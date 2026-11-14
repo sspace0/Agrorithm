@@ -1,0 +1,116 @@
+export type CropId = "maize" | "wheat" | "mung" | "cover" | "rice";
+export type Day = {
+  date: string;
+  min: number | null;
+  max: number | null;
+  rain: number | null;
+};
+export type Crop = {
+  id: CropId;
+  name: string;
+  urdu: string;
+  family: string;
+  legume: boolean;
+  window: [string, string];
+  duration: [number, number];
+  stages: number[];
+  kc: number[];
+  heat: number;
+  frost: number;
+  rootM: number;
+  equipment: string;
+  market: string;
+  source: string;
+  applicability?: string;
+  provisional: string[];
+};
+export type Planting = {
+  crop: CropId;
+  sow: string;
+  harvest: string;
+  residue: boolean;
+};
+export type Farm = {
+  name: string;
+  lat: number;
+  lon: number;
+  areaHa: number;
+  irrigation: string;
+  efficiency: number | null;
+  waterLimitMm: number | null;
+  soil: {
+    ph: number | null;
+    ec: number | null;
+    capacityMm: number | null;
+    depthCm: number | null;
+    date: string;
+    source: string;
+  };
+  equipment: string[];
+  markets: string[];
+  exclusions: CropId[];
+  budget: number | null;
+  confirmed: boolean;
+  sequence: Planting[];
+  polygon: string;
+  observations: string;
+  soilTexture: string;
+  cropTable?: Record<CropId, Crop>;
+};
+export type Scenario = {
+  rainFactor: number;
+  tempDelta: number;
+  waterFactor: number;
+  kcFactor: number;
+  weights: {
+    water: number;
+    cover: number;
+    diversity: number;
+    exposure: number;
+  };
+};
+export type Rotation = {
+  id: string;
+  name: string;
+  description: string;
+  sequence: Planting[];
+};
+export type Result = {
+  id: string;
+  name: string;
+  description: string;
+  sequence: Planting[];
+  status: "feasible" | "infeasible" | "unresolved";
+  constraints: string[];
+  unknowns: string[];
+  warnings: string[];
+  etc: number | null;
+  effectiveRain: number | null;
+  netIrrigation: number | null;
+  delivered: number | null;
+  volume: number | null;
+  coverage: number;
+  liveCover: number;
+  residueCover: number;
+  families: number;
+  legume: boolean;
+  heatDays: number | null;
+  frostDays: number | null;
+  deficitDays: number | null;
+  completeness: number;
+  score: number | null;
+  pareto: boolean;
+  initialStorage: number | null;
+  finalStorage: number | null;
+  soilEvaporation: number | null;
+  drainage: number | null;
+  replay: number[];
+  stageExposure: {
+    crop: string;
+    stage: string;
+    heat: number;
+    frost: number;
+    deficit: number;
+    days: number;
+  }[];
+};

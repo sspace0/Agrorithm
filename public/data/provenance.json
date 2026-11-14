@@ -1,0 +1,51 @@
+[
+  {
+    "file": "power-2018.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20180101&end=20181231&format=JSON&time-standard=UTC",
+    "retrieved": "2026-11-14",
+    "sha256": "581cc0bd1a417a29115a24fe0815827a1cf8b264f1919c591cfcecce75bd04ac",
+    "status": "genuine cached observation"
+  },
+  {
+    "file": "power-2019.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20190101&end=20191231&format=JSON&time-standard=UTC",
+    "retrieved": "2026-11-14",
+    "sha256": "e7b8bab17261b99b8e8091046bd677b919eafc8572599ce3936aca0a83c1e8c2",
+    "status": "genuine cached observation"
+  },
+  {
+    "file": "power-2020.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20200101&end=20201231&format=JSON&time-standard=UTC",
+    "retrieved": "2026-11-14",
+    "sha256": "61ee5c1e1b27ebb48c04f1f2943f570521a19b89b3ee5a67ddb821ae7eb79c4e",
+    "status": "genuine cached observation"
+  },
+  {
+    "file": "power-2021.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20210101&end=20211231&format=JSON&time-standard=UTC",
+    "retrieved": "2026-11-14",
+    "sha256": "149c2a0b506e2cbbf038ceafcc0400b92b50264f53194c4cfd06acdef4a80f05",
+    "status": "genuine cached observation"
+  },
+  {
+    "file": "power-2022.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20220101&end=20221231&format=JSON&time-standard=UTC",
+    "retrieved": "2026-11-14",
+    "sha256": "3533db9565b6daacf286145d33a6363a0d009ca9762ce4b07cdcd2582a905a0a",
+    "status": "genuine cached observation"
+  },
+  {
+    "file": "power-2023.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20230101&end=20231231&format=JSON&time-standard=UTC",
+    "retrieved": "2026-11-14",
+    "sha256": "4a3939fbc52cb2e99ae32e894f166b42c8ae128e069e21ebacb9a338d39530b1",
+    "status": "genuine cached observation"
+  },
+  {
+    "file": "power-2024.json",
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20240101&end=20241231&format=JSON&time-standard=UTC",
+    "retrieved": "2026-11-14",
+    "sha256": "8dd484e83bc5706b533b261216a7707e5fec72f81d5710a1a5af6b5c60b3fddd",
+    "status": "genuine cached observation"
+  }
+]

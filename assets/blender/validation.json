@@ -1,0 +1,16 @@
+[
+  {
+    "scene": "root-zone",
+    "triangles": 17848,
+    "meshObjects": 9,
+    "glbBytes": 1758684,
+    "blender": "5.2.1 LTS"
+  },
+  {
+    "scene": "groundwater",
+    "triangles": 6232,
+    "meshObjects": 5,
+    "glbBytes": 1057208,
+    "blender": "5.2.1 LTS"
+  }
+]

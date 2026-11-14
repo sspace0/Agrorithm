@@ -1,0 +1,6 @@
+/* Urdu falls back to the platform Arabic font; no third-party font request is made. */
+[lang="ur"] .workspace-nav nav a,
+[lang="ur"] .translation-note {
+  line-height: 2;
+  letter-spacing: 0;
+}

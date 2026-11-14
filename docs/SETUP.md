@@ -49,3 +49,5 @@ Plans are localStorage records under `fieldshift-plan`. Language/quality prefere
 The production service worker caches the versioned static bundle after a successful first visit. After installation, sample data, models, posters and navigation work offline. Live weather retrieval is optional; failed requests preserve the current series. Update deployment hashes generate a new cache. Local development does not install a service worker. For development debugging, clear the site's service worker/cache in browser devtools when necessary.
 
 The UI supports weather JSON with explicit dataset coordinates and plan JSON with soil and crop dates. Example schema is in docs/IMPORTS.md. A changed field coordinate invalidates the regional weather match until matching data is supplied. It does not silently transplant cached observations.
+
+On the existing Windows workspace, `./scripts/run.ps1 dev` (or build/preview/typecheck/lint/test) locates a normal pnpm installation or the bundled runtime beside Node. This avoids hardcoding a particular Codex runtime version.

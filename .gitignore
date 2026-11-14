@@ -5,5 +5,7 @@ test-results/
 playwright-report/
 *.blend1
 .env*
+! .env.example
 private-farms/
 *.log
+*.tsbuildinfo

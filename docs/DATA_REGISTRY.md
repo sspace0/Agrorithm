@@ -23,3 +23,9 @@ No SMAP/GRACE field-depth inference, economic predictions, fertilizer credits, c
 POWER: 2018–2024, 2,557 complete UTC days, raw yearly responses and checksums in public/data/provenance.json. HLS: 43 L30 v2.0 scenes in 2023, 16 with at least 50% valid footprint coverage; no acquisition failures. Exact ids, dates, valid counts, processing hashes and footprint are in vegetation.json. Earthdata credentialed access was avoided through NASA’s documented Microsoft mirror; temporary read signatures were held only in memory. ORNL MODIS returned 503 and is not the shipped sample.
 
 World atlas: Beck et al. (2023), historical 1991–2020 provider 0.5° grid, CC BY 4.0. Exact archive/source/hash and modifications: docs/ATLAS.md. Crop adaptation sources and all provisional fit mappings: src/data/atlas.ts. Soil filtering is a user scenario, not observed global soil.
+
+## Satellite basemap
+
+NASA Earth Observatory, Blue Marble: Next Generation, August 2004 monthly MODIS composite. Creators: Reto Stöckli and Robert Simmon. [Official download page](https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/) and [NASA image-use guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/). The original 5400×2700 JPEG is bundled without pixel changes; 1616254 bytes, SHA-256 `2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9`. Exact download URL and retrieval date are in public/data/basemap-provenance.json. Rebuild with `node scripts/fetch-basemap.mjs`.
+
+The satellite image is a historical cloud-free composite, not live imagery or field-resolution mapping. The independent 1991–2020 climate/crop layer sits above it with an adjustable opacity (including 0% for satellite-only inspection). The two layers represent different periods. Both are available from the offline cache. Soil filters remain hypothetical; satellite colors do not establish soil type or crop suitability.

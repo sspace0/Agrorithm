@@ -18,6 +18,17 @@ test("crop atlas has genuine zones, soil filters, keyboard map and a separate se
   page,
 }) => {
   await page.goto("./#/atlas");
+  const satellite = page.getByRole("img", {
+    name: "NASA Blue Marble satellite composite, August 2004",
+  });
+  await expect(satellite).toBeVisible();
+  await expect
+    .poll(() =>
+      satellite.evaluate((img) => (img as HTMLImageElement).naturalWidth),
+    )
+    .toBe(5400);
+  await page.getByRole("slider", { name: "Overlay opacity" }).fill("25");
+  await expect(page.locator(".map-world canvas")).toHaveCSS("opacity", "0.25");
   await expect(
     page.getByRole("heading", { name: /Different ground/ }),
   ).toBeVisible();
@@ -176,6 +187,14 @@ test("cached sample is usable offline after installation", async ({
   await expect(
     page.getByText("Genuine cached observations · 2023"),
   ).toBeVisible();
+  await page.getByRole("link", { name: "Crop atlas", exact: true }).click();
+  await expect
+    .poll(() =>
+      page
+        .locator(".satellite-base")
+        .evaluate((img) => (img as HTMLImageElement).naturalWidth),
+    )
+    .toBe(5400);
   await context.close();
 });
 test("failed live request preserves cached observations", async ({

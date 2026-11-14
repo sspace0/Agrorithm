@@ -1,0 +1,22 @@
+{
+  "title": "Blue Marble: Next Generation · August 2004",
+  "publisher": "NASA Earth Observatory",
+  "creators": [
+    "Reto Stöckli",
+    "Robert Simmon"
+  ],
+  "page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+  "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/august/world.200408.3x5400x2700.jpg",
+  "observationPeriod": "2004-08",
+  "sourceDimensions": [
+    5400,
+    2700
+  ],
+  "spatialSupport": "Global monthly MODIS true-color composite; provider preview about 8 km/pixel. Not current imagery or field detail.",
+  "retrieved": "2026-11-14",
+  "license": "NASA imagery use guidelines; source offered for public use",
+  "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "sha256": "2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9",
+  "bytes": 1616254,
+  "modifications": "Bundled original JPEG without pixel edits; independent climate/crop overlay rendered above it."
+}

@@ -43,6 +43,8 @@ export default function Atlas({
   const [mode, setMode] = useState("climate");
   const [point, setPoint] = useState({ lat: 32.1, lon: 73 });
   const [zoom, setZoom] = useState(1);
+  const [opacity, setOpacity] = useState(55);
+  const [basemapFailed, setBasemapFailed] = useState(false);
   const canvas = useRef<HTMLCanvasElement>(null);
   const c = ATLAS_CROPS.find((x) => x.id === crop)!;
   const zone = data
@@ -73,7 +75,7 @@ export default function Atlas({
             ? GROUP_COLORS[group]
             : FIT_COLORS[broadFit(crop, z, soil, irrigated).level];
       const rgb = col.match(/\w\w/g)!.map((v) => parseInt(v, 16));
-      img.data.set([...rgb, 255], i * 4);
+      img.data.set([...rgb, z === 0 ? 0 : 255], i * 4);
     });
     ctx.putImageData(img, 0, 0);
   }, [data, crop, soil, mode, irrigated]);
@@ -163,6 +165,18 @@ export default function Atlas({
           />
           Assume irrigation access
         </label>
+        <label className="overlay-opacity">
+          Color overlay · {opacity}%
+          <input
+            aria-label="Overlay opacity"
+            type="range"
+            min="0"
+            max="100"
+            step="5"
+            value={opacity}
+            onChange={(e) => setOpacity(+e.target.value)}
+          />
+        </label>
       </div>
       {err && (
         <p role="alert" className="warning">
@@ -206,8 +220,16 @@ export default function Atlas({
                 transformOrigin: `${((point.lon + 180) / 360) * 100}% ${((90 - point.lat) / 180) * 100}%`,
               }}
             >
+              <img
+                className="satellite-base"
+                src={asset("images/blue-marble-2004-08.jpg")}
+                alt="NASA Blue Marble satellite composite, August 2004"
+                onError={() => setBasemapFailed(true)}
+                style={{ display: basemapFailed ? "none" : "block" }}
+              />
               <canvas
                 ref={canvas}
+                style={{ opacity: basemapFailed ? 1 : opacity / 100 }}
                 onClick={(e) => {
                   const r = e.currentTarget.getBoundingClientRect();
                   pick(
@@ -298,12 +320,23 @@ export default function Atlas({
             ))}
           </div>
           <p className="note map-footnote">
-            Actual climate classes; our muted palette groups the 30 subclasses
-            into five families. Equal-angle projection, no political boundaries.
-            The selected soil is a hypothetical filter, not a global mapped soil
-            layer. A coarse climate class cannot establish the best crop for a
-            farm.
+            <strong>
+              Satellite basemap: NASA Blue Marble · August 2004 composite.
+            </strong>{" "}
+            Not live imagery. Independent color overlay: 1991–2020 climate
+            classes / provisional crop fit. Adjust opacity to reveal the
+            satellite view. Actual climate classes; our muted palette groups the
+            30 subclasses into five families. Equal-angle projection, no
+            political boundaries. The selected soil is a hypothetical filter,
+            not a global mapped soil layer. A coarse climate class cannot
+            establish the best crop for a farm.
           </p>
+          {basemapFailed && (
+            <p className="note" role="status">
+              Satellite image unavailable; the cached climate layer is still
+              usable.
+            </p>
+          )}
         </section>
         <aside className="atlas-inspector">
           <span className="eyebrow">SELECTED CONTEXT</span>

@@ -21,3 +21,9 @@ Wheat, maize, paddy rice, mungbean and sorghum have adaptation descriptions and 
 References: Canada's CFIA maize biology, African Organisation for Standardisation wheat outreach, FAO rice irrigation systems, World Vegetable Center mungbean manual and ICRISAT sorghum. The FAO crop-information URLs initially returned 404, so the shipped registry uses verified alternative primary references. No numerical global yield, profit or “best crop” claim is derived from climate alone.
 
 Real suitability assessment additionally needs local soil/depth/pH/salinity, seasonal weather, cultivar, water rights, protected land, topography, equipment and markets. These unknowns remain visible.
+
+## Satellite basemap
+
+NASA Earth Observatory, Blue Marble: Next Generation, August 2004 monthly MODIS composite. Creators: Reto Stöckli and Robert Simmon. [Official download page](https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/) and [NASA image-use guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/). The original 5400×2700 JPEG is bundled without pixel changes; 1616254 bytes, SHA-256 `2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9`. Exact download URL and retrieval date are in public/data/basemap-provenance.json. Rebuild with `node scripts/fetch-basemap.mjs`.
+
+The satellite image is a historical cloud-free composite, not live imagery or field-resolution mapping. The independent 1991–2020 climate/crop layer sits above it with an adjustable opacity (including 0% for satellite-only inspection). The two layers represent different periods. Both are available from the offline cache. Soil filters remain hypothetical; satellite colors do not establish soil type or crop suitability.

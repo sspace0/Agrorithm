@@ -18,15 +18,15 @@ The original team artwork's SHA-256 matches the copied team-page asset. `.blend`
 
 ## Actual asset measurements
 
-| Asset | Raw bytes | Locally computed gzip bytes |
-|---|---:|---:|
-| Root-zone GLB | 1,758,684 | 690,592 |
-| Groundwater GLB | 1,057,208 | 496,594 |
-| Root-zone poster | 1,758,039 | 1,756,580 |
-| Groundwater poster | 1,298,324 | 1,296,131 |
-| Global historical climate grid | 583,759 | 19,681 |
+| Asset                          | Raw bytes | Locally computed gzip bytes |
+| ------------------------------ | --------: | --------------------------: |
+| Root-zone GLB                  | 1,758,684 |                     690,592 |
+| Groundwater GLB                | 1,057,208 |                     496,594 |
+| Root-zone poster               | 1,758,039 |                   1,756,580 |
+| Groundwater poster             | 1,298,324 |                   1,296,131 |
+| Global historical climate grid |   583,759 |                      19,681 |
 
-Blender scene triangle counts: root-zone 17,848; groundwater 6,232. Both GLBs are comfortably below the initial 150,000-triangle target. The lazy Three.js chunk is about 1.00 MB raw / 268 KB gzip; the main JS chunk about 736 KB raw / 219 KB gzip; CSS about 45 KB raw / 10 KB gzip. Runtime font files total 76,644 bytes. Whole static output is approximately 9.48 MB raw including both models, all posters and offline data. Gzip numbers are computed file compression measurements, not claimed transfer sizes from an undeployed host.
+Blender scene triangle counts: root-zone 17,848; groundwater 6,232. Both GLBs are comfortably below the initial 150,000-triangle target. The lazy Three.js chunk is about 1.00 MB raw / 268 KB gzip; the main JS chunk about 736 KB raw / 219 KB gzip; CSS about 45 KB raw / 10 KB gzip. Runtime font files total 76,644 bytes. Whole static output is approximately 11.10 MB raw after the satellite basemap revision including both models, all posters and offline data. Gzip numbers are computed file compression measurements, not claimed transfer sizes from an undeployed host.
 
 No integrated-graphics laptop/phone FPS, touch hardware latency, battery use or calibrated agronomic performance was measured. Pixel ratio is bounded at 1–1.5 (low quality 1), heavy 3D is lazy, offscreen/hidden rendering pauses, no environment HDRI is downloaded, and a static mode preserves all planning functionality.
 
@@ -43,3 +43,5 @@ Repository was explicitly created private under sspace0. Source/assets are synch
 Private-repository Pages requires an eligible GitHub plan and owner Pages/environment settings. Deployment is manually dispatched only after review; there is no observed live website URL yet. The supplied official challenge URL returned 502 during verification and remains an external reference blocker. HLS Earthdata credentials were not needed for the documented Microsoft-mirror preprocessing; ORNL's alternative service returned 503 and was not used as sample data.
 
 Review PR: https://github.com/sspace0/FieldShift/pull/1. The initial complete source snapshot is commit 1345c3eeeb8b808b7a06770bb3680cd9747180e6; final documentation refinements are subsequent commits on the same feature branch.
+
+Satellite-map revision: genuine NASA August 2004 Blue Marble imagery is bundled beneath the climate/crop overlays. The atlas/opacity, offline satellite-image reload and responsive checks passed locally after this revision. The prior complete source snapshot cd9dfe95022a5bcf98236cd246e42c1185c8d306 also passed all GitHub CI steps (run 43618923030); the final satellite revision is checked by a subsequent run.

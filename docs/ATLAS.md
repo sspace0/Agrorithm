@@ -14,7 +14,7 @@ An equal-angle display shows climate/coast shapes without political boundaries. 
 
 ## Crop and soil graphics
 
-Wheat, maize, paddy rice, mungbean and sorghum have adaptation descriptions and primary references in `src/data/atlas.ts`. Crop glyphs are original SVG geometry. Climate-fit colors are **provisional qualitative rules**, not measured suitability, GAEZ, crop productivity or validated global ranking.
+Eight references cover wheat, maize, mungbean, chickpea, tomato, potato, citrus and mango. Traits and primary sources are in `src/data/atlas.ts` and `src/data/cropProfiles.ts`. Four representative category models cover grains, pulses, vegetables and fruit trees. Climate-fit colors are **provisional qualitative rules**, not measured suitability, GAEZ, productivity or validated global ranking. New reference crops use conditional screens; orchards are excluded from the annual engine.
 
 “Promising broad climate fit” means an adaptation context worth investigating. “Season / water check” requires more evidence. “Outside broad preference” does not establish field infeasibility. Mungbean beyond the cited Pakistan calendar receives no strong-fit claim. Desert pixels require water-source review. The soil dropdown is an explicitly hypothetical filter, not a global soil map. Persistent waterlogging flags non-paddy drainage concerns; sand flags paddy seepage concerns.
 

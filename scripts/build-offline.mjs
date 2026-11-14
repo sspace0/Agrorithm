@@ -16,7 +16,16 @@ async function files(dir) {
 const paths = (await files("dist")).filter((p) => !p.endsWith("sw.js"));
 const version = createHash("sha256");
 for (const p of paths) version.update(await readFile(p));
-const urls = paths.map((p) => base + p.slice(5));
+// Keep the complete planning sample offline without downloading optional 3D assets.
+// Models and large source posters enter the runtime cache only after an explicit visit.
+const urls = paths
+  .filter(
+    (p) =>
+      !p.includes("/models/") &&
+      !p.endsWith(".png") &&
+      !/images\/(root-zone|groundwater)\.webp$/.test(p),
+  )
+  .map((p) => base + p.slice(5));
 const source = `
 const CACHE='fieldshift-${version.digest("hex").slice(0, 12)}';
 const URLS=${JSON.stringify(urls)};
@@ -37,7 +46,7 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const cached=await caches.match(request,{ignoreVary:true});
     if(cached)return cached;
-    try{return await fetch(request);}
+    try{const response=await fetch(request);if(response.ok && new URL(request.url).pathname.startsWith('${base}')){const cache=await caches.open(CACHE);await cache.put(request,response.clone());}return response;}
     catch{
       if(request.mode==='navigate')return (await caches.match('${base}index.html'))||Response.error();
       return Response.error();

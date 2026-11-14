@@ -49,3 +49,6 @@ Satellite-map revision: genuine NASA August 2004 Blue Marble imagery is bundled 
 ## Subsequent public publication
 
 On 2026-11-14 the user requested the shareable HTTPS link. Sites version 1 deployed successfully at https://fieldshift-jt1.spacetime24.chatgpt.site with public URL access, while the GitHub repository remains private and PR #1 unmerged. Anonymous live HTTP, sample-planner, satellite/opacity and mobile checks passed without page errors. Details and exact hosting source/deployment identifiers are in PUBLIC_DEPLOYMENT.md. Earlier no-deployment statements above describe the initial PR handoff; GitHub Pages itself is still not deployed.
+
+## Experience revision verification
+The later experience revision passes 23 unit tests and the complete 20-test production-browser suite; TypeScript/ESLint/build pass. New asset sizes, screenshots, source applicability and phone poster defaults supersede the earlier visual asset measurements above; see EXPERIENCE_UPDATE.md. Current publication details are maintained in PUBLIC_DEPLOYMENT.md.

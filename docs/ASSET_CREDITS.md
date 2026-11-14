@@ -1,5 +1,15 @@
 # Asset and software credits
 
+## Experience revision
+
+[Kiara 1 Dawn](https://polyhaven.com/a/kiara_1_dawn), Greg Zaal / Poly Haven; [CC0](https://polyhaven.com/license). Retrieved 14 November 2026 using the documented API and a project User-Agent. Actual tonemapped JPEG, cropped WebP, download URL, SHA-256, crop rectangle and processing are recorded in `assets/textures/landscape-manifest.json`. The decorative South African valley is not the selected Punjab field. No provider example render was used as the asset.
+
+The user-supplied `sponsorship bg.png` is preserved in `assets/textures/project-background-supplied.png`. Creator/license were not specified; user authorization covers this project and no third-party open license is asserted. Checksums and technical WebP processing are in `assets/textures/supplied-background-manifest.json`.
+
+The v2 scenes reuse the licensed textures below, with desaturated/baked mineral tints and physical planar UV scale. Four procedural crop category studies, source scenes, full PNG renders and lightweight WebPs are documented in `assets/blender/NOTES-v2.md` and validation JSON. Earlier crop studies remain source studies; the current interface uses four representatives.
+
+[Open-Meteo geocoding](https://open-meteo.com/en/docs/geocoding-api) / GeoNames: [provider terms](https://open-meteo.com/en/terms), [CC BY4.0](https://creativecommons.org/licenses/by/4.0/). Eight cached responses were retrieved 14 November 2026. The non-commercial educational prototype makes online queries only on explicit request. Reassess provider terms before commercial use.
+
 Retrieved 2026-11-14. Full download URLs, byte counts, SHA-256 checksums, creators and modifications are in [assets/textures/manifest.json](../assets/textures/manifest.json). All runtime maps are bundled in the GLBs, not hotlinked. The original 1K diffuse, roughness and OpenGL normal JPGs are committed for reproducibility.
 
 | Asset             | Creator(s) from provider metadata                                     | Asset page                                | License |

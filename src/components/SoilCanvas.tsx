@@ -16,9 +16,10 @@ type Props = {
   rain: number;
   depth: number;
   reset: number;
+  interactive: boolean;
 };
 function Model(p: Props) {
-  const gltf = useGLTF(asset(`models/${p.view}.glb`));
+  const gltf = useGLTF(asset(`models/${p.view}-v2.glb`));
   const model = useMemo(() => gltf.scene.clone(true), [gltf]);
   const group = useRef<THREE.Group>(null);
   const initial = useMemo(() => {
@@ -37,23 +38,39 @@ function Model(p: Props) {
           if (o.name.includes("Subsoil")) o.position.y -= 0.2;
           if (o.name.includes("Parent")) o.position.y -= 0.45;
         }
-        if (p.motion && p.progress > 0.35) {
-          const spread = (p.progress - 0.35) * 0.6;
-          if (o.name.includes("Subsoil")) o.position.y -= spread;
-          if (o.name.includes("Parent")) o.position.y -= spread * 1.8;
-        }
       }
       if (o.name.startsWith("Roots_")) o.visible = p.roots;
-      if (o.name === "Water_In_Pores" || o.name === "Water_Table_Boundary")
-        o.visible = false;
+      if (o.name.startsWith("Water_")) o.visible = false;
     });
-  }, [model, initial, p.layers, p.roots, p.explode, p.progress, p.motion]);
-  useFrame(({ clock }) => {
+  }, [model, initial, p.layers, p.roots, p.explode]);
+  useFrame(({ clock, pointer }, delta) => {
     if (group.current)
-      group.current.rotation.y = p.motion
-        ? Math.sin(clock.elapsedTime * 0.16) * 0.018 + p.progress * 1.05
-        : 0;
+      group.current.rotation.y = THREE.MathUtils.damp(
+        group.current.rotation.y,
+        p.motion
+          ? Math.sin(clock.elapsedTime * 0.16) * 0.018 +
+              p.progress * 0.8 +
+              (p.interactive ? 0 : pointer.x * 0.06)
+          : 0,
+        4,
+        delta,
+      );
     model.traverse((o) => {
+      if (o.name.startsWith("Layer_")) {
+        const base = initial.get(o.uuid)!.y;
+        const spread = p.explode ? 0.2 : Math.max(0, p.progress - 0.35) * 0.5;
+        const offset = o.name.includes("Subsoil")
+          ? spread
+          : o.name.includes("Parent")
+            ? spread * 1.8
+            : 0;
+        o.position.y = THREE.MathUtils.damp(
+          o.position.y,
+          base - offset,
+          5,
+          delta,
+        );
+      }
       if (
         o.name === "Surface_Leaves" ||
         o.name === "Surface_Grain" ||
@@ -76,7 +93,7 @@ function Pores({ depth }: { depth: number }) {
     for (let i = 0; i < 160; i++) {
       const x = Math.sin(i * 27.3) * 1.94;
       const y = -depth / 10 - ((Math.sin(i * 4.7) + 1) / 2) * (2 - depth / 10);
-      arr.push(x, y, -1.54);
+      arr.push(x, y, 1.54);
     }
     return new Float32Array(arr);
   }, [depth]);
@@ -88,7 +105,7 @@ function Pores({ depth }: { depth: number }) {
         </bufferGeometry>
         <pointsMaterial color="#4d9fac" size={0.036} />
       </points>
-      <mesh position={[0, -depth / 10, -1.55]}>
+      <mesh position={[0, -depth / 10, 1.55]}>
         <boxGeometry args={[4, 0.018, 0.012]} />
         <meshBasicMaterial color="#3c8a9b" />
       </mesh>
@@ -101,7 +118,7 @@ function Processes(p: Props) {
     () =>
       new Float32Array(
         Array.from({ length: 60 }, (_, i) =>
-          i % 3 === 0 ? Math.sin(i) * 1.9 : i % 3 === 1 ? 1 : -1.6,
+          i % 3 === 0 ? Math.sin(i) * 1.9 : i % 3 === 1 ? 1 : 1.6,
         ),
       ),
     [],
@@ -189,6 +206,8 @@ export default function SoilCanvas(p: Props) {
           </group>
         </Suspense>
         <OrbitControls
+          enableZoom={p.interactive}
+          enableRotate={p.interactive}
           target={[0, -0.55, 0]}
           enablePan={false}
           minDistance={4}

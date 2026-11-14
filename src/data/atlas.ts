@@ -31,9 +31,18 @@ export const ZONES = [
   ["ET", "Tundra"],
   ["EF", "Ice cap"],
 ];
-export type AtlasCropId = "wheat" | "maize" | "rice" | "mung" | "sorghum";
+export type AtlasCropId =
+  | "wheat"
+  | "maize"
+  | "mung"
+  | "chickpea"
+  | "tomato"
+  | "potato"
+  | "citrus"
+  | "mango";
 export type SoilType = "unknown" | "sand" | "loam" | "clay" | "waterlogged";
-export const ATLAS_CROPS: {
+export type CropGroup = "grains" | "pulses" | "vegetables" | "fruit";
+export type AtlasCrop = {
   id: AtlasCropId;
   name: string;
   latin: string;
@@ -44,7 +53,8 @@ export const ATLAS_CROPS: {
   source: string;
   strong: number[];
   conditional: number[];
-}[] = [
+};
+export const ATLAS_CROPS: AtlasCrop[] = [
   {
     id: "wheat",
     name: "Wheat",
@@ -74,20 +84,6 @@ export const ATLAS_CROPS: {
     conditional: [4, 5, 6, 7, 9, 12, 15, 17, 18, 21, 22, 25, 26],
   },
   {
-    id: "rice",
-    name: "Paddy rice",
-    latin: "Oryza sativa",
-    symbol: "rice",
-    climate:
-      "Warm growing conditions; tropical, subtropical and some temperate production systems.",
-    soil: "Water-retaining clayey lowlands can support paddy management; upland rice is a different system.",
-    water:
-      "Verified supply, preparation, ponding and seepage/percolation are essential.",
-    source: "https://www.fao.org/4/x6959e/x6959e03.htm",
-    strong: [1, 2, 3, 11, 14],
-    conditional: [4, 6, 7, 8, 9, 12, 15, 17, 21, 25, 26],
-  },
-  {
     id: "mung",
     name: "Mungbean",
     latin: "Vigna radiata",
@@ -102,18 +98,75 @@ export const ATLAS_CROPS: {
     conditional: [1, 2, 3, 4, 6, 7, 8, 11, 14, 17, 21, 25],
   },
   {
-    id: "sorghum",
-    name: "Sorghum",
-    latin: "Sorghum bicolor",
-    symbol: "sorghum",
+    id: "chickpea",
+    name: "Chickpea",
+    latin: "Cicer arietinum",
+    symbol: "pulse",
     climate:
-      "Adapted varieties are used in semi-arid tropics. Drought tolerance does not mean no water demand.",
-    soil: "Rooting, fertility and drainage still constrain performance; no universal poor-soil advantage is assumed.",
+      "Cool, relatively dry growing seasons; rainfall at flowering and maturation can increase disease risk. Global climate mapping is provisional.",
+    soil: "Deep, well-drained loams or clay loams. Poor aeration, waterlogging and salinity need local checks.",
     water:
-      "Hot steppe can be a useful context to investigate; deserts still need a water source.",
-    source: "https://icrisat.org/public/crops/sorghum/overview",
-    strong: [3, 6],
-    conditional: [1, 2, 4, 5, 7, 8, 11, 14, 17, 21, 25],
+      "Stored soil moisture can contribute; irrigation depends on season and soil. Drought tolerance does not remove flowering and pod-filling water needs.",
+    source: "https://oar.icrisat.org/10276/1/ChickpeaManual_full.pdf",
+    strong: [],
+    conditional: [4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 17, 18, 21, 22, 25, 26],
+  },
+  {
+    id: "tomato",
+    name: "Tomato",
+    latin: "Solanum lycopersicum",
+    symbol: "vegetable",
+    climate:
+      "Warm, frost-free growing season. Global mapping is a provisional seasonal screen; protected cultivation is not modeled.",
+    soil: "Well-drained root zone, local pH and soil test required. Disease and rotation history matter.",
+    water:
+      "Steady root-zone moisture is needed. Local crop ET, effective rain and irrigation efficiency must be checked.",
+    source: "https://extension.umn.edu/vegetables/growing-tomatoes",
+    strong: [],
+    conditional: [1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 14, 15, 17, 21, 25],
+  },
+  {
+    id: "potato",
+    name: "Potato",
+    latin: "Solanum tuberosum",
+    symbol: "vegetable",
+    climate:
+      "Local variety, season and soil temperature are essential. This global climate-family screen is provisional.",
+    soil: "Drained, workable soil with verified pH. Disease-free seed tubers and disease history are practical requirements.",
+    water:
+      "Root-zone moisture needs attention during tuber development. No universal delivered-irrigation total is assumed.",
+    source: "https://extension.umn.edu/vegetables/growing-potatoes",
+    strong: [],
+    conditional: [6, 7, 8, 9, 11, 12, 14, 15, 16, 17, 18, 21, 22, 25, 26],
+  },
+  {
+    id: "citrus",
+    name: "Citrus",
+    latin: "Citrus spp.",
+    symbol: "fruit",
+    climate:
+      "Warm tropical/subtropical settings; freezing risk and rootstock/cultivar choice are essential. Perennial orchard reference only.",
+    soil: "Well-drained soil with locally appropriate rootstock. A soil survey is needed before orchard establishment.",
+    water:
+      "Multi-year tree age, canopy, climate and irrigation management determine demand. Not part of the annual rotation engine.",
+    source: "https://ipm.ucanr.edu/home-and-landscape/citrus-site-selection/",
+    strong: [],
+    conditional: [1, 2, 3, 4, 6, 8, 9, 11, 14],
+  },
+  {
+    id: "mango",
+    name: "Mango",
+    latin: "Mangifera indica",
+    symbol: "fruit",
+    climate:
+      "Tropical/subtropical lowlands; flowers and young fruit can be cold sensitive. Perennial orchard reference only.",
+    soil: "Adapted to multiple soil textures where well drained. Local depth, flooding risk and cultivar need assessment.",
+    water:
+      "Demand depends on tree age, canopy and phenology. No orchard water model or annual rotation result is supplied.",
+    source:
+      "https://gardeningsolutions.ifas.ufl.edu/plants/edibles/fruits/mango/",
+    strong: [],
+    conditional: [1, 2, 3, 4, 6, 8, 11, 14],
   },
 ];
 export function broadFit(
@@ -129,19 +182,12 @@ export function broadFit(
       label: "No land classification",
       reason: "Choose a classified land pixel.",
     };
-  if (soil === "waterlogged" && crop !== "rice")
+  if (soil === "waterlogged")
     return {
       level: 1,
       label: "Drainage constraint",
       reason:
         "Persistent waterlogging is a management constraint for this broad crop screen.",
-    };
-  if (crop === "rice" && soil === "sand")
-    return {
-      level: 1,
-      label: "Paddy water-retention concern",
-      reason:
-        "Coarse soil can increase seepage; paddy water requirements are not parameterized.",
     };
   if ([4, 5].includes(zone) && !irrigated)
     return {

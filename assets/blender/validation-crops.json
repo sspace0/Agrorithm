@@ -1,0 +1,291 @@
+{
+  "blender": "5.2.1 LTS",
+  "seed": 20261114,
+  "status": "Illustrative procedural botanical studies; no external plant textures",
+  "crops": [
+    {
+      "crop": "maize",
+      "triangles": 11296,
+      "meshNodes": [
+        "Maize_Jointed_Stem",
+        "Maize_Broad_Ribbed_Leaves",
+        "Maize_Leaf_Midribs",
+        "Maize_Layered_Husks",
+        "Maize_Individual_Kernels",
+        "Maize_Branching_Tassel",
+        "Maize_Tassel_Anthers",
+        "Maize_Cob_Silks"
+      ],
+      "presentationHeightMeters": 1.5,
+      "blenderBoundsMeters": {
+        "min": [
+          -0.6032,
+          -0.2742,
+          -0.0011
+        ],
+        "max": [
+          0.5693,
+          0.1943,
+          1.5
+        ]
+      },
+      "origin": "Base at (0,0,0); Blender Z up, exported glTF Y up",
+      "glbBytes": 234696,
+      "gzipGlbBytes": 135844,
+      "blendBytes": 299604,
+      "posterBytes": 764576,
+      "sha256": "eb3fd3c843afaae38b1722b9554539b1bd2febddb4c537b7c269b8047c78ce9f",
+      "geometryStatus": "Illustrative botanical study, not a cultivar claim, crop observation or forecast. Uniformly normalized to 1.5 m presentation height; not a field scale comparison.",
+      "runtimePosterWebpBytes": 35356,
+      "selectorThumbnailWebpBytes": 5098,
+      "browserRender": {
+        "loadMs": 31.69999998807907,
+        "triangles": 11296,
+        "drawCalls": 8,
+        "errors": []
+      }
+    },
+    {
+      "crop": "wheat",
+      "triangles": 4248,
+      "meshNodes": [
+        "Wheat_Tillering_Stems",
+        "Wheat_Narrow_Curved_Leaves",
+        "Wheat_Paired_Spikelets",
+        "Wheat_Fine_Awns"
+      ],
+      "presentationHeightMeters": 1.5,
+      "blenderBoundsMeters": {
+        "min": [
+          -0.2872,
+          -0.2989,
+          -0.0004
+        ],
+        "max": [
+          0.3,
+          0.2913,
+          1.5
+        ]
+      },
+      "origin": "Base at (0,0,0); Blender Z up, exported glTF Y up",
+      "glbBytes": 92964,
+      "gzipGlbBytes": 46625,
+      "blendBytes": 169059,
+      "posterBytes": 722354,
+      "sha256": "2b8eb9c346350a90281984af94145c5589cc22aa6da4ba457149ce907e85e16f",
+      "geometryStatus": "Illustrative botanical study, not a cultivar claim, crop observation or forecast. Uniformly normalized to 1.5 m presentation height; not a field scale comparison.",
+      "runtimePosterWebpBytes": 30148,
+      "selectorThumbnailWebpBytes": 3662,
+      "browserRender": {
+        "loadMs": 31.099999994039536,
+        "triangles": 4248,
+        "drawCalls": 4,
+        "errors": []
+      }
+    },
+    {
+      "crop": "rice",
+      "triangles": 9792,
+      "meshNodes": [
+        "Rice_Clump_Stems",
+        "Rice_Long_Narrow_Leaves",
+        "Rice_Drooping_Panicle_Branches",
+        "Rice_Individual_Panicle_Grains"
+      ],
+      "presentationHeightMeters": 1.5,
+      "blenderBoundsMeters": {
+        "min": [
+          -0.4924,
+          -0.4981,
+          -0.0006
+        ],
+        "max": [
+          0.5,
+          0.4829,
+          1.5
+        ]
+      },
+      "origin": "Base at (0,0,0); Blender Z up, exported glTF Y up",
+      "glbBytes": 206932,
+      "gzipGlbBytes": 109177,
+      "blendBytes": 271123,
+      "posterBytes": 1007408,
+      "sha256": "15e0ecdbf8da9686a486388a7598ca2e47eaa6f95dd4c2e334494cbdce6493bb",
+      "geometryStatus": "Illustrative botanical study, not a cultivar claim, crop observation or forecast. Uniformly normalized to 1.5 m presentation height; not a field scale comparison.",
+      "runtimePosterWebpBytes": 75068,
+      "selectorThumbnailWebpBytes": 7108,
+      "browserRender": {
+        "loadMs": 32.900000005960464,
+        "triangles": 9792,
+        "drawCalls": 4,
+        "errors": []
+      }
+    },
+    {
+      "crop": "mungbean",
+      "triangles": 3732,
+      "meshNodes": [
+        "Mungbean_Branching_Stem",
+        "Mungbean_Trifoliate_Leaflets",
+        "Mungbean_Leaf_Veins",
+        "Mungbean_Long_Slender_Pods",
+        "Mungbean_Small_Yellow_Flowers"
+      ],
+      "presentationHeightMeters": 1.5,
+      "blenderBoundsMeters": {
+        "min": [
+          -0.6897,
+          -0.6976,
+          -0.0008
+        ],
+        "max": [
+          0.7001,
+          0.6766,
+          1.5
+        ]
+      },
+      "origin": "Base at (0,0,0); Blender Z up, exported glTF Y up",
+      "glbBytes": 83372,
+      "gzipGlbBytes": 55815,
+      "blendBytes": 166183,
+      "posterBytes": 837386,
+      "sha256": "2932acff7fc3cca4984aaabbdf8fa6296eaff3f56b7c6695b16e16e5ee4a6090",
+      "geometryStatus": "Illustrative botanical study, not a cultivar claim, crop observation or forecast. Uniformly normalized to 1.5 m presentation height; not a field scale comparison.",
+      "runtimePosterWebpBytes": 36124,
+      "selectorThumbnailWebpBytes": 5252,
+      "browserRender": {
+        "loadMs": 31.80000001192093,
+        "triangles": 3732,
+        "drawCalls": 5,
+        "errors": []
+      }
+    },
+    {
+      "crop": "sorghum",
+      "triangles": 7778,
+      "meshNodes": [
+        "Sorghum_Strong_Culm",
+        "Sorghum_Arching_Leaves",
+        "Sorghum_Compact_Panicle_Branches",
+        "Sorghum_Dense_Seed_Head"
+      ],
+      "presentationHeightMeters": 1.5,
+      "blenderBoundsMeters": {
+        "min": [
+          -0.4313,
+          -0.3809,
+          -0.0002
+        ],
+        "max": [
+          0.4803,
+          0.3626,
+          1.5
+        ]
+      },
+      "origin": "Base at (0,0,0); Blender Z up, exported glTF Y up",
+      "glbBytes": 161192,
+      "gzipGlbBytes": 64762,
+      "blendBytes": 232537,
+      "posterBytes": 692185,
+      "sha256": "fb773459637b718862e86532a973dd88779852b6edb645c05418513a9a9c0d98",
+      "geometryStatus": "Illustrative botanical study, not a cultivar claim, crop observation or forecast. Uniformly normalized to 1.5 m presentation height; not a field scale comparison.",
+      "runtimePosterWebpBytes": 22436,
+      "selectorThumbnailWebpBytes": 3354,
+      "browserRender": {
+        "loadMs": 31.900000005960464,
+        "triangles": 7778,
+        "drawCalls": 4,
+        "errors": []
+      }
+    },
+    {
+      "crop": "tomato",
+      "triangles": 5992,
+      "meshNodes": [
+        "Tomato_Branching_Herb_Stems",
+        "Tomato_Compound_Serrated_Leaflets",
+        "Tomato_Ripe_Red_Fruit",
+        "Tomato_Green_Fruit",
+        "Tomato_Star_Calyxes"
+      ],
+      "presentationHeightMeters": 1.5,
+      "blenderBoundsMeters": {
+        "min": [
+          -0.5864,
+          -0.5932,
+          -0.0007
+        ],
+        "max": [
+          0.5954,
+          0.5751,
+          1.5
+        ]
+      },
+      "origin": "Base at (0,0,0); Blender Z up, exported glTF Y up",
+      "glbBytes": 138004,
+      "gzipGlbBytes": 89351,
+      "blendBytes": 194688,
+      "posterBytes": 866894,
+      "sha256": "1f6b7eed55187ec9099adf8dcfdcc6ca953671de7cc2e07efaec73444534fd4e",
+      "geometryStatus": "Illustrative botanical study, not a cultivar claim, crop observation or forecast. Uniformly normalized to 1.5 m presentation height; not a field scale comparison.",
+      "runtimePosterWebpBytes": 40414,
+      "selectorThumbnailWebpBytes": 5516,
+      "browserRender": {
+        "loadMs": 32.900000005960464,
+        "triangles": 5992,
+        "drawCalls": 5,
+        "errors": []
+      }
+    },
+    {
+      "crop": "citrus",
+      "triangles": 11472,
+      "meshNodes": [
+        "Citrus_Woody_Trunk_And_Branches",
+        "Citrus_Oval_Glossy_Leaves",
+        "Citrus_Fruit_Stems",
+        "Citrus_Orange_Fruit",
+        "Citrus_Young_Green_Leaves"
+      ],
+      "presentationHeightMeters": 1.5,
+      "blenderBoundsMeters": {
+        "min": [
+          -0.5758,
+          -0.5249,
+          -0.0041
+        ],
+        "max": [
+          0.6009,
+          0.5092,
+          1.5
+        ]
+      },
+      "origin": "Base at (0,0,0); Blender Z up, exported glTF Y up",
+      "glbBytes": 258036,
+      "gzipGlbBytes": 189471,
+      "blendBytes": 280567,
+      "posterBytes": 980328,
+      "sha256": "828f071f82a9a79107d28aa5c7421c47f3b0c65b87f4442b7f7722925e08f85e",
+      "geometryStatus": "Illustrative botanical study, not a cultivar claim, crop observation or forecast. Uniformly normalized to 1.5 m presentation height; not a field scale comparison.",
+      "runtimePosterWebpBytes": 46640,
+      "selectorThumbnailWebpBytes": 6080,
+      "browserRender": {
+        "loadMs": 40.80000001192093,
+        "triangles": 11472,
+        "drawCalls": 5,
+        "errors": []
+      }
+    }
+  ],
+  "posterProcessing": {
+    "encoder": "Chromium canvas WebP",
+    "browser": "158.0.8127.18",
+    "quality": 0.82,
+    "maxWidth": 640,
+    "thumbnailWidth": 128
+  },
+  "browserReview": {
+    "browser": "158.0.8127.18",
+    "renderer": "Headless Chromium WebGL; single rendered frame on localhost, not a device FPS benchmark"
+  }
+}

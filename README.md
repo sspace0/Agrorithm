@@ -67,3 +67,6 @@ The original jt_1 logo is preserved and used on the project team page. Branding 
 CI verifies the locked install, types, lint, engine tests, static build and browser journeys. Pages deployment is **manual only**; nothing publishes or merges automatically. Private-repository Pages eligibility/settings may require owner action. GitHub Pages has not been deployed; the public Sites deployment is recorded in docs/PUBLIC_DEPLOYMENT.md.
 
 The opening page includes a scroll-driven soil cutaway with a static reduced-motion equivalent. Every major area has its own static-safe hash URL; the six planning steps are separate screens. One bundled DM Sans type family is used throughout. See [atlas methods](docs/ATLAS.md) for the limits of global crop/soil interpretation.
+
+## Updated experience
+Explore the eight crop references and four shared category models at #/crops, search the satellite atlas at #/atlas, or find source-linked explanations at #/help. Global Search (Ctrl/Cmd K) opens pages and tools. See docs/EXPERIENCE_UPDATE.md for measurements, screenshots and scientific scope. The complete static core still builds for /FieldShift/. No Gemini/API key is required.

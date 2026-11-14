@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { flushSync } from "react-dom";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -21,6 +22,8 @@ import {
   CloudRain,
   Printer,
   Upload,
+  Layers,
+  Settings2,
 } from "lucide-react";
 import {
   Area,
@@ -35,9 +38,12 @@ import {
   Bar,
   BarChart,
 } from "recharts";
-import { BRAND, MEMBERS, MODEL_VERSION, asset } from "./config";
+import { BRAND, MEMBERS, MODEL_VERSION, asset, cropAsset } from "./config";
 import { Diorama } from "./components/Diorama";
-import ScrollStory from "./components/ScrollStory";
+import HomeExperience from "./screens/HomeExperience";
+import Help from "./screens/Help";
+import NavigationSearch from "./components/NavigationSearch";
+import CropLibrary from "./screens/CropLibrary";
 import Atlas from "./screens/Atlas";
 import {
   compare,
@@ -143,7 +149,8 @@ export default function App() {
     !matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
   const [quality, setQuality] = useState(stored("fieldshift-quality", "auto"));
-  const [concept, setConcept] = useState<Concept>("studio");
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const concept: Concept = "studio";
   const [weather, setWeather] = useState<Day[]>([]);
   const [veg, setVeg] = useState<Vegetation | null>(null);
   const [weatherSource, setWeatherSource] = useState(
@@ -161,12 +168,21 @@ export default function App() {
   };
   useEffect(() => {
     const onhash = () => {
-      setRoute(location.hash.slice(1) || "/");
-      window.scrollTo(0, 0);
+      const update = () => {
+        flushSync(() => setRoute(location.hash.slice(1) || "/"));
+        window.scrollTo(0, 0);
+      };
+      if (
+        motion &&
+        document.startViewTransition &&
+        !matchMedia("(prefers-reduced-motion: reduce)").matches
+      )
+        document.startViewTransition(update);
+      else update();
     };
     addEventListener("hashchange", onhash);
     return () => removeEventListener("hashchange", onhash);
-  }, []);
+  }, [motion]);
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "ur" ? "rtl" : "ltr";
@@ -204,7 +220,7 @@ export default function App() {
     () => compare(farm, aligned ? weather : [], scenario),
     [farm, weather, scenario, aligned],
   );
-  const parts = route.split("/").filter(Boolean);
+  const parts = route.split("?")[0].split("/").filter(Boolean);
   const currentConcept = (
     ["studio", "console", "companion"].includes(parts[0]) ? parts[0] : concept
   ) as Concept;
@@ -212,7 +228,7 @@ export default function App() {
   const navigate = (path: string) => {
     location.hash = path;
   };
-  const start = (sample: boolean, c = concept) => {
+  const start = (sample: boolean, c: Concept = concept) => {
     setFarm(clone(sample ? SAMPLE : EMPTY));
     setScenario(clone(DEFAULT_SCENARIO));
     navigate(`/${c}/${sample ? "lab" : "setup"}`);
@@ -257,15 +273,18 @@ export default function App() {
         <Wind size={15} />
         <span>{motion ? "Motion on" : "Reduced motion"}</span>
       </button>
-      <select
-        aria-label="Graphics quality"
-        value={quality}
-        onChange={(e) => setQuality(e.target.value)}
-      >
-        <option value="auto">3D · balanced</option>
-        <option value="low">3D · low</option>
-        <option value="static">Static · no WebGL</option>
-      </select>
+      <label className="quality-control">
+        <Leaf size={14} />
+        <select
+          aria-label="Graphics quality"
+          value={quality}
+          onChange={(e) => setQuality(e.target.value)}
+        >
+          <option value="auto">3D · balanced</option>
+          <option value="low">3D · low</option>
+          <option value="static">Static · no WebGL</option>
+        </select>
+      </label>
     </div>
   );
   const header = (
@@ -278,136 +297,49 @@ export default function App() {
         <span className="beta">PUNJAB PILOT</span>
       </a>
       <nav className="top-links">
-        <a href="#/atlas">Crop atlas</a>
-        <a href="#/sources">How it works</a>
-        <a href="#/about">
-          About jt_1 <ArrowUpRight size={13} />
-        </a>
+        <a href={`#/${concept}/setup`}>Plan</a>
+        <a href="#/atlas">Map</a>
+        <a href="#/soil">3D explorer</a>
+        <a href="#/help">Help</a>
       </nav>
-      {controls}
+      <NavigationSearch />
+      <button
+        className="mobile-settings-trigger"
+        aria-expanded={settingsOpen}
+        aria-label="Display and language settings"
+        onClick={() => setSettingsOpen(!settingsOpen)}
+      >
+        <Settings2 size={18} />
+      </button>
+      <div
+        className={`display-controls ${settingsOpen ? "is-open" : ""}`}
+        id="display-controls"
+      >
+        {controls}
+      </div>
     </header>
   );
   const home = (
-    <>
-      <main className="home">
-        <div className="home-copy">
-          <IconText>
-            <span className="live-dot" /> EARTH OBSERVATIONS. GROUNDED
-            DECISIONS.
-          </IconText>
-          <h1>
-            A different
-            <br />
-            season{" "}
-            <em>
-              starts
-              <br />
-              here.
-            </em>
-          </h1>
-          <p className="intro">
-            Your soil has a story.
-            <br />
-            Explore the next chapter with NASA data.
-          </p>
-          <div className="hero-actions">
-            <button className="primary" onClick={() => start(false)}>
-              {lang === "ur" ? "منصوبہ شروع کریں" : "Start planning"}
-              <ArrowUpRight size={20} />
-            </button>
-            <button className="text-action" onClick={() => start(true)}>
-              {lang === "ur" ? "نمونہ کھیت آزمائیں" : "Try a sample farm"}
-              <ArrowRight size={17} />
-            </button>
-          </div>
-          {saved && (
-            <button
-              className="resume"
-              onClick={() => {
-                const v = stored<{ farm: Farm; scenario: Scenario }>(
-                  "fieldshift-plan",
-                  { farm: SAMPLE, scenario: DEFAULT_SCENARIO },
-                );
-                try {
-                  setFarm(validateFarm(v.farm));
-                  setScenario(validateScenario(v.scenario));
-                  navigate(`/${concept}/lab`);
-                } catch {
-                  say(
-                    "Saved plan could not be restored. Import a valid JSON plan.",
-                  );
-                }
-              }}
-            >
-              Resume your saved plan <ChevronRight size={16} />
-            </button>
-          )}
-          <div className="home-proof">
-            <span>
-              <MapPin size={15} /> Punjab, Pakistan
-            </span>
-            <span>One field. More possibilities.</span>
-          </div>
-        </div>
-        <div className="hero-art">
-          <div className="orbit-ring ring-one" />
-          <div className="orbit-ring ring-two" />
-          <Diorama motion={motion} quality={quality} />
-          <button className="beneath-link" onClick={() => navigate("/soil")}>
-            <span className="mini-icon">
-              <LayersIcon />
-            </span>
-            <span>
-              Good decisions go deeper.
-              <small>Explore beneath the surface</small>
-            </span>
-            <ArrowUpRight size={22} />
-          </button>
-        </div>
-      </main>
-      <ScrollStory motion={motion} quality={quality} />
-      <section className="home-bottom">
-        <div>
-          <span className="section-index">01 — UNDERSTAND</span>
-          <h3>Start with what is known.</h3>
-          <p>
-            Weather history, vegetation observations and your own field
-            knowledge.
-          </p>
-        </div>
-        <div>
-          <span className="section-index">02 — EXPLORE</span>
-          <h3>Make space for another way.</h3>
-          <p>
-            Compare rotations over the same three seasons, with constraints in
-            view.
-          </p>
-        </div>
-        <div>
-          <span className="section-index">03 — DECIDE</span>
-          <h3>See the trade-offs clearly.</h3>
-          <p>
-            Test water limits and priorities. Keep uncertainty part of the
-            conversation.
-          </p>
-        </div>
-      </section>
-      <footer className="home-footer">
-        <span>NASA SPACE APPS 2026 · TEAM jt_1</span>
-        <label>
-          Planning style
-          <select
-            value={concept}
-            onChange={(e) => setConcept(e.target.value as Concept)}
-          >
-            <option value="studio">Field Studio</option>
-            <option value="console">Agronomist Console</option>
-            <option value="companion">Farmer Companion</option>
-          </select>
-        </label>
-        <span>Private by default. Your field stays on your device.</span>
-      </footer>
-    </>
+    <HomeExperience
+      motion={motion}
+      quality={quality}
+      lang={lang}
+      saved={saved}
+      start={start}
+      resume={() => {
+        const v = stored<{ farm: Farm; scenario: Scenario }>(
+          "fieldshift-plan",
+          { farm: SAMPLE, scenario: DEFAULT_SCENARIO },
+        );
+        try {
+          setFarm(validateFarm(v.farm));
+          setScenario(validateScenario(v.scenario));
+          navigate(`/${concept}/lab`);
+        } catch {
+          say("Saved plan could not be restored. Import a valid JSON plan.");
+        }
+      }}
+    />
   );
   const appData = {
     farm,
@@ -579,7 +511,9 @@ export default function App() {
     </div>
   );
   return (
-    <div className={motion ? "app" : "app reduced-motion"}>
+    <div
+      className={`app ${motion ? "" : "reduced-motion"} ${route === "/" ? "home-route" : ""}`}
+    >
       <a
         className="skip-link"
         href="#main-content"
@@ -615,6 +549,16 @@ export default function App() {
             Roots, soil and groundwater are connected. Their scales—and the
             evidence needed to understand them—are different.
           </p>
+          <nav className="soil-subnav" aria-label="3D explorer pages">
+            <a href="#/soil" aria-current="page">
+              <Layers size={16} />
+              Soil & water
+            </a>
+            <a href="#/crops">
+              <Sprout size={16} />
+              Crop models
+            </a>
+          </nav>
           <Diorama
             explorer
             motion={motion}
@@ -668,6 +612,10 @@ export default function App() {
         <About />
       ) : parts[0] === "design" ? (
         <DesignReview start={(c) => start(true, c)} />
+      ) : parts[0] === "help" ? (
+        <Help key={route} />
+      ) : parts[0] === "crops" ? (
+        <CropLibrary motion={motion} quality={quality} key={route} />
       ) : (
         workspace
       )}
@@ -685,9 +633,6 @@ export default function App() {
       />
     </div>
   );
-}
-function LayersIcon() {
-  return <Sprout size={23} />;
 }
 type DataProps = {
   farm: Farm;
@@ -838,7 +783,10 @@ function Setup({ farm: f, setFarm }: DataProps) {
             <Droplets size={18} /> Water & soil
           </h3>
           <label>
-            Irrigation method
+            <span className="selector-art">
+              <Droplets size={16} />
+              Irrigation method
+            </span>
             <select
               value={f.irrigation}
               onChange={(e) => patch({ irrigation: e.target.value })}
@@ -941,7 +889,13 @@ function Setup({ farm: f, setFarm }: DataProps) {
           {f.sequence.map((p, i) => (
             <div className="sequence-row" key={i}>
               <label>
-                Crop
+                <span className="selector-art">
+                  <img
+                    src={asset(`images/crops/${cropAsset(p.crop)}-thumb.webp`)}
+                    alt=""
+                  />
+                  Crop
+                </span>
                 <select
                   value={p.crop}
                   onChange={(e) =>

@@ -7,8 +7,12 @@ import {
   Droplets,
   Plus,
   Minus,
+  Layers,
+  RotateCcw,
 } from "lucide-react";
-import { asset } from "../config";
+import { asset, cropAsset } from "../config";
+import LocationSearch from "../components/LocationSearch";
+import CropProfile from "../components/CropProfile";
 import {
   ATLAS_CROPS,
   broadFit,
@@ -111,23 +115,44 @@ export default function Atlas({
           </small>
         </div>
       </div>
+      <LocationSearch
+        onPick={(lat, lon) => {
+          pick(lat, lon);
+          document
+            .getElementById("satellite-map")
+            ?.scrollIntoView({ behavior: "instant", block: "start" });
+        }}
+      />
+      <button
+        className="map-jump"
+        onClick={() =>
+          document
+            .getElementById("satellite-map")
+            ?.scrollIntoView({ behavior: "instant", block: "start" })
+        }
+      >
+        <MapPin size={16} />
+        View the satellite map
+      </button>
       <div className="atlas-controls">
         <div className="segmented">
           <button
             aria-pressed={mode === "climate"}
             onClick={() => setMode("climate")}
           >
-            Climate families
+            <Globe2 size={16} /> Climate families
           </button>
           <button
             aria-pressed={mode === "crop"}
             onClick={() => setMode("crop")}
           >
-            Crop climate fit
+            <Leaf size={16} /> Crop climate fit
           </button>
         </div>
         <label>
-          Explore a crop
+          <span>
+            <Leaf size={15} /> Explore a crop
+          </span>
           <select
             aria-label="Atlas crop"
             value={crop}
@@ -144,7 +169,9 @@ export default function Atlas({
           </select>
         </label>
         <label>
-          Illustrative soil filter
+          <span>
+            <Layers size={15} /> Illustrative soil filter
+          </span>
           <select
             aria-label="Atlas soil filter"
             value={soil}
@@ -185,7 +212,7 @@ export default function Atlas({
         </p>
       )}
       <div className="atlas-layout">
-        <section className="world-panel">
+        <section className="world-panel" id="satellite-map">
           <div className="map-header">
             <span>
               <span className="live-dot" />{" "}
@@ -280,7 +307,7 @@ export default function Atlas({
                   pick(32.1, 73);
                 }}
               >
-                Reset
+                <RotateCcw size={14} /> Reset
               </button>
             </div>
           </div>
@@ -315,7 +342,7 @@ export default function Atlas({
               ["Europe", 48, 10],
             ].map(([name, lat, lon]) => (
               <button key={name} onClick={() => pick(+lat, +lon)}>
-                {name}
+                <MapPin size={13} /> {name}
               </button>
             ))}
           </div>
@@ -389,7 +416,11 @@ export default function Atlas({
                     setMode("crop");
                   }}
                 >
-                  <CropGlyph kind={c.symbol} />
+                  <img
+                    className="crop-choice-art"
+                    src={asset(`images/crops/${cropAsset(c.id)}-thumb.webp`)}
+                    alt=""
+                  />
                   <span>
                     {c.name}
                     <small>{fit.label}</small>
@@ -414,8 +445,15 @@ export default function Atlas({
       </div>
       <section className="atlas-detail">
         <div className="atlas-crop-art">
-          <CropGlyph kind={c.symbol} />
+          <img
+            className="atlas-plant-poster"
+            src={asset(`images/crops/${cropAsset(crop)}.webp`)}
+            alt={`Illustrative ${c.name} plant`}
+          />
           <span>{c.latin}</span>
+          <a className="text-action" href={`#/crops?crop=${crop}`}>
+            Inspect the 3D plant <ArrowUpRight size={16} />
+          </a>
         </div>
         <div>
           <span className="eyebrow">WHY {c.name.toUpperCase()}?</span>
@@ -452,6 +490,7 @@ export default function Atlas({
           </a>
         </div>
       </section>
+      <CropProfile crop={crop} />
       <details className="paper atlas-methods">
         <summary>What this map can—and cannot—tell you</summary>
         <p>

@@ -187,7 +187,7 @@ test("cached sample is usable offline after installation", async ({
   await expect(
     page.getByText("Genuine cached observations · 2023"),
   ).toBeVisible();
-  await page.getByRole("link", { name: "Crop atlas", exact: true }).click();
+  await page.getByRole("link", { name: "Map", exact: true }).click();
   await expect
     .poll(() =>
       page

@@ -59,9 +59,10 @@ export default function ScrollStory({
       className={`scroll-story ${motion ? "" : "static-story"}`}
       ref={el}
       aria-label="Scroll through the soil illustration"
+      id="soil-story"
     >
       <div className="story-sticky">
-        <div className="story-copy">
+        <div className="story-copy" key={motion ? step : 0}>
           <span className="eyebrow">
             A CLOSER LOOK · {String(step + 1).padStart(2, "0")} / 03
           </span>

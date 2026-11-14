@@ -45,3 +45,7 @@ Private-repository Pages requires an eligible GitHub plan and owner Pages/enviro
 Review PR: https://github.com/sspace0/FieldShift/pull/1. The initial complete source snapshot is commit 1345c3eeeb8b808b7a06770bb3680cd9747180e6; final documentation refinements are subsequent commits on the same feature branch.
 
 Satellite-map revision: genuine NASA August 2004 Blue Marble imagery is bundled beneath the climate/crop overlays. The atlas/opacity, offline satellite-image reload and responsive checks passed locally after this revision. The prior complete source snapshot cd9dfe95022a5bcf98236cd246e42c1185c8d306 also passed all GitHub CI steps (run 43618923030); the final satellite revision is checked by a subsequent run.
+
+## Subsequent public publication
+
+On 2026-11-14 the user requested the shareable HTTPS link. Sites version 1 deployed successfully at https://fieldshift-jt1.spacetime24.chatgpt.site with public URL access, while the GitHub repository remains private and PR #1 unmerged. Anonymous live HTTP, sample-planner, satellite/opacity and mobile checks passed without page errors. Details and exact hosting source/deployment identifiers are in PUBLIC_DEPLOYMENT.md. Earlier no-deployment statements above describe the initial PR handoff; GitHub Pages itself is still not deployed.

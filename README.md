@@ -2,6 +2,8 @@
 
 **A different season starts here.**
 
+[Open the public website](https://fieldshift-jt1.spacetime24.chatgpt.site) · [Deployment record](docs/PUBLIC_DEPLOYMENT.md)
+
 A static crop-rotation exploration tool for a configurable Punjab, Pakistan pilot. NASA POWER weather and quality-filtered HLS vegetation provide regional historical context. Local inputs, stated crop assumptions and a transparent decision engine help compare a baseline with two alternatives over the same 36 months.
 
 ![FieldShift opening menu](docs/design/menu-desktop.png)
@@ -62,6 +64,6 @@ The original jt_1 logo is preserved and used on the project team page. Branding 
 
 [Methods](docs/METHODS.md) · [Data registry](docs/DATA_REGISTRY.md) · [Build specification](docs/BUILD_SPEC.md) · [Design rationale and previews](docs/design/README.md) · [Verification results](docs/VERIFICATION.md) · [Demo walkthrough](docs/DEMO.md) · [Import schemas](docs/IMPORTS.md) · [Blank feedback template](public/data/feedback-template.md) · [Team](docs/TEAM.md).
 
-CI verifies the locked install, types, lint, engine tests, static build and browser journeys. Pages deployment is **manual only**; nothing publishes or merges automatically. Private-repository Pages eligibility/settings may require owner action. No live deployment is claimed.
+CI verifies the locked install, types, lint, engine tests, static build and browser journeys. Pages deployment is **manual only**; nothing publishes or merges automatically. Private-repository Pages eligibility/settings may require owner action. GitHub Pages has not been deployed; the public Sites deployment is recorded in docs/PUBLIC_DEPLOYMENT.md.
 
 The opening page includes a scroll-driven soil cutaway with a static reduced-motion equivalent. Every major area has its own static-safe hash URL; the six planning steps are separate screens. One bundled DM Sans type family is used throughout. See [atlas methods](docs/ATLAS.md) for the limits of global crop/soil interpretation.

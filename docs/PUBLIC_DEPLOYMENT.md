@@ -1,0 +1,26 @@
+# Public deployment
+
+Published and anonymously verified on 2026-11-14:
+
+**https://fieldshift-jt1.spacetime24.chatgpt.site**
+
+The site is public to anyone with its URL. The GitHub source repository remains private and PR #1 remains unmerged. GitHub Pages has not been enabled or deployed; the existing manual Pages workflow remains available for future use.
+
+## Hosting identity and reproducibility
+
+- Sites project: `appgprj_6af89821fc248191a588f9257cd991be`.
+- Saved version: 1 (`appgprj_6af89821fc248191a588f9257cd991be~appgver_b6f142913c448191b621f94fbcd40b27`).
+- Successful deployment: `appgdep_6af898ca3a848191a6e0e236b45b2540`.
+- Hosted source commit: `070ec3a8cfda8af9cc9ccfedfc881c12d069bf17` in the Sites source repository.
+- Application source corresponds to GitHub commit `8fa18c6da2afcf4517e3a90b08d9ea223af71c89`, with the added hosting manifest and a root-path build.
+- Hosting manifest: `.openai/hosting.json`; static directory `dist`.
+
+For this host, build with `DEPLOY_BASE=/`. GitHub Pages builds continue to default to `/FieldShift/`; display branding is independent of either path. On PowerShell, set `$env:DEPLOY_BASE='/'` for the hosting build process, run the normal build, and remove that environment override afterward. The publication used a separate checkout under the ignored .cache directory, so the original local `/FieldShift/` preview was preserved.
+
+Use the existing project ID for subsequent Sites updates. Obtain a fresh short-lived source credential through the Sites tools, push the exact source, package it with the Sites workflow helper, save a version and deploy that saved version. Do not commit credentials, deployment archives or private farm inputs. The archive is built from the exact pushed hosting source and is not the source repository itself.
+
+## Live verification
+
+The deployed origin returned HTTP 200 in an anonymous Chromium context, with no authentication redirect. The opening menu loaded, the genuine-data sample showed both alternatives under its stated demo assumptions, the 5400×2700 satellite basemap loaded, the overlay opacity changed to 25%, and the 390 px mobile layout had no document overflow. No page JavaScript errors were observed.
+
+Saved farmer plans remain in each visitor's own browser. This deployment does not copy the owner's browser storage or share plans between visitors. Scientific and translation limitations in METHODS.md and VERIFICATION.md still apply.

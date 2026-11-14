@@ -51,3 +51,7 @@ The production service worker caches the versioned static bundle after a success
 The UI supports weather JSON with explicit dataset coordinates and plan JSON with soil and crop dates. Example schema is in docs/IMPORTS.md. A changed field coordinate invalidates the regional weather match until matching data is supplied. It does not silently transplant cached observations.
 
 On the existing Windows workspace, `./scripts/run.ps1 dev` (or build/preview/typecheck/lint/test) locates a normal pnpm installation or the bundled runtime beside Node. This avoids hardcoding a particular Codex runtime version.
+
+## Public hosted website
+
+The user requested a shareable HTTPS link after the initial PR delivery. FieldShift is now public at https://fieldshift-jt1.spacetime24.chatgpt.site via Sites. This does not change the private GitHub repository or merge PR #1. See PUBLIC_DEPLOYMENT.md for the project identity, root-path build recipe and observed live checks. The GitHub Pages instructions above describe the separate, still-unused Pages deployment option.

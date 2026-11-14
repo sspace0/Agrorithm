@@ -3,6 +3,7 @@ import {
   lazy,
   Suspense,
   useCallback,
+  useEffect,
   useState,
   type ReactNode,
 } from "react";
@@ -54,6 +55,10 @@ export default function CropLibrary({
     [ready, setReady] = useState(false),
     [failed, setFailed] = useState(false),
     [reset, setReset] = useState(0);
+  useEffect(() => {
+    setActive(false);
+    setReady(false);
+  }, [quality]);
   const onReady = useCallback(() => setReady(true), []),
     onFail = useCallback(() => {
       setFailed(true);
@@ -157,9 +162,12 @@ export default function CropLibrary({
             className="plant-poster"
             src={asset(`images/crops/${cropAsset(crop)}.webp`)}
             alt={`Illustrative ${group.example} plant representing ${group.name}`}
-            style={{ opacity: ready && active && !failed ? 0 : 1 }}
+            style={{
+              opacity:
+                ready && active && !failed && quality !== "static" ? 0 : 1,
+            }}
           />
-          {active && !failed && (
+          {active && !failed && quality !== "static" && (
             <PlantBoundary key={`${crop}-${reset}`} onFail={onFail}>
               <Suspense fallback={null}>
                 <CropCanvas

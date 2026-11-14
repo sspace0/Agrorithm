@@ -100,6 +100,18 @@ test("four illustrated categories cover eight crop profiles and fetch only the c
   expect(models[0]).toContain("tomato.glb");
   await page.getByRole("button", { name: "Poster view", exact: true }).click();
   await expect(page.locator(".plant-stage canvas")).toHaveCount(0);
+  await page
+    .getByRole("button", { name: "Explore in 3D", exact: true })
+    .click();
+  await expect(page.locator(".plant-stage canvas")).toBeVisible();
+  await page
+    .getByRole("combobox", { name: "Graphics quality" })
+    .selectOption("static");
+  await expect(page.locator(".plant-stage canvas")).toHaveCount(0);
+  await page
+    .getByRole("combobox", { name: "Graphics quality" })
+    .selectOption("auto");
+  await expect(page.locator(".plant-stage canvas")).toHaveCount(0);
   await context.close();
 });
 test("phones start with a useful poster and no soil model download", async ({

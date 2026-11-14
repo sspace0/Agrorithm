@@ -52,3 +52,7 @@ On 2026-11-14 the user requested the shareable HTTPS link. Sites version 1 deplo
 
 ## Experience revision verification
 The later experience revision passes 23 unit tests and the complete 20-test production-browser suite; TypeScript/ESLint/build pass. New asset sizes, screenshots, source applicability and phone poster defaults supersede the earlier visual asset measurements above; see EXPERIENCE_UPDATE.md. Current publication details are maintained in PUBLIC_DEPLOYMENT.md.
+
+Remote CI run43626894174 passed for experience commit5758712d6eb31790751e8f70b45d2d8699fedfc9. Anonymous live checks of Sites version2 passed, including all four GLBs and390px mobile. A later crop-quality regression check ensures switching to Static unloads an already opened plant canvas and switching back requires another explicit3D request.
+
+The active crop viewer now distinguishes renderer teardown from a genuine WebGL context loss. Reopen/poster/static-quality regression and all five experience tests passed after the cleanup fix.

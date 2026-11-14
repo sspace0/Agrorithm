@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { asset, cropAsset } from "../config";
@@ -20,6 +20,13 @@ export default function CropCanvas({
   onReady: () => void;
   onLost: () => void;
 }) {
+  const mounted = useRef(true);
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+    };
+  }, []);
   return (
     <Canvas
       dpr={low ? 1 : [1, 1.5]}
@@ -29,7 +36,8 @@ export default function CropCanvas({
       onCreated={({ gl }) =>
         gl.domElement.addEventListener("webglcontextlost", (e) => {
           e.preventDefault();
-          onLost();
+          // Renderer cleanup also loses its context; only report an active viewer loss.
+          if (mounted.current) onLost();
         })
       }
     >

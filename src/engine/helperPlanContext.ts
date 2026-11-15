@@ -41,6 +41,7 @@ export function createHelperPlanContext(
 }
 
 const planLinks = [
+  { label: "See this in the Rotation lab", href: "#/studio/lab" },
   { label: "Review side-by-side results", href: "#/studio/tradeoffs" },
   { label: "Review field inputs", href: "#/studio/setup" },
   { label: "Inspect NASA observations", href: "#/studio/evidence" },

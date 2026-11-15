@@ -77,9 +77,21 @@
         <p>Preparing your field view</p>
       </div>
     </div>
-    <noscript
-      >Enable JavaScript to use the local crop-planning calculations.</noscript
-    >
+    <noscript>
+      <style>#root{display:none!important}.noscript-summary{max-width:850px;margin:0 auto;padding:60px 28px;color:#e3edcf;font:18px/1.8 "Century Gothic","Segoe UI",sans-serif}.noscript-summary h1{font-size:clamp(36px,8vw,64px);line-height:1.15}.noscript-summary a{color:#d3e7a8}.noscript-summary li{margin-bottom:15px}</style>
+      <main class="noscript-summary">
+        <p>AGRORITHM · PUNJAB PILOT</p>
+        <h1>A different season starts here.</h1>
+        <p>Explore crop rotations using historical NASA observations, farmer inputs and transparent water screening. Compare a demonstration maize–wheat sequence with pulse and cover-crop alternatives over the same three years.</p>
+        <ul>
+          <li>NASA POWER / MERRA-2: daily temperature and rainfall, 2018–2024. These observations drive crop-water estimates and historical climate exposure.</li>
+          <li>NASA / USGS HLS L30 v2.0: 2023 vegetation observations; 16 of 43 scenes pass quality checks. NDVI provides cover context, not crop identity or a soil-health measurement.</li>
+          <li>Cover, family diversity, stated residue and water exposure are stewardship proxies. Soil carbon, nutrient status and soil structure are not measured here.</li>
+        </ul>
+        <p>Regional weather grid; demonstration soil values; scenarios are not forecasts. Enable JavaScript for interactive planning, maps, local saving and exports.</p>
+        <p><a href="https://github.com/sspace0/Agrorithm">Source, methods and setup</a> · <a href="%BASE_URL%data/weather.json">Cached NASA weather</a> · <a href="%BASE_URL%data/vegetation.json">Satellite record and provenance</a></p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

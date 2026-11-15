@@ -52,6 +52,7 @@ import NavigationSearch from "./components/NavigationSearch";
 import FindFarmLocation from "./components/FindFarmLocation";
 import BootOverlay from "./components/BootOverlay";
 import RotationComparison from "./components/RotationComparison";
+import RotationHeadline from "./components/RotationHeadline";
 import { rankingReasons } from "./engine/ranking";
 import { NasaEvidencePanel, WeatherDataStrip } from "./components/NasaEvidencePanel";
 import NasaScopePanel from "./components/NasaScopePanel";
@@ -358,6 +359,7 @@ export default function App() {
       <nav className="top-links">
         <a href={`#/${concept}/setup`}>Plan</a>
         <a href="#/atlas">Map</a>
+        <a href={`#/${currentConcept}/lab`}>Results</a>
         <a href="#/soil">3D explorer</a>
         <a href="#/help">Help</a>
       </nav>
@@ -540,6 +542,7 @@ export default function App() {
           </div>
         )}
         {["lab", "tradeoffs", "export"].includes(page) && <>
+          {page === "lab" && <RotationHeadline results={results} farm={farm} scenario={scenario} onOpenEvidence={() => navigate(`/${currentConcept}/evidence`)} />}
           <WeatherDataStrip weather={weather} weatherSource={weatherSource} vegetation={veg} weatherMatchesFarm={aligned} vegetationMatchesFarm={Math.abs(farm.lat - 32.1) < .001 && Math.abs(farm.lon - 73) < .001} onOpenEvidence={() => navigate(`/${currentConcept}/evidence`)} />
           <div className="results-explain"><div><h3>Understand your results</h3><p>Ask about this field’s water estimates, differences between rotations, or the exact reasons an option is not ranked.</p></div><button className="primary" onClick={event => requestAgrorithmHelp(helperPlanContext, undefined, event.currentTarget)}>Explain my results <Info size={18}/></button></div>
         </>}

@@ -29,8 +29,8 @@ html[data-orbit-navigation="intro"] .app.home-route .agr-helper-trigger { displa
 .agr-helper-user { max-width: 92%; margin: 0 0 16px auto; border: 1px solid #c4d6b2; border-radius: 13px 13px 3px 13px; padding: 15px 17px; background: #e3edda; overflow-wrap: anywhere; }
 .agr-helper-user > .eyebrow { display: block; font-size: 10px; margin-bottom: 8px; }
 .agr-helper-busy { display: flex; gap: 8px; align-items: center; font-size: 11px; }
-.agr-helper-suggestions { display: flex; gap: 7px; overflow-x: auto; padding: 13px 22px; border-top: 1px solid #d8e2cd; scrollbar-width: thin; }
-.agr-helper-suggestions button { display: inline-flex; align-items: center; gap: 7px; flex-shrink: 0; font-size: 12px; padding: 10px 12px; min-height: 44px; border: 1px solid #c5d6b6; border-radius: 20px; background: #edf3e5; }
+.agr-helper-suggestions { display: flex; flex-wrap:wrap; gap: 7px; overflow:visible; padding: 13px 22px; border-top: 1px solid #d8e2cd; }
+.agr-helper-suggestions button { display: inline-flex; align-items: center; gap: 7px; max-width:100%; white-space:normal; text-align:left; font-size: 12px; line-height:1.5; padding: 10px 12px; min-height: 44px; border: 1px solid #c5d6b6; border-radius: 20px; background: #edf3e5; }
 .agr-helper-form { padding: 3px 22px 11px; }
 .agr-helper-form > label { font-size: 12px; margin-bottom: 8px; display: block; }
 .agr-helper-form > div { display: flex; gap: 8px; align-items: stretch; }

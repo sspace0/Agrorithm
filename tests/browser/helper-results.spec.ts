@@ -53,7 +53,7 @@ for(const viewport of [{width:1440,height:1000},{width:390,height:844}]) {
     await page.locator(".boot-overlay").waitFor({state:"hidden"});
     await page.getByRole("button",{name:"Load sample",exact:true}).click();
     await expect(page.locator(".comparison-option")).toHaveCount(3);
-    const opener=page.getByRole("button",{name:"Explain my results",exact:true});
+    const opener=page.locator(".results-explain").getByRole("button",{name:"Explain my results",exact:true});
     await opener.scrollIntoViewIfNeeded();
     await opener.evaluate(element=>element.addEventListener("click",()=>{element.dataset.helperOpenScroll=String(scrollY);},{capture:true,once:true}));
     await opener.click();

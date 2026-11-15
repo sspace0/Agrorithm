@@ -1,7 +1,7 @@
 import { GUIDE } from "../data/guide";
 import { PROFILES, type CropProfile } from "../data/cropProfiles";
 import { ATLAS_CROPS } from "../data/atlas";
-import { assignWeatherPattern, type WeatherPatternModel } from "./weatherPatterns";
+import { assignWeatherPattern, plainWeatherPattern, type WeatherPatternModel } from "./weatherPatterns";
 import { answerPlanQuestion, type HelperPlanContext } from "./helperPlanContext";
 
 export interface HelperContext { month?: string; topicIds?: string[]; cropIds?: string[]; plan?: HelperPlanContext; }
@@ -17,12 +17,12 @@ export function historicalMonthFromQuestion(query: string) {
   if (dates.size>1 || months.length>1 || years.length>1) return { month:null, ambiguous:true, needsDate:false };
   return { month:[...dates][0] || null, ambiguous:false, needsDate:(months.length>0||years.length>0)&&dates.size===0 };
 }
-const modelLinks = [{label:"Explore learned weather patterns",href:"#/weather-patterns"},{label:"NASA POWER source",href:"https://power.larc.nasa.gov/docs/services/api/temporal/daily/"}];
+const modelLinks = [{label:"Explore learned weather patterns",href:"#/weather-patterns"},{label:"NASA POWER source",href:"https://power.larc.nasa.gov/docs/services/api/temporal/daily/"},{label:"See this in the Rotation lab",href:"#/studio/lab"}];
 export const HELPER_WELCOME: HelperAnswer = {kind:"welcome",title:"A clearer next step.",text:"Ask about a historical month, the model, or a farming-data topic. I use the learned NASA weather patterns and the project's documented source guide. Questions stay in this browser session.",links:[{label:"Open the pattern lab",href:"#/weather-patterns"},{label:"Browse the field guide",href:"#/help"}]};
 const scopeQuestion = /\b(forecast|predict(?:ion|ions)?|future|tomorrow|profit|yield|guarantee|guaranteed)\b|\bbest crop\b|\bwhich crop\b|\bwhat (?:crop|should i plant)\b|\b(?:carbon|nitrogen) (?:gain|increase|credit)\b|\b(?:my|field|farm)(?:'s)? water.table depth\b/i;
 const stop = new Set("a an the is are was were i my me you your can could would should how what where when why do does did to of for and or please tell about this that it much mean means explain".split(" "));
 const monthLabel = (month: string) => new Intl.DateTimeFormat("en",{month:"long",year:"numeric",timeZone:"UTC"}).format(new Date(`${month}-15T12:00:00Z`));
-const guideLinks = (entry: typeof GUIDE[number]) => [{label:entry.action,href:`#${entry.route}`},{label:`Source: ${entry.title}`,href:entry.source.startsWith("/")?`#${entry.source}`:entry.source}];
+const guideLinks = (entry: typeof GUIDE[number]) => [{label:entry.action,href:`#${entry.route}`},{label:"See this in the Rotation lab",href:"#/studio/lab"},{label:`Source: ${entry.title}`,href:entry.source.startsWith("/")?`#${entry.source}`:entry.source}];
 const topicPatterns: Record<string, RegExp> = {
   start:/\b(start|begin|setup)\b/i, map:/\b(map|atlas|coordinates|location|blue marble)\b/i,
   water:/\b(irrigation|water accounting|water budget|evapotranspiration|ET|millimetre|volume)\b/i,
@@ -107,7 +107,7 @@ export function answerAgrorithmQuestion(question: string, model: WeatherPatternM
     if (!assignment) return {kind:"unavailable",title:"This comparison is unresolved.",text:"All four valid features are required. Missing evidence cannot be treated as a closer historical match.",links:modelLinks};
     const label=monthLabel(row.month);
     const guide=sourceAnswer(query,{});
-    return {kind:"learned-pattern",title:`${label} · ${assignment.nearest.cluster.label}`,text:`${assumedYear?`Assuming ${row.month.slice(0,4)} from the previous month you asked about. `:""}This complete NASA POWER month was ${row.split==="heldout"?"held out of fitting":"used in training"}. Its nearest learned center is a descriptive assignment for the Punjab regional point, not a crop recommendation.`,facts:[`Mean daily minimum ${row.features.meanTminC.toFixed(2)} °C; mean daily maximum ${row.features.meanTmaxC.toFixed(2)} °C.`,`Monthly precipitation ${row.features.totalRainMm.toFixed(2)} mm; ${(100*row.features.dryDayFraction).toFixed(2)}% of days had less than 1 mm rainfall.`,`Coverage ${row.completeDays}/${row.expectedDays} complete days. Standardized distance ${assignment.nearest.distance.toFixed(2)}; not a confidence score.`,"Regional MERRA-2/POWER meteorology (~0.5° × 0.63° grid), not a field sensor. Model power-monthly-kmeans-1.0.0."],sections:guide?.sections,context:{...context,month:row.month},links:modelLinks};
+    return {kind:"learned-pattern",title:`${label} · ${plainWeatherPattern(assignment.nearest.cluster.id, assignment.nearest.cluster.label)}`,text:`${assumedYear?`Assuming ${row.month.slice(0,4)} from the previous month you asked about. `:""}This complete NASA POWER month was ${row.split==="heldout"?"held out of fitting":"used in training"}. Its nearest learned center is a descriptive assignment for the Punjab regional point, not a crop recommendation.`,facts:[`Mean daily minimum ${row.features.meanTminC.toFixed(2)} °C; mean daily maximum ${row.features.meanTmaxC.toFixed(2)} °C.`,`Monthly precipitation ${row.features.totalRainMm.toFixed(2)} mm; ${(100*row.features.dryDayFraction).toFixed(2)}% of days had less than 1 mm rainfall.`,`Coverage ${row.completeDays}/${row.expectedDays} complete days. Standardized distance ${assignment.nearest.distance.toFixed(2)}; not a confidence score.`,"Regional MERRA-2/POWER meteorology (~0.5° × 0.63° grid), not a field sensor. Model power-monthly-kmeans-1.0.0."],sections:guide?.sections,context:{...context,month:row.month},links:modelLinks};
   }
   if (date.needsDate) return {kind:"clarification",title:"Which historical month and year?",text:"Try “What was July 2023 like?” I can compare complete months in the bundled 2018–2024 record.",links:modelLinks};
   const guide=sourceAnswer(query,context);

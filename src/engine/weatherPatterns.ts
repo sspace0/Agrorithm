@@ -1,5 +1,12 @@
 export const WEATHER_FEATURES = ["meanTminC", "meanTmaxC", "totalRainMm", "dryDayFraction"] as const;
 export type WeatherFeature = (typeof WEATHER_FEATURES)[number];
+/** Plain display names describe the learned centers, not agronomic thresholds. */
+export const plainWeatherPattern = (id: string, fallback: string) => ({
+  "pattern-1": "Cooler, drier months",
+  "pattern-2": "Warm, drier months",
+  "pattern-3": "Hot, wetter months",
+  "pattern-4": "Hot, drier months",
+}[id] ?? fallback);
 export type WeatherFeatures = Record<WeatherFeature, number>;
 export interface WeatherPattern {
   id: string;

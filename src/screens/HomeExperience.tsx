@@ -59,6 +59,7 @@ export default function HomeExperience({
             Begin with what we can observe. Add what you know about your field.
             Explore the choices between them.
           </p>
+          <button className="primary sample-judge-entry" onClick={() => start(true)}>Load Punjab example → open Rotation lab <ArrowUpRight size={18}/></button>
         </div>
         <div className="prologue-evidence">
           <a href="#/sources">

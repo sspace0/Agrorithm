@@ -12,7 +12,7 @@
 .results-data-strip strong,.results-data-strip small { display:block; }.results-data-strip strong { font-size:12px; letter-spacing:.3px; margin-bottom:5px; }.results-data-strip small { font-size:12px; color:#506452; }.results-data-strip a { display:flex; align-items:center; gap:6px; font-size:13px; text-decoration:underline; text-underline-offset:4px; }
 .results-context { margin-top:42px; }
 .app { --shadow-soft:0 10px 28px #173d3210; --shadow-raised:0 18px 42px #173d321c; --shadow-control:0 4px 12px #173d3218; }
-.app .paper,.app .comparison-option,.app .rotation-headline,.app .weather-data-strip,.app .results-extra,.app .input-assessment-row { box-shadow:var(--shadow-soft); }
+.app .paper,.app .comparison-option,.app .rotation-headline,.app .results-data-strip,.app .results-extra,.app .input-assessment-row { box-shadow:var(--shadow-soft); }
 .app [data-annotation] { box-shadow:var(--shadow-control); }
 .app .primary,.app .agr-helper-trigger { box-shadow:var(--shadow-control); }
 .app .primary:hover,.app .primary:focus-visible { box-shadow:var(--shadow-raised); }

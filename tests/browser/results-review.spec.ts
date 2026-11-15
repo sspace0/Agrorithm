@@ -21,8 +21,16 @@ for (const concept of ["studio", "console", "companion"]) {
     await page.getByRole("button", { name: "Explain my results", exact: true }).click();
     await expect(page.locator(".agr-helper-answer").last()).toContainText("1,517.93 mm");
     await page.getByRole("button", { name: "Close Agrorithm helper", exact: true }).click();
-    await expect(page.getByTestId("nasa-evidence-panel")).toContainText("does not automatically change the numerical rotation score");
-    await expect(page.getByRole("complementary", { name: "Soil-health interpretation" })).toContainText("do not measure organic carbon");
+    const soilSummary = page.locator(".soil-proxy-summary");
+    await expect(soilSummary).toBeVisible();
+    await expect(soilSummary).toContainText("They do not measure soil carbon");
+    const evidence = page.locator("details.results-extra").filter({
+      has: page.locator("summary", { hasText: "Full NASA data record & soil-health interpretation" }),
+    });
+    await evidence.locator(":scope > summary").click();
+    await expect(evidence.getByTestId("nasa-evidence-panel")).toBeVisible();
+    await expect(evidence.getByTestId("nasa-evidence-panel")).toContainText("does not automatically change the numerical rotation score");
+    await expect(evidence.getByRole("complementary", { name: "Soil-health interpretation" })).toContainText("do not measure organic carbon");
     const currentName = await page.locator(".field-chip").innerText();
     await page.getByRole("link", { name: "Open your farm plan", exact: true }).click();
     await expect(page.getByLabel("Field name", { exact: true })).toHaveValue(currentName);

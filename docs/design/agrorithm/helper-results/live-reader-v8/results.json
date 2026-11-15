@@ -1,0 +1,116 @@
+{
+  "at": "2026-11-15T19:21:44.980Z",
+  "base": "https://fieldshift-jt1.spacetime24.chatgpt.site/?revision=8",
+  "totalMs": 103200,
+  "outcome": "failed",
+  "checks": [
+    {
+      "name": "Evidence T_max rendered as attached and visible table subscript",
+      "pass": true,
+      "text": "max"
+    },
+    {
+      "name": "Friendly exact social greeting",
+      "pass": true
+    },
+    {
+      "name": "No model weight requests before explicit consent",
+      "pass": true,
+      "count": 0
+    },
+    {
+      "name": "Live reader verification",
+      "pass": false,
+      "error": "expect(locator).toContainText(expected) failed\n\nLocator: locator('.generated-accepted').last()\nExpected substring: \"259.09 mm\"\nTimeout: 100000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toContainText\" locator('.generated-accepted').last() with timeout 100000ms\n  - waiting for locator('.generated-accepted').last()\n"
+    }
+  ],
+  "errors": [],
+  "modelRequests": [
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/manifest.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/tokenizer_config.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/config.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/generation_config.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.001.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/v2/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "method": "GET"
+    }
+  ],
+  "assetResponses": [
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/manifest.json",
+      "status": 200
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/tokenizer_config.json.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/config.json.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/generation_config.json.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/v2/tokenizer.json",
+      "status": 200
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://fieldshift-jt1.spacetime24.chatgpt.site/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "status": 200
+    }
+  ]
+}

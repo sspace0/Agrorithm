@@ -109,6 +109,8 @@ for (const concept of ["studio", "console", "companion"])
   test(`${concept}: complete sample journey, controls and exports`, async ({
     page,
   }) => {
+    // Six multi-year worker replays share CPU with the live 3D inspector.
+    test.setTimeout(60000);
     await page.goto(`./#/${concept}/setup`);
     await page.getByRole("button", { name: "Load sample" }).click();
     await expect(page.locator(".rotation-card")).toHaveCount(3);
@@ -136,7 +138,7 @@ for (const concept of ["studio", "console", "companion"])
       .getByRole("button", { name: "Run six sensitivity scenarios" })
       .click();
     await expect(page.getByText("Feasible cases / 6")).toBeVisible({
-      timeout: 15000,
+      timeout: 30000,
     });
     await page.getByRole("link", { name: "Your plan", exact: false }).click();
     const jsonDownload = page.waitForEvent("download");

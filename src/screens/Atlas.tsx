@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import { asset, cropAsset } from "../config";
 import LocationSearch from "../components/LocationSearch";
+import FindFarmLocation from "../components/FindFarmLocation";
+import type { CoordinateEvidence } from "../engine/types";
 import CropProfile from "../components/CropProfile";
 import { sessionValue, saveSession } from "../state/viewState";
 import { equirectangularPoint } from "../engine/presentation";
@@ -39,7 +41,11 @@ const GROUP_COLORS = ["#dbe8d4", "#d4b47d", "#87a897", "#8ba8bc", "#b9bec8"];
 export default function Atlas({
   onUseLocation,
 }: {
-  onUseLocation: (lat: number, lon: number) => void;
+  onUseLocation: (
+    lat: number,
+    lon: number,
+    evidence?: CoordinateEvidence,
+  ) => void;
 }) {
   const [data, setData] = useState<ClimateGrid | null>(null);
   const [err, setErr] = useState("");
@@ -92,6 +98,8 @@ export default function Atlas({
     [crop, soil, irrigated, mode, point, zoom, opacity],
   );
   const [basemapFailed, setBasemapFailed] = useState(false);
+  const [coordinateEvidence, setCoordinateEvidence] =
+    useState<CoordinateEvidence>();
   const canvas = useRef<HTMLCanvasElement>(null);
   const c = ATLAS_CROPS.find((x) => x.id === crop)!;
   const zone = data
@@ -126,11 +134,13 @@ export default function Atlas({
     });
     ctx.putImageData(img, 0, 0);
   }, [data, crop, soil, mode, irrigated]);
-  const pick = (lat: number, lon: number) =>
+  const pick = (lat: number, lon: number) => {
+    setCoordinateEvidence(undefined);
     setPoint({
       lat: Math.max(-89.75, Math.min(89.75, lat)),
       lon: Math.max(-179.75, Math.min(179.75, lon)),
     });
+  };
   return (
     <main className="atlas-page">
       <div className="atlas-heading">
@@ -158,6 +168,17 @@ export default function Atlas({
           </small>
         </div>
       </div>
+      <FindFarmLocation
+        selectionKey={`${point.lat}/${point.lon}`}
+        evidence={coordinateEvidence}
+        onPick={(lat, lon, evidence) => {
+          pick(lat, lon);
+          setCoordinateEvidence(evidence);
+          document
+            .getElementById("satellite-map")
+            ?.scrollIntoView({ behavior: "instant", block: "start" });
+        }}
+      />
       <LocationSearch
         onPick={(lat, lon) => {
           pick(lat, lon);
@@ -478,7 +499,9 @@ export default function Atlas({
           </div>
           <button
             className="primary"
-            onClick={() => onUseLocation(point.lat, point.lon)}
+            onClick={() =>
+              onUseLocation(point.lat, point.lon, coordinateEvidence)
+            }
           >
             Use location in field setup <ArrowUpRight size={16} />
           </button>

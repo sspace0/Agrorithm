@@ -1,6 +1,7 @@
 import { Suspense, useEffect, useMemo, useRef } from "react";
 import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { asset } from "../config";
 const ease = (x: number) => {
   const t = Math.max(0, Math.min(1, x));
@@ -20,47 +21,53 @@ function Earth({
     asset("images/earth-2004.webp"),
   );
   texture.colorSpace = THREE.SRGBColorSpace;
-  const geometry = useMemo(
-      () => new THREE.PlaneGeometry(5.7, 2.85, 96, 48),
-      [],
-    ),
-    mesh = useRef<THREE.Group>(null),
-    halo = useRef<THREE.ShaderMaterial>(null),
-    globeMaterial = useRef<THREE.MeshStandardMaterial>(null),
+  const nasa = useLoader(GLTFLoader, asset("models/earth-nasa.glb"));
+  const model = useMemo(() => {
+    const scene = nasa.scene.clone(true);
+    scene.traverse((o) => {
+      if ((o as THREE.Mesh).isMesh) {
+        const mesh = o as THREE.Mesh;
+        const original = mesh.material as THREE.MeshStandardMaterial;
+        const material = original.clone();
+        material.transparent = true;
+        material.metalness = 0;
+        material.roughness = 0.54;
+        material.normalScale.setScalar(0.45);
+        mesh.material = material;
+      }
+    });
+    return scene;
+  }, [nasa]);
+  const globe = useRef<THREE.Group>(null),
+    group = useRef<THREE.Group>(null),
+    map = useRef<THREE.Mesh>(null),
     mapMaterial = useRef<THREE.MeshBasicMaterial>(null),
-    mapMesh = useRef<THREE.Mesh>(null),
-    last = useRef(-1);
+    halo = useRef<THREE.ShaderMaterial>(null);
   const { camera, size } = useThree();
   useEffect(() => {
     onReady();
-  }, [onReady, texture]);
-  useFrame(() => {
+  }, [texture, model, onReady]);
+  useFrame((_, delta) => {
     const p = motion ? progress : 0,
-      turn = ease((p - 0.08) / 0.35),
-      flat = ease((p - 0.48) / 0.4),
-      angle = THREE.MathUtils.lerp(1.35, (-73 * Math.PI) / 180, turn);
-    if (last.current !== p) {
-      const positions = geometry.attributes.position,
-        normals = geometry.attributes.normal,
-        uv = geometry.attributes.uv;
-      for (let i = 0; i < positions.count; i++) {
-        const u = uv.getX(i),
-          v = uv.getY(i),
-          lon = (u - 0.5) * 2 * Math.PI,
-          lat = (v - 0.5) * Math.PI;
-        const a = new THREE.Vector3(
-          Math.sin(lon) * Math.cos(lat),
-          Math.sin(lat),
-          Math.cos(lon) * Math.cos(lat),
-        ).applyAxisAngle(new THREE.Vector3(0, 1, 0), angle);
-        positions.setXYZ(i, a.x * 1.1, a.y * 1.1, a.z * 1.1);
-        normals.setXYZ(i, a.x, a.y, a.z);
-      }
-      positions.needsUpdate = true;
-      normals.needsUpdate = true;
-      geometry.computeBoundingSphere();
-      last.current = p;
-    }
+      turn = ease((p - 0.08) / 0.58),
+      flat = ease((p - 0.68) / 0.26);
+    if (globe.current)
+      globe.current.rotation.y = motion
+        ? THREE.MathUtils.damp(
+            globe.current.rotation.y,
+            (THREE.MathUtils.lerp(-12, -110, turn) * Math.PI) / 180,
+            2.3,
+            Math.min(0.05, delta),
+          )
+        : (-12 * Math.PI) / 180;
+    model.traverse((o) => {
+      if ((o as THREE.Mesh).isMesh)
+        ((o as THREE.Mesh).material as THREE.MeshStandardMaterial).opacity =
+          1 - flat;
+    });
+    if (mapMaterial.current) mapMaterial.current.opacity = flat;
+    if (map.current) map.current.scale.setScalar(0.75 + 0.25 * flat);
+    if (halo.current) halo.current.uniforms.strength.value = 1 - flat;
     const distance = THREE.MathUtils.lerp(
       size.width < 760 ? 6.8 : 5.3,
       Math.max(
@@ -75,27 +82,16 @@ function Earth({
     );
     camera.position.set(0, 0, distance + 1.2 * flat);
     camera.lookAt(0, 0, 0);
-    if (halo.current) halo.current.uniforms.strength.value = 1 - flat;
-    if (globeMaterial.current) globeMaterial.current.opacity = 1 - flat;
-    if (mapMaterial.current) mapMaterial.current.opacity = flat;
-    if (mapMesh.current) mapMesh.current.scale.setScalar(0.75 + flat * 0.25);
-    if (mesh.current)
-      mesh.current.position.x =
-        (size.width < 760 ? 0 : 1.15) * (1 - ease((p - 0.28) / 0.28));
+    if (group.current)
+      group.current.position.x =
+        (size.width < 760 ? 0 : 1.15) * (1 - ease((p - 0.44) / 0.26));
   });
   return (
-    <group ref={mesh}>
-      <mesh geometry={geometry}>
-        <meshStandardMaterial
-          ref={globeMaterial}
-          map={texture}
-          transparent
-          roughness={1}
-          metalness={0}
-          side={THREE.FrontSide}
-        />
-      </mesh>
-      <mesh ref={mapMesh} position={[0, 0, 1.2]}>
+    <group ref={group}>
+      <group ref={globe}>
+        <primitive object={model} />
+      </group>
+      <mesh ref={map} position={[0, 0, 1.2]}>
         <planeGeometry args={[5.7, 2.85]} />
         <meshBasicMaterial
           ref={mapMaterial}
@@ -106,17 +102,60 @@ function Earth({
         />
       </mesh>
       <mesh>
-        <sphereGeometry args={[1.12, 48, 24]} />
+        <sphereGeometry args={[1.12, 96, 48]} />
         <shaderMaterial
           ref={halo}
           uniforms={{ strength: { value: 1 } }}
-          vertexShader={`varying vec3 n; varying vec3 v; void main(){ vec4 p=modelViewMatrix*vec4(position,1.0); n=normalize(normalMatrix*normal); v=normalize(-p.xyz); gl_Position=projectionMatrix*p; }`}
-          fragmentShader={`uniform float strength; varying vec3 n; varying vec3 v; void main(){ float rim=pow(1.0-abs(dot(normalize(n),normalize(v))),4.5); gl_FragColor=vec4(0.25,0.55,0.85,rim*0.55*strength); }`}
+          vertexShader="varying vec3 n; varying vec3 v; void main(){vec4 p=modelViewMatrix*vec4(position,1.0);n=normalize(normalMatrix*normal);v=normalize(-p.xyz);gl_Position=projectionMatrix*p;}"
+          fragmentShader="uniform float strength;varying vec3 n;varying vec3 v;void main(){float rim=pow(1.0-abs(dot(normalize(n),normalize(v))),4.5);gl_FragColor=vec4(0.25,0.55,0.85,rim*0.35*strength);}"
           transparent
           depthWrite={false}
           blending={THREE.AdditiveBlending}
         />
       </mesh>
+    </group>
+  );
+}
+function Sun({ progress, motion }: { progress: number; motion: boolean }) {
+  const core = useRef<THREE.MeshBasicMaterial>(null),
+    glow = useRef<THREE.SpriteMaterial>(null);
+  const texture = useMemo(() => {
+    const d = new Uint8Array(64 * 64 * 4);
+    for (let y = 0; y < 64; y++)
+      for (let x = 0; x < 64; x++) {
+        const r = Math.hypot(x - 31.5, y - 31.5) / 31.5,
+          i = (y * 64 + x) * 4;
+        d.set(
+          [255, 208, 120, Math.round(Math.pow(Math.max(0, 1 - r), 3) * 200)],
+          i,
+        );
+      }
+    const t = new THREE.DataTexture(d, 64, 64);
+    t.magFilter = THREE.LinearFilter;
+    t.minFilter = THREE.LinearFilter;
+    t.needsUpdate = true;
+    return t;
+  }, []);
+  useFrame(() => {
+    const opacity = 1 - ease(((motion ? progress : 0) - 0.35) / 0.2);
+    if (core.current) core.current.opacity = opacity;
+    if (glow.current) glow.current.opacity = opacity;
+  });
+  return (
+    <group position={[-2.1, 1.4, -0.6]}>
+      <mesh>
+        <sphereGeometry args={[0.075, 24, 16]} />
+        <meshBasicMaterial ref={core} color="#fff4d2" transparent />
+      </mesh>
+      <sprite scale={[1.3, 1.3, 1]}>
+        <spriteMaterial
+          ref={glow}
+          map={texture}
+          transparent
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
+      </sprite>
     </group>
   );
 }
@@ -163,12 +202,12 @@ export default function EarthCanvas({
   onFail: () => void;
 }) {
   const alive = useRef(true);
-  useEffect(
-    () => () => {
+  useEffect(() => {
+    alive.current = true;
+    return () => {
       alive.current = false;
-    },
-    [],
-  );
+    };
+  }, []);
   return (
     <Canvas
       dpr={matchMedia("(max-width:760px)").matches ? 1 : [1, 1.5]}
@@ -183,8 +222,13 @@ export default function EarthCanvas({
         });
       }}
     >
-      <ambientLight intensity={1.05} />
-      <directionalLight position={[-3, 2, 5]} intensity={2.3} color="#fff5df" />
+      <ambientLight intensity={0.16} />
+      <directionalLight
+        position={[-5, 2.8, 5]}
+        intensity={3.7}
+        color="#fff4df"
+      />
+      <Sun progress={progress} motion={motion} />
       <Stars />
       <Suspense fallback={null}>
         <Earth progress={progress} motion={motion} onReady={onReady} />

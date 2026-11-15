@@ -1,4 +1,6 @@
 import { ArrowUpRight, Layers, Compass } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { coverMapPoint } from "../engine/presentation";
 import OrbitOpening from "../components/OrbitOpening";
 import ScrollStory from "../components/ScrollStory";
 import { asset, BRAND } from "../config";
@@ -18,6 +20,23 @@ export default function HomeExperience({
   resume: () => void;
   saved: boolean;
 }) {
+  const portal = useRef<HTMLElement>(null),
+    map = useRef<HTMLImageElement>(null);
+  const [pilot, setPilot] = useState<{ x: number; y: number } | null>(null);
+  useEffect(() => {
+    const update = () => {
+      if (!portal.current || !map.current) return;
+      const a = portal.current.getBoundingClientRect(),
+        b = map.current.getBoundingClientRect(),
+        p = coverMapPoint(b.width, b.height, 32.1, 73);
+      setPilot({ x: b.left - a.left + p.x, y: b.top - a.top + p.y });
+    };
+    const observer = new ResizeObserver(update);
+    if (portal.current) observer.observe(portal.current);
+    if (map.current) observer.observe(map.current);
+    update();
+    return () => observer.disconnect();
+  }, []);
   return (
     <main className="experience-home" id="main-content">
       <OrbitOpening
@@ -29,8 +48,13 @@ export default function HomeExperience({
         saved={saved}
       />
       <ScrollStory motion={motion} quality={quality} />
-      <section className="map-portal" aria-labelledby="portal-title">
+      <section
+        ref={portal}
+        className="map-portal"
+        aria-labelledby="portal-title"
+      >
         <img
+          ref={map}
           src={asset("images/blue-marble-2004-08.jpg")}
           alt=""
           loading="lazy"
@@ -58,7 +82,16 @@ export default function HomeExperience({
             Climate and crop screening layers open in the atlas.
           </small>
         </div>
-        <div className="portal-marker">
+        <div
+          className="portal-marker"
+          data-latitude="32.1"
+          data-longitude="73"
+          style={{
+            left: pilot?.x ?? 0,
+            top: pilot?.y ?? 0,
+            visibility: pilot ? "visible" : "hidden",
+          }}
+        >
           <i />
           <span>
             Punjab pilot

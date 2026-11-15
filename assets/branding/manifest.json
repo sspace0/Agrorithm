@@ -53,8 +53,8 @@
     },
     {
       "file": "public/images/earth-2004.webp",
-      "bytes": 149452,
-      "sha256": "fdd0ebcda3d03a2755e58ce69e8bf14c628dc8e92114b644da8a39e18f40e7b6",
+      "bytes": 142082,
+      "sha256": "f456b5da202458dce95177cd12171d90060fd6636cc651b24e1740bd9c1618bd",
       "title": "Blue Marble: Next Generation · August 2004",
       "creators": [
         "Reto Stöckli",
@@ -79,6 +79,22 @@
       "license": "SIL Open Font License1.1",
       "licenseUrl": "https://github.com/google/fonts/blob/main/ofl/instrumentserif/OFL.txt",
       "modifications": "Unmodified TrueType binary; packaged locally with its license."
+    },
+    {
+      "file": "public/images/earth-poster.webp",
+      "bytes": 89460,
+      "sha256": "39c1366decd5360c269b9000ad948d58503e82edbfd5b208b604cddd9fdd9810",
+      "title": "NASA VTAD clouded Earth presentation poster",
+      "creators": [
+        "NASA VTAD"
+      ],
+      "publisher": "NASA Visualization Technology Applications and Development (VTAD)",
+      "page": "https://science.nasa.gov/resource/earth-with-clouds-3d-model/",
+      "download": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/EarthClouds_1_12756.glb?emrc=6af96c145f135",
+      "license": "NASA imagery use guidelines; source offered for public use",
+      "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "observationPeriod": "Not specified for this historical presentation model",
+      "modifications": "Actual transparent WebGL capture of the optimized NASA model with illustrative Sun lighting;690×690 crop, WebP90. Rebuild via capture-earth-poster.mjs and prepare-exhibition-assets.py."
     }
   ]
 }

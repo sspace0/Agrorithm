@@ -119,7 +119,9 @@ test("phones start with a useful poster and no soil model download", async ({
     page.getByRole("button", { name: "Start planning", exact: true }),
   ).toBeVisible();
   await expect(page.locator(".orbit-canvas")).toBeVisible();
-  expect(models).toHaveLength(0);
+  expect(
+    models.filter((url) => /(?:root-zone|groundwater|models\/crops)/.test(url)),
+  ).toHaveLength(0);
   await page
     .getByRole("button", { name: "Try a sample farm", exact: true })
     .click();

@@ -2,10 +2,17 @@ import { describe, expect, it } from "vitest";
 import {
   equirectangularPoint,
   fitModelDistance,
+  coverMapPoint,
 } from "../src/engine/presentation";
 import { observationDates } from "../src/state/observationDates";
 
 describe("presentation geometry and observation coverage", () => {
+  it("keeps the pilot point tied to a centered cover crop", () => {
+    expect(coverMapPoint(1800, 600, 32.1, 73)).toEqual({ x: 1265, y: 139.5 });
+    const phone = coverMapPoint(390, 195, 32.1, 73);
+    expect(phone.x).toBeCloseTo(274.0833333333);
+    expect(phone.y).toBeCloseTo(62.725);
+  });
   it("places geographic coordinates on a 2:1 equirectangular image", () => {
     expect(equirectangularPoint(0, 0)).toEqual({ x: 0.5, y: 0.5 });
     expect(equirectangularPoint(90, -180)).toEqual({ x: 0, y: 0 });

@@ -92,7 +92,7 @@ function Asset(p: ModelSceneProps) {
     c.dampingFactor = 0.09;
     c.zoomToCursor = true;
     c.enableZoom = p.interactive;
-    c.zoomSpeed = 0.8;
+    c.zoomSpeed = 1.25;
     c.panSpeed = 0.65;
     c.minPolarAngle = 0.12;
     c.maxPolarAngle = Math.PI - 0.12;
@@ -134,8 +134,8 @@ function Asset(p: ModelSceneProps) {
         direction.normalize().multiplyScalar(d * (p.options.view ? 1.1 : 1)),
       );
       c.target.set(0, 0, 0);
-      c.minDistance = radius * 0.12;
-      c.maxDistance = radius * 40;
+      c.minDistance = radius * 0.06;
+      c.maxDistance = radius * 80;
       c.enablePan = false;
       c.update();
       manual.current = false;
@@ -197,19 +197,18 @@ function Asset(p: ModelSceneProps) {
     gl.domElement.style.touchAction = manual.current ? "none" : "pan-y";
     if (!manual.current) {
       const yaw = p.motion ? -0.13 + p.progress * 0.55 : 0;
-      stage.current.rotation.y = p.motion ? THREE.MathUtils.damp(
-        stage.current.rotation.y,
-        yaw,
-        4,
-        delta,
-      ) : yaw;
+      stage.current.rotation.y = p.motion
+        ? THREE.MathUtils.damp(stage.current.rotation.y, yaw, 4, delta)
+        : yaw;
       const direction = p.options.view
         ? new THREE.Vector3(1, 0.7, 2.4)
         : new THREE.Vector3(0.6, 0.15, 3);
       const target = direction
         .normalize()
         .multiplyScalar(
-          fitted.current * (1 + (p.motion ? 0.025 * p.progress : 0)),
+          fitted.current *
+            (1 + (p.motion ? 0.025 * p.progress : 0)) *
+            (p.options.explode ? 1.18 : 1),
         );
       camera.position.lerp(target, p.motion ? 1 - Math.exp(-4 * delta) : 1);
       c.target.lerp(
@@ -230,17 +229,15 @@ function Asset(p: ModelSceneProps) {
           if (o.name.includes("Subsoil")) offset = -0.2;
           if (o.name.includes("Parent")) offset = -0.4;
         }
-        o.position.y = p.motion ? THREE.MathUtils.damp(
-          o.position.y,
-          original.y + offset,
-          6,
-          delta,
-        ) : original.y + offset;
+        o.position.y = p.motion
+          ? THREE.MathUtils.damp(o.position.y, original.y + offset, 6, delta)
+          : original.y + offset;
       }
       if (o.name.startsWith("Surface_") && !o.name.includes("Grass"))
         o.rotation.z = p.motion ? Math.sin(clock.elapsedTime * 0.7) * 0.002 : 0;
     });
-    if (p.motion && p.visible && clock.elapsedTime - frameTime.current < 0.12) return;
+    if (p.motion && p.visible && clock.elapsedTime - frameTime.current < 0.12)
+      return;
     frameTime.current = clock.elapsedTime;
     model.updateWorldMatrix(true, true);
     const worldBounds = new THREE.Box3().setFromObject(model);

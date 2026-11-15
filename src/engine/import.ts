@@ -152,6 +152,16 @@ export function validateFarm(input: unknown): Farm {
   if (typeof f.confirmed !== "boolean")
     throw Error("Confirm management status");
   if (
+    f.coordinateEvidence &&
+    (f.coordinateEvidence.method !== "device-geolocation" ||
+      (f.coordinateEvidence.accuracyM !== null &&
+        (!Number.isFinite(f.coordinateEvidence.accuracyM) ||
+          f.coordinateEvidence.accuracyM < 0)) ||
+      typeof f.coordinateEvidence.capturedAt !== "string" ||
+      !Number.isFinite(Date.parse(f.coordinateEvidence.capturedAt)))
+  )
+    throw Error("Invalid device-location provenance");
+  if (
     !Number.isFinite(f.lat) ||
     Math.abs(f.lat) > 90 ||
     !Number.isFinite(f.lon) ||

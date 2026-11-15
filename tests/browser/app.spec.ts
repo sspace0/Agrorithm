@@ -27,6 +27,18 @@ test("crop atlas has genuine zones, soil filters, keyboard map and a separate se
       satellite.evaluate((img) => (img as HTMLImageElement).naturalWidth),
     )
     .toBe(5400);
+  const marker = await page.locator(".world-pin").evaluate((el) => {
+    const pin = el.getBoundingClientRect(),
+      image = document
+        .querySelector(".satellite-base")!
+        .getBoundingClientRect();
+    return {
+      x: (pin.x + pin.width / 2 - image.x) / image.width,
+      y: (pin.bottom - image.y) / image.height,
+    };
+  });
+  expect(marker.x).toBeCloseTo((73 + 180) / 360, 3);
+  expect(marker.y).toBeCloseTo((90 - 32.1) / 180, 3);
   await page.getByRole("slider", { name: "Overlay opacity" }).fill("25");
   await expect(page.locator(".map-world canvas")).toHaveCSS("opacity", "0.25");
   await expect(

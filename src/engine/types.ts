@@ -30,10 +30,16 @@ export type Planting = {
   harvest: string;
   residue: boolean;
 };
+export type CoordinateEvidence = {
+  method: "device-geolocation";
+  accuracyM: number | null;
+  capturedAt: string;
+};
 export type Farm = {
   name: string;
   lat: number;
   lon: number;
+  coordinateEvidence?: CoordinateEvidence;
   areaHa: number;
   irrigation: string;
   efficiency: number | null;

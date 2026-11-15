@@ -25,6 +25,7 @@ import {
   Upload,
   Layers,
   Settings2,
+  ChevronDown,
 } from "lucide-react";
 import {
   Area,
@@ -44,6 +45,7 @@ import { Diorama } from "./components/Diorama";
 import HomeExperience from "./screens/HomeExperience";
 import Help from "./screens/Help";
 import NavigationSearch from "./components/NavigationSearch";
+import FindFarmLocation from "./components/FindFarmLocation";
 import AgrorithmReport, {
   printAgrorithmReport,
 } from "./report/AgrorithmReport";
@@ -161,6 +163,27 @@ export default function App() {
   );
   const [quality, setQuality] = useState(stored("fieldshift-quality", "auto"));
   const [settingsOpen, setSettingsOpen] = useState(false);
+  useEffect(() => setSettingsOpen(false), [route]);
+  useEffect(() => {
+    if (!settingsOpen) return;
+    const close = (event: PointerEvent) => {
+      if (
+        !(event.target as Element).closest(
+          ".display-controls,.mobile-settings-trigger",
+        )
+      )
+        setSettingsOpen(false);
+    };
+    const key = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSettingsOpen(false);
+    };
+    document.addEventListener("pointerdown", close);
+    document.addEventListener("keydown", key);
+    return () => {
+      document.removeEventListener("pointerdown", close);
+      document.removeEventListener("keydown", key);
+    };
+  }, [settingsOpen]);
   const concept: Concept = "studio";
   const [weather, setWeather] = useState<Day[]>([]);
   const [veg, setVeg] = useState<Vegetation | null>(null);
@@ -281,16 +304,17 @@ export default function App() {
         <span>{motion ? "Motion on" : "Reduced motion"}</span>
       </button>
       <label className="quality-control">
-        <Leaf size={14} />
+        <Layers size={16} aria-hidden="true" />
         <select
           aria-label="Graphics quality"
           value={quality}
           onChange={(e) => setQuality(e.target.value)}
         >
-          <option value="auto">3D · balanced</option>
-          <option value="low">3D · low</option>
-          <option value="static">Static · no WebGL</option>
+          <option value="auto">3D · Balanced</option>
+          <option value="low">3D · Lighter</option>
+          <option value="static">Poster only</option>
         </select>
+        <ChevronDown size={14} className="quality-chevron" aria-hidden="true" />
       </label>
     </div>
   );
@@ -314,7 +338,8 @@ export default function App() {
       <button
         className="mobile-settings-trigger"
         aria-expanded={settingsOpen}
-        aria-label="Display and language settings"
+        aria-label="Display settings"
+        aria-controls="display-controls"
         onClick={() => setSettingsOpen(!settingsOpen)}
       >
         <Settings2 size={18} />
@@ -520,7 +545,7 @@ export default function App() {
   );
   return (
     <div
-      className={`app ${motion ? "" : "reduced-motion"} ${route === "/" ? "home-route" : ""}`}
+      className={`app ${parts[0] === "atlas" ? "atlas-route" : ""} ${motion ? "" : "reduced-motion"} ${route === "/" ? "home-route" : ""}`}
     >
       <a
         className="skip-link"
@@ -555,8 +580,8 @@ export default function App() {
         home
       ) : parts[0] === "atlas" ? (
         <Atlas
-          onUseLocation={(lat, lon) => {
-            setFarm({ ...farm, lat, lon });
+          onUseLocation={(lat, lon, coordinateEvidence) => {
+            setFarm({ ...farm, lat, lon, coordinateEvidence });
             navigate(`/${concept}/setup`);
           }}
         />
@@ -755,6 +780,13 @@ function Setup({ farm: f, setFarm }: DataProps) {
           <h3>
             <MapPin size={18} /> Place & scale
           </h3>
+          <FindFarmLocation
+            selectionKey={`${f.lat}/${f.lon}`}
+            evidence={f.coordinateEvidence}
+            onPick={(lat, lon, coordinateEvidence) =>
+              patch({ lat, lon, coordinateEvidence })
+            }
+          />
           <label>
             Field name
             <input
@@ -770,7 +802,9 @@ function Setup({ farm: f, setFarm }: DataProps) {
               min={-90}
               max={90}
               step={0.0001}
-              onChange={(n) => n !== null && patch({ lat: n })}
+              onChange={(n) =>
+                n !== null && patch({ lat: n, coordinateEvidence: undefined })
+              }
             />
             <NumberField
               label="Longitude (°)"
@@ -778,7 +812,9 @@ function Setup({ farm: f, setFarm }: DataProps) {
               min={-180}
               max={180}
               step={0.0001}
-              onChange={(n) => n !== null && patch({ lon: n })}
+              onChange={(n) =>
+                n !== null && patch({ lon: n, coordinateEvidence: undefined })
+              }
             />
           </div>
           <div className="coordinate-map" aria-label="Regional locator">
@@ -2720,9 +2756,8 @@ function Sources() {
           registry.
         </p>
         <p>
-          English carries the technical detail. Urdu navigation is provisional
-          and requires fluent agricultural review. Unknown answers are allowed;
-          the core planner works without WebGL and without live services.
+          The current interface is in English. Unknown answers are allowed; the
+          core planner works without WebGL and without live services.
         </p>
       </section>
     </main>

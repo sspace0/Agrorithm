@@ -1,0 +1,31 @@
+{
+  "title": "Earth with Clouds 3D Model",
+  "publisher": "NASA Visualization Technology Applications and Development (VTAD)",
+  "page": "https://science.nasa.gov/resource/earth-with-clouds-3d-model/",
+  "download": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/EarthClouds_1_12756.glb?emrc=6af96c145f135",
+  "published": "2019-04-22",
+  "downloadVersionDate": "2023-09-09",
+  "retrieved": "2026-11-15T08:33:38.929Z",
+  "license": "NASA media use guidelines; credit NASA VTAD; no endorsement",
+  "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "bytes": 18928336,
+  "sha256": "f0989772fa9ab1aeee32911df9b5da4ee1a938580414357ace51c9e05b5f3929",
+  "status": "Historical presentation model; cloud observation date not specified by the model record. Not live weather.",
+  "processing": "Blender prepare_earth.py: normalize diameter2.2 display units, smooth shading, diffuse2048px, normal1024px, JPEG88, metallic0, roughness0.6. Compressed editable blend and glTF retained.",
+  "outputs": [
+    {
+      "file": "assets/blender/earth-nasa.blend",
+      "bytes": 4188507,
+      "gzipBytes": 4185985,
+      "sha256": "2381fe1415a6f132e0abf234b801197545c3e8a03aa646b8e48510c8af8a1cdc"
+    },
+    {
+      "file": "public/models/earth-nasa.glb",
+      "bytes": 510232,
+      "gzipBytes": 446197,
+      "sha256": "95666b365070dae5aff00221635edfedfb162500845479566f2fcbcce005af25"
+    }
+  ],
+  "triangles": 3072,
+  "blender": "5.2.1 LTS"
+}

@@ -59,14 +59,14 @@ export default function OrbitOpening({
   const phase =
     progress < 0.22
       ? "A new perspective"
-      : progress < 0.48
+      : progress < 0.66
         ? "Turn toward your ground"
         : progress < 0.88
           ? "From orbit to an atlas"
           : "Find your place";
   const titleOpacity = motion ? Math.max(0, 1 - (progress - 0.2) / 0.2) : 1,
     atlasOpacity = motion
-      ? Math.max(0, Math.min(1, (progress - 0.72) / 0.16))
+      ? Math.max(0, Math.min(1, (progress - 0.8) / 0.12))
       : 0;
   return (
     <section
@@ -83,8 +83,8 @@ export default function OrbitOpening({
           {(!ready || failed || quality === "static") && (
             <div className="earth-poster">
               <img
-                src={asset("images/earth-2004.webp")}
-                alt="NASA Blue Marble Earth composite from August 2004"
+                src={asset("images/earth-poster.webp")}
+                alt="NASA VTAD Earth with Clouds model, with illustrative lighting"
               />
             </div>
           )}
@@ -170,7 +170,7 @@ export default function OrbitOpening({
               : "Reduced motion · static Earth view"}
           </span>
           <small>
-            NASA Blue Marble · August 2004 composite · illustrative journey
+            NASA VTAD globe · 2004 map · illustrative Sun and motion
           </small>
           <a href="#/atlas">
             Skip to map

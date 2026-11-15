@@ -33,3 +33,16 @@ export function fitModelDistance(
 export function equirectangularPoint(lat: number, lon: number) {
   return { x: (lon + 180) / 360, y: (90 - lat) / 180 };
 }
+export function coverMapPoint(
+  width: number,
+  height: number,
+  lat: number,
+  lon: number,
+) {
+  const point = equirectangularPoint(lat, lon),
+    scale = Math.max(width / 2, height);
+  return {
+    x: (width - 2 * scale) / 2 + point.x * 2 * scale,
+    y: (height - scale) / 2 + point.y * scale,
+  };
+}

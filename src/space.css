@@ -1,0 +1,68 @@
+.app.atlas-route {
+  background-image: none;
+  background: #f3f5ed;
+}
+.atlas-page .world-panel {
+  background: #fdfdf7;
+}
+.atlas-page .atlas-heading {
+  border-bottom: 1px solid #d6dfcb;
+  padding-bottom: 30px;
+}
+.orbit-bottom small {
+  max-width: 330px;
+}
+.map-portal > img {
+  object-position: center;
+  transform: none;
+}
+.map-portal .portal-marker {
+  inset-inline-end: auto;
+  bottom: auto;
+  transform: translate(-7px, -50%);
+  padding: 8px 12px 8px 0;
+  background: #061a1dd9;
+  border-radius: 22px;
+}
+@media (max-width: 760px) {
+  .map-portal {
+    padding-bottom: 260px;
+    min-height: 0;
+  }
+  .map-portal > img {
+    top: auto;
+    bottom: 0;
+    height: auto;
+    aspect-ratio: 2;
+    opacity: 0.85;
+    object-fit: contain;
+  }
+  .portal-shade {
+    background: linear-gradient(
+      180deg,
+      #0b2526 0%,
+      #0b2526ef 65%,
+      #0b252612 90%
+    );
+  }
+  .map-portal .portal-marker {
+    font-size: 10px;
+    gap: 8px;
+    max-width: 130px;
+  }
+  .map-portal .portal-marker small {
+    font-size: 8px;
+  }
+  .map-portal .portal-marker > i {
+    box-shadow: 0 0 0 8px #c8e3a52b;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .app .site-header {
+    height: 106px;
+    min-height: 106px;
+    padding-block: 6px;
+  }
+}

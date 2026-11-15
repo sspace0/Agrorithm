@@ -6,7 +6,7 @@
 
 A static crop-rotation exploration tool for a configurable Punjab, Pakistan pilot. NASA POWER weather and quality-filtered HLS vegetation provide regional historical context. Local inputs, stated crop assumptions and a transparent decision engine help compare a baseline with two alternatives over the same 36 months.
 
-![Agrorithm opening in space](docs/design/agrorithm/opening-desktop-0.jpg)
+![Agrorithm opening in space](docs/design/agrorithm/nasa-earth-desktop.jpg)
 
 ## Run locally
 

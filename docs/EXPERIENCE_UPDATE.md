@@ -37,3 +37,11 @@ TypeScript, ESLint, 23 unit tests and production build pass. The 20-test product
 Screenshots are in `docs/design/redesign/`. Local calendars/varieties, unknown orchard water totals and Urdu still need appropriate review. Detailed profiles are references, not automatic engine thresholds or irrigation prescriptions.
 
 ![Representative category models](design/redesign/category-models.png)
+
+## Agrorithm exhibition refinement
+
+This current revision supersedes the earlier typeface, opt-in and report details above. The display name is Agrorithm, with local Century Gothic / bundled DM Sans and Instrument Serif Italic. All crop and soil models share the immersive ModelStage/ModelScene presentation, transparent canvas, bounded framing, native scroll reveal, manual orbit/pan/cursor zoom, reset, backed HTML annotations and text alternatives. Desktop models load when near the viewport; phones retain poster-first opt-in. The opening is a separate light Earth-in-space scene with rotation and a transition into the historical satellite atlas. No model rebuild or change in agronomic thresholds was implied by the presentation refinement.
+
+Actual current build sizes: main JavaScript about827kB raw /249kB gzip, shared Three/Fiber chunk913kB raw /242kB gzip, model scene73kB raw /21kB gzip, Earth scene4kB raw /2kB gzip; CSS95kB raw /20kB gzip. These are build measurements, not observed network transfer or FPS. Existing Blender/model measurements remain applicable. The transparent Earth poster and original illustration texture are documented in the branding manifest.
+
+The device-location button uses the browser permission flow only on click. Its accuracy/date are explicit and local; a device position is not a farm boundary. Denial/timeouts retain manual/search entry. New coordinates do not acquire matching weather silently. The new PDF uses 16:9 slides and includes scientific model previews, with source/assumption disclosures and dynamic pagination; CSV implementation is preserved. See REPORT_EXPORT.md and VISUAL_QA.md for measured verification.

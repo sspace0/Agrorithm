@@ -59,6 +59,19 @@
 .agr-report .agr-chart { display: block; width: 1728px; height: auto; max-width: none; overflow: visible; }
 .agr-report .agr-chart text { font-family: "Century Gothic", "DM Sans", "Segoe UI", sans-serif; font-size: 22px; fill: var(--agr-ink); }
 .agr-report .agr-chart .agr-svg-title { font-size: 27px; font-weight: 700; }
+.agr-report .agr-model-figure { display: grid; grid-template-rows: 535px 167px; gap: 18px; height: 720px; width: 1728px; }
+.agr-report .agr-model-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; height: 535px; }
+.agr-report .agr-model-panel { margin: 0; height: 535px; padding: 18px 24px; border: 1px solid var(--agr-line); border-radius: 12px; background: radial-gradient(ellipse at 50% 45%, #fffefa, #eef1e7); }
+.agr-report .agr-model-kicker { display: block; font-size: 16px; line-height: 1.3; letter-spacing: 1.4px; color: var(--agr-muted); font-weight: 700; }
+.agr-report .agr-model-panel h3 { font-size: 28px; line-height: 1.2; margin-top: 7px; font-weight: 400; letter-spacing: -.5px; }
+.agr-report .agr-model-panel img { display: block; width: 100%; height: 350px; object-fit: contain; margin: 5px 0 8px; }
+.agr-report .agr-model-panel figcaption { font-size: 18px; line-height: 1.35; color: var(--agr-muted); }
+.agr-report .agr-model-panel figcaption strong { display: block; font-size: 18px; line-height: 1.3; margin-bottom: 3px; color: var(--agr-ink); }
+.agr-report .agr-water-key { display: inline-block; width: 25px; height: 4px; margin: 0 9px 4px 0; background: #4c9eae; }
+.agr-report .agr-model-disclosures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; height: 167px; }
+.agr-report .agr-model-disclosures > div { padding: 14px 18px; border-inline-start: 3px solid #a1b18a; background: #edf1e5; }
+.agr-report .agr-model-disclosures h3 { font-size: 21px; line-height: 1.3; font-weight: 700; margin-bottom: 8px; }
+.agr-report .agr-model-disclosures p { font-size: 18px; line-height: 1.4; color: var(--agr-muted); }
 .agr-report .agr-page-footer { position: absolute; left: 96px; right: 96px; bottom: 34px; display: flex; align-items: center; gap: 24px; border-top: 1px solid #bfcbb6; padding-top: 18px; font-size: 17px; color: var(--agr-muted); height: 47px; }
 .agr-report .agr-footer-field { max-width: 500px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .agr-report .agr-page-footer > span:nth-child(2) { margin-inline-start: auto; }

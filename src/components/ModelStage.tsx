@@ -292,13 +292,13 @@ export default function ModelStage({
                 {manual ? "Resume scroll" : "Inspect model"}
               </button>
               <button
-                onClick={() => commands.current?.zoom(0.78)}
+                onClick={() => commands.current?.zoom(0.68)}
                 aria-label="Zoom model in"
               >
                 <Plus size={16} />
               </button>
               <button
-                onClick={() => commands.current?.zoom(1.28)}
+                onClick={() => commands.current?.zoom(1.48)}
                 aria-label="Zoom model out"
               >
                 <Minus size={16} />

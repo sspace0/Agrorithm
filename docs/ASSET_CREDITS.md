@@ -6,7 +6,7 @@ The supplied Agrorithm wordmarks, editable Paint.NET source and report cover are
 
 Instrument Serif Italic, copyright2022 The Instrument Serif Project Authors, is bundled as an unmodified TrueType font under the SIL Open Font License1.1. Its complete license is `public/fonts/Instrument-Serif-OFL.txt`; the manifest records its download and checksum. Century Gothic is selected locally when installed. Its Windows font files are not redistributed because a webfont redistribution license has not been supplied. Devices without it use the bundled DM Sans fallback.
 
-The opening globe reuses the genuine August2004 NASA Blue Marble composite described below. A 2048×1024 WebP derivative is149,452 bytes. The sphere-to-plane deformation, atmosphere, stars and explanatory motion are illustrative presentation geometry, not another NASA product. Rebuild the cropped wordmark and Earth preview with `python scripts/prepare-exhibition-assets.py` (Pillow required). No proprietary assets from the reference websites are included.
+The flat map stage reuses the genuine August2004 NASA Blue Marble composite described below. A 2048×1024 WebP derivative is142,082 bytes. The sphere-to-plane deformation, atmosphere, stars and explanatory motion are illustrative presentation geometry, not another NASA product. Rebuild the cropped wordmark and Earth preview with `python scripts/prepare-exhibition-assets.py` (Pillow required). No proprietary assets from the reference websites are included.
 
 ## Experience revision
 
@@ -43,3 +43,14 @@ Global atlas: Beck et al. (2023), Scientific Data 10, 724, DOI 10.1038/s41597-02
 NASA Earth Observatory, Blue Marble: Next Generation, August 2004 monthly MODIS composite. Creators: Reto Stöckli and Robert Simmon. [Official download page](https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/) and [NASA image-use guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/). The original 5400×2700 JPEG is bundled without pixel changes; 1616254 bytes, SHA-256 `2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9`. Exact download URL and retrieval date are in public/data/basemap-provenance.json. Rebuild with `node scripts/fetch-basemap.mjs`.
 
 The satellite image is a historical cloud-free composite, not live imagery or field-resolution mapping. The independent 1991–2020 climate/crop layer sits above it with an adjustable opacity (including 0% for satellite-only inspection). The two layers represent different periods. Both are available from the offline cache. Soil filters remain hypothetical; satellite colors do not establish soil type or crop suitability.
+
+The lightweight Earth loading/static poster is an actual transparent capture of the same Three.js globe, not a circle cropped from an equirectangular image. Reproduce it against the production preview using `node scripts/capture-earth-poster.mjs`, then `python scripts/prepare-exhibition-assets.py`. Its checksum and exact processing are in the branding manifest.
+
+
+## NASA clouded Earth model
+
+[Earth with Clouds 3D Model](https://science.nasa.gov/resource/earth-with-clouds-3d-model/), NASA Visualization Technology Applications and Development (VTAD), published22April2019, download labeled9September2023. [NASA media guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/) apply; NASA credit is retained and no endorsement is implied. Cloud acquisition dates are not specified by the model record. The globe is a historical presentation asset, not current cloud or forecast data.
+
+The verified glTF source was18,928,336bytes. Blender5.2.1 LTS was actually run to normalize geometry, smooth normals, resize diffuse/normal textures and encode runtime JPEGs. The optimized model has3,072triangles and is510,232bytes. Exact source/download URLs, retrieval timestamp, original/output SHA-256, output gzip sizes and modifications are in `assets/blender/earth-source.json`. The editable scene is `assets/blender/earth-nasa.blend`; rebuild using `node scripts/fetch-earth-model.mjs` then Blender `--factory-startup --background --python assets/blender/prepare_earth.py`. Bulk source download remains in ignored .cache.
+
+The model keeps its cloud texture and surface-normal map. Sun position, atmosphere, illumination, presentation rotation and the transition to the separate2004 map are illustrative. Original flat-map colors remain unchanged.

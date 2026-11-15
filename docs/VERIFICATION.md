@@ -56,3 +56,11 @@ The later experience revision passes 23 unit tests and the complete 20-test prod
 Remote CI run43626894174 passed for experience commit5758712d6eb31790751e8f70b45d2d8699fedfc9. Anonymous live checks of Sites version2 passed, including all four GLBs and390px mobile. A later crop-quality regression check ensures switching to Static unloads an already opened plant canvas and switching back requires another explicit3D request.
 
 The active crop viewer now distinguishes renderer teardown from a genuine WebGL context loss. Reopen/poster/static-quality regression and all five experience tests passed after the cleanup fix.
+
+## Agrorithm exhibition release — 15 November 2026
+
+The current display brand is Agrorithm; legacy repository/base/storage paths remain compatible. TypeScript, ESLint, production build and30 unit tests pass. The20-case browser suite passed before the new device-location extension; four new location/date cases also pass. The final model/layout matrix passed 61 cases / 773 checks; the affected typography/exploded-view retest passed 4 cases / 23 checks. See VISUAL_QA.md for actual timestamps, screenshots and renderer limits. The presentation PDF is 50 pages, 3,580,199 bytes, all 1440×810 pt, with a scientific model-preview slide and an offline-first export check. Report details are in REPORT_EXPORT.md.
+
+The incomplete Urdu switch is removed. Century Gothic is used where locally installed; a webfont redistribution license was not supplied, so other devices use bundled DM Sans. Instrument Serif Italic is bundled under OFL. No physical phone/integrated-GPU FPS, local agronomic validation or groundwater prediction is claimed. GitHub CI run 43691529776 passed implementation commit 814faa72f69692d1a018d89ae15d0b7b1c1dc030; the final release is checked separately.
+
+Final follow-up:24browser cases and31unit tests pass after geolocation, padding, enlarged zoom and the sourced NASA clouded-Earth integration. The portal marker uses measured image bounds and a tested equal-angle cover transform. NASA model/source/editable-scene provenance is in assets/blender/earth-source.json. The standalone public-source model is510,232bytes; rendering and Sun/cloud timing remain illustrative.

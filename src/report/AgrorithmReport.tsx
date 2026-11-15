@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { BRAND, asset } from "../config";
 import { sensitivity } from "../engine/engine";
 import { CalendarChart, VegetationChart, WaterChart, WeatherChart } from "./ReportCharts";
+import ScientificModelFigure from "./ScientificModelFigure";
 import { cropRegistry, display, packMeasured, percent, REPORT_BODY_HEIGHT, REPORT_HORIZON, splitTableRow, splitText, summarizeWeather, type AgrorithmReportProps, type MeasuredItem } from "./reportData";
 import "./report.css";
 export type { AgrorithmReportProps, ReportSnapshot, ReportVegetation } from "./reportData";
@@ -36,7 +37,9 @@ function buildSections(p: AgrorithmReportProps): Section[] {
 
   const inputs = makeSection("inputs", "02 / THE FIELD YOU ENTERED", "Start with the ground truth.", "Every field input is carried into this report, including unknown answers and stated assumptions.");
   inputs.table("Farm and practical limits", ["Input", "Entered value"], [
-    ["Field name", f.name], ["Latitude / longitude", `${f.lat}° / ${f.lon}°`], ["Area", `${f.areaHa} ha / ${(f.areaHa * 2.47105381).toFixed(3)} acres`],
+    ["Field name", f.name], ["Latitude / longitude", `${f.lat}° / ${f.lon}°`],
+    ...(f.coordinateEvidence ? [["Coordinate provenance", "Device geolocation estimate; confirm this point is the farm rather than only the device's current location."], ["Device-reported horizontal accuracy", f.coordinateEvidence.accuracyM === null ? "Unknown; not a surveyed boundary" : `${display(f.coordinateEvidence.accuracyM, " m")} (reported estimate; not a surveyed boundary)`], ["Coordinate estimate captured", f.coordinateEvidence.capturedAt]] : []),
+    ["Area", `${f.areaHa} ha / ${(f.areaHa * 2.47105381).toFixed(3)} acres`],
     ["Irrigation method", f.irrigation], ["Delivery efficiency", f.efficiency === null ? "Unknown" : `${percent(f.efficiency)} (fraction ${f.efficiency})`], ["Delivered-water limit", display(f.waterLimitMm, " mm / common horizon")],
     ["Soil texture", f.soilTexture || "Unknown"], ["Soil pH", display(f.soil.ph)], ["Soil EC", display(f.soil.ec, " dS/m")], ["Available root-zone storage capacity", display(f.soil.capacityMm, " mm")], ["Soil depth", display(f.soil.depthCm, " cm")], ["Soil test date", f.soil.date || "Unknown"], ["Soil source / status", f.soil.source || "Unknown"],
     ["Equipment access", joined(f.equipment)], ["Market access", joined(f.markets)], ["Crop exclusions", f.exclusions.length ? f.exclusions.map(c => crops[c].name).join(", ") : "None selected"], ["Budget", display(f.budget, " PKR")], ["Management-confirmation checkbox", yes(f.confirmed)], ["Crop-parameter registry", f.cropTable ? "User-imported table; source applicability remains unverified" : "Bundled provisional crop table"],
@@ -75,8 +78,12 @@ function buildSections(p: AgrorithmReportProps): Section[] {
   }
   sections.push(eo.section);
 
+  const models = makeSection("model-preview", "07 / VISUAL FIELD GUIDE", "Two views. Two different depth scales.", "Actual Blender poster renders. Geometry explains a process; observations and scenario calculations remain separate evidence.");
+  models.content(<ScientificModelFigure />);
+  sections.push(models.section);
+
   for (const r of rs) {
-    const rotation = makeSection(`rotation-${r.id}`, `07 / ROTATION DETAIL / ${r.status.toUpperCase()}`, r.name, r.description);
+    const rotation = makeSection(`rotation-${r.id}`, `08 / ROTATION DETAIL / ${r.status.toUpperCase()}`, r.name, r.description);
     for (let offset = 0; offset < r.sequence.length; offset += 8) rotation.content(<CalendarChart result={r} farm={f} offset={offset} />);
     rotation.paragraph("Calendar interpretation", "Stage bands use the current crop-stage fractions scaled to the entered sowing/harvest interval; they are not simulated phenology. All calendars share the same 36-month time scale. A minimum seven-day harvest/termination transition buffer is a screening rule. Retained residue has an explicit 45-day display assumption.");
     rotation.table("Exact crop dates and residue assumptions", ["Crop / family", "Sow", "Harvest / terminate", "Duration", "Residue"], r.sequence.map(a => [`${crops[a.crop].name} / ${crops[a.crop].family}`, a.sow, a.harvest, `${Math.round((Date.parse(a.harvest) - Date.parse(a.sow)) / 86400000)} d`, a.residue ? "Retained; 45-day assumption" : "None assumed"]), [2.4, 1.2, 1.5, .8, 2]);
@@ -90,7 +97,7 @@ function buildSections(p: AgrorithmReportProps): Section[] {
     sections.push(rotation.section);
   }
 
-  const robust = makeSection("robustness", "08 / REPLAY & SENSITIVITY", "How stable is the comparison?", "Enumerated historical windows and parameter cases are not independent trials or calibrated probabilities.");
+  const robust = makeSection("robustness", "09 / REPLAY & SENSITIVITY", "How stable is the comparison?", "Enumerated historical windows and parameter cases are not independent trials or calibrated probabilities.");
   robust.table("Historical replay - accepted complete windows only", ["Sequence", "Complete windows", "Delivered water values (mm)", "Range (mm)"], rs.map(r => [r.name, `${r.replay.length} / 4 attempted`, r.replay.length ? r.replay.map(v => Math.round(v).toLocaleString()).join(", ") : "Unavailable", r.replay.length ? `${Math.round(Math.min(...r.replay))} - ${Math.round(Math.max(...r.replay))}` : "Unknown"]), [2, 1.5, 3, 1.4]);
   robust.paragraph("Replay support", "The engine preserves crop order across consecutive 36-month historical windows starting July 2018, 2019, 2020 and 2021. Windows overlap and only complete windows are accepted. Values are listed in accepted-window order; the result schema does not retain the date label of an omitted partial window. Historical replay does not validate future yields.");
   const cases = sensitivity(f, matching === false ? [] : weather, s);
@@ -98,19 +105,19 @@ function buildSections(p: AgrorithmReportProps): Section[] {
   robust.paragraph("Sensitivity definition", "Rainfall is enumerated at the current setting minus 20 percentage points, current, and plus 20 percentage points (clipped at zero), crossed with Kc multipliers 0.9 and 1.1. The number of favorable cases is not a probability of success. Water-budget and priority effects are represented by the current scenario, not by invented future outcomes.");
   sections.push(robust.section);
 
-  const ranking = makeSection("index", "09 / OPTIONAL INDEX", "A preference summary, after the components.", "Hard feasibility rules always apply. Priority sliders cannot override a known constraint or fill missing evidence.");
+  const ranking = makeSection("index", "10 / OPTIONAL INDEX", "A preference summary, after the components.", "Hard feasibility rules always apply. Priority sliders cannot override a known constraint or fill missing evidence.");
   ranking.table("Current optional index", ["Sequence", "Status", "Optional index / 100", "Non-dominated among feasible choices"], rs.map(r => [r.name, r.status, display(r.score), r.status === "feasible" ? yes(r.pareto) : "Not compared"]), [2.6, 1.5, 1.6, 2.4]);
   ranking.paragraph("Fixed normalization and weights", "Water uses max(0, 1 - delivered mm / 6000); cover uses the live-calendar fraction; diversity uses min(1, family count / 3); exposure uses max(0, 1 - (heat + frost days) / horizon days). The weighted sum is divided by the sum of supplied weights and multiplied by 100. Zero total weight gives no index. Infeasible or unresolved options are not ranked. Required missing numerical dimensions suppress the index.");
   ranking.paragraph("Pareto comparison", "Among screening-feasible choices only, minimize delivered irrigation and heat-plus-frost exposure; maximize live cover and distinct families. A choice dominates another only when no dimension is worse and at least one is better. The baseline can remain non-dominated. This report never forces an alternative to win.");
   sections.push(ranking.section);
 
-  const parameters = makeSection("parameters", "10 / PARAMETER REGISTER", "Every crop assumption stays inspectable.", "This is the exact current registry used for screening, including imported values and provisional flags.");
+  const parameters = makeSection("parameters", "11 / PARAMETER REGISTER", "Every crop assumption stays inspectable.", "This is the exact current registry used for screening, including imported values and provisional flags.");
   for (const [id, c] of Object.entries(crops)) {
     parameters.table(`${c.name.length > 75 ? c.name.slice(0, 72) + "..." : c.name} (${id})`, ["Parameter", "Current value"], [...(c.name.length > 75 ? [["Full crop name", c.name]] : []), ["Family / legume", `${c.family} / ${yes(c.legume)}`], ["Sowing window / duration", `${c.window.join(" to ")} / ${c.duration.join(" to ")} days`], ["Stage fractions: initial, development, mid, late", c.stages.join(", ")], ["Stage Kc: initial, development, mid, late", c.kc.join(", ")], ["Heat / frost screen", `${c.heat} °C daily max / ${c.frost} °C daily min`], ["Illustrative root-depth parameter", `${c.rootM} m; not a measured root profile`], ["Equipment / market", `${c.equipment} / ${c.market}`], ["Region / variety applicability", c.applicability || "Not supplied; local applicability remains provisional"], ["Source", c.source], ...c.provisional.map(v => ["Provisional flag", v])], [1.2, 2.8]);
   }
   sections.push(parameters.section);
 
-  const methods = makeSection("methods", "11 / METHODS & ASSUMPTIONS", "Use the model within its limits.", "Software checks verify implementation. They do not establish agronomic validity.");
+  const methods = makeSection("methods", "12 / METHODS & ASSUMPTIONS", "Use the model within its limits.", "Software checks verify implementation. They do not establish agronomic validity.");
   [
     ["Reference ET", "Daily Hargreaves screening ET0 uses FAO extraterrestrial radiation from latitude/day of year and the 0.408 radiation-to-mm conversion. It is not locally calibrated FAO Penman-Monteith. Crop ET uses stage-specific Kc and the current Kc multiplier."],
     ["Root-zone water", "A single bucket starts at 50% of supplied available storage. Fixed 80% effective rainfall enters storage; overflow drains. Crops consume ET; assumed net irrigation fills a deficit. Uncropped evaporation consumes up to 0.25 ET0. Storage carries between crops and years. Initial storage + effective rain + net irrigation = final storage + crop ET + uncropped evaporation + drainage."],
@@ -121,7 +128,7 @@ function buildSections(p: AgrorithmReportProps): Section[] {
   ].forEach(([title, text]) => methods.paragraph(title, text));
   sections.push(methods.section);
 
-  const sources = makeSection("sources", "12 / SOURCES & FOLLOW-UP", "Keep the trail back to the evidence.", "Direct references and a clear set of local checks accompany this exported snapshot.");
+  const sources = makeSection("sources", "13 / SOURCES & FOLLOW-UP", "Keep the trail back to the evidence.", "Direct references and a clear set of local checks accompany this exported snapshot.");
   sources.table("Methods and data references", ["Reference", "Direct source"], [["NASA POWER historical daily weather API", "https://power.larc.nasa.gov/docs/services/api/temporal/daily/"], ["NASA HLS products / quality documentation", "https://hls.gsfc.nasa.gov/data-products/"], ["FAO 56 crop evapotranspiration", "https://www.fao.org/4/X0490E/x0490e00.htm"], ["FAO irrigation, including paddy terms", "https://www.fao.org/4/s2022e/s2022e08.htm"], ["USGS aquifers and groundwater", "https://www.usgs.gov/water-science-school/science/aquifers-and-groundwater"], ...[...new Set(Object.values(crops).map(c => c.source))].map(url => ["Current crop parameter source", url])], [1.2, 2.8]);
   sources.paragraph("Before a planting decision", "Obtain local soil tests; confirm cultivar and calendar, water rights and actual delivered volume, machinery, buyers and dated production costs. Review disease and rotation history, cover termination and residue management with a local agronomist. Record missing evidence rather than replacing it with a favorable assumption.");
   sources.paragraph("Export and review record", `Model version: ${p.modelVersion}. Generated: ${p.generatedAt ?? "At browser print"}. The supplied cover and crop/soil geometry are presentation assets, not measurements. Full machine-readable plan settings and result records are available through the app's existing JSON/CSV exports. Farm inputs are stored locally by default and are included in this report only because the user exports it.`);

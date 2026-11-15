@@ -1,0 +1,20 @@
+[
+  {
+    "host": "Sites v11",
+    "width": 1440,
+    "exactGreeting": "ON THIS DEVICE\nHi. Ready when you are.\n\nHi! I’m ready to help. What would you like to explore—NASA observations, crop options or your plan? You can ask in your own words.\n\nOpen the pattern lab\nBrowse the field guide",
+    "mixedQuestionAnswered": true,
+    "thanks": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "host": "Sites v11",
+    "width": 390,
+    "exactGreeting": "ON THIS DEVICE\nHi. Ready when you are.\n\nHi! I’m ready to help. What would you like to explore—NASA observations, crop options or your plan? You can ask in your own words.\n\nOpen the pattern lab\nBrowse the field guide",
+    "mixedQuestionAnswered": true,
+    "thanks": true,
+    "overflow": false,
+    "errors": []
+  }
+]

@@ -2827,7 +2827,7 @@ function About() {
         use does not imply endorsement. This pilot needs real farmer and
         agronomist review; no interviews or outcomes are claimed.
       </p>
-      <a href="https://www.spaceappschallenge.org/2026/challenges/field-shift-adapting-farms-with-nasa-data/">
+      <a href="https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/">
         Official challenge reference <ArrowUpRight size={16} />
       </a>
     </main>

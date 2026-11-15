@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-15T18:27:38.950Z",
+  "results": [
+    {
+      "test": "No automatic model requests",
+      "pass": true,
+      "requests": 0
+    },
+    {
+      "test": "Actual trained generation offline after load",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "test": "Disable and remove model cache",
+      "pass": true
+    },
+    {
+      "test": "Phone greeting and failed model fallback; no overflow",
+      "pass": true
+    }
+  ]
+}

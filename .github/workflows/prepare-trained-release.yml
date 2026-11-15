@@ -1,0 +1,71 @@
+name: Prepare trained reader release
+on:
+  push:
+    branches: [feat/fieldshift-pilot]
+    paths:
+      - .github/trained-reader-release.json
+      - .github/workflows/prepare-trained-release.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: prepare-trained-reader-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  prepare:
+    if: github.ref == 'refs/heads/feat/fieldshift-pilot'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Fetch and verify pinned trained model parts
+        run: node scripts/sync-trained-assets.mjs
+      - name: Commit only verified model parts to the source branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          node --input-type=module <<'NODE'
+          import { readFileSync } from 'node:fs';
+          import { execFileSync } from 'node:child_process';
+          const spec = JSON.parse(readFileSync('.github/trained-reader-release.json', 'utf8'));
+          execFileSync('git', ['add', '--', ...spec.parts.map(part => part.path)], { stdio: 'inherit' });
+          NODE
+          if ! git diff --cached --quiet; then
+            git commit -m 'Add verified trained reader model parts'
+          fi
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "SOURCE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:e2e
+      - name: Stage tested build on a detached artifact worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          export PAGES_WORKTREE="${RUNNER_TEMP}/agrorithm-gh-pages"
+          git fetch origin gh-pages
+          git worktree add --detach "$PAGES_WORKTREE" origin/gh-pages
+          node scripts/stage-pages-release.mjs
+          git -C "$PAGES_WORKTREE" add --all
+          if ! git -C "$PAGES_WORKTREE" diff --cached --quiet; then
+            git -C "$PAGES_WORKTREE" commit -m "Prepare tested trained reader build from ${SOURCE_SHA}"
+          fi
+          git -C "$PAGES_WORKTREE" push origin HEAD:gh-pages
+      - name: Record publication handoff
+        run: echo 'Prepared gh-pages artifacts. GITHUB_TOKEN pushes do not trigger a Pages build; a separate authenticated publication trigger is required.' >> "$GITHUB_STEP_SUMMARY"

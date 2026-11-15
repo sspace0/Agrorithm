@@ -120,7 +120,6 @@ export function Diorama({
               rain,
             }}
             annotations={annotations}
-            interactive={explorer}
           />
         </div>
       </div>

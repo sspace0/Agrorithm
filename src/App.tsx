@@ -548,8 +548,9 @@ export default function App() {
         </>}
         <div className="panel-content">{panel}</div>
         {["lab", "tradeoffs", "export"].includes(page) && <div className="results-context">
-          <InputAssessment assessment={inputAssessment}/>
-          <NasaEvidencePanel weather={weather} weatherSource={weatherSource} vegetation={veg} weatherMatchesFarm={aligned} vegetationMatchesFarm={Math.abs(farm.lat - 32.1) < .001 && Math.abs(farm.lon - 73) < .001} onOpenEvidence={() => navigate(`/${currentConcept}/evidence`)} showSoilNote/>
+          <aside className="soil-proxy-summary"><h3>Soil-health proxies, not a soil test</h3><p>Cover, crop-family diversity, stated residue and water exposure help compare stewardship scenarios. They do not measure soil carbon, nutrients, structure, erosion or long-term recovery. Next: dated local soil-carbon and nutrient tests; SMAP could add coarse regional moisture context after validation. SMAP is not implemented here.</p></aside>
+          <details className="results-extra"><summary>Compare inputs with crop references <span>{inputAssessment.water.filter(row => row.status === "exceeds").length ? `${inputAssessment.water.filter(row => row.status === "exceeds").length} water budgets exceeded` : "Water · soil pH · temperature"}</span></summary><InputAssessment assessment={inputAssessment}/></details>
+          <details className="results-extra"><summary>Full NASA data record & soil-health interpretation <span>Sources · quality · assumptions</span></summary><NasaEvidencePanel weather={weather} weatherSource={weatherSource} vegetation={veg} weatherMatchesFarm={aligned} vegetationMatchesFarm={Math.abs(farm.lat - 32.1) < .001 && Math.abs(farm.lon - 73) < .001} onOpenEvidence={() => navigate(`/${currentConcept}/evidence`)} showSoilNote/></details>
         </div>}
         {currentConcept === "console" && (
           <div className="console-inspector">
@@ -1471,7 +1472,7 @@ function Evidence(p: DataProps) {
                 <tr>
                   <th>Month</th>
                   <th>Rainfall mm</th>
-                  <th>Mean Tmax °C</th>
+                  <th>Mean T<sub>max</sub> °C</th>
                   <th>Valid days</th>
                 </tr>
               </thead>
@@ -2744,7 +2745,7 @@ function Sources() {
           <span className="section-index">03</span>
           <h3>Compare openly</h3>
           <p>
-            FAO Hargreaves screening ET0 and stage-specific Kc feed a daily
+            FAO Hargreaves screening ET<sub>0</sub> and stage-specific K<sub>c</sub> feed a daily
             storage bucket. Show component indicators, historical replay and
             sensitivity before an aggregate index.
           </p>

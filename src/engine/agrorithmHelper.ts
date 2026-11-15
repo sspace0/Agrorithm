@@ -74,7 +74,8 @@ function sourceAnswer(query: string, context: HelperContext): HelperAnswer | nul
 
 export function answerAgrorithmQuestion(question: string, model: WeatherPatternModel | null, context: HelperContext = {}): HelperAnswer {
   const query=question.trim();
-  if (!query || /^(hello|hi|hey|help)[!. ]*$/i.test(query)) return HELPER_WELCOME;
+  if (!query || /^help[!. ]*$/i.test(query)) return HELPER_WELCOME;
+  if (/^(?:(?:hello|hi|hey)(?: there)?[!., ]*|(?:(?:hello|hi|hey)[!., ]*)?how (?:are|r) (?:you|u)(?: doing)?[?!. ]*|(?:thanks|thank you)[!. ]*)$/i.test(query)) return {...HELPER_WELCOME,title:"Hi. Ready when you are.",text:"Hi! I can help you read NASA observations, explore crop references and understand your plan. Ask about a historical month, water accounting, satellite evidence or your results."};
   if (scopeQuestion.test(query)) return {kind:"scope",title:"That needs evidence this helper cannot supply.",text:"The learned model groups supplied historical weather months. It cannot forecast, choose the best crop, estimate future yield or profit, or establish a field's groundwater depth. Use the transparent planning tools and local evidence for those decisions.",links:[{label:"Review observations and gaps",href:"#/studio/evidence"},{label:"Explore hypothetical stress tests",href:"#/studio/scenarios"},...modelLinks]};
   const plan = answerPlanQuestion(query, context.plan);
   if (plan) return { ...plan, context };

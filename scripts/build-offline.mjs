@@ -23,6 +23,7 @@ const urls = paths
   .filter(
     (p) =>
       !p.includes("/models/") &&
+      !p.includes("/nasa-helper-model/") &&
       !/generative-|ort-wasm-/.test(p) &&
       !/social-preview\./.test(p) &&
       (!p.endsWith(".png") ||

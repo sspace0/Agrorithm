@@ -119,9 +119,9 @@ Prepared 15 November 2026 from the current repository, shipped data provenance, 
 - Live HTTP checks on 15 November 2026 succeeded for all 18 NASA rows and 63 of the 78 other rows. The remaining 15 URLs returned access blocks, connection/time limits or a server error; none returned 404. Their exact recorded source URLs are retained rather than replaced with an unrelated source. The local check record is output/judging-audit/submission-url-checks.json; successful reachability does not independently validate a scientific claim.
 - The inspected evidence includes docs/DATA_REGISTRY.md, docs/ASSET_CREDITS.md, docs/ATLAS.md, src/data/crops.ts, src/data/cropProfiles.ts, src/data/atlas.ts, public/data/provenance.json, public/data/vegetation.json, public/data/basemap-provenance.json, public/data/climate-zones.json, asset/font manifests, package.json, and THIRD_PARTY_NOTICES.txt. Source URLs are copied from these records or the corresponding official project metadata.
 
-## Conditional generative-model resources — keep separate until inclusion is confirmed
+## Optional trained-reader resources
 
-The current website inventory above does not claim that the generative training experiment has shipped. If a tested trained/exported model is included in the final submission, add the resources actually used by that final pipeline to **Space Agency Partner & Other Data**:
+These resources support the trained, guarded source reader included in the optional release. Add them to **Space Agency Partner & Other Data**. The numerical rotation engine remains independent of generated text.
 
 - Google FLAN-T5 Small, pinned base-model revision 0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab; Apache 2.0: https://huggingface.co/google/flan-t5-small/tree/0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab
 - PyTorch — training framework: https://pytorch.org/
@@ -129,7 +129,7 @@ The current website inventory above does not claim that the generative training 
 - Hugging Face PEFT — LoRA fine-tuning: https://github.com/huggingface/peft
 - SentencePiece — base-model tokenizer dependency: https://github.com/google/sentencepiece
 - Safetensors — model weights: https://github.com/huggingface/safetensors
-- Hugging Face Optimum — ONNX export, only if the export is actually used: https://github.com/huggingface/optimum
-- ONNX Runtime — quantization/inference, only if actually used: https://github.com/microsoft/onnxruntime
+- Hugging Face Optimum — measured ONNX export: https://github.com/huggingface/optimum
+- ONNX Runtime — quantization and browser inference: https://github.com/microsoft/onnxruntime
 
-The pinned model and training-package names come from scripts/ml/generative-training/download-base.py, requirements.txt, train.py and export-onnx.py. Packaging, measured validation and deployment remain separate completion checks.
+The pinned model and training-package names come from scripts/ml/generative-training/download-base.py, requirements.txt, train.py and export-onnx.py. Exact training runs, limits, browser checks and hashes accompany the model in docs/generative-training and docs/HELPER_SCOPE.md.

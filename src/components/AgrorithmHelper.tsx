@@ -5,11 +5,13 @@ import { answerAgrorithmQuestion, HELPER_WELCOME, type HelperAnswer, type Helper
 import { parseWeatherPatternModel, type WeatherPatternModel } from "../engine/weatherPatterns";
 import type { HelperPlanContext } from "../engine/helperPlanContext";
 import { HELPER_REQUEST_EVENT, type HelperRequest } from "./helperEvents";
+import LocalGeneration, { GeneratedExplanation, type GeneratedDraft } from "./LocalGeneration";
+import ScientificText from "./ScientificText";
 import "./helper.css";
 
-type Message = { id: number; role: "user"; text: string } | { id: number; role: "helper"; answer: HelperAnswer };
+type Message = { id: number; role: "user"; text: string } | { id: number; role: "helper"; answer: HelperAnswer; question?:string; generated?:GeneratedDraft };
 const kinds: Record<HelperAnswer["kind"],string> = { welcome:"ON THIS DEVICE", "learned-pattern":"LEARNED HISTORICAL PATTERN", "source-guide":"DOCUMENTED SOURCE GUIDE", "plan-results":"YOUR COMPUTED PLAN SNAPSHOT", "model-details":"TRAINING RECORD", clarification:"CLARIFICATION", scope:"EVIDENCE LIMIT", "model-required":"MODEL PREPARATION", unavailable:"UNAVAILABLE EVIDENCE" };
-const suggestions = ["What was July 2023 like?", "How was the model trained?", "Explain irrigation water accounting"];
+const suggestions = ["Explain historical weather data", "How was the model trained?", "Explain irrigation water accounting"];
 
 export default function AgrorithmHelper({ planContext }: { planContext?: HelperPlanContext }) {
   const [open,setOpen]=useState(false), [bottom,setBottom]=useState(24), [question,setQuestion]=useState(""), [busy,setBusy]=useState(false), [modelReady,setModelReady]=useState(false), [modelError,setModelError]=useState(false);
@@ -76,7 +78,7 @@ export default function AgrorithmHelper({ planContext }: { planContext?: HelperP
       try{answer=answerAgrorithmQuestion(value,await loadModel(),context.current);}
       catch{answer={kind:"unavailable",title:"The learned record could not load.",text:"Historical-month answers need the bundled model file. The documented source guide still works; try a water, soil or satellite question, or retry loading the model.",links:[{label:"Open the source guide",href:"#/help"}]};}
     }
-    if(alive.current){if(answer.context)context.current=answer.context;setMessages(previous=>[...previous,{id:id.current++,role:"helper",answer}]);setBusy(false);input.current?.focus({preventScroll:true});}
+    if(alive.current){if(answer.context)context.current=answer.context;setMessages(previous=>[...previous,{id:id.current++,role:"helper",answer,question:value}]);setBusy(false);input.current?.focus({preventScroll:true});}
   },[busy,loadModel]);
   useEffect(()=>{
     const requested=(event:Event)=>{
@@ -91,6 +93,8 @@ export default function AgrorithmHelper({ planContext }: { planContext?: HelperP
     addEventListener(HELPER_REQUEST_EVENT,requested);
     return()=>removeEventListener(HELPER_REQUEST_EVENT,requested);
   },[ask,busy]);
+  const latestAnswer=[...messages].reverse().find(message=>message.role==="helper"),latestAnswerId=latestAnswer?.id;
+  const updateDraft=useCallback((draft:GeneratedDraft)=>{if(latestAnswerId!==undefined)setMessages(previous=>previous.map(message=>message.id===latestAnswerId&&message.role==="helper"?{...message,generated:draft}:message));},[latestAnswerId]);
   const triggerButton=<button ref={trigger} className="agr-helper-trigger" style={{bottom:`max(${bottom}px, calc(20px + env(safe-area-inset-bottom)))`}} type="button" aria-label="Ask Agrorithm" title="Ask Agrorithm" aria-haspopup="dialog" aria-controls="agrorithm-helper-panel" aria-expanded={open} onClick={()=>{returnFocus.current=trigger.current;returnScroll.current={x:scrollX,y:scrollY,hash:location.hash};setOpen(true);}}><span className="agr-helper-orb" aria-hidden="true"><img src={asset("images/agrorithm-o.png")} alt=""/><MessageCircle size={12}/></span><span className="agr-helper-trigger-label">Ask Agrorithm</span></button>;
   return <>
     {triggerButton}
@@ -99,14 +103,17 @@ export default function AgrorithmHelper({ planContext }: { planContext?: HelperP
         <header className="agr-helper-header"><div className="agr-helper-mark" aria-hidden="true"><img src={asset("images/agrorithm-o.png")} alt=""/></div><div><span className="eyebrow">THE FIELD CONVERSATION</span><h2 id="agr-helper-title">Ask Agrorithm</h2></div><button type="button" aria-label="Close Agrorithm helper" onClick={()=>setOpen(false)}><X size={21}/></button></header>
         <p className="agr-helper-description" id="agr-helper-description">Historical pattern model + documented source guide{planAvailable?" + your computed plan":""}. Questions stay in this browser session.</p>
         <div className="agr-helper-record"><Database size={14}/><span>{modelReady?"NASA POWER model ready · 2018–2024":modelError?"Source guide ready · model unavailable":"Preparing the bundled historical model…"}</span>{modelError&&<button type="button" aria-label="Retry historical model" onClick={()=>void loadModel().catch(()=>{})}><RefreshCw size={15}/></button>}</div>
-        <div className="agr-helper-log" ref={log} role="log" aria-live="polite" aria-relevant="additions" aria-label="Agrorithm conversation">{messages.map(message=>message.role==="user"?<article className="agr-helper-user" key={message.id}><span className="eyebrow">YOUR QUESTION</span><p>{message.text}</p></article>:<article className="agr-helper-answer" key={message.id}><span className="agr-helper-answer-kind">{message.answer.kind==="learned-pattern"?<Database size={13}/>:<BookOpen size={13}/>} {kinds[message.answer.kind]}</span><h3>{message.answer.title}</h3><p>{message.answer.text}</p>{message.answer.facts&&<ul>{message.answer.facts.map(fact=><li key={fact}>{fact}</li>)}</ul>}{message.answer.sections?.map(section=><section className="agr-helper-section" key={section.title}><h4>{section.title}</h4><p>{section.text}</p><div className="agr-helper-links">{section.links.map(link=><a key={link.href+link.label} href={link.href} {...(link.href.startsWith("https:")?{target:"_blank",rel:"noreferrer"}:{})} onClick={()=>{if(link.href.startsWith("#"))setOpen(false);}}>{link.label}<ArrowUpRight size={14}/></a>)}</div></section>)}<div className="agr-helper-links">{message.answer.links.map(link=><a key={link.href+link.label} href={link.href} {...(link.href.startsWith("https:")?{target:"_blank",rel:"noreferrer"}:{})} onClick={()=>{if(link.href.startsWith("#"))setOpen(false);}}>{link.label}<ArrowUpRight size={14}/></a>)}</div></article>)}{busy&&<p className="agr-helper-busy" role="status"><Leaf size={15}/> Reading the bundled historical record…</p>}</div>
+        <LocalGeneration open={open} answer={latestAnswer?.role==="helper"?latestAnswer.answer:undefined} question={latestAnswer?.role==="helper"?latestAnswer.question:undefined} onDraft={updateDraft}/>
+        <div className="agr-helper-log" ref={log} role="log" aria-live="polite" aria-relevant="additions" aria-label="Agrorithm conversation">{messages.map(message=>message.role==="user"?<article className="agr-helper-user" key={message.id}><span className="eyebrow">YOUR QUESTION</span><p>{message.text}</p></article>:<article className="agr-helper-answer" key={message.id}><span className="agr-helper-answer-kind">{message.answer.kind==="learned-pattern"?<Database size={13}/>:<BookOpen size={13}/>} {kinds[message.answer.kind]}</span><h3>{message.answer.title}</h3>{message.generated&&<GeneratedExplanation draft={message.generated}/>}<p><ScientificText>{message.answer.text}</ScientificText></p>{message.answer.facts&&<ul>{message.answer.facts.map(fact=><li key={fact}><ScientificText>{fact}</ScientificText></li>)}</ul>}{message.answer.sections?.map(section=><section className="agr-helper-section" key={section.title}><h4>{section.title}</h4><p><ScientificText>{section.text}</ScientificText></p><div className="agr-helper-links">{section.links.map(link=><a key={link.href+link.label} href={link.href} {...(link.href.startsWith("https:")?{target:"_blank",rel:"noreferrer"}:{})} onClick={()=>{if(link.href.startsWith("#"))setOpen(false);}}>{link.label}<ArrowUpRight size={14}/></a>)}</div></section>)}<div className="agr-helper-links">{message.answer.links.map(link=><a key={link.href+link.label} href={link.href} {...(link.href.startsWith("https:")?{target:"_blank",rel:"noreferrer"}:{})} onClick={()=>{if(link.href.startsWith("#"))setOpen(false);}}>{link.label}<ArrowUpRight size={14}/></a>)}</div></article>)}{busy&&<p className="agr-helper-busy" role="status"><Leaf size={15}/> Reading the bundled historical record…</p>}</div>
         <div className="agr-helper-suggestions" aria-label="Suggested questions">{(planAvailable?["Explain my results","Why is my current sequence not ranked?",...suggestions]:suggestions).map(prompt=><button type="button" key={prompt} disabled={busy} onClick={()=>void ask(prompt)}><MessageCircle size={14}/>{prompt}</button>)}</div>
-        <form className="agr-helper-form" onSubmit={e=>{e.preventDefault();void ask(question);}}><label htmlFor="agr-helper-question">Your question</label><div><input ref={input} id="agr-helper-question" value={question} onChange={e=>setQuestion(e.target.value)} maxLength={600} placeholder="Ask about July 2023, water, soil…" autoComplete="off"/><button type="submit" disabled={busy||!question.trim()} aria-label="Send question"><Send size={18}/></button></div></form>
+        <form className="agr-helper-form" onSubmit={e=>{e.preventDefault();void ask(question);}}><label htmlFor="agr-helper-question">Your question</label><div><input ref={input} id="agr-helper-question" value={question} onChange={e=>setQuestion(e.target.value)} maxLength={600} placeholder="Ask about weather, water, soil…" autoComplete="off"/><button type="submit" disabled={busy||!question.trim()} aria-label="Send question"><Send size={18}/></button></div></form>
         <footer className="agr-helper-footer"><span>Session only · no farm recommendation</span><button type="button" disabled={busy} onClick={()=>{context.current={plan:context.current.plan};setMessages([{id:id.current++,role:"helper",answer:HELPER_WELCOME}]);}}><Trash2 size={13}/> Clear conversation</button></footer>
       </div>
     </dialog>
   </>;
 }
+
+
 
 
 

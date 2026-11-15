@@ -4,6 +4,10 @@ import { answerAgrorithmQuestion, historicalMonthFromQuestion } from "../src/eng
 import { parseWeatherPatternModel } from "../src/engine/weatherPatterns";
 const model=parseWeatherPatternModel(JSON.parse(readFileSync("public/data/weather-patterns.json","utf8")));
 describe("Agrorithm on-device helper",()=>{
+  it("answers exact greetings while preserving compound farming questions",()=>{
+    for(const query of ["Hi","Hi, How are you?"])expect(answerAgrorithmQuestion(query,null).text).toContain("Hi!");
+    expect(answerAgrorithmQuestion("Hi, explain irrigation water accounting",null).kind).toBe("source-guide");
+  });
   it("parses named and ISO months and requests clarification for ambiguity",()=>{
     expect(historicalMonthFromQuestion("What was July 2023 like?").month).toBe("2023-07");
     expect(historicalMonthFromQuestion("Show 2023-07").month).toBe("2023-07");

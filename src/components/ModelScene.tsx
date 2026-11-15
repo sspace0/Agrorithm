@@ -238,6 +238,11 @@ function Asset(p: ModelSceneProps) {
       manual.current = true;
       p.onManual(true);
       c.enablePan = true;
+      c.enableRotate = true;
+      gl.domElement.style.touchAction = "none";
+      // Inspect also runs without a pointer event (toolbar/keyboard). Demand
+      // rendering must apply the new camera mode before the next gesture.
+      invalidate();
     };
     const wheel = (e: WheelEvent) => {
       if (!e.ctrlKey) {
@@ -274,6 +279,9 @@ function Asset(p: ModelSceneProps) {
       c.minDistance = radius * 0.06;
       c.maxDistance = radius * 80;
       c.enablePan = false;
+      c.enableRotate =
+        p.interactive && !matchMedia("(pointer:coarse)").matches;
+      gl.domElement.style.touchAction = "pan-y";
       c.update();
       manual.current = false;
       p.onManual(false);
@@ -426,6 +434,11 @@ function Asset(p: ModelSceneProps) {
         viewportHeight: viewport.height,
       });
       p.host.dataset.cameraMode = manual.current ? "manual" : "scroll";
+      p.host.dataset.camera = JSON.stringify({
+        position: camera.position.toArray(),
+        target: c.target.toArray(),
+        distance: camera.position.distanceTo(c.target),
+      });
       p.host.dataset.clearAlpha = String(gl.getClearAlpha());
       p.host.dataset.layerOffsets = JSON.stringify(layerOffsets);
     }

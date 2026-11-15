@@ -1,5 +1,6 @@
 import type { Day, Farm, Result, Scenario } from "../engine/types";
 import { CROPS } from "../data/crops";
+import { formatNumber } from "../engine/format";
 
 export const REPORT_HORIZON = { start: "2021-07-01", end: "2024-07-01", label: "1 July 2021 - 30 June 2024" };
 export const REPORT_BODY_HEIGHT = 752;
@@ -20,7 +21,7 @@ export interface AgrorithmReportProps {
   /** A local development/review surface; normal app integration leaves this false. */
   preview?: boolean;
 }
-export const display = (value: unknown, unit = "") => value === null || value === undefined || value === "" ? "Unknown" : typeof value === "number" ? `${new Intl.NumberFormat("en", { maximumFractionDigits: 1 }).format(value)}${unit}` : String(value);
+export const display = (value: unknown, unit = "") => value === null || value === undefined || value === "" ? "Unknown" : typeof value === "number" ? formatNumber(value, unit) : String(value);
 export const percent = (n: number | null) => n === null ? "Unknown" : `${Math.round(n * 100)}%`;
 export function splitText(text: string, limit = 900): string[] {
   if (!text) return ["Not supplied"];

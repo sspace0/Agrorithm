@@ -17,7 +17,7 @@ export function Diorama({
   progress?: number;
 }) {
   const [view, setView] = useState<"root-zone" | "groundwater">("root-zone");
-  const [explode, setExplode] = useState(false),
+  const [explode, setExplode] = useState<boolean | null>(null),
     [layers, setLayers] = useState(true),
     [roots, setRoots] = useState(true),
     [process, setProcess] = useState("none"),
@@ -26,6 +26,15 @@ export function Diorama({
   const story = useRef<HTMLDivElement>(null);
   const localProgress = useScrollProgress(story, motion && explorer);
   const phase = explorer ? localProgress : progress;
+  const smooth = (value: number) => {
+    const t = Math.max(0, Math.min(1, value));
+    return t * t * (3 - 2 * t);
+  };
+  const guidedSeparation =
+    motion && view === "root-zone"
+      ? smooth((phase - 0.28) / 0.22) * (1 - smooth((phase - 0.78) / 0.18))
+      : 0;
+  const separation = explode === null ? guidedSeparation : explode ? 1 : 0;
   const annotations =
     view === "root-zone"
       ? [
@@ -66,6 +75,8 @@ export function Diorama({
     <section
       className={`diorama ${compact ? "compact" : ""} ${explorer ? "explorer soil-exhibit" : ""}`}
       aria-label="Illustrative soil cutaway"
+      data-layer-mode={explode === null ? "guided" : "manual"}
+      data-layer-separation={separation}
     >
       <div ref={story} className={explorer ? "soil-scene-journey" : ""}>
         <div className={explorer ? "soil-exhibit-sticky" : ""}>
@@ -98,7 +109,16 @@ export function Diorama({
             compact={compact || !explorer}
             progress={phase}
             resetKey={reset}
-            options={{ view, layers, roots, explode, process, depth, rain }}
+            options={{
+              view,
+              layers,
+              roots,
+              explode: separation > 0,
+              separation,
+              process,
+              depth,
+              rain,
+            }}
             annotations={annotations}
             interactive={explorer}
           />
@@ -128,9 +148,17 @@ export function Diorama({
             >
               <RotateCcw size={17} />
             </button>
-            <button aria-pressed={explode} onClick={() => setExplode(!explode)}>
+            <button
+              aria-pressed={separation > 0.5}
+              onClick={() => setExplode(!(separation > 0.5))}
+            >
               <Move3D size={17} /> Separate layers
             </button>
+            {explode !== null && (
+              <button onClick={() => setExplode(null)}>
+                <RotateCcw size={17} /> Follow scroll
+              </button>
+            )}
             <button aria-pressed={layers} onClick={() => setLayers(!layers)}>
               <Layers size={17} /> Soil
             </button>
@@ -172,8 +200,8 @@ export function Diorama({
             Drag to orbit; Ctrl + wheel or the +/− controls zoom. Reset restores
             the stable cutaway.{" "}
             {view === "root-zone"
-              ? "Demo layer boundaries vary around 0.39, 1.13 and 2.02 m. These are not measured soil horizons."
-              : "Scale break: this view represents 0–20 m. Blue markers represent water within sediment pores; no cavity is implied."}{" "}
+              ? "Demo layer boundaries vary around 0.39, 1.13 and 2.02 m. Scroll reveals illustrative gaps between the layers; these are not measured soil horizons or physical depth changes. The layer control overrides the guided reveal."
+              : "Scale break: this view represents 0–20 m. Blue wet shading and enlarged pore markers illustrate saturation below the user-controlled table. Colors and pore sizes are illustrative; no cavity or measured field depth is implied."}{" "}
             Processes illustrate pathways, not flow velocities or an aquifer
             simulation.
           </p>

@@ -1,33 +1,26 @@
 # Public deployment
 
-Published and anonymously verified on 2026-11-14:
+Both public hosts were observed without a login on15November2026:
 
-**https://fieldshift-jt1.spacetime24.chatgpt.site**
+- GitHubPages: https://sspace0.github.io/Agrorithm/
+- Sites: https://fieldshift-jt1.spacetime24.chatgpt.site/
 
-The site is public to anyone with its URL. The GitHub source repository remains private and PR #1 remains unmerged. GitHub Pages has not been enabled or deployed; the existing manual Pages workflow remains available for future use.
+The owner explicitly authorized making sspace0/Agrorithm public. The source remains on feat/fieldshift-pilot with PR1 open and unmerged. main has not been merged automatically.
 
-## Hosting identity and reproducibility
+## Reviewed core release
 
-- Sites project: `appgprj_6af89821fc248191a588f9257cd991be`.
-- Saved version: 1 (`appgprj_6af89821fc248191a588f9257cd991be~appgver_b6f142913c448191b621f94fbcd40b27`).
-- Successful deployment: `appgdep_6af898ca3a848191a6e0e236b45b2540`.
-- Hosted source commit: `070ec3a8cfda8af9cc9ccfedfc881c12d069bf17` in the Sites source repository.
-- Application source corresponds to GitHub commit `8fa18c6da2afcf4517e3a90b08d9ea223af71c89`, with the added hosting manifest and a root-path build.
-- Hosting manifest: `.openai/hosting.json`; static directory `dist`.
+The first Pages release serves the dedicated gh-pages branch at its root, with .nojekyll. Its artifact commit is dbec0b5aeb590f770dc2a9740bb94711ddf4a5c0; application source is cb5f9ff0012ba4b27af227e0372e8fd3e0968c12. GitHub's Pages settings reported successful publication through run43715309759 in the github-pages environment. An anonymous browser received HTTP200, loaded the opening, entered the complete sample and observed both alternatives passing the demo screens with no JavaScript errors.
 
-For this host, build with `DEPLOY_BASE=/`. GitHub Pages builds continue to default to `/FieldShift/`; display branding is independent of either path. On PowerShell, set `$env:DEPLOY_BASE='/'` for the hosting build process, run the normal build, and remove that environment override afterward. The publication used a separate checkout under the ignored .cache directory, so the original local `/FieldShift/` preview was preserved.
+Sites version5 deployed successfully: appgprj_6af89821fc248191a588f9257cd991be~appgver_f5597b402fc081918de4feb987703dfa. Deployment: appgdep_6af9a6c98f0081918b7637d85b395ab2. Exact hosted source:36f756dfce036bcdb792c08e4baba324c7194efa. Anonymous opening and About/logo checks returned HTTP200 without JavaScript errors. Later release records are appended below after publication.
 
-Use the existing project ID for subsequent Sites updates. Obtain a fresh short-lived source credential through the Sites tools, push the exact source, package it with the Sites workflow helper, save a version and deploy that saved version. Do not commit credentials, deployment archives or private farm inputs. The archive is built from the exact pushed hosting source and is not the source repository itself.
+## Reproduction and updates
 
-## Live verification
+Display branding is separate from deployment. deployment.config.json defaults to /Agrorithm/ after the repository rename. DEPLOY_BASE overrides it for builds; Sites uses /. Runtime data, fonts, models, workers and service-worker scope derive from Vite's base. Hash routes support direct entry and refresh.
 
-The deployed origin returned HTTP 200 in an anonymous Chromium context, with no authentication redirect. The opening menu loaded, the genuine-data sample showed both alternatives under its stated demo assumptions, the 5400×2700 satellite basemap loaded, the overlay opacity changed to 25%, and the 390 px mobile layout had no document overflow. No page JavaScript errors were observed.
+For the current Pages branch deployment, build the reviewed source with DEPLOY_BASE=/Agrorithm/, copy only dist into an artifact tree, add .nojekyll and release.json identifying the exact source revision, then advance gh-pages without force. Publishing an artifact does not merge the review PR. Each update to the selected artifact branch publishes it. Development-source pushes do not publish.
 
-Saved farmer plans remain in each visitor's own browser. This deployment does not copy the owner's browser storage or share plans between visitors. Scientific and translation limitations in METHODS.md and VERIFICATION.md still apply.
+The source also includes a manually dispatched official-actions workflow in .github/workflows/pages.yml, with scoped permissions, concurrency and github-pages environment. After that workflow is available on the default branch through an authorized review/merge, an owner can select GitHubActions as the Pages source and deliberately dispatch publish=true. It derives DEPLOY_BASE from the repository slug. The present branch-based release does not claim to have dispatched that workflow.
 
-## Experience publication
-Sites version2 was successfully deployed and anonymously verified on14November2026. Version ID: appgprj_6af89821fc248191a588f9257cd991be~appgver_b7ed61bdfbb08191ae7569bdd1ecc385. Deployment ID: appgdep_6af8a8feaed08191b2f960ef93cebaf5. Hosted source:49d665f4fafdd740375fefc215cfbeabf47f42e2; GitHub application source:5758712d6eb31790751e8f70b45d2d8699fedfc9. That GitHub revision passed remote CI run43626894174.
-Fresh anonymous browser checks returned HTTP200, loaded all four crop GLBs with HTTP200, opened the genuine sample, selected cached Lahore on the atlas, searched a natural-language water question, and verified390px mobile without document overflow. No page JavaScript errors were observed. See docs/design/redesign/live-check.json and live screenshots. Later quality-control fixes retain the same public URL. GitHub Pages remains undeployed and the private repository PR remains unmerged.
+Sites project identity remains appgprj_6af89821fc248191a588f9257cd991be. Its existing hosting checkout contains .openai/hosting.json with static directory dist. The source workflow helper builds, commits/pushes and packages the exact source before a version is saved and deployed. Short-lived source credentials are kept in process memory. Archives and credentials are excluded from Git.
 
-## Final crop-viewer release
-Sites version3 deployed successfully at the same public HTTPS URL. Saved version:appgprj_6af89821fc248191a588f9257cd991be~appgver_ad6bc601dad481918468b73d2b635ecc. Deployment:appgdep_6af8aa602de48191b9239dd1f5707018. Hosted source:ef712a196ada2729e00c89d04dd45bcea86cd290. GitHub application source:71e28a251670cf407eb729f037a4a6d926516b64. A fresh anonymous browser received HTTP200, reopened a plant viewer twice, switched an active viewer to Static and observed no remaining canvas or page errors. Version2 screenshots remain representative of the unchanged composition.
+A previous installed service worker can display an older cached document during an update. A fresh query such as ?revision=6 opens the new document while the browser updates its versioned cache. A first successful online installation is required for offline use. Saved farm data stays in the visitor's browser and is not published with either host.

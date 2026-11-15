@@ -14,7 +14,7 @@ export default function ScientificModelFigure() {
         <span className="agr-model-kicker">02 / UNCONFINED GROUNDWATER EXAMPLE</span>
         <h3>Water within solid material.</h3>
         <img src={asset("images/groundwater-v2.webp")} width="1600" height="1250" alt="Actual Blender groundwater cutaway render showing solid sediment, a blue water-table boundary and small water markers within pores and fractures" />
-        <figcaption><strong><i className="agr-water-key" />0-20 m conceptual scale · scale break</strong><span>Water table at 7 m is a demo assumption. Blue markers represent water in pores/fractures, not an underground cavity.</span></figcaption>
+        <figcaption><strong><i className="agr-water-key" />0-20 m conceptual scale · scale break</strong><span>Demo table at 7 m. Blue wet shading and enlarged pores illustrate saturation; actual geology and field depth remain unknown.</span></figcaption>
       </figure>
     </div>
     <div className="agr-model-disclosures">

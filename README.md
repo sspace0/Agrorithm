@@ -72,3 +72,13 @@ The opening page rotates a NASA-textured Earth in space and transitions into a s
 Explore the eight crop references and four shared category models at #/crops, search the satellite atlas at #/atlas, or find source-linked explanations at #/help. Global Search (Ctrl/Cmd K) opens pages and tools. See docs/EXPERIENCE_UPDATE.md for measurements, screenshots and scientific scope. The complete static core still builds for /Agrorithm/. No Gemini/API key is required.
 
 The presentation PDF uses dynamically paginated1920×1080 sheets with a supplied cover, vector charts, all inputs and outcomes, feasibility, sensitivities and provenance. See [report export](docs/REPORT_EXPORT.md), [visual QA](docs/VISUAL_QA.md), and the [sample PDF](output/pdf/Agrorithm-sample-report.pdf).
+
+
+## Current public project
+
+- Website: https://sspace0.github.io/Agrorithm/
+- Alternate host: https://fieldshift-jt1.spacetime24.chatgpt.site/
+- Reviewed source: https://github.com/sspace0/Agrorithm/tree/feat/fieldshift-pilot
+- Review PR: https://github.com/sspace0/Agrorithm/pull/1
+
+The project now includes the historical NASA pattern lab and floating botanical-O helper, 24× satellite-map interaction, crop-to-plan preferences, wet-blue groundwater and guided soil-layer separation. The helper uses learned historical clustering and documented guidance; it is not a language model or forecast. See docs/ML_METHODS.md, docs/MODEL_REVIEW.md and docs/SCROLL_MAP_REVIEW.md.

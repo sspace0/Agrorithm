@@ -4,13 +4,23 @@ import {
   Suspense,
   useCallback,
   useEffect,
+  useLayoutEffect,
   useRef,
   useState,
   type ReactNode,
+  type CSSProperties,
 } from "react";
-import { ArrowDown, ArrowUpRight, ArrowRight, MapPin } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowUpRight,
+  ArrowRight,
+  MapPin,
+  Compass,
+  Layers,
+} from "lucide-react";
 import { asset, BRAND } from "../config";
 import { useScrollProgress } from "./ModelStage";
+import "../landing.css";
 const EarthCanvas = lazy(() => import("./EarthCanvas"));
 class EarthBoundary extends Component<
   { children: ReactNode; onFail: () => void },
@@ -47,6 +57,33 @@ export default function OrbitOpening({
   const [visible, setVisible] = useState(true),
     [ready, setReady] = useState(false),
     [failed, setFailed] = useState(false);
+  const [introSkipped, setIntroSkipped] = useState(false);
+  const [introCompleted, setIntroCompleted] = useState(false);
+  const headerReady =
+    introSkipped ||
+    introCompleted ||
+    !motion ||
+    quality === "static" ||
+    failed ||
+    progress >= 0.94;
+  useEffect(() => {
+    if (progress >= 0.94) setIntroCompleted(true);
+  }, [progress]);
+  useEffect(() => {
+    if (!motion || quality === "static" || failed) setIntroSkipped(true);
+  }, [motion, quality, failed]);
+  useLayoutEffect(() => {
+    const header = document.querySelector<HTMLElement>(".site-header");
+    const previousInert = header?.inert ?? false;
+    document.documentElement.dataset.orbitNavigation = headerReady
+      ? "ready"
+      : "intro";
+    if (header) header.inert = !headerReady;
+    return () => {
+      delete document.documentElement.dataset.orbitNavigation;
+      if (header) header.inert = previousInert;
+    };
+  }, [headerReady]);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -54,6 +91,24 @@ export default function OrbitOpening({
     ob.observe(el);
     return () => ob.disconnect();
   }, []);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || !motion || !matchMedia("(pointer:fine)").matches) return;
+    let frame = 0;
+    const move = (event: PointerEvent) => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const r = el.querySelector(".orbit-pinned")!.getBoundingClientRect();
+        el.style.setProperty("--pointer-x", `${event.clientX - r.left}px`);
+        el.style.setProperty("--pointer-y", `${event.clientY - r.top}px`);
+      });
+    };
+    el.addEventListener("pointermove", move, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      el.removeEventListener("pointermove", move);
+    };
+  }, [motion]);
   const loaded = useCallback(() => {
       setReady(true);
       window.dispatchEvent(
@@ -87,9 +142,28 @@ export default function OrbitOpening({
       ref={ref}
       className={`orbit-opening ${motion ? "" : "orbit-static"}`}
       aria-label="Earth to satellite atlas opening"
+      data-intro-bypass={headerReady ? "true" : "false"}
+      data-intro-ended={progress >= 0.94 ? "true" : "false"}
     >
-      <div className="orbit-pinned">
+      <div
+        className="orbit-pinned"
+        style={
+          {
+            "--frame-inset": `${Math.max(0, 1 - progress / 0.66) * (matchMedia("(max-width:760px)").matches ? 12 : 32)}px`,
+            "--frame-radius": `${Math.max(0, 1 - progress / 0.66) * 30}px`,
+          } as CSSProperties
+        }
+      >
         <div className="orbit-backdrop" />
+        <div
+          className="orbit-guide"
+          aria-hidden="true"
+          style={{ opacity: Math.max(0, 1 - progress * 1.8) }}
+        >
+          <i />
+          <i />
+          <span>01 / PERSPECTIVE</span>
+        </div>
         <div
           className="orbit-canvas"
           aria-label="Illustrative Earth rotation into a historical satellite map"
@@ -117,9 +191,27 @@ export default function OrbitOpening({
           )}
         </div>
         <div className="orbit-meta">
-          <span>NASA EARTH OBSERVATIONS · AGRORITHM</span>
-          <span>{phase}</span>
+          <span>
+            NASA EARTH OBSERVATIONS <i /> {BRAND.name.toUpperCase()}
+          </span>
+          <span>
+            <b>
+              {String(progress < 0.22 ? 1 : progress < 0.66 ? 2 : 3).padStart(
+                2,
+                "0",
+              )}
+            </b>{" "}
+            / {phase}
+          </span>
         </div>
+        {!headerReady && (
+          <button
+            className="orbit-skip-intro"
+            onClick={() => setIntroSkipped(true)}
+          >
+            Skip intro <ArrowDown size={13} />
+          </button>
+        )}
         <div
           className="orbit-title"
           style={{
@@ -128,7 +220,9 @@ export default function OrbitOpening({
             pointerEvents: titleOpacity > 0.2 ? "auto" : "none",
           }}
         >
-          <span className="eyebrow">A NEW PERSPECTIVE ON YOUR FIELD</span>
+          <span className="eyebrow">
+            <i /> A NEW PERSPECTIVE ON YOUR FIELD
+          </span>
           <h1>
             {BRAND.headline.lead}
             <br />
@@ -155,6 +249,15 @@ export default function OrbitOpening({
               <ArrowRight size={15} />
             </button>
           )}
+          <div className="orbit-shortcuts" aria-label="Explore Agrorithm">
+            <a href="#/atlas">
+              <Compass size={15} /> Satellite atlas <ArrowUpRight size={14} />
+            </a>
+            <a href="#/soil">
+              <Layers size={15} /> Beneath the surface{" "}
+              <ArrowUpRight size={14} />
+            </a>
+          </div>
         </div>
         <div
           className="orbit-atlas-copy"
@@ -194,6 +297,12 @@ export default function OrbitOpening({
         <div className="orbit-progress" aria-hidden="true">
           <i style={{ width: `${progress * 100}%` }} />
         </div>
+        {motion && (
+          <div className="orbit-cursor" aria-hidden="true">
+            <i />
+            <span>SCROLL</span>
+          </div>
+        )}
       </div>
     </section>
   );

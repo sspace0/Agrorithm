@@ -1,0 +1,1042 @@
+{
+  "generated": "2026-11-15T12:36:04.829Z",
+  "base": "http://127.0.0.1:5199/Agrorithm/",
+  "results": [
+    {
+      "id": "maize",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 936.734375,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 245.9767817569007,
+              "top": 109.7337470410307,
+              "width": 423.118158463761,
+              "height": 534.4104498523991,
+              "viewportWidth": 936.734375,
+              "viewportHeight": 720
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 245.9767817569007,
+            "top": 109.7337470410307,
+            "width": 423.118158463761,
+            "height": 534.4104498523991,
+            "viewportWidth": 936.734375,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "desktop-maize-50.jpg"
+      ]
+    },
+    {
+      "id": "mungbean",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 936.734375,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 175.95510724277673,
+              "top": 126.9148986711954,
+              "width": 512.6341810529657,
+              "height": 512.570198797295,
+              "viewportWidth": 936.734375,
+              "viewportHeight": 720
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 175.95510724277673,
+            "top": 126.9148986711954,
+            "width": 512.6341810529657,
+            "height": 512.570198797295,
+            "viewportWidth": 936.734375,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "desktop-mungbean-50.jpg"
+      ]
+    },
+    {
+      "id": "tomato",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 936.734375,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 214.7767851715544,
+              "top": 123.10668190350871,
+              "width": 451.051342590529,
+              "height": 516.5498272077459,
+              "viewportWidth": 936.734375,
+              "viewportHeight": 720
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 214.7767851715544,
+            "top": 123.10668190350871,
+            "width": 451.051342590529,
+            "height": 516.5498272077459,
+            "viewportWidth": 936.734375,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "desktop-tomato-50.jpg"
+      ]
+    },
+    {
+      "id": "citrus",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 936.734375,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 221.97685100793808,
+              "top": 120.64027395860849,
+              "width": 441.74345590067094,
+              "height": 519.6990023008658,
+              "viewportWidth": 936.734375,
+              "viewportHeight": 720
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 221.97685100793808,
+            "top": 120.64027395860849,
+            "width": 441.74345590067094,
+            "height": 519.6990023008658,
+            "viewportWidth": 936.734375,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "desktop-citrus-50.jpg"
+      ]
+    },
+    {
+      "id": "root-zone",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 1296,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 295.9053780455449,
+              "top": 174.80313767955937,
+              "width": 655.7964332432547,
+              "height": 481.5802132776042,
+              "viewportWidth": 1296,
+              "viewportHeight": 720
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 295.9053780455449,
+            "top": 174.80313767955937,
+            "width": 655.7964332432547,
+            "height": 481.5802132776042,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "desktop-root-zone-50.jpg"
+      ]
+    },
+    {
+      "id": "groundwater",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "Progress0.08: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 1296,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 256.0839433174196,
+              "top": 183.27014609114377,
+              "width": 724.8678790966096,
+              "height": 462.104592974495,
+              "viewportWidth": 1296,
+              "viewportHeight": 720
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.08: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 256.0839433174196,
+            "top": 183.27014609114377,
+            "width": 724.8678790966096,
+            "height": 462.104592974495,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.08: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 1296,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 247.57134607236247,
+              "top": 188.46744453356987,
+              "width": 741.4639724898318,
+              "height": 469.3124773414404,
+              "viewportWidth": 1296,
+              "viewportHeight": 720
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 247.57134607236247,
+            "top": 188.46744453356987,
+            "width": 741.4639724898318,
+            "height": 469.3124773414404,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Progress0.95: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 1296,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 184.59415260239453,
+              "top": 179.2764671966583,
+              "width": 835.0318482333881,
+              "height": 508.0906789717454,
+              "viewportWidth": 1296,
+              "viewportHeight": 720
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.95: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 184.59415260239453,
+            "top": 179.2764671966583,
+            "width": 835.0318482333881,
+            "height": 508.0906789717454,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.95: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Detailed water has an active clipping plane in WebGL",
+          "passed": true,
+          "detail": {
+            "before": [
+              -1.3877787807814457e-17,
+              -0.9671013951301575,
+              -0.25439128279685974,
+              -2.1079554557800293
+            ],
+            "after": [
+              -1.3877787807814457e-17,
+              -0.9671013951301575,
+              -0.25439128279685974,
+              -2.6079554557800293
+            ]
+          }
+        },
+        {
+          "name": "User depth recomputes the real clipping uniform",
+          "passed": true,
+          "detail": {
+            "before": [
+              -1.3877787807814457e-17,
+              -0.9671013951301575,
+              -0.25439128279685974,
+              -2.1079554557800293
+            ],
+            "after": [
+              -1.3877787807814457e-17,
+              -0.9671013951301575,
+              -0.25439128279685974,
+              -2.6079554557800293
+            ]
+          }
+        },
+        {
+          "name": "Shallow depth updates the same clipping plane",
+          "passed": true,
+          "detail": {
+            "shallow": [
+              -1.3877787807814457e-17,
+              -0.9671013951301575,
+              -0.25439128279685974,
+              -1.7079554796218872
+            ],
+            "after": [
+              -1.3877787807814457e-17,
+              -0.9671013951301575,
+              -0.25439128279685974,
+              -2.6079554557800293
+            ]
+          }
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "desktop-groundwater-8.jpg",
+        "desktop-groundwater-50.jpg",
+        "desktop-groundwater-95.jpg",
+        "desktop-groundwater-depth12.jpg"
+      ]
+    },
+    {
+      "id": "maize",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 540.15625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 34.203882832164616,
+              "top": 112.42536695964111,
+              "width": 270.0659128898287,
+              "height": 336.05590915274325,
+              "viewportWidth": 350,
+              "viewportHeight": 540.15625
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 34.203882832164616,
+            "top": 112.42536695964111,
+            "width": 270.0659128898287,
+            "height": 336.05590915274325,
+            "viewportWidth": 350,
+            "viewportHeight": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "phone-maize-50.jpg"
+      ]
+    },
+    {
+      "id": "mungbean",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 540.15625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 28.163210577947684,
+              "top": 155.49014317370384,
+              "width": 267.25934873065705,
+              "height": 252.4924839799206,
+              "viewportWidth": 350,
+              "viewportHeight": 540.15625
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 28.163210577947684,
+            "top": 155.49014317370384,
+            "width": 267.25934873065705,
+            "height": 252.4924839799206,
+            "viewportWidth": 350,
+            "viewportHeight": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "phone-mungbean-50.jpg"
+      ]
+    },
+    {
+      "id": "tomato",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 540.15625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 28.132656971026655,
+              "top": 132.6603835824815,
+              "width": 267.31607939056465,
+              "height": 298.57665846973805,
+              "viewportWidth": 350,
+              "viewportHeight": 540.15625
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 28.132656971026655,
+            "top": 132.6603835824815,
+            "width": 267.31607939056465,
+            "height": 298.57665846973805,
+            "viewportWidth": 350,
+            "viewportHeight": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "phone-tomato-50.jpg"
+      ]
+    },
+    {
+      "id": "citrus",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 540.15625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 29.477622902792195,
+              "top": 129.5982111755499,
+              "width": 266.1734911755366,
+              "height": 304.7510072725672,
+              "viewportWidth": 350,
+              "viewportHeight": 540.15625
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 29.477622902792195,
+            "top": 129.5982111755499,
+            "width": 266.1734911755366,
+            "height": 304.7510072725672,
+            "viewportWidth": 350,
+            "viewportHeight": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "phone-citrus-50.jpg"
+      ]
+    },
+    {
+      "id": "root-zone",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 489.515625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 27.2050268143438,
+              "top": 158.26959718065314,
+              "width": 282.21845108210624,
+              "height": 205.78188214400512,
+              "viewportWidth": 350,
+              "viewportHeight": 489.515625
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 27.2050268143438,
+            "top": 158.26959718065314,
+            "width": 282.21845108210624,
+            "height": 205.78188214400512,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "phone-root-zone-50.jpg"
+      ]
+    },
+    {
+      "id": "groundwater",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "Progress0.08: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 489.515625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 33.90757010667902,
+              "top": 171.23060047716513,
+              "width": 270.20403503051114,
+              "height": 170.14998544269105,
+              "viewportWidth": 350,
+              "viewportHeight": 489.515625
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.08: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 33.90757010667902,
+            "top": 171.23060047716513,
+            "width": 270.20403503051114,
+            "height": 170.14998544269105,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.08: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 489.515625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 31.569612500271102,
+              "top": 172.65599333770479,
+              "width": 276.1063116609149,
+              "height": 172.0467636342097,
+              "viewportWidth": 350,
+              "viewportHeight": 489.515625
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 31.569612500271102,
+            "top": 172.65599333770479,
+            "width": 276.1063116609149,
+            "height": 172.0467636342097,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Progress0.95: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 489.515625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 10.672963631037394,
+              "top": 168.33422522583646,
+              "width": 311.10079652855734,
+              "height": 183.43326836591973,
+              "viewportWidth": 350,
+              "viewportHeight": 489.515625
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.95: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 10.672963631037394,
+            "top": 168.33422522583646,
+            "width": 311.10079652855734,
+            "height": 183.43326836591973,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.95: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Detailed water has an active clipping plane in WebGL",
+          "passed": true,
+          "detail": {
+            "before": [
+              0,
+              -0.9664283394813538,
+              -0.25693628191947937,
+              -3.923510789871216
+            ],
+            "after": [
+              0,
+              -0.9664283394813538,
+              -0.25693628191947937,
+              -4.423511028289795
+            ]
+          }
+        },
+        {
+          "name": "User depth recomputes the real clipping uniform",
+          "passed": true,
+          "detail": {
+            "before": [
+              0,
+              -0.9664283394813538,
+              -0.25693628191947937,
+              -3.923510789871216
+            ],
+            "after": [
+              0,
+              -0.9664283394813538,
+              -0.25693628191947937,
+              -4.423511028289795
+            ]
+          }
+        },
+        {
+          "name": "Shallow depth updates the same clipping plane",
+          "passed": true,
+          "detail": {
+            "shallow": [
+              0,
+              -0.9664283394813538,
+              -0.25693628191947937,
+              -3.5235109329223633
+            ],
+            "after": [
+              0,
+              -0.9664283394813538,
+              -0.25693628191947937,
+              -4.423511028289795
+            ]
+          }
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "phone-groundwater-8.jpg",
+        "phone-groundwater-50.jpg",
+        "phone-groundwater-95.jpg",
+        "phone-groundwater-depth12.jpg"
+      ]
+    }
+  ],
+  "failures": [],
+  "limitation": "Headless viewport checks and actual WebGL uniform observation; no physical-device or FPS claim."
+}

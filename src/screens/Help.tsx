@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, BookOpen, ArrowUpRight, MessageCircle } from "lucide-react";
+import { Search, BookOpen, ArrowUpRight, MessageCircle, FlaskConical } from "lucide-react";
 import { GUIDE, searchText } from "../data/guide";
 export default function Help() {
   const [q, setQ] = useState(
@@ -23,6 +23,12 @@ export default function Help() {
         source-linked explanations—not generated agronomic advice. No API key,
         login or paid service.
       </p>
+      <section className="paper">
+        <span className="eyebrow"><FlaskConical size={15}/> THE HISTORICAL PATTERN LAB</span>
+        <h2>See what the weather model learned.</h2>
+        <p>Explore four historical monthly patterns learned from the genuine NASA POWER cache, with training years, held-out months and source evidence visible.</p>
+        <a className="text-action" href="#/weather-patterns"><FlaskConical size={17}/> Explore learned weather patterns <ArrowUpRight size={16}/></a>
+      </section>
       <label className="guide-search">
         <Search size={22} />
         <input

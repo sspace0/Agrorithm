@@ -1,6 +1,7 @@
 import type { Crop, CropId, Day, Farm, Scenario } from "./types";
 import { date } from "./engine";
 import { CROPS } from "../data/crops";
+import { isCropInterest } from "./cropInterest";
 export function parseCropTable(text: string): Record<CropId, Crop> {
   const input: unknown = JSON.parse(text);
   if (!input || typeof input !== "object")
@@ -141,6 +142,8 @@ export function parseWeather(text: string): Day[] {
 export function validateFarm(input: unknown): Farm {
   if (!input || typeof input !== "object") throw Error("Invalid plan");
   const f = input as Farm;
+  if (f.cropInterest !== undefined && !isCropInterest(f.cropInterest))
+    throw Error("Unknown crop reference interest");
   for (const key of [
     "name",
     "irrigation",

@@ -68,6 +68,14 @@
 .agr-report .agr-model-panel figcaption { font-size: 18px; line-height: 1.35; color: var(--agr-muted); }
 .agr-report .agr-model-panel figcaption strong { display: block; font-size: 18px; line-height: 1.3; margin-bottom: 3px; color: var(--agr-ink); }
 .agr-report .agr-water-key { display: inline-block; width: 25px; height: 4px; margin: 0 9px 4px 0; background: #4c9eae; }
+.agr-report .agr-crop-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; width: 1728px; }
+.agr-report .agr-crop-panel { margin: 0; padding: 28px; border: 1px solid var(--agr-line); border-radius: 12px; background: #f2f5e9; }
+.agr-report .agr-crop-image { height: 300px; display: grid; place-items: center; background: radial-gradient(ellipse, #fffefa, #edf1e3); border-radius: 10px; overflow: hidden; }
+.agr-report .agr-crop-image img { display: block; width: 100%; height: 300px; max-height: 300px; min-height: 0; min-width: 0; object-fit: contain; }
+.agr-report .agr-crop-panel h3 { margin: 20px 0 8px; overflow-wrap: anywhere; font-size: 32px; line-height: 1.2; }
+.agr-report .agr-crop-panel figcaption > strong { display: block; font-size: 20px; color: var(--agr-ink); }
+.agr-report .agr-crop-panel p { font-size: 20px; line-height: 1.4; margin: 10px 0; }
+.agr-report .agr-crop-panel small { display: block; font-size: 17px; line-height: 1.4; color: var(--agr-muted); }
 .agr-report .agr-model-disclosures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; height: 167px; }
 .agr-report .agr-model-disclosures > div { padding: 14px 18px; border-inline-start: 3px solid #a1b18a; background: #edf1e5; }
 .agr-report .agr-model-disclosures h3 { font-size: 21px; line-height: 1.3; font-weight: 700; margin-bottom: 8px; }

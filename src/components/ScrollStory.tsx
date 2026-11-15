@@ -75,7 +75,7 @@ export default function ScrollStory({
           <span className="story-scroll">
             <ArrowDown size={15} />
             {motion
-              ? "Scroll to turn the cutaway"
+              ? "Scroll to reveal the soil layers"
               : "Reduced motion · static view"}
           </span>
           <div className="story-progress">

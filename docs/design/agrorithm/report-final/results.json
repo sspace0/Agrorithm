@@ -1,0 +1,13 @@
+{
+  "generated": "2026-11-15T13:26:59.054Z",
+  "base": "http://127.0.0.1:5192/Agrorithm/",
+  "fixture": "genuine sample with declared farm assumptions",
+  "pages": 52,
+  "bytes": 4016542,
+  "geometry": [],
+  "oversized": "",
+  "errors": [],
+  "failedAssets": [],
+  "charts": 7,
+  "cropImages": 4
+}

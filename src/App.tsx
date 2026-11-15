@@ -1,4 +1,5 @@
 import { observationDates } from "./state/observationDates";
+import { formatNumber } from "./engine/format";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { flushSync } from "react-dom";
 import {
@@ -44,6 +45,8 @@ import { BRAND, MEMBERS, MODEL_VERSION, asset, cropAsset } from "./config";
 import { Diorama } from "./components/Diorama";
 import HomeExperience from "./screens/HomeExperience";
 import Help from "./screens/Help";
+import WeatherPatterns from "./screens/WeatherPatterns";
+import AgrorithmHelper from "./components/AgrorithmHelper";
 import NavigationSearch from "./components/NavigationSearch";
 import FindFarmLocation from "./components/FindFarmLocation";
 import BootOverlay from "./components/BootOverlay";
@@ -51,6 +54,8 @@ import AgrorithmReport, {
   printAgrorithmReport,
 } from "./report/AgrorithmReport";
 import CropLibrary from "./screens/CropLibrary";
+import CropInterestPicker from "./components/CropInterestPicker";
+import { withCropInterest } from "./engine/cropInterest";
 import Atlas from "./screens/Atlas";
 import {
   compare,
@@ -212,8 +217,11 @@ export default function App() {
         motion &&
         document.startViewTransition &&
         !matchMedia("(prefers-reduced-motion: reduce)").matches
-      )
-        document.startViewTransition(update);
+      ) {
+        const transition = document.startViewTransition(update);
+        // Rapid navigation can skip the visual transition while its DOM update succeeds.
+        void transition.ready.catch(() => undefined);
+      }
       else update();
     };
     addEventListener("hashchange", onhash);
@@ -669,11 +677,17 @@ export default function App() {
         <DesignReview start={(c) => start(true, c)} />
       ) : parts[0] === "help" ? (
         <Help key={route} />
+      ) : parts[0] === "weather-patterns" ? (
+        <WeatherPatterns />
       ) : parts[0] === "crops" ? (
-        <CropLibrary motion={motion} quality={quality} key={route} />
+        <CropLibrary motion={motion} quality={quality} key={route} onPlanCrop={crop => {
+          setFarm(current => withCropInterest(current, crop));
+          location.hash = "#/studio/setup";
+        }} />
       ) : (
         workspace
       )}
+      <AgrorithmHelper />
       {toast && (
         <div className="toast" role="status">
           <Check size={17} />
@@ -781,6 +795,7 @@ function Setup({ farm: f, setFarm }: DataProps) {
           and management values are assumptions, not field measurements.
         </p>
       </div>
+      <CropInterestPicker farm={f} onChange={setFarm} />
       <div className="setup-grid">
         <section className="paper">
           <h3>
@@ -828,7 +843,7 @@ function Setup({ farm: f, setFarm }: DataProps) {
             <span className="map-label">PUNJAB · PAKISTAN</span>
             <MapPin size={30} />
             <small>
-              {f.lat.toFixed(4)}° N, {f.lon.toFixed(4)}° E
+              {f.lat.toFixed(2)}° N, {f.lon.toFixed(2)}° E
             </small>
             <span className="map-disclaimer">
               Schematic locator · manual coordinates are authoritative
@@ -837,7 +852,7 @@ function Setup({ farm: f, setFarm }: DataProps) {
           <div className="form-row">
             <NumberField
               label={`Area (${acres ? "acres" : "hectares"})`}
-              value={+(f.areaHa * (acres ? 2.47105 : 1)).toFixed(3)}
+              value={+(f.areaHa * (acres ? 2.47105 : 1)).toFixed(2)}
               min={0.001}
               step={0.01}
               onChange={(n) =>
@@ -964,7 +979,7 @@ function Setup({ farm: f, setFarm }: DataProps) {
         </section>
       </div>
       <section className="paper">
-        <h3>
+        <h3 id="field-sequence" tabIndex={-1}>
           <Sprout size={18} /> Your existing crop sequence
         </h3>
         <p>
@@ -1366,7 +1381,7 @@ function Evidence(p: DataProps) {
         </div>
         <p className="note">
           {weatherSource}. T2M_MIN/MAX: °C; PRECTOTCORR: mm/day. MERRA-2
-          meteorology grid ~0.5° × 0.625°. This is regional reanalysis, not an
+          meteorology grid ~0.50° × 0.63° (rounded). This is regional reanalysis, not an
           on-field rain gauge.
         </p>
         <div
@@ -1378,9 +1393,10 @@ function Evidence(p: DataProps) {
             <AreaChart data={monthly} margin={{ top: 18, right: 32, bottom: 16, left: 8 }}>
               <CartesianGrid vertical={false} stroke="#e1e4dc" />
               <XAxis dataKey="date" minTickGap={50} />
-              <YAxis unit=" mm" width={65} />
-              <Tooltip />
+              <YAxis unit=" mm" width={65} tickFormatter={v => formatNumber(Number(v))} />
+              <Tooltip formatter={v => typeof v === "number" ? formatNumber(v) : String(v ?? "Unknown")} />
               <Area
+                isAnimationActive={false}
                 dataKey="rain"
                 name="Monthly rainfall (mm)"
                 stroke="#427b83"
@@ -1398,9 +1414,10 @@ function Evidence(p: DataProps) {
           <ResponsiveContainer>
             <LineChart data={monthly} margin={{ top: 18, right: 32, bottom: 16, left: 8 }}>
               <XAxis dataKey="date" minTickGap={50} />
-              <YAxis unit="°C" width={65} />
-              <Tooltip />
+              <YAxis unit="°C" width={65} tickFormatter={v => formatNumber(Number(v))} />
+              <Tooltip formatter={v => typeof v === "number" ? formatNumber(v) : String(v ?? "Unknown")} />
               <Line
+                isAnimationActive={false}
                 dataKey="max"
                 name="Mean daily maximum (°C)"
                 stroke="#b47743"
@@ -1492,8 +1509,9 @@ function Evidence(p: DataProps) {
                   <CartesianGrid vertical={false} />
                   <XAxis dataKey="date" minTickGap={55} />
                   <YAxis domain={[-0.2, 1]} />
-                  <Tooltip />
+                  <Tooltip formatter={v => typeof v === "number" ? formatNumber(v) : String(v ?? "Unknown")} />
                   <Line
+                    isAnimationActive={false}
                     dataKey="ndvi"
                     name="Mean valid-pixel NDVI"
                     stroke="#54754a"
@@ -1540,7 +1558,7 @@ function Evidence(p: DataProps) {
                     {veg.observations.map((o) => (
                       <tr key={o.item}>
                         <th>{o.date}</th>
-                        <td>{o.ndvi?.toFixed(3) ?? "No valid pixels"}</td>
+                        <td>{o.ndvi?.toFixed(2) ?? "No valid pixels"}</td>
                         <td>
                           {o.validPixels} / {o.totalPixels}
                         </td>
@@ -2017,7 +2035,7 @@ function Slider({
       <span>
         {label}
         <strong>
-          {value.toFixed(step < 1 ? 1 : 0)}
+          {formatNumber(value)}
           {unit}
         </strong>
       </span>
@@ -2120,9 +2138,10 @@ function Scenarios({ farm, scenario: s, setScenario, results }: DataProps) {
               >
                 <CartesianGrid vertical={false} />
                 <XAxis dataKey="name" />
-                <YAxis unit=" mm" width={65} />
-                <Tooltip />
+                <YAxis unit=" mm" width={65} tickFormatter={v => formatNumber(Number(v))} />
+                <Tooltip formatter={v => typeof v === "number" ? formatNumber(v) : String(v ?? "Unknown")} />
                 <Bar
+                  isAnimationActive={false}
                   dataKey="water"
                   name="Delivered irrigation (mm)"
                   fill="#567557"
@@ -2694,7 +2713,7 @@ function Sources() {
           [
             "NASA POWER daily API",
             "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
-            "T2M_MIN/MAX °C, PRECTOTCORR mm/day; UTC; cached 2018–2024. Historical MERRA-2 grid ~0.5° × 0.625°.",
+            "T2M_MIN/MAX °C, PRECTOTCORR mm/day; UTC; cached 2018–2024. Historical MERRA-2 grid ~0.50° × 0.63° (rounded).",
           ],
           [
             "HLS L30 v2.0",

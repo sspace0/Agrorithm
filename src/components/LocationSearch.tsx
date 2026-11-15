@@ -41,7 +41,7 @@ export default function LocationSearch({
     setBusy(false);
     onPick(p.latitude, p.longitude);
     setNote(
-      `Selected ${p.name} · ${p.latitude.toFixed(4)}°, ${p.longitude.toFixed(4)}°. Place coordinates are not field boundaries.`,
+      `Selected ${p.name} · ${p.latitude.toFixed(2)}°, ${p.longitude.toFixed(2)}° (rounded display). Place coordinates are not field boundaries.`,
     );
   };
   async function searchOnline() {

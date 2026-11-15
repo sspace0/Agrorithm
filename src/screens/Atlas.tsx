@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ArrowUpRight,
   Globe2,
@@ -9,6 +9,8 @@ import {
   Minus,
   Layers,
   RotateCcw,
+  Mouse,
+  Move,
 } from "lucide-react";
 import { asset, cropAsset } from "../config";
 import LocationSearch from "../components/LocationSearch";
@@ -17,6 +19,14 @@ import type { CoordinateEvidence } from "../engine/types";
 import CropProfile from "../components/CropProfile";
 import { sessionValue, saveSession } from "../state/viewState";
 import { equirectangularPoint } from "../engine/presentation";
+import {
+  ATLAS_MAX_ZOOM,
+  atlasPointAt,
+  boundAtlasView,
+  centerAtlasAt,
+  zoomAtlasAt,
+  type AtlasView,
+} from "../engine/atlasView";
 import {
   ATLAS_CROPS,
   broadFit,
@@ -56,6 +66,7 @@ export default function Atlas({
     mode: "climate",
     point: { lat: 32.1, lon: 73 },
     zoom: 1,
+    pan: { x: 0, y: 0 },
     opacity: 55,
   });
   const [crop, setCrop] = useState<AtlasCropId>(
@@ -80,7 +91,26 @@ export default function Atlas({
         }
       : { lat: 32.1, lon: 73 },
   );
-  const [zoom, setZoom] = useState(Math.max(1, Math.min(4, initial.zoom || 1)));
+  const [view, setView] = useState<AtlasView>(() =>
+    boundAtlasView({
+      zoom: initial.zoom || 1,
+      x:
+        initial.pan?.x ?? (1 - (initial.zoom || 1)) * ((point.lon + 180) / 360),
+      y: initial.pan?.y ?? (1 - (initial.zoom || 1)) * ((90 - point.lat) / 180),
+    }),
+  );
+  const { zoom } = view;
+  const viewRef = useRef(view),
+    mapRef = useRef<HTMLDivElement>(null);
+  const [wheelZoom, setWheelZoom] = useState(true),
+    [dragging, setDragging] = useState(false);
+  const drag = useRef<{ x: number; y: number; moved: boolean } | null>(null),
+    suppressPick = useRef(false);
+  const updateView = useCallback((next: AtlasView) => {
+    const bounded = boundAtlasView(next);
+    viewRef.current = bounded;
+    setView(bounded);
+  }, []);
   const [opacity, setOpacity] = useState(
     Math.max(0, Math.min(100, initial.opacity ?? 55)),
   );
@@ -93,10 +123,82 @@ export default function Atlas({
         mode,
         point,
         zoom,
+        pan: { x: view.x, y: view.y },
         opacity,
       }),
-    [crop, soil, irrigated, mode, point, zoom, opacity],
+    [crop, soil, irrigated, mode, point, zoom, view.x, view.y, opacity],
   );
+  useEffect(() => {
+    const el = mapRef.current;
+    if (!el) return;
+    const anchor = (x: number, y: number) => {
+      const r = el.getBoundingClientRect();
+      return { x: (x - r.left) / r.width, y: (y - r.top) / r.height };
+    };
+    const wheel = (e: WheelEvent) => {
+      if (
+        (!wheelZoom && !e.ctrlKey) ||
+        (e.target as HTMLElement).closest("button,input")
+      )
+        return;
+      e.preventDefault();
+      el.focus({ preventScroll: true });
+      const delta =
+        e.deltaY *
+        (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? el.clientHeight : 1);
+      updateView(
+        zoomAtlasAt(
+          viewRef.current,
+          viewRef.current.zoom *
+            Math.exp(-Math.max(-500, Math.min(500, delta)) * 0.002),
+          anchor(e.clientX, e.clientY),
+        ),
+      );
+    };
+    let pinch: { distance: number; center: { x: number; y: number } } | null =
+      null;
+    const touch = (e: TouchEvent) => {
+      if (e.touches.length !== 2) {
+        pinch = null;
+        return;
+      }
+      e.preventDefault();
+      suppressPick.current = true;
+      const a = e.touches[0],
+        b = e.touches[1],
+        distance = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
+      const center = anchor(
+        (a.clientX + b.clientX) / 2,
+        (a.clientY + b.clientY) / 2,
+      );
+      if (pinch && pinch.distance > 0) {
+        const next = zoomAtlasAt(
+          viewRef.current,
+          (viewRef.current.zoom * distance) / pinch.distance,
+          pinch.center,
+        );
+        updateView({
+          ...next,
+          x: next.x + center.x - pinch.center.x,
+          y: next.y + center.y - pinch.center.y,
+        });
+      }
+      pinch = { distance, center };
+    };
+    const end = () => {
+      pinch = null;
+    };
+    el.addEventListener("wheel", wheel, { passive: false });
+    el.addEventListener("touchstart", touch, { passive: false });
+    el.addEventListener("touchmove", touch, { passive: false });
+    el.addEventListener("touchend", end);
+    return () => {
+      el.removeEventListener("wheel", wheel);
+      el.removeEventListener("touchstart", touch);
+      el.removeEventListener("touchmove", touch);
+      el.removeEventListener("touchend", end);
+    };
+  }, [wheelZoom, updateView]);
   const [basemapFailed, setBasemapFailed] = useState(false);
   const [coordinateEvidence, setCoordinateEvidence] =
     useState<CoordinateEvidence>();
@@ -134,12 +236,20 @@ export default function Atlas({
     });
     ctx.putImageData(img, 0, 0);
   }, [data, crop, soil, mode, irrigated]);
-  const pick = (lat: number, lon: number) => {
+  const pick = (lat: number, lon: number, recenter = true) => {
     setCoordinateEvidence(undefined);
-    setPoint({
+    const selected = {
       lat: Math.max(-89.75, Math.min(89.75, lat)),
       lon: Math.max(-179.75, Math.min(179.75, lon)),
-    });
+    };
+    setPoint(selected);
+    if (recenter && viewRef.current.zoom > 1)
+      updateView(
+        centerAtlasAt(
+          viewRef.current,
+          equirectangularPoint(selected.lat, selected.lon),
+        ),
+      );
   };
   return (
     <main className="atlas-page">
@@ -284,14 +394,101 @@ export default function Atlas({
                 ? "CLIMATE FAMILIES"
                 : "BROAD CROP CLIMATE SCREEN · PROVISIONAL"}
             </span>
-            <span>Click / tap land · arrow keys move the marker</span>
+            <span>Scroll to zoom · drag to explore · tap to select</span>
           </div>
           <div
-            className="world-map"
+            ref={mapRef}
+            className={`world-map ${dragging ? "is-panning" : ""}`}
             role="application"
             aria-label="World climate map. Arrow keys move the selected location by two degrees."
+            aria-describedby="atlas-navigation-help"
+            data-zoom={zoom}
+            data-pan-x={view.x}
+            data-pan-y={view.y}
             tabIndex={0}
+            onPointerDown={(e) => {
+              if (e.pointerType === "touch") {
+                if (e.isPrimary) suppressPick.current = false;
+                return;
+              }
+              if (
+                e.button !== 0 ||
+                (e.target as HTMLElement).closest("button,input")
+              )
+                return;
+              suppressPick.current = false;
+              if (zoom > 1) {
+                drag.current = { x: e.clientX, y: e.clientY, moved: false };
+                e.currentTarget.setPointerCapture(e.pointerId);
+              }
+            }}
+            onPointerMove={(e) => {
+              if (!drag.current) return;
+              const previous = drag.current,
+                dx = e.clientX - previous.x,
+                dy = e.clientY - previous.y;
+              if (previous.moved || Math.hypot(dx, dy) > 3) {
+                const r = e.currentTarget.getBoundingClientRect();
+                updateView({
+                  ...viewRef.current,
+                  x: viewRef.current.x + dx / r.width,
+                  y: viewRef.current.y + dy / r.height,
+                });
+                previous.moved = true;
+                suppressPick.current = true;
+                setDragging(true);
+              }
+              if (previous.moved) {
+                previous.x = e.clientX;
+                previous.y = e.clientY;
+              }
+            }}
+            onPointerUp={(e) => {
+              drag.current = null;
+              setDragging(false);
+              if (e.currentTarget.hasPointerCapture(e.pointerId))
+                e.currentTarget.releasePointerCapture(e.pointerId);
+            }}
+            onPointerCancel={() => {
+              drag.current = null;
+              setDragging(false);
+            }}
+            onClick={(e) => {
+              if ((e.target as HTMLElement).closest("button,input")) return;
+              if (suppressPick.current) {
+                suppressPick.current = false;
+                return;
+              }
+              const r = e.currentTarget.getBoundingClientRect(),
+                p = atlasPointAt(viewRef.current, {
+                  x: (e.clientX - r.left) / r.width,
+                  y: (e.clientY - r.top) / r.height,
+                });
+              pick(90 - p.y * 180, p.x * 360 - 180, false);
+            }}
             onKeyDown={(e) => {
+              if (e.target !== e.currentTarget) return;
+              if (e.key === "Escape") {
+                setWheelZoom(false);
+                e.currentTarget.blur();
+                return;
+              }
+              if (e.key === "+" || e.key === "=" || e.key === "-") {
+                e.preventDefault();
+                updateView(
+                  zoomAtlasAt(
+                    viewRef.current,
+                    zoom * (e.key === "-" ? 1 / 1.5 : 1.5),
+                    { x: 0.5, y: 0.5 },
+                  ),
+                );
+                return;
+              }
+              if (e.key === "0") {
+                e.preventDefault();
+                updateView({ zoom: 1, x: 0, y: 0 });
+                return;
+              }
               const d: { [k: string]: [number, number] } = {
                 ArrowUp: [2, 0],
                 ArrowDown: [-2, 0],
@@ -300,15 +497,21 @@ export default function Atlas({
               };
               if (d[e.key]) {
                 e.preventDefault();
-                pick(point.lat + d[e.key][0], point.lon + d[e.key][1]);
+                if (e.shiftKey)
+                  updateView({
+                    ...viewRef.current,
+                    x: view.x - d[e.key][1] * 0.025,
+                    y: view.y + d[e.key][0] * 0.025,
+                  });
+                else pick(point.lat + d[e.key][0], point.lon + d[e.key][1]);
               }
             }}
           >
             <div
               className="map-world"
               style={{
-                transform: `scale(${zoom})`,
-                transformOrigin: `${((point.lon + 180) / 360) * 100}% ${((90 - point.lat) / 180) * 100}%`,
+                transform: `translate(${view.x * 100}%, ${view.y * 100}%) scale(${zoom})`,
+                transformOrigin: "0 0",
               }}
             >
               <img
@@ -321,13 +524,6 @@ export default function Atlas({
               <canvas
                 ref={canvas}
                 style={{ opacity: basemapFailed ? 1 : opacity / 100 }}
-                onClick={(e) => {
-                  const r = e.currentTarget.getBoundingClientRect();
-                  pick(
-                    90 - ((e.clientY - r.top) / r.height) * 180,
-                    ((e.clientX - r.left) / r.width) * 360 - 180,
-                  );
-                }}
                 aria-label="Historical Köppen climate raster"
               />
               <svg
@@ -342,41 +538,71 @@ export default function Atlas({
                   <path key={x} d={`M${x} 0V360`} />
                 ))}
               </svg>
-              <span
-                className="world-pin"
-                data-latitude={point.lat}
-                data-longitude={point.lon}
-                aria-label={`Selected location ${point.lat} latitude, ${point.lon} longitude`}
-                style={{
-                  left: `${equirectangularPoint(point.lat, point.lon).x * 100}%`,
-                  top: `${equirectangularPoint(point.lat, point.lon).y * 100}%`,
-                }}
-              >
-                <MapPin size={25} />
-              </span>
             </div>
+            <span
+              className="world-pin"
+              data-latitude={point.lat}
+              data-longitude={point.lon}
+              aria-label={`Selected location ${point.lat.toFixed(2)} latitude, ${point.lon.toFixed(2)} longitude`}
+              style={{
+                left: `${(view.x + equirectangularPoint(point.lat, point.lon).x * zoom) * 100}%`,
+                top: `${(view.y + equirectangularPoint(point.lat, point.lon).y * zoom) * 100}%`,
+              }}
+            >
+              <MapPin size={25} />
+            </span>
             <div className="map-zoom">
               <button
                 aria-label="Zoom world map in"
-                onClick={() => setZoom(Math.min(4, zoom + 0.5))}
+                disabled={zoom >= ATLAS_MAX_ZOOM}
+                onClick={() =>
+                  updateView(
+                    zoomAtlasAt(viewRef.current, zoom * 1.5, {
+                      x: 0.5,
+                      y: 0.5,
+                    }),
+                  )
+                }
               >
                 <Plus size={15} />
               </button>
               <button
                 aria-label="Zoom world map out"
-                onClick={() => setZoom(Math.max(1, zoom - 0.5))}
+                disabled={zoom <= 1}
+                onClick={() =>
+                  updateView(
+                    zoomAtlasAt(viewRef.current, zoom / 1.5, {
+                      x: 0.5,
+                      y: 0.5,
+                    }),
+                  )
+                }
               >
                 <Minus size={15} />
               </button>
               <button
+                aria-label="Reset map view"
                 onClick={() => {
-                  setZoom(1);
-                  pick(32.1, 73);
+                  updateView({ zoom: 1, x: 0, y: 0 });
                 }}
               >
                 <RotateCcw size={14} /> Reset
               </button>
+              <output aria-label="Map zoom level">{zoom.toFixed(1)}×</output>
             </div>
+          </div>
+          <div className="map-navigation-bar" id="atlas-navigation-help">
+            <p>
+              <Move size={14} /> Drag to pan. Two fingers pinch; one finger
+              scrolls the page. + / − zoom, 0 resets; Esc releases wheel zoom.
+            </p>
+            <button
+              className="map-wheel-toggle"
+              aria-pressed={wheelZoom}
+              onClick={() => setWheelZoom(!wheelZoom)}
+            >
+              <Mouse size={15} /> Scroll zoom {wheelZoom ? "on" : "off"}
+            </button>
           </div>
           <div className="map-legend">
             {mode === "climate"
@@ -421,9 +647,10 @@ export default function Atlas({
             classes / provisional crop fit. Adjust opacity to reveal the
             satellite view. Actual climate classes; our muted palette groups the
             30 subclasses into five families. Equal-angle projection, no
-            political boundaries. The selected soil is a hypothetical filter,
-            not a global mapped soil layer. A coarse climate class cannot
-            establish the best crop for a farm.
+            political boundaries. Zoom magnifies existing pixels up to 24×; it
+            does not add field-scale detail. The selected soil is a hypothetical
+            filter, not a global mapped soil layer. A coarse climate class
+            cannot establish the best crop for a farm.
           </p>
           {basemapFailed && (
             <p className="note" role="status">
@@ -517,9 +744,12 @@ export default function Atlas({
           <img
             className="atlas-plant-poster"
             src={asset(`images/crops/${cropAsset(crop)}.webp`)}
-            alt={`Illustrative ${c.name} plant`}
+            alt={`Shared ${cropAsset(crop)} category model for the ${c.name} reference`}
           />
           <span>{c.latin}</span>
+          <small className="atlas-model-disclosure">
+            Shared category illustration; species appearance varies.
+          </small>
           <a className="text-action" href={`#/crops?crop=${crop}`}>
             Inspect the 3D plant <ArrowUpRight size={16} />
           </a>

@@ -310,10 +310,11 @@ def export(name):
     bounds=[o.matrix_world@Vector(v) for o in scene.objects if o.type=='MESH' for v in o.bound_box]
     return {'scene':name,'triangles':tris,'meshObjects':len(nodes),'meshNodes':nodes,'blenderBoundsMeters':{'min':[round(min(v[a] for v in bounds),4) for a in range(3)],'max':[round(max(v[a] for v in bounds),4) for a in range(3)]},'coordinateConvention':'Blender Z up, front cut face Y=-1.5; glTF exported Y up. Groundwater vertical units are conceptual with an explicit scale break.','glbBytes':glb.stat().st_size,'gzipGlbBytes':len(gzip.compress(glb.read_bytes())),'blendBytes':source.stat().st_size,'posterBytes':poster.stat().st_size,'sha256':hashlib.sha256(glb.read_bytes()).hexdigest(),'blender':bpy.app.version_string,'geometryStatus':scene['geometry_status']}
 
-root_scene();setup_render();stats=[export('root-zone-v2')]
-for obj in list(scene.objects):
-    if obj.type not in ['CAMERA','LIGHT']:bpy.data.objects.remove(obj,do_unlink=True)
-groundwater_scene();stats.append(export('groundwater-v2'))
-report={'seed':20261114,'textureProcessing':'Existing CC0 PBR maps, 512px packed copies; diffuse chroma removed and warm mineral tint baked to image pixels. Physical planar UV tile 1.6 m. No moss or grass diffuse in underground layers.','scenes':stats}
-(ROOT/'assets/blender/validation-v2.json').write_text(json.dumps(report,indent=2))
-print('FIELDSHIFT_V2_RESULT',json.dumps(report),flush=True)
+if __name__ == '__main__':
+    root_scene();setup_render();stats=[export('root-zone-v2')]
+    for obj in list(scene.objects):
+        if obj.type not in ['CAMERA','LIGHT']:bpy.data.objects.remove(obj,do_unlink=True)
+    groundwater_scene();stats.append(export('groundwater-v2'))
+    report={'seed':20261114,'textureProcessing':'Existing CC0 PBR maps, 512px packed copies; diffuse chroma removed and warm mineral tint baked to image pixels. Physical planar UV tile 1.6 m. No moss or grass diffuse in underground layers.','scenes':stats}
+    (ROOT/'assets/blender/validation-v2.json').write_text(json.dumps(report,indent=2))
+    print('AGRORITHM_V2_RESULT',json.dumps(report),flush=True)

@@ -37,6 +37,7 @@ export type CoordinateEvidence = {
 };
 export type Farm = {
   name: string;
+  cropInterest?: string;
   lat: number;
   lon: number;
   coordinateEvidence?: CoordinateEvidence;

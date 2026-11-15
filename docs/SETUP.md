@@ -30,15 +30,13 @@ blender --background --threads 6 --python assets/blender/generate.py
 
 The data jobs are explicit local operations. POWER uses seven sequential bounded yearly requests. HLS downloads small COG windows through the Microsoft mirror; a temporary container read signature stays in process memory and must never be committed or logged. No Earthdata, GitHub or paid API key belongs in `VITE_` variables. Full raster downloads and credentials are excluded. Source parameters, QA rules, bounds and checksums are committed. Raw POWER responses are small and redistributable. No remote texture hotlink is used at runtime.
 
-Blender rebuilds root-zone.blend, groundwater.blend, GLBs, PNG posters and validation.json. PBR source maps remain under assets/textures; Blender packs resized runtime maps. Inspect `public/models/` in the actual browser after rebuilding. The scenes use deterministic random seed 42. The current v2 root-zone GLB is 7.71 MB raw / 5.75 MB gzip; groundwater is 5.31 MB raw / 4.55 MB gzip. The four category GLBs total 0.71 MB raw. Source scenes and deterministic v2 scripts remain in assets/blender; current measurements are documented in docs/EXPERIENCE_UPDATE.md. No Git LFS is used.
+Blender rebuilds root-zone.blend, groundwater.blend, GLBs, PNG posters and validation.json. PBR source maps remain under assets/textures; Blender packs resized runtime maps. Inspect `public/models/` in the actual browser after rebuilding. The scenes use deterministic random seed 42. The current v2 root-zone GLB is 7.71 MB raw / 5.75 MB gzip; groundwater is 6.03 MB raw / 4.87 MB gzip. The four category GLBs total 0.71 MB raw. Source scenes and deterministic v2 scripts remain in assets/blender; current measurements are documented in docs/EXPERIENCE_UPDATE.md. No Git LFS is used.
 
-## Pages owner steps — no deployment has been run
+## Current GitHub Pages deployment
 
-1. Review and merge the PR only when approved. For a private repository, confirm the owner's GitHub plan supports Pages from private repositories (GitHub Pro/Team/Enterprise), or choose another approved static host. Repository visibility is not changed by the project.
-2. In repository **Settings → Pages → Build and deployment → Source**, select **GitHub Actions**.
-3. Review the **github-pages** environment. Configure required reviewers/allowed deployment branches if appropriate. A Pages site may be publicly reachable even when its source repository is private; review access before publishing.
-4. In **Actions → Deploy Pages manually → Run workflow**, select the approved branch and confirm the `publish` input. The workflow only deploys when deliberately dispatched with that explicit input.
-5. Observe the workflow environment URL after successful deployment, then verify `/Agrorithm/`, direct hash entry, refresh, model URLs and offline reload. Do not assume a live URL before this succeeds.
+The owner authorized public repository visibility and publication. The site is live at https://sspace0.github.io/Agrorithm/ from the reviewed static artifact on gh-pages; PR1 remains open and unmerged. See PUBLIC_DEPLOYMENT.md for observed checks and exact revisions.
+
+The current manual release builds the reviewed source with DEPLOY_BASE=/Agrorithm/ and advances only the artifact branch. The source includes an official-actions workflow for future deliberate dispatch after it is available on the default branch through an authorized merge. To use it, choose GitHubActions under Settings→Pages and dispatch DeployPagesmanually with publish=true on the approved ref. Do not merge or publish development changes automatically.
 
 CI is independent of publishing. It runs install, types, lint, engine tests, production build and browser checks. Official actions were verified against GitHub's current custom Pages documentation: checkout v7, configure-pages v5, upload-pages-artifact v4, deploy-pages v4; Node setup v7. Deployment permissions are scoped to its jobs, with deployment concurrency and github-pages environment.
 
@@ -54,7 +52,7 @@ On the existing Windows workspace, `./scripts/run.ps1 dev` (or build/preview/typ
 
 ## Public hosted website
 
-The user requested a shareable HTTPS link after the initial PR delivery. Agrorithm is now public at https://fieldshift-jt1.spacetime24.chatgpt.site via Sites. This does not change the private GitHub repository or merge PR #1. See PUBLIC_DEPLOYMENT.md for the project identity, root-path build recipe and observed live checks. The GitHub Pages instructions above describe the separate, still-unused Pages deployment option.
+Both GitHubPages and Sites are public at the URLs in PUBLIC_DEPLOYMENT.md. This does not merge PR1. The hosting build uses DEPLOY_BASE=/; Pages uses /Agrorithm/.
 
 ## Device location
 

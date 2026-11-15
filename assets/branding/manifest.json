@@ -95,6 +95,36 @@
       "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
       "observationPeriod": "Not specified for this historical presentation model",
       "modifications": "Actual transparent WebGL capture of the optimized NASA model with illustrative Sun lighting;690×690 crop, WebP90. Rebuild via capture-earth-poster.mjs and prepare-exhibition-assets.py."
+    },
+    {
+      "file": "assets/branding/agrorithm-o-edited.png",
+      "bytes": 255107,
+      "sha256": "7bbe7b9bd562568032bca9e514d014626a677428230ab794a2c4995b3c3e82b5",
+      "title": "Isolated Agrorithm botanical O",
+      "source": "Project-supplied Agrorithm wordmark",
+      "creator": "Not independently specified",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Neighboring letters removed from the supplied wordmark; transparent botanical O preserved as source."
+    },
+    {
+      "file": "public/images/agrorithm-o.png",
+      "bytes": 10996,
+      "sha256": "8ab63c92877ba073635dc6736b2028df0d9dc9aac6e59ce2a008d854e9d42f94",
+      "title": "Agrorithm chat launcher mark",
+      "source": "Project-supplied Agrorithm wordmark",
+      "creator": "Not independently specified",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Trimmed transparent padding, resized and centered on a256pixeltransparentcanvas; prepare-brand-mark.py."
+    },
+    {
+      "file": "public/images/agrorithm-mark.svg",
+      "bytes": 14880,
+      "sha256": "a7780b0e1c9afecad1e59abeae092616514df7af75a4b74f88d3b81784bb0614",
+      "title": "Agrorithm browser icon",
+      "source": "Project-supplied Agrorithm wordmark",
+      "creator": "Not independently specified",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Isolated botanicalOonroundedpalebackplate; build-brand-icon.mjs."
     }
   ]
 }

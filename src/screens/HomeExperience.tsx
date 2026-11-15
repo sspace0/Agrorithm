@@ -1,4 +1,4 @@
-import { ArrowUpRight, Layers, Compass } from "lucide-react";
+import { ArrowUpRight, Layers, Compass, Globe2, Sprout } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { coverMapPoint } from "../engine/presentation";
 import OrbitOpening from "../components/OrbitOpening";
@@ -47,6 +47,48 @@ export default function HomeExperience({
         resume={resume}
         saved={saved}
       />
+      <section className="exhibition-prologue" aria-labelledby="prologue-title">
+        <div className="prologue-heading">
+          <span className="eyebrow">01 / A CLOSER LOOK</span>
+          <h2 id="prologue-title">
+            From a planet.
+            <br />
+            <em>To your next season.</em>
+          </h2>
+          <p>
+            Begin with what we can observe. Add what you know about your field.
+            Explore the choices between them.
+          </p>
+        </div>
+        <div className="prologue-evidence">
+          <a href="#/sources">
+            <Globe2 size={23} />
+            <span>Earth observations</span>
+            <p>
+              Historical NASA weather and a quality-filtered vegetation record.
+            </p>
+            <ArrowUpRight size={19} />
+          </a>
+          <a href="#/soil">
+            <Layers size={23} />
+            <span>Beneath the surface</span>
+            <p>
+              Roots, soil layers and water. Measurements stay separate from
+              illustrations.
+            </p>
+            <ArrowUpRight size={19} />
+          </a>
+          <a href="#/crops">
+            <Sprout size={23} />
+            <span>Explore crop options</span>
+            <p>
+              Eight crop references. Four botanical models. A clearer place to
+              start.
+            </p>
+            <ArrowUpRight size={19} />
+          </a>
+        </div>
+      </section>
       <ScrollStory motion={motion} quality={quality} />
       <section
         ref={portal}

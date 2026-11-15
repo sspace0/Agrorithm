@@ -1,5 +1,20 @@
 import { test, expect } from "@playwright/test";
 
+test("rapid navigation reaches the latest page without rejected transitions", async ({ page }) => {
+  const errors: string[] = [];
+  page.on("pageerror", e => errors.push(e.message));
+  await page.addInitScript(() => localStorage.setItem("fieldshift-quality", JSON.stringify("static")));
+  await page.goto("./#/help");
+  await page.locator(".boot-overlay").waitFor({ state: "hidden" });
+  await page.evaluate(() => {
+    location.hash = "#/about";
+    requestAnimationFrame(() => { location.hash = "#/studio/setup"; });
+  });
+  await expect(page.getByRole("heading", { name: "Your field", exact: true })).toBeVisible();
+  await page.waitForTimeout(650);
+  expect(errors).toEqual([]);
+});
+
 test("refresh prepares the active page and can be skipped while data is pending", async ({ page }) => {
   let release!: () => void;
   const gate = new Promise<void>((resolve) => (release = resolve));

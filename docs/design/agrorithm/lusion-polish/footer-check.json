@@ -1,0 +1,50 @@
+[
+  {
+    "n": "desktop",
+    "link": {
+      "x": 1154.390625,
+      "y": 920,
+      "width": 75.609375,
+      "height": 15,
+      "top": 920,
+      "right": 1230,
+      "bottom": 935,
+      "left": 1154.390625
+    },
+    "helper": {
+      "x": 1268.703125,
+      "y": 918,
+      "width": 147.296875,
+      "height": 58,
+      "top": 918,
+      "right": 1416,
+      "bottom": 976,
+      "left": 1268.703125
+    },
+    "overlap": false
+  },
+  {
+    "n": "phone",
+    "link": {
+      "x": 226.125,
+      "y": 789.109375,
+      "width": 69.875,
+      "height": 15,
+      "top": 789.109375,
+      "right": 296,
+      "bottom": 804.109375,
+      "left": 226.125
+    },
+    "helper": {
+      "x": 316,
+      "y": 762,
+      "width": 58,
+      "height": 58,
+      "top": 762,
+      "right": 374,
+      "bottom": 820,
+      "left": 316
+    },
+    "overlap": false
+  }
+]

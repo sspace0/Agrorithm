@@ -9,6 +9,7 @@ export type SceneOptions = {
   layers?: boolean;
   roots?: boolean;
   explode?: boolean;
+  separation?: number;
   process?: string;
   depth?: number;
   rain?: number;
@@ -106,7 +107,68 @@ function Asset(p: ModelSceneProps) {
       event.lengthComputable && event.total ? event.loaded / event.total : null,
     ),
   );
-  const model = useMemo(() => gltf.scene.clone(true), [gltf]);
+  const detailedWaterPlane = useMemo(() => new THREE.Plane(), []);
+  const saturationPlane = useMemo(() => new THREE.Vector4(), []);
+  const model = useMemo(() => {
+    const cloned = gltf.scene.clone(true);
+    cloned.traverse((object) => {
+      const detailedWater = object.name.startsWith("Water_Detailed_");
+      const mineralSection =
+        p.options.view === "groundwater" &&
+        /^(Layer_|Soil_|Pore_|Mineral_|Compacted_)/.test(object.name);
+      if (!detailedWater && !mineralSection) return;
+      const mesh = object as THREE.Mesh;
+      if (!mesh.isMesh) return;
+      const displayMaterial = (original: THREE.Material) => {
+        const material = original.clone();
+        if (detailedWater) material.clippingPlanes = [detailedWaterPlane];
+        if (mineralSection) {
+          material.onBeforeCompile = (shader) => {
+            shader.uniforms.illustrativeSaturationPlane = {
+              value: saturationPlane,
+            };
+            shader.vertexShader =
+              `varying vec3 sectionWorldPosition;\n${shader.vertexShader}`.replace(
+                "#include <project_vertex>",
+                "#include <project_vertex>\nsectionWorldPosition = (modelMatrix * vec4(transformed, 1.0)).xyz;",
+              );
+            shader.fragmentShader =
+              `uniform vec4 illustrativeSaturationPlane;\nvarying vec3 sectionWorldPosition;\n${shader.fragmentShader}`
+                .replace(
+                  "#include <map_fragment>",
+                  `#include <map_fragment>
+                float illustrativeSaturation = step(0.0, dot(illustrativeSaturationPlane.xyz, sectionWorldPosition) + illustrativeSaturationPlane.w);
+                float mineralLuminance = dot(diffuseColor.rgb, vec3(0.2126, 0.7152, 0.0722));
+                diffuseColor.rgb = mix(diffuseColor.rgb, mineralLuminance * vec3(0.34, 0.66, 0.90), illustrativeSaturation);`,
+                )
+                .replace(
+                  "#include <roughnessmap_fragment>",
+                  "#include <roughnessmap_fragment>\nroughnessFactor = mix(roughnessFactor, max(0.36, roughnessFactor * 0.58), illustrativeSaturation);",
+                );
+          };
+          material.customProgramCacheKey = () =>
+            "agrorithm-illustrative-wet-section-v1";
+        }
+        return material;
+      };
+      mesh.material = Array.isArray(mesh.material)
+        ? mesh.material.map(displayMaterial)
+        : displayMaterial(mesh.material);
+      mesh.userData.ownsSectionMaterial = true;
+    });
+    return cloned;
+  }, [gltf, detailedWaterPlane, saturationPlane, p.options.view]);
+  useEffect(
+    () => () => {
+      model.traverse((object) => {
+        if (!object.userData.ownsSectionMaterial) return;
+        const material = (object as THREE.Mesh).material;
+        if (Array.isArray(material)) material.forEach((item) => item.dispose());
+        else material.dispose();
+      });
+    },
+    [model],
+  );
   const initial = useMemo(() => {
     const positions = new Map<string, THREE.Vector3>();
     model.traverse((o) => positions.set(o.uuid, o.position.clone()));
@@ -258,14 +320,28 @@ function Asset(p: ModelSceneProps) {
   useEffect(() => {
     model.traverse((o) => {
       if (o.name.startsWith("Layer_")) o.visible = p.options.layers !== false;
+      if (
+        p.options.view === "groundwater" &&
+        /^(Soil_|Pore_|Mineral_|Compacted_)/.test(o.name)
+      )
+        o.visible = p.options.layers !== false;
       if (o.name.startsWith("Roots_")) o.visible = p.options.roots !== false;
-      if (o.name.startsWith("Water_")) o.visible = false;
+      if (o.name.startsWith("Water_"))
+        o.visible =
+          o.name.startsWith("Water_Detailed_") &&
+          p.options.view === "groundwater" &&
+          p.options.layers !== false;
     });
     invalidate();
-  }, [model, p.options.layers, p.options.roots, invalidate]);
+  }, [model, p.options.layers, p.options.roots, p.options.view, invalidate]);
   useFrame(({ clock }, delta) => {
     const c = controls.current;
     if (!c || !stage.current) return;
+    const separation = THREE.MathUtils.clamp(
+      p.options.separation ?? (p.options.explode ? 1 : 0),
+      0,
+      1,
+    );
     c.enableRotate =
       p.interactive &&
       (!matchMedia("(pointer:coarse)").matches || manual.current);
@@ -283,7 +359,7 @@ function Asset(p: ModelSceneProps) {
         .multiplyScalar(
           fitted.current *
             (1 + (p.motion ? 0.025 * p.progress : 0)) *
-            (p.options.explode ? 1.18 : 1),
+            (1 + separation * 0.18),
         );
       camera.position.lerp(target, p.motion ? 1 - Math.exp(-4 * delta) : 1);
       c.target.lerp(
@@ -296,21 +372,33 @@ function Asset(p: ModelSceneProps) {
       );
     }
     c.update();
+    const layerOffsets: Record<string, number> = {};
     model.traverse((o) => {
       if (o.name.startsWith("Layer_")) {
         const original = initial.get(o.uuid)!;
         let offset = 0;
-        if (p.options.explode) {
-          if (o.name.includes("Subsoil")) offset = -0.2;
-          if (o.name.includes("Parent")) offset = -0.4;
-        }
+        if (o.name.includes("Subsoil")) offset = -0.2 * separation;
+        if (o.name.includes("Parent")) offset = -0.4 * separation;
         o.position.y = p.motion
           ? THREE.MathUtils.damp(o.position.y, original.y + offset, 6, delta)
           : original.y + offset;
+        layerOffsets[o.name] = o.position.y - original.y;
       }
       if (o.name.startsWith("Surface_") && !o.name.includes("Grass"))
         o.rotation.z = p.motion ? Math.sin(clock.elapsedTime * 0.7) * 0.002 : 0;
     });
+    // Pore water is teaching geometry. Clip it in model space to the user's
+    // illustrative table; rotating or panning the section cannot expose water above it.
+    model.updateWorldMatrix(true, true);
+    detailedWaterPlane.normal.set(0, -1, 0);
+    detailedWaterPlane.constant = -(p.options.depth ?? 7) / 10;
+    detailedWaterPlane.applyMatrix4(model.matrixWorld);
+    saturationPlane.set(
+      detailedWaterPlane.normal.x,
+      detailedWaterPlane.normal.y,
+      detailedWaterPlane.normal.z,
+      detailedWaterPlane.constant,
+    );
     if (p.motion && p.visible && clock.elapsedTime - frameTime.current < 0.12)
       return;
     frameTime.current = clock.elapsedTime;
@@ -339,6 +427,7 @@ function Asset(p: ModelSceneProps) {
       });
       p.host.dataset.cameraMode = manual.current ? "manual" : "scroll";
       p.host.dataset.clearAlpha = String(gl.getClearAlpha());
+      p.host.dataset.layerOffsets = JSON.stringify(layerOffsets);
     }
     const occupied: { x: number; y: number; w: number; h: number }[] = [];
     const occluders: THREE.Object3D[] = [];
@@ -350,17 +439,22 @@ function Asset(p: ModelSceneProps) {
       )
         occluders.push(o);
     });
-    for (const a of annotations) {
+    // Place upper features first so collision offsets do not cross lower leaders.
+    const orderedAnnotations = annotations
+      .map((a) => {
+        const world = a.target.localToWorld(a.anchor.clone());
+        return { a, world, v: world.clone().project(camera) };
+      })
+      .sort((a, b) => b.v.y - a.v.y);
+    for (const { a, world, v } of orderedAnnotations) {
       const el = p.host?.querySelector<HTMLElement>(
         `[data-annotation="${a.id}"]`,
       );
       if (!el) continue;
-      const world = a.target.localToWorld(a.anchor.clone()),
-        v = world.clone().project(camera),
-        ray = new THREE.Raycaster(
-          camera.position,
-          world.clone().sub(camera.position).normalize(),
-        );
+      const ray = new THREE.Raycaster(
+        camera.position,
+        world.clone().sub(camera.position).normalize(),
+      );
       const hit = ray.intersectObjects(occluders, false)[0];
       let featureHidden = false;
       for (
@@ -571,6 +665,7 @@ export default function ModelScene(p: ModelSceneProps) {
       gl={{ alpha: true, antialias: !p.low, powerPreference: "low-power" }}
       onCreated={({ gl }) => {
         gl.setClearColor(0x000000, 0);
+        gl.localClippingEnabled = true;
         gl.domElement.addEventListener("webglcontextlost", (e) => {
           e.preventDefault();
           if (mounted.current) p.onFail();

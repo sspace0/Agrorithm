@@ -1,0 +1,11 @@
+# Crop reference to planning
+
+The active crop view provides an illustrated **Plan with [crop]** action. It opens Field Studio setup immediately and selects that crop in **Crop to explore**. The field name, coordinates, soil values, entered crop sequence, water limits and scenario remain unchanged. This action does not load the sample or replace an existing plan.
+
+The optional `Farm.cropInterest` field stores one of the eight library reference identifiers. It is included in the normal local save and complete JSON export, and validated on import. Clearing the selector removes the preference. Older plans without the field continue to work.
+
+An interest is separate from the deterministic rotation engine's crop registry and hard feasibility rules. Maize, wheat and mungbean are available in the current annual registry, with their provisional parameter and management requirements. The setup provides a **Review dates & crop sequence** action so the farmer can enter confirmed dates. The library action does not invent or overwrite sowing and harvest dates.
+
+Chickpea, tomato and potato remain library references pending region-specific parameter/calendar and practical-access integration. Citrus and mango are perennial references; orchard establishment and bearing years are outside the annual 36-month engine. Their choices are retained for the planning conversation, with an explicit scope warning. They do not create unsupported orchard water, yield or feasibility results, and are never silently substituted with an annual crop.
+
+Actual software verification on 15 November 2026: TypeScript and scoped ESLint passed; all four pure tests passed. Both targeted production-browser tests passed in 17.9 seconds, covering annual and fruit handoff, field/date preservation, JSON/save continuity, keyboard focus on the existing-sequence heading, and a phone layout without horizontal overflow. The tests used static quality and no WebGL canvas. Desktop and phone screenshots in `docs/design/agrorithm/crop-plan/` were visually inspected. The crop-choice card wraps cleanly; the floating helper's overlap with a phone heading was reported separately to its owner for compact-trigger polish. These checks verify navigation and state continuity rather than agronomic suitability.

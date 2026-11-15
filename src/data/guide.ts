@@ -169,6 +169,12 @@ export const DESTINATIONS = [
     tags: "answers help guide",
   },
   {
+    title: "Learned weather patterns",
+    detail: "Explore a model trained on historical NASA POWER data",
+    route: "/weather-patterns",
+    tags: "AI machine learning trained NASA weather clusters historical model holdout",
+  },
+  {
     title: "Sources & methods",
     detail: "Data provenance and scientific limits",
     route: "/sources",

@@ -43,12 +43,23 @@ function Earth({
     map = useRef<THREE.Mesh>(null),
     mapMaterial = useRef<THREE.MeshBasicMaterial>(null),
     halo = useRef<THREE.ShaderMaterial>(null);
-  const { camera, size } = useThree();
+  const { camera, size, pointer } = useThree();
   useEffect(() => {
     onReady();
   }, [texture, model, onReady]);
   useFrame((_, delta) => {
-    const p = motion ? progress : 0,
+    const aspect = size.width / size.height,
+      portrait = aspect < 1.15,
+      openingDistance = portrait
+        ? Math.max(
+            6.8,
+            1.12 /
+              Math.sin(
+                Math.atan(Math.tan((34 * Math.PI) / 360) * aspect * 0.88),
+              ),
+          )
+        : 5.3,
+      p = motion ? progress : 0,
       turn = ease((p - 0.08) / 0.58),
       flat = ease((p - 0.68) / 0.26);
     if (globe.current)
@@ -69,7 +80,7 @@ function Earth({
     if (map.current) map.current.scale.setScalar(0.75 + 0.25 * flat);
     if (halo.current) halo.current.uniforms.strength.value = 1 - flat;
     const distance = THREE.MathUtils.lerp(
-      size.width < 760 ? 6.8 : 5.3,
+      openingDistance,
       5.7 /
         (2 * Math.tan((34 * Math.PI) / 360) * (size.width / size.height) * 1),
       flat,
@@ -78,7 +89,22 @@ function Earth({
     camera.lookAt(0, 0, 0);
     if (group.current)
       group.current.position.x =
-        (size.width < 760 ? 0 : 1.15) * (1 - ease((p - 0.44) / 0.26));
+        (portrait ? 0 : 0.95 * Math.min(1, Math.max(0, (aspect - 1) / 0.44))) *
+        (1 - ease((p - 0.44) / 0.26));
+    if (group.current) {
+      group.current.position.y = portrait
+        ? -Math.min(0.85, Math.max(0.48, 0.48 + (0.7 - aspect) * 1.6)) *
+          (1 - flat)
+        : 0;
+      group.current.rotation.x = motion
+        ? THREE.MathUtils.damp(
+            group.current.rotation.x,
+            pointer.y * 0.025 * (1 - flat),
+            1.8,
+            Math.min(0.05, delta),
+          )
+        : 0;
+    }
   });
   return (
     <group ref={group}>

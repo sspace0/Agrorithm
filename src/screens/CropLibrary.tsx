@@ -9,9 +9,11 @@ import { Search } from "lucide-react";
 export default function CropLibrary({
   motion,
   quality,
+  onPlanCrop,
 }: {
   motion: boolean;
   quality: string;
+  onPlanCrop: (crop: AtlasCropId) => void;
 }) {
   const initial =
     new URLSearchParams(location.hash.split("?")[1]).get("crop") ||
@@ -184,6 +186,10 @@ export default function CropLibrary({
           <h3>Ground & water</h3>
           <p>{c.soil}</p>
           <p>{c.water}</p>
+          <button className="primary crop-plan-button" onClick={() => onPlanCrop(crop)}>
+            <img src={asset(`images/crops/${cropAsset(crop)}-thumb.webp`)} alt="" />
+            Plan with {c.name.toLowerCase()} <ArrowUpRight size={17} />
+          </button>
           <a className="text-action" href="#/atlas">
             Find its climate context <ArrowUpRight size={16} />
           </a>

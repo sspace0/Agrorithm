@@ -53,8 +53,8 @@
     },
     {
       "scene": "groundwater-v2",
-      "triangles": 32662,
-      "meshObjects": 10,
+      "triangles": 73660,
+      "meshObjects": 14,
       "meshNodes": [
         "Layer_Unsaturated",
         "Layer_Saturated",
@@ -63,40 +63,44 @@
         "Roots_Illustrative_Fibrous",
         "Roots_Right_Section",
         "Soil_Aggregates",
-        "Water_In_Pores",
-        "Water_Table_Boundary",
-        "Water_Filled_Fractures_Illustrative"
+        "Pore_Mineral_Rims_Illustrative",
+        "Pore_Section_Openings_Illustrative",
+        "Mineral_Fractures_Illustrative",
+        "Compacted_Fine_Sediment_Laminae",
+        "Water_Detailed_Pores_Illustrative",
+        "Water_Detailed_Fractures_Illustrative",
+        "Water_Table_Boundary"
       ],
+      "coordinateConvention": "Blender Z up; glTF Y up. Groundwater vertical scale is conceptual with a scale break.",
+      "glbBytes": 6029336,
+      "gzipGlbBytes": 4869866,
+      "blendBytes": 9045051,
+      "posterBytes": 2014139,
+      "sha256": "f8b5bfe32eda3e3468755b7f377b75204f71a7a5758b30d2350a69533df1d7f6",
+      "blender": "5.2.1 LTS",
+      "geometryStatus": "Illustrative unconfined groundwater, conceptual 0–20 m vertical scale with demo table at 7 m. Enlarged pore openings, mineral grains, water films and fine fractures explain porous material; they are not measured porosity, a site-specific horizon, water storage or field depth. No aquifer dynamics or recharge prediction. No free underground pool.",
+      "detailRevision": "porous-section-2026-11-15",
+      "runtimeWater": "Named detailed water meshes use a user-controlled clipping plane in the browser; no inferred water depth.",
+      "runtimePosterWebpBytes": 77858,
+      "posterProcessing": {
+        "encoder": "Chromium canvas WebP",
+        "browser": "158.0.8127.18",
+        "quality": 0.82,
+        "maxWidth": 1200
+      },
       "blenderBoundsMeters": {
         "min": [
-          -2,
-          -1.5466,
+          -2.0664,
+          -1.5456,
           -2.0375
         ],
         "max": [
-          2.0325,
-          1.5,
-          0.1304
+          2.0443,
+          1.5133,
+          0.1321
         ]
       },
-      "coordinateConvention": "Blender Z up, front cut face Y=-1.5; glTF exported Y up. Groundwater vertical units are conceptual with an explicit scale break.",
-      "glbBytes": 5309612,
-      "gzipGlbBytes": 4552733,
-      "blendBytes": 8541156,
-      "posterBytes": 1942421,
-      "sha256": "73fb4e29c900828e4887802a61a3736894c37b80e0f0dc4d618fb81d0cd116ad",
-      "blender": "5.2.1 LTS",
-      "geometryStatus": "Illustrative unconfined groundwater in pores/fractures. Explicit separate 0–20 m conceptual scale; boundary shown at demo 7 m. No NASA-derived depth or aquifer dynamics. Layers, roots and fractures are not site measurements.",
-      "runtimePosterWebpBytes": 72942,
-      "browserRender": {
-        "model": "groundwater-v2",
-        "loadMs": 115.59999999403954,
-        "triangles": 32662,
-        "drawCalls": 14,
-        "errors": [],
-        "glbBytes": 5309612,
-        "gzipBytes": 4586437
-      }
+      "wetDisplay": "Blue wet saturation is an illustrative display color: Blender poster uses the default 7 m plane; browser uses the selected plane, preserving mineral luminance/normal detail."
     }
   ],
   "posterProcessing": {

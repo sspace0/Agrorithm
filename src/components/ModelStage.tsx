@@ -56,13 +56,20 @@ export function useScrollProgress(
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         const r = ref.current?.getBoundingClientRect();
+        const pinned = ref.current?.firstElementChild;
+        const pinnedTop =
+          pinnedOpening && pinned
+            ? parseFloat(getComputedStyle(pinned).top) || 0
+            : 0;
         if (r)
           setProgress(
             Math.max(
               0,
               Math.min(
                 1,
-                (pinnedOpening ? 106 - r.top : innerHeight * 0.22 - r.top) /
+                (pinnedOpening
+                  ? pinnedTop - r.top
+                  : innerHeight * 0.22 - r.top) /
                   Math.max(
                     1,
                     r.height -

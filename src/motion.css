@@ -71,6 +71,35 @@
 .orbit-canvas {
   transition: inset 0.15s linear;
 }
+@supports (animation-timeline: view()) {
+  .app:not(.reduced-motion) .prologue-heading,
+  .app:not(.reduced-motion) .prologue-evidence > a,
+  .app:not(.reduced-motion) .home-paths > div {
+    animation: exhibit-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 5% entry 90%;
+  }
+  @keyframes exhibit-reveal {
+    from {
+      opacity: 0.65;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.prologue-evidence > a > svg:last-child,
+.path-links > a > svg {
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.prologue-evidence > a:hover > svg:last-child,
+.prologue-evidence > a:focus-visible > svg:last-child,
+.path-links > a:hover > svg,
+.path-links > a:focus-visible > svg {
+  transform: translate(4px, -4px);
+}
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-old(*),
   ::view-transition-new(*),
@@ -82,5 +111,10 @@
   .top-links a::after,
   .orbit-canvas {
     transition: none !important;
+  }
+  .app .prologue-heading,
+  .app .prologue-evidence > a,
+  .app .home-paths > div {
+    animation: none !important;
   }
 }

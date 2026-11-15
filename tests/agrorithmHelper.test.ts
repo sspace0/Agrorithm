@@ -4,9 +4,17 @@ import { answerAgrorithmQuestion, historicalMonthFromQuestion } from "../src/eng
 import { parseWeatherPatternModel } from "../src/engine/weatherPatterns";
 const model=parseWeatherPatternModel(JSON.parse(readFileSync("public/data/weather-patterns.json","utf8")));
 describe("Agrorithm on-device helper",()=>{
-  it("answers exact greetings while preserving compound farming questions",()=>{
-    for(const query of ["Hi","Hi, How are you?"])expect(answerAgrorithmQuestion(query,null).text).toContain("Hi!");
-    expect(answerAgrorithmQuestion("Hi, explain irrigation water accounting",null).kind).toBe("source-guide");
+  it.each(["Hi","Hi, How are you?","Hey there! How are you?","HELLO THERE!! HOW ARE YOU TODAY?","hey there\nhow r u","Hello there, how’s it going?","How is it going?","What's up?","Good morning!","Good evening, how are you doing?","Hiya 👋","How do you do?"])("answers a social greeting without requiring evidence: %s",query=>{
+    const answer=answerAgrorithmQuestion(query,null);
+    expect(answer.kind).toBe("welcome");
+    expect(answer.text).toContain("Hi!");
+  });
+  it("does not swallow substantive questions after a greeting or thanks",()=>{
+    for(const query of ["Hi, explain irrigation water accounting","Hey there! How are you? Explain irrigation water accounting","Thanks, what about tomato?"])expect(answerAgrorithmQuestion(query,null).kind).toBe("source-guide");
+    expect(answerAgrorithmQuestion("Hi! Predict tomorrow’s weather",null).kind).toBe("scope");
+  });
+  it("responds to thanks conversationally",()=>{
+    for(const query of ["Thanks!","Thank you so much!","Thanks a lot."])expect(answerAgrorithmQuestion(query,null).title).toBe("You’re welcome.");
   });
   it("parses named and ISO months and requests clarification for ambiguity",()=>{
     expect(historicalMonthFromQuestion("What was July 2023 like?").month).toBe("2023-07");

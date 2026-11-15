@@ -19,6 +19,15 @@ export function historicalMonthFromQuestion(query: string) {
 }
 const modelLinks = [{label:"Explore learned weather patterns",href:"#/weather-patterns"},{label:"NASA POWER source",href:"https://power.larc.nasa.gov/docs/services/api/temporal/daily/"},{label:"See this in the Rotation lab",href:"#/studio/lab"}];
 export const HELPER_WELCOME: HelperAnswer = {kind:"welcome",title:"A clearer next step.",text:"Ask about a historical month, the model, or a farming-data topic. I use the learned NASA weather patterns and the project's documented source guide. Questions stay in this browser session.",links:[{label:"Open the pattern lab",href:"#/weather-patterns"},{label:"Browse the field guide",href:"#/help"}]};
+function conversationalAnswer(query: string): HelperAnswer | null {
+  const words=query.normalize("NFKC").toLowerCase().replace(/[’']/g, "").replace(/[^\p{L}\p{N}\s]/gu, " ").replace(/\s+/g, " ").trim();
+  const greeting="(?:(?:hello|hi|hey|hiya)(?: there)?|good (?:morning|afternoon|evening))";
+  const checkIn="(?:(?:how (?:are|r) (?:you|u)(?: doing)?|how(?:s| is) it going|what(?:s| is) up|how do you do)(?: today)?)";
+  // Match the whole social message so a greeting cannot swallow a farm question.
+  if(new RegExp(`^(?:${greeting}(?: ${checkIn})?|${checkIn})$`).test(words)) return {...HELPER_WELCOME,title:"Hi. Ready when you are.",text:"Hi! I’m ready to help. What would you like to explore—NASA observations, crop options or your plan? You can ask in your own words."};
+  if(/^(?:thanks(?: a lot| so much)?|thank you(?: very much| so much)?|ty)$/.test(words)) return {...HELPER_WELCOME,title:"You’re welcome.",text:"You’re welcome! Ask another question whenever you’re ready, or open your plan to explore the results."};
+  return null;
+}
 const scopeQuestion = /\b(forecast|predict(?:ion|ions)?|future|tomorrow|profit|yield|guarantee|guaranteed)\b|\bbest crop\b|\bwhich crop\b|\bwhat (?:crop|should i plant)\b|\b(?:carbon|nitrogen) (?:gain|increase|credit)\b|\b(?:my|field|farm)(?:'s)? water.table depth\b/i;
 const stop = new Set("a an the is are was were i my me you your can could would should how what where when why do does did to of for and or please tell about this that it much mean means explain".split(" "));
 const monthLabel = (month: string) => new Intl.DateTimeFormat("en",{month:"long",year:"numeric",timeZone:"UTC"}).format(new Date(`${month}-15T12:00:00Z`));
@@ -75,7 +84,8 @@ function sourceAnswer(query: string, context: HelperContext): HelperAnswer | nul
 export function answerAgrorithmQuestion(question: string, model: WeatherPatternModel | null, context: HelperContext = {}): HelperAnswer {
   const query=question.trim();
   if (!query || /^help[!. ]*$/i.test(query)) return HELPER_WELCOME;
-  if (/^(?:(?:hello|hi|hey)(?: there)?[!., ]*|(?:(?:hello|hi|hey)[!., ]*)?how (?:are|r) (?:you|u)(?: doing)?[?!. ]*|(?:thanks|thank you)[!. ]*)$/i.test(query)) return {...HELPER_WELCOME,title:"Hi. Ready when you are.",text:"Hi! I can help you read NASA observations, explore crop references and understand your plan. Ask about a historical month, water accounting, satellite evidence or your results."};
+  const conversation=conversationalAnswer(query);
+  if(conversation) return conversation;
   if (scopeQuestion.test(query)) return {kind:"scope",title:"That needs evidence this helper cannot supply.",text:"The learned model groups supplied historical weather months. It cannot forecast, choose the best crop, estimate future yield or profit, or establish a field's groundwater depth. Use the transparent planning tools and local evidence for those decisions.",links:[{label:"Review observations and gaps",href:"#/studio/evidence"},{label:"Explore hypothetical stress tests",href:"#/studio/scenarios"},...modelLinks]};
   const plan = answerPlanQuestion(query, context.plan);
   if (plan) return { ...plan, context };

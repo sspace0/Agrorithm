@@ -10,6 +10,15 @@ for(const viewport of [{width:1440,height:1000},{width:390,height:844}]) {
     await page.getByRole("button",{name:"Ask Agrorithm",exact:true}).click();
     const input=page.getByLabel("Your question",{exact:true});
     const ask=async(question:string)=>{await input.fill(question);await page.getByRole("button",{name:"Send question",exact:true}).click();};
+    for(const greeting of ["Hey there! How are you?","Hello there, how’s it going?","Good morning!"]) {
+      await ask(greeting);
+      await expect(page.locator(".agr-helper-answer").last()).toContainText("Hi! I’m ready to help.");
+      await expect(page.locator(".agr-helper-answer").last()).not.toContainText("UNAVAILABLE EVIDENCE");
+    }
+    await ask("Thank you so much!");
+    await expect(page.locator(".agr-helper-answer").last()).toContainText("You’re welcome.");
+    await ask("Hey there! How are you? Explain irrigation water accounting");
+    await expect(page.locator(".agr-helper-answer").last()).toContainText("millimetre");
     await ask("Explain irrigation water accounting\nbest water method for tomato");
     const answer=page.locator(".agr-helper-answer").last();
     await expect(answer).toContainText("millimetre");

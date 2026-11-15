@@ -22,7 +22,8 @@ const urls = paths
   .filter(
     (p) =>
       !p.includes("/models/") &&
-      !p.endsWith(".png") &&
+      (!p.endsWith(".png") ||
+        /images\/(agrorithm-logo|report-cover)\.png$/.test(p)) &&
       !/images\/(root-zone|groundwater)\.webp$/.test(p),
   )
   .map((p) => base + p.slice(5));

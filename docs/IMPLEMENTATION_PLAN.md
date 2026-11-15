@@ -1,4 +1,4 @@
-# FieldShift implementation plan
+# Agrorithm implementation plan
 
 1. Verify tools, repository access, challenge, data contracts and licenses. Preserve the supplied team logo.
 2. Cache genuine POWER weather and a quality-filtered NASA vegetation subset. Build reproducible acquisition and manual imports.

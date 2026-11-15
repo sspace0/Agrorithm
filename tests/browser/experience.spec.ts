@@ -5,7 +5,7 @@ test("global search opens with the keyboard and reaches tools without losing fie
   await page.goto("./#/studio/setup");
   await page.getByLabel("Field name").fill("Test field kept locally");
   await page.keyboard.press("Control+k");
-  const dialog = page.getByRole("dialog", { name: "Search FieldShift" });
+  const dialog = page.getByRole("dialog", { name: "Search Agrorithm" });
   await expect(dialog).toBeVisible();
   await page
     .getByRole("textbox", { name: "Search pages, crops and questions" })
@@ -51,26 +51,21 @@ test("location search uses genuine cached places, manual coordinates and honest 
   );
   await context.close();
 });
-test("four illustrated categories cover eight crop profiles and fetch only the chosen model", async ({
+test("four illustrated crop categories retain eight references and one visible model", async ({
   browser,
 }) => {
   const context = await browser.newContext({ serviceWorkers: "block" });
   const page = await context.newPage();
-  const models: string[] = [];
-  page.on("request", (r) => {
-    if (r.url().includes("/models/")) models.push(r.url());
-  });
   await page.goto("./#/crops");
   await expect(
     page.getByRole("heading", { name: /Explore crop options/ }),
   ).toBeVisible();
-  expect(models).toHaveLength(0);
   await expect(page.locator(".crop-picks button img")).toHaveCount(4);
-  for (const [group, crops] of [
-    ["Grains", ["Wheat", "Maize"]],
-    ["Pulses", ["Mungbean", "Chickpea"]],
-    ["Vegetables", ["Tomato", "Potato"]],
-    ["Fruit trees", ["Citrus", "Mango"]],
+  for (const [group, crops, model] of [
+    ["Grains", ["Wheat", "Maize"], "maize"],
+    ["Pulses", ["Mungbean", "Chickpea"], "mungbean"],
+    ["Vegetables", ["Tomato", "Potato"], "tomato"],
+    ["Fruit trees", ["Citrus", "Mango"], "citrus"],
   ] as const) {
     await page
       .locator(".crop-picks")
@@ -82,38 +77,31 @@ test("four illustrated categories cover eight crop profiles and fetch only the c
         .getByRole("button", { name: crop, exact: true })
         .click();
       await expect(
-        page.getByRole("region", { name: `${crop} growing reference` }),
+        page.getByRole("region", { name: crop + " growing reference" }),
       ).toBeVisible();
       await expect(page.locator(".profile-facts dt")).toHaveCount(7);
     }
+    await expect(page.locator("[data-model-stage] canvas")).toBeVisible();
+    await expect(page.locator(".model-presentation")).toHaveAttribute(
+      "data-model-url",
+      new RegExp(model + "\\.glb"),
+    );
+    await expect(
+      page.getByRole("button", { name: "Inspect model", exact: true }),
+    ).toBeVisible();
+    await expect(page.locator("[data-model-stage] canvas")).toHaveCount(1);
   }
-  await page
-    .locator(".crop-picks")
-    .getByRole("button", { name: /Vegetables/ })
-    .click();
-  await page
-    .getByRole("button", { name: "Explore in 3D", exact: true })
-    .click();
-  await expect(page.locator(".plant-stage canvas")).toBeVisible();
-  await expect(page.getByText("Loading this plant only…")).toBeHidden();
-  expect(models).toHaveLength(1);
-  expect(models[0]).toContain("tomato.glb");
-  await page.getByRole("button", { name: "Poster view", exact: true }).click();
-  await expect(page.locator(".plant-stage canvas")).toHaveCount(0);
-  await page
-    .getByRole("button", { name: "Explore in 3D", exact: true })
-    .click();
-  await expect(page.locator(".plant-stage canvas")).toBeVisible();
+  await page.getByRole("button", { name: "Show model poster" }).click();
+  await expect(page.locator("[data-model-stage] canvas")).toHaveCount(0);
+  await page.getByRole("button", { name: "Reload 3D", exact: true }).click();
+  await expect(page.locator("[data-model-stage] canvas")).toBeVisible();
   await page
     .getByRole("combobox", { name: "Graphics quality" })
     .selectOption("static");
-  await expect(page.locator(".plant-stage canvas")).toHaveCount(0);
-  await page
-    .getByRole("combobox", { name: "Graphics quality" })
-    .selectOption("auto");
-  await expect(page.locator(".plant-stage canvas")).toHaveCount(0);
+  await expect(page.locator("[data-model-stage] canvas")).toHaveCount(0);
   await context.close();
 });
+
 test("phones start with a useful poster and no soil model download", async ({
   browser,
 }) => {
@@ -130,7 +118,7 @@ test("phones start with a useful poster and no soil model download", async ({
   await expect(
     page.getByRole("button", { name: "Start planning", exact: true }),
   ).toBeVisible();
-  await expect(page.locator(".cinema-art .poster")).toBeVisible();
+  await expect(page.locator(".orbit-canvas")).toBeVisible();
   expect(models).toHaveLength(0);
   await page
     .getByRole("button", { name: "Try a sample farm", exact: true })

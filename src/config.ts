@@ -1,12 +1,14 @@
+const headline = { lead: "A different", emphasis: "season starts here." };
 export const BRAND = {
-  name: "FieldShift",
-  tagline: "A different season starts here.",
+  headline,
+  name: "Agrorithm",
+  tagline: `${headline.lead} ${headline.emphasis}`,
   team: "jt_1",
   description: "See the seasons. Understand the soil. Explore what comes next.",
 };
 export const asset = (path: string) =>
   `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
-export const MODEL_VERSION = "fieldshift-screening-0.1.0";
+export const MODEL_VERSION = "agrorithm-screening-0.1.0";
 export const cropAsset = (id: string) =>
   ({
     wheat: "maize",

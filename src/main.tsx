@@ -4,6 +4,7 @@ import App from "./App";
 import "./styles.css";
 import "./atlas.css";
 import "./experience.css";
+import "./exhibition.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />

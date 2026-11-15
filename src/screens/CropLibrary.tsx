@@ -1,41 +1,11 @@
-import {
-  Component,
-  lazy,
-  Suspense,
-  useCallback,
-  useEffect,
-  useState,
-  type ReactNode,
-} from "react";
-import {
-  ArrowUpRight,
-  Play,
-  RotateCcw,
-  Sprout,
-  Eye,
-  Move3D,
-} from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+import { ArrowUpRight, Sprout, Move3D } from "lucide-react";
 import { ATLAS_CROPS, type AtlasCropId } from "../data/atlas";
 import { CROP_GROUPS, groupForCrop } from "../data/cropGroups";
 import { asset, cropAsset } from "../config";
+import ModelStage, { useScrollProgress } from "../components/ModelStage";
 import CropProfile from "../components/CropProfile";
 import { Search } from "lucide-react";
-const CropCanvas = lazy(() => import("../components/CropCanvas"));
-class PlantBoundary extends Component<
-  { children: ReactNode; onFail: () => void },
-  { failed: boolean }
-> {
-  state = { failed: false };
-  static getDerivedStateFromError() {
-    return { failed: true };
-  }
-  componentDidCatch() {
-    this.props.onFail();
-  }
-  render() {
-    return this.state.failed ? null : this.props.children;
-  }
-}
 export default function CropLibrary({
   motion,
   quality,
@@ -43,7 +13,9 @@ export default function CropLibrary({
   motion: boolean;
   quality: string;
 }) {
-  const initial = new URLSearchParams(location.hash.split("?")[1]).get("crop");
+  const initial =
+    new URLSearchParams(location.hash.split("?")[1]).get("crop") ||
+    sessionStorage.getItem("agrorithm-crop");
   const [crop, setCrop] = useState<AtlasCropId>(
     ATLAS_CROPS.some((c) => c.id === initial)
       ? (initial as AtlasCropId)
@@ -51,26 +23,17 @@ export default function CropLibrary({
   );
   const group = groupForCrop(crop);
   const [query, setQuery] = useState("");
-  const [active, setActive] = useState(false),
-    [ready, setReady] = useState(false),
-    [failed, setFailed] = useState(false),
-    [reset, setReset] = useState(0);
+  const story = useRef<HTMLDivElement>(null);
+  const progress = useScrollProgress(story, motion);
   useEffect(() => {
-    setActive(false);
-    setReady(false);
-  }, [quality]);
-  const onReady = useCallback(() => setReady(true), []),
-    onFail = useCallback(() => {
-      setFailed(true);
-      setActive(false);
-    }, []);
+    try {
+      sessionStorage.setItem("agrorithm-crop", crop);
+    } catch {
+      /* Current selection remains usable without storage. */
+    }
+  }, [crop]);
   const c = ATLAS_CROPS.find((c) => c.id === crop)!;
-  const choose = (id: AtlasCropId) => {
-    setCrop(id);
-    setActive(false);
-    setReady(false);
-    setFailed(false);
-  };
+  const choose = (id: AtlasCropId) => setCrop(id);
   return (
     <main className="standalone crop-library">
       <span className="eyebrow">
@@ -153,78 +116,50 @@ export default function CropLibrary({
           </button>
         ))}
       </div>
-      <div className="crop-showcase">
-        <section
-          className="plant-stage"
-          aria-label={`${group.name} representative preview`}
-        >
-          <img
-            className="plant-poster"
-            src={asset(`images/crops/${cropAsset(crop)}.webp`)}
-            alt={`Illustrative ${group.example} plant representing ${group.name}`}
-            style={{
-              opacity:
-                ready && active && !failed && quality !== "static" ? 0 : 1,
-            }}
-          />
-          {active && !failed && quality !== "static" && (
-            <PlantBoundary key={`${crop}-${reset}`} onFail={onFail}>
-              <Suspense fallback={null}>
-                <CropCanvas
-                  crop={crop}
-                  motion={motion}
-                  low={
-                    quality !== "auto" ||
-                    matchMedia("(max-width:760px)").matches
-                  }
-                  onReady={onReady}
-                  onLost={onFail}
-                />
-              </Suspense>
-            </PlantBoundary>
-          )}
-          <span className="plant-scale">
-            1.5 m presentation height · illustrative, not a botanical
-            measurement
-          </span>
-          <div className="plant-actions">
-            {!active ? (
-              <button
-                className="primary"
-                disabled={quality === "static"}
-                onClick={() => setActive(true)}
-              >
-                <Play size={16} />
-                Explore in 3D
-              </button>
-            ) : (
-              <>
-                <button onClick={() => setReset(reset + 1)}>
-                  <RotateCcw size={16} />
-                  Reset
-                </button>
-                <button
-                  onClick={() => {
-                    setActive(false);
-                    setReady(false);
-                  }}
-                >
-                  <Eye size={16} />
-                  Poster view
-                </button>
-              </>
-            )}
+      <div className="crop-showcase immersive-crop-story">
+        <div className="crop-model-journey" ref={story}>
+          <div className="crop-sticky-model">
+            <ModelStage
+              url={`models/crops/${cropAsset(crop)}.glb`}
+              poster={`images/crops/${cropAsset(crop)}.webp`}
+              title={`${group.name} representative preview`}
+              motion={motion}
+              quality={quality}
+              progress={progress}
+              annotations={[
+                {
+                  id: "foliage",
+                  title:
+                    group.name === "Fruit trees"
+                      ? "Canopy structure"
+                      : "Leaf structure",
+                  detail: group.note,
+                  node: "Leaves",
+                },
+                {
+                  id: "fruit",
+                  title:
+                    group.name === "Grains"
+                      ? "Reproductive structures"
+                      : group.name === "Pulses"
+                        ? "Flowers and pods"
+                        : "Fruiting structures",
+                  detail:
+                    "Illustrative " + group.example + " group representative",
+                  node:
+                    group.model === "maize"
+                      ? "Kernels"
+                      : group.model === "mungbean"
+                        ? "Pods"
+                        : "Fruit",
+                },
+              ]}
+            />
           </div>
-          {active && !ready && (
-            <span className="plant-loading" role="status">
-              Loading this plant only…
-            </span>
-          )}
-        </section>
+        </div>
         <div className="plant-description">
           <span className="eyebrow">
-            <Move3D size={15} />{" "}
-            {active ? "DRAG / PINCH TO EXPLORE" : "LIGHTWEIGHT POSTER PREVIEW"}
+            <Move3D size={15} /> SCROLL TO EXPLORE · DRAG TO INSPECT
           </span>
           <h2>{group.name}</h2>
           <p className="representative-note">{group.note}</p>
@@ -263,18 +198,6 @@ export default function CropLibrary({
           >
             Crop reference <ArrowUpRight size={14} />
           </a>
-          {failed && (
-            <p role="status" className="warning">
-              3D is unavailable. The poster and all crop information remain
-              usable.
-            </p>
-          )}
-          {quality === "static" && (
-            <p className="note">
-              Static quality is selected. Change graphics quality to enable
-              optional 3D.
-            </p>
-          )}
         </div>
       </div>
       <CropProfile crop={crop} />

@@ -1,4 +1,4 @@
-# FieldShift product and engineering specification
+# Agrorithm product and engineering specification
 
 ## Purpose
 
@@ -9,16 +9,16 @@ Display name, tagline and team are centralized in `src/config.ts`. Deployment ba
 ## Application
 
 - React, TypeScript and Vite; a static GitHub Pages build without a database, paid service, authentication or secret-bearing browser code.
-- Responsive opening menu with an immediately visible poster, interactive Blender diorama, start/sample/soil/sources/team actions, conditional resume, language, motion and quality controls.
+- Responsive opening menu with an immediately visible poster, interactive Blender diorama, start/sample/soil/sources/team actions, conditional resume, motion and quality controls.
 - Field Studio default: editorial, warm, spacious calendars. Agronomist Console: dense evidence rail, quantitative tables, compact inspector. Farmer Companion: guided single-column steps and larger touch controls. One shared state and decision engine.
 - Separate `#/design` route with desktop/mobile previews; no development review controls in normal field steps.
 - Separate `#/atlas` page: genuine historical global climate zones, crop graphics, hypothetical soil filters, keyboard/touch location selection and provenance. Crop-fit rules remain explicitly provisional.
-- Unified bundled DM Sans typography across concepts/pages, with platform Arabic glyph fallback. A skippable opening-page scroll sequence rotates/separates illustrative soil geometry; reduced motion provides a static equivalent.
+- Century Gothic primary typography with a licensed bundled DM Sans fallback and Instrument Serif italics. A skippable Earth-in-space opening rotates toward the pilot region and transitions to the historical satellite map. All crop/soil model pages use a shared immersive presentation, bounded-box framing, sticky scroll reveals, manual orbit/pan/cursor-centered zoom, accessible labels and fallback posters.
 - Field setup accepts coordinates, optional boundary, area, irrigation, delivered water limit, dates, soil units/depth/date/source, exclusions, equipment, market access, observations and optional budget. Unknown inputs remain visible.
 - Evidence includes genuine historical weather and HLS time series, spatial support, dates, quality and missingness, plus farmer confirmation.
 - Rotation lab aligns crop/stage calendars, buffers and management assumptions. What-if changes weather, water and priorities. Trade-offs precede optional scores and show Pareto eligibility, historical replays and sensitivity.
-- Browser-print plan, JSON/CSV provenance packets, local persistence, resume, delete/reset and manual JSON imports. Farm details stay local unless deliberately exported or a public weather request is invoked.
-- Keyboard/touch, focus indicators, reduced motion, RTL navigation and clearly flagged provisional Urdu. All core calculations and content work with static graphics.
+- Dynamically paginated16:9 presentation PDF on a1920×1080 canvas, JSON/CSV provenance packets, local persistence, resume, delete/reset and manual JSON imports. Farm details stay local unless deliberately exported or a public weather request is invoked.
+- Keyboard/touch, focus indicators and reduced motion. The incomplete Urdu translation control is removed. All core calculations and content work with static graphics.
 
 ## Scientific boundaries
 
@@ -46,3 +46,9 @@ The atlas uses bundled NASA Blue Marble satellite imagery (August 2004 composite
 
 ## Experience and crop reference extension
 Persistent searchable navigation, separate map/soil/crop/guide pages, native-scroll motion with static alternatives, eight sourced crop references and four representative category models are required. Crop reference seasons, temperature, pH, water and stress tolerance retain regional applicability and missing evidence. Fruit-tree references do not enter the annual rotation engine. Optional models load individually; mobile automatic quality begins with posters. See EXPERIENCE_UPDATE.md for implementation and measurements.
+
+## Exhibition and report verification
+
+Use the supplied Agrorithm logo, transparent loading mark and report cover. Loading percentages correspond to measurable transfers; unknown totals use an indeterminate indicator. Ordinary scrolling remains on the document; manual camera interaction pauses guided motion until reset or resume. All important annotations have readable panels plus an accessible text alternative. Keep the main model canvas transparent.
+
+Execute production-browser visual checks at desktop, tablet and phone sizes across every route/model and multiple scroll positions. Assert framing, annotation bounds/overlap, control clearance, state continuity, failed assets, context loss and responsive overflow. Export and render the actual PDF; verify page boxes, embedded typography, content preservation and overflow. Retain real results and limits in docs/VISUAL_QA.md and docs/REPORT_EXPORT.md.

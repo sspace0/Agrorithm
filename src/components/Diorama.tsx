@@ -1,37 +1,6 @@
-import {
-  Component,
-  lazy,
-  Suspense,
-  useEffect,
-  useState,
-  useRef,
-  type ReactNode,
-} from "react";
-import {
-  RotateCcw,
-  Layers,
-  Move3D,
-  Sprout,
-  Droplets,
-  Play,
-} from "lucide-react";
-import { asset } from "../config";
-const SoilCanvas = lazy(() => import("./SoilCanvas"));
-class SafeCanvas extends Component<
-  { children: ReactNode; onFail: () => void },
-  { failed: boolean }
-> {
-  state = { failed: false };
-  static getDerivedStateFromError() {
-    return { failed: true };
-  }
-  componentDidCatch() {
-    this.props.onFail();
-  }
-  render() {
-    return this.state.failed ? null : this.props.children;
-  }
-}
+import { useRef, useState } from "react";
+import { RotateCcw, Layers, Move3D, Sprout, Droplets } from "lucide-react";
+import ModelStage, { useScrollProgress } from "./ModelStage";
 export function Diorama({
   motion,
   quality,
@@ -48,158 +17,93 @@ export function Diorama({
   progress?: number;
 }) {
   const [view, setView] = useState<"root-zone" | "groundwater">("root-zone");
-  const [explode, setExplode] = useState(false);
-  const [layers, setLayers] = useState(true);
-  const [roots, setRoots] = useState(true);
-  const [process, setProcess] = useState("none");
-  const [depth, setDepth] = useState(7);
-  const [reset, setReset] = useState(0);
-  const [failed, setFailed] = useState(false);
-  const [ready, setReady] = useState(false);
-  const [loaded, setLoaded] = useState(false);
-  const [posterFailed, setPosterFailed] = useState(false);
-  const [near, setNear] = useState(false);
-  const [requested, setRequested] = useState(false);
-  const constrained =
-    matchMedia("(max-width: 760px)").matches ||
-    !!(navigator as Navigator & { connection?: { saveData?: boolean } })
-      .connection?.saveData;
-  const staticFirst = quality === "auto" && constrained && !requested;
-  const container = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = container.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setNear(entry.isIntersecting),
-      { rootMargin: "150px" },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-  useEffect(() => {
-    const el = container.current;
-    if (!el) return;
-    const lost = () => setFailed(true);
-    el.addEventListener("fieldshift-context-lost", lost);
-    return () => el.removeEventListener("fieldshift-context-lost", lost);
-  }, []);
-  useEffect(() => setLoaded(false), [view]);
-  useEffect(() => {
-    try {
-      const c = document.createElement("canvas");
-      const gl = c.getContext("webgl2");
-      setReady(!!gl);
-      gl?.getExtension("WEBGL_lose_context")?.loseContext();
-    } catch {
-      setReady(false);
-    }
-  }, []);
+  const [explode, setExplode] = useState(false),
+    [layers, setLayers] = useState(true),
+    [roots, setRoots] = useState(true),
+    [process, setProcess] = useState("none"),
+    [depth, setDepth] = useState(7),
+    [reset, setReset] = useState(0);
+  const story = useRef<HTMLDivElement>(null);
+  const localProgress = useScrollProgress(story, motion && explorer);
+  const phase = explorer ? localProgress : progress;
+  const annotations =
+    view === "root-zone"
+      ? [
+          {
+            id: "surface",
+            title: "Living surface",
+            detail: "Illustrative cereal canopy",
+            node: "Surface_Grain",
+          },
+          {
+            id: "roots",
+            title: "Visible root network",
+            detail: "Illustrative roots, not a field measurement",
+            node: "Roots_Right_Section",
+          },
+          {
+            id: "subsoil",
+            title: "Irregular soil horizons",
+            detail: "Demo boundaries around 0.39, 1.13, 2.02 m",
+            node: "Layer_Subsoil",
+          },
+        ]
+      : [
+          {
+            id: "water",
+            title: "Water held in pores",
+            detail: "Water table " + depth + " m · user-controlled",
+            position: [0.3, -depth / 10, 1.57] as [number, number, number],
+          },
+          {
+            id: "unsaturated",
+            title: "Unsaturated material",
+            detail: "Solid sediment with pore space",
+            node: "Layer_Unsaturated",
+          },
+        ];
   return (
     <section
-      className={`diorama ${compact ? "compact" : ""} ${explorer ? "explorer" : ""}`}
+      className={`diorama ${compact ? "compact" : ""} ${explorer ? "explorer soil-exhibit" : ""}`}
       aria-label="Illustrative soil cutaway"
     >
-      <div className="scene-window" ref={container}>
-        {posterFailed &&
-          (!loaded || failed || quality === "static" || staticFirst) && (
-            <svg
-              className="poster"
-              viewBox="0 0 640 500"
-              role="img"
-              aria-label="Static soil cutaway: planted surface, topsoil, subsoil and parent material; illustrative layers."
-            >
-              <path fill="#bea47a" d="M100 170 320 90 550 180 330 280Z" />
-              <path fill="#74533a" d="M100 170 330 280 330 400 100 290Z" />
-              <path fill="#92704e" d="M330 280 550 180 550 300 330 400Z" />
-              <path fill="#aa8b63" d="M100 290 330 400 330 455 100 345Z" />
-              <path fill="#bda47a" d="M330 400 550 300 550 355 330 455Z" />
-              <path
-                fill="none"
-                stroke="#526f43"
-                strokeWidth="8"
-                d="M180 200v-75m75 110v-90m95 65v-90m80 45V95m50 75v-60"
-              />
-              <path
-                fill="none"
-                stroke="#d3c29a"
-                strokeWidth="3"
-                d="m150 200 22 90-25 38m65-99-12 70 28 48m54-77 15 65-12 35m-110-94 30 30m-5-8 25 5"
-              />
-            </svg>
+      <div ref={story} className={explorer ? "soil-scene-journey" : ""}>
+        <div className={explorer ? "soil-exhibit-sticky" : ""}>
+          {explorer && (
+            <div className="exhibit-caption">
+              <span className="eyebrow">
+                {view === "root-zone"
+                  ? "ROOT-ZONE CUTAWAY"
+                  : "UNCONFINED GROUNDWATER EXAMPLE"}
+              </span>
+              <h2>
+                {phase < 0.45
+                  ? "See what supports the surface."
+                  : phase < 0.78
+                    ? "Follow the hidden connections."
+                    : "Inspect the evidence, keep the uncertainty."}
+              </h2>
+            </div>
           )}
-        <img
-          className="poster"
-          style={{
-            opacity:
-              posterFailed ||
-              (loaded && !failed && quality !== "static" && !staticFirst)
-                ? 0
-                : 1,
-          }}
-          onError={() => setPosterFailed(true)}
-          src={asset(`images/${view}-v2.webp`)}
-          alt={
-            view === "root-zone"
-              ? "Cereal plants above a textured soil block, with pale roots visible on its cut face."
-              : "Solid sediment with blue pore markers below an illustrative water-table boundary."
-          }
-        />
-        {ready && near && !failed && quality !== "static" && !staticFirst && (
-          <SafeCanvas onFail={() => setFailed(true)}>
-            <Suspense fallback={null}>
-              <div className="canvas-mount" key={view}>
-                <SoilCanvas
-                  view={view}
-                  onLoaded={() => setLoaded(true)}
-                  motion={motion}
-                  quality={quality}
-                  explode={explode}
-                  layers={layers}
-                  roots={roots}
-                  process={process}
-                  rain={rain}
-                  progress={progress}
-                  depth={depth}
-                  reset={reset}
-                  interactive={explorer}
-                />
-              </div>
-            </Suspense>
-          </SafeCanvas>
-        )}
-        {staticFirst && (
-          <button className="load-3d" onClick={() => setRequested(true)}>
-            <Play size={15} />
-            Load interactive 3D
-          </button>
-        )}
-        <span className="scene-stamp">
-          <span /> ILLUSTRATIVE GEOMETRY
-        </span>
-        <div className="soil-label soil-label-top">
-          {view === "root-zone" ? "Living surface" : "Land surface"}
-          <small>
-            {view === "root-zone"
-              ? "Cereal appearance · illustrative"
-              : "Unconfined example"}
-          </small>
-        </div>
-        <div className="soil-label soil-label-bottom">
-          {view === "root-zone"
-            ? "A world beneath your feet"
-            : "Water held in pores"}
-          <small>
-            {view === "root-zone"
-              ? "Root-zone view · 0–2 m demo scale"
-              : `Water table ${depth} m · user-controlled`}
-          </small>
+          <ModelStage
+            url={`models/${view}-v2.glb`}
+            poster={`images/${view}-v2.webp`}
+            title={
+              view === "root-zone"
+                ? "Root-zone farm cutaway"
+                : "Groundwater cutaway"
+            }
+            motion={motion}
+            quality={quality}
+            compact={compact || !explorer}
+            progress={phase}
+            resetKey={reset}
+            options={{ view, layers, roots, explode, process, depth, rain }}
+            annotations={annotations}
+            interactive={explorer}
+          />
         </div>
       </div>
-      {failed && (
-        <p role="status" className="note">
-          3D is unavailable. The poster and all planning tools remain available.
-        </p>
-      )}
       {explorer ? (
         <>
           <div className="scene-toolbar">
@@ -265,8 +169,8 @@ export function Diorama({
             )}
           </div>
           <p className="note">
-            Drag to orbit, scroll/pinch to zoom; reset restores the stable
-            cutaway.{" "}
+            Drag to orbit; Ctrl + wheel or the +/− controls zoom. Reset restores
+            the stable cutaway.{" "}
             {view === "root-zone"
               ? "Demo layer boundaries vary around 0.39, 1.13 and 2.02 m. These are not measured soil horizons."
               : "Scale break: this view represents 0–20 m. Blue markers represent water within sediment pores; no cavity is implied."}{" "}

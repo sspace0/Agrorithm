@@ -1,5 +1,13 @@
 # Asset and software credits
 
+## Agrorithm exhibition update
+
+The supplied Agrorithm wordmarks, editable Paint.NET source and report cover are preserved in `assets/branding/` and `public/images/report-cover.png`. They are used with the supplier's project authorization; no third-party open license or designer attribution is invented. The runtime wordmark trims only transparent margins. Source/runtime checksums, byte sizes and modifications are recorded in `assets/branding/manifest.json`. The original loose files in the workspace are preserved.
+
+Instrument Serif Italic, copyright2022 The Instrument Serif Project Authors, is bundled as an unmodified TrueType font under the SIL Open Font License1.1. Its complete license is `public/fonts/Instrument-Serif-OFL.txt`; the manifest records its download and checksum. Century Gothic is selected locally when installed. Its Windows font files are not redistributed because a webfont redistribution license has not been supplied. Devices without it use the bundled DM Sans fallback.
+
+The opening globe reuses the genuine August2004 NASA Blue Marble composite described below. A 2048×1024 WebP derivative is149,452 bytes. The sphere-to-plane deformation, atmosphere, stars and explanatory motion are illustrative presentation geometry, not another NASA product. Rebuild the cropped wordmark and Earth preview with `python scripts/prepare-exhibition-assets.py` (Pillow required). No proprietary assets from the reference websites are included.
+
 ## Experience revision
 
 [Kiara 1 Dawn](https://polyhaven.com/a/kiara_1_dawn), Greg Zaal / Poly Haven; [CC0](https://polyhaven.com/license). Retrieved 14 November 2026 using the documented API and a project User-Agent. Actual tonemapped JPEG, cropped WebP, download URL, SHA-256, crop rectangle and processing are recorded in `assets/textures/landscape-manifest.json`. The decorative South African valley is not the selected Punjab field. No provider example render was used as the asset.

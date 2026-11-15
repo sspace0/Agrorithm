@@ -41,7 +41,7 @@ export default function NavigationSearch() {
       <dialog
         ref={dialog}
         className="search-dialog"
-        aria-label="Search FieldShift"
+        aria-label="Search Agrorithm"
         onClick={(e) => {
           if (e.target === e.currentTarget) dialog.current?.close();
         }}

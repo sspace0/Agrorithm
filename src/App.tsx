@@ -1,3 +1,4 @@
+import { observationDates } from "./state/observationDates";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { flushSync } from "react-dom";
 import {
@@ -43,6 +44,9 @@ import { Diorama } from "./components/Diorama";
 import HomeExperience from "./screens/HomeExperience";
 import Help from "./screens/Help";
 import NavigationSearch from "./components/NavigationSearch";
+import AgrorithmReport, {
+  printAgrorithmReport,
+} from "./report/AgrorithmReport";
 import CropLibrary from "./screens/CropLibrary";
 import Atlas from "./screens/Atlas";
 import {
@@ -106,6 +110,13 @@ const URDU: Record<string, string> = {
 const rounded = (n: number | null, suffix = "") =>
   n === null ? "Unknown" : `${Math.round(n).toLocaleString()}${suffix}`;
 const clone = <T,>(x: T): T => structuredClone(x);
+function storedSession<T>(key: string, fallback: T): T {
+  try {
+    return JSON.parse(sessionStorage.getItem(key) || "null") ?? fallback;
+  } catch {
+    return fallback;
+  }
+}
 function stored<T>(key: string, fallback: T): T {
   try {
     return JSON.parse(localStorage.getItem(key) || "null") ?? fallback;
@@ -144,7 +155,7 @@ export default function App() {
       return clone(DEFAULT_SCENARIO);
     }
   });
-  const [lang, setLang] = useState(stored("fieldshift-lang", "en"));
+  const [lang] = useState("en");
   const [motion, setMotion] = useState(
     !matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
@@ -160,6 +171,7 @@ export default function App() {
   const [toast, setToast] = useState("");
   const [saved, setSaved] = useState(() => !!stored("fieldshift-plan", null));
   const [loading, setLoading] = useState(true);
+  const [loadSteps, setLoadSteps] = useState(0);
   const [latitudeData, setLatitudeData] = useState(32.1);
   const [longitudeData, setLongitudeData] = useState(73);
   const say = (s: string) => {
@@ -198,13 +210,15 @@ export default function App() {
           if (!r.ok) throw Error("Weather cache unavailable");
           return r.text();
         })
-        .then((t) => setWeather(parseWeather(t))),
+        .then((t) => setWeather(parseWeather(t)))
+        .finally(() => setLoadSteps((n) => Math.min(2, n + 1))),
       fetch(asset("data/vegetation.json"))
         .then((r) => {
           if (!r.ok) throw Error("Vegetation cache unavailable");
           return r.json();
         })
-        .then(setVeg),
+        .then(setVeg)
+        .finally(() => setLoadSteps((n) => Math.min(2, n + 1))),
     ]).then((rs) => {
       const errors = rs.flatMap((r) =>
         r.status === "rejected" ? [String(r.reason)] : [],
@@ -259,13 +273,6 @@ export default function App() {
   const controls = (
     <div className="global-controls">
       <button
-        onClick={() => setLang(lang === "en" ? "ur" : "en")}
-        aria-label="Switch language"
-      >
-        <Globe2 size={15} />
-        {lang === "en" ? "اردو" : "English"}
-      </button>
-      <button
         aria-pressed={!motion}
         onClick={() => setMotion(!motion)}
         title="Reduced motion"
@@ -290,10 +297,11 @@ export default function App() {
   const header = (
     <header className="site-header">
       <a className="wordmark" href="#/" aria-label={`${BRAND.name} home`}>
-        <span className="brand-icon">
-          <Sprout size={23} />
-        </span>
-        {BRAND.name}
+        <img
+          className="brand-logo"
+          src={asset("images/agrorithm-logo.png")}
+          alt={BRAND.name}
+        />
         <span className="beta">PUNJAB PILOT</span>
       </a>
       <nav className="top-links">
@@ -527,6 +535,22 @@ export default function App() {
         Skip to content
       </a>
       {header}
+      {loading && (
+        <div
+          className="dataset-loading"
+          role="progressbar"
+          aria-label="Preparing cached NASA observations"
+          aria-valuenow={loadSteps}
+          aria-valuemin={0}
+          aria-valuemax={2}
+        >
+          <i style={{ width: `${loadSteps * 50}%` }} />
+          <div className="dataset-loading-label">
+            <img src={asset("images/agrorithm-logo.png")} alt={BRAND.name} />
+            Checking observations · {loadSteps}/2
+          </div>
+        </div>
+      )}
       {route === "/" ? (
         home
       ) : parts[0] === "atlas" ? (
@@ -625,12 +649,33 @@ export default function App() {
           {toast}
         </div>
       )}
-      <PrintPlan
-        farm={farm}
-        scenario={scenario}
-        results={results}
-        weatherSource={weatherSource}
-      />
+      {page === "export" && (
+        <AgrorithmReport
+          farm={farm}
+          scenario={scenario}
+          results={results}
+          weatherSource={weatherSource}
+          weather={weather}
+          veg={veg}
+          modelVersion={MODEL_VERSION}
+          weatherCoordinates={{
+            lat: latitudeData,
+            lon: longitudeData,
+            matching: aligned,
+          }}
+          uiSnapshot={{
+            route,
+            language: "English",
+            quality,
+            motion,
+            atlas: JSON.stringify(storedSession("agrorithm-atlas", {})),
+            cropReference: storedSession("agrorithm-crop", "maize"),
+            evidence: JSON.stringify(
+              storedSession("agrorithm-evidence-filter", {}),
+            ),
+          }}
+        />
+      )}
     </div>
   );
 }
@@ -1099,12 +1144,49 @@ function Evidence(p: DataProps) {
   const [liveError, setLiveError] = useState("");
   const [importLat, setImportLat] = useState(farm.lat);
   const [importLon, setImportLon] = useState(farm.lon);
+  const availableStart = weather[0]?.date || "",
+    availableEnd = weather.at(-1)?.date || "";
+  const initialFilter = storedSession("agrorithm-evidence-filter", {
+    start: "",
+    end: "",
+  });
+  const [requestedFrom, setDateFrom] = useState(initialFilter.start),
+    [requestedTo, setDateTo] = useState(initialFilter.end);
+  const { from: dateFrom, to: dateTo } = observationDates(
+    requestedFrom,
+    requestedTo,
+    availableStart,
+    availableEnd,
+  );
+  const [requestEnd, setRequestEnd] = useState(2024),
+    [requestYear, setRequestYear] = useState<number | null>(null);
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(
+        "agrorithm-evidence-filter",
+        JSON.stringify({
+          start: dateFrom || availableStart,
+          end: dateTo || availableEnd,
+        }),
+      );
+    } catch {
+      /* Filters remain usable when session storage is unavailable. */
+    }
+  }, [dateFrom, dateTo, availableStart, availableEnd]);
+  const filteredWeather = useMemo(
+    () =>
+      weather.filter(
+        (d) =>
+          (!dateFrom || d.date >= dateFrom) && (!dateTo || d.date <= dateTo),
+      ),
+    [weather, dateFrom, dateTo],
+  );
   const monthly = useMemo(() => {
     const m = new Map<
       string,
       { date: string; rain: number; max: number; count: number }
     >();
-    for (const d of weather) {
+    for (const d of filteredWeather) {
       const k = d.date.slice(0, 7);
       const row = m.get(k) || { date: k, rain: 0, max: 0, count: 0 };
       if (d.rain !== null && d.max !== null) {
@@ -1118,13 +1200,14 @@ function Evidence(p: DataProps) {
       ...d,
       max: d.count ? d.max / d.count : null,
     }));
-  }, [weather]);
+  }, [filteredWeather]);
   async function live() {
     setBusy(true);
     setLiveError("");
     try {
       const days: Day[] = [];
-      for (const year of [2018, 2019, 2020, 2021, 2022, 2023, 2024]) {
+      for (let year = 2018; year <= requestEnd; year++) {
+        setRequestYear(year);
         const q = new URLSearchParams({
           parameters: "T2M_MIN,T2M_MAX,PRECTOTCORR",
           community: "AG",
@@ -1159,9 +1242,11 @@ function Evidence(p: DataProps) {
       setLatitudeData(farm.lat);
       setLongitudeData(farm.lon);
       setWeatherSource(
-        `NASA POWER · live response · UTC · fetched ${new Date().toISOString()}`,
+        `NASA POWER · verified historical response · observations ${days[0]?.date}–${days.at(-1)?.date} · UTC · retrieved ${new Date().toISOString()}`,
       );
-      say("Matching historical weather loaded.");
+      setDateFrom("");
+      setDateTo("");
+      say("Historical weather updated from NASA.");
     } catch (e) {
       setLiveError(
         `${String(e)} Cached data remains available for its original coordinates.`,
@@ -1183,7 +1268,10 @@ function Evidence(p: DataProps) {
         <div>
           <span>WEATHER RECORD</span>
           <strong>{weather.length.toLocaleString()} days</strong>
-          <small>2018–2024 · 7 complete years</small>
+          <small>
+            {availableStart || "No dates"} — {availableEnd || "No dates"} ·
+            historical observations
+          </small>
         </div>
         <div>
           <span>VEGETATION RECORD</span>
@@ -1199,6 +1287,35 @@ function Evidence(p: DataProps) {
         </div>
       </div>
       <section className="paper">
+        <div className="date-filter-row">
+          <label>
+            Show observations from
+            <input
+              type="date"
+              aria-label="Weather view start"
+              min={availableStart}
+              max={dateTo || availableEnd}
+              value={dateFrom || availableStart}
+              onChange={(e) => setDateFrom(e.target.value)}
+            />
+          </label>
+          <label>
+            Through
+            <input
+              type="date"
+              aria-label="Weather view end"
+              min={dateFrom || availableStart}
+              max={availableEnd}
+              value={dateTo || availableEnd}
+              onChange={(e) => setDateTo(e.target.value)}
+            />
+          </label>
+          <span>
+            {filteredWeather.length.toLocaleString()} daily rows shown. Charts
+            filter the available observations; the common rotation horizon stays
+            July2021–June2024.
+          </span>
+        </div>
         <div className="section-title">
           <h3>
             <CloudRain size={19} /> Historical weather
@@ -1213,7 +1330,7 @@ function Evidence(p: DataProps) {
         <div
           className="chart"
           role="img"
-          aria-label="Monthly rainfall totals across 2018 to 2024"
+          aria-label={`Monthly rainfall totals ${dateFrom || availableStart} through ${dateTo || availableEnd}`}
         >
           <ResponsiveContainer>
             <AreaChart data={monthly}>
@@ -1275,10 +1392,28 @@ function Evidence(p: DataProps) {
             </table>
           </div>
         </details>
+        <label className="request-years">
+          NASA observation request ends in
+          <select
+            aria-label="NASA observation end year"
+            value={requestEnd}
+            onChange={(e) => setRequestEnd(Number(e.target.value))}
+          >
+            <option value="2024">2024 · same period as cached sample</option>
+            <option value="2025">
+              2025 · request newer historical observations
+            </option>
+          </select>
+          <small>
+            Newer data appear only after a successful validated NASA response.
+            HLS vegetation remains its separately dated2023 record. This is not
+            a forecast.
+          </small>
+        </label>
         <button className="secondary" disabled={busy} onClick={live}>
           {busy
-            ? "Fetching seven bounded yearly requests…"
-            : "Fetch matching POWER history"}
+            ? `Updating NASA history · ${requestYear ?? 2018} (${requestEnd - 2018 + 1} yearly requests)`
+            : "Update historical weather from NASA"}
         </button>
         {liveError && (
           <p className="warning" role="alert">
@@ -2322,12 +2457,15 @@ function Export(p: DataProps & { save: () => void; deletePlan: () => void }) {
         </p>
       </div>
       <div className="export-grid">
-        <button className="export-tile" onClick={() => window.print()}>
+        <button
+          className="export-tile"
+          onClick={() => void printAgrorithmReport()}
+        >
           <Printer />
-          <h3>Print a field plan</h3>
+          <h3>Presentation PDF</h3>
           <p>
-            Browser print → Save as PDF. Includes inputs, results, sources and
-            assumptions.
+            16:9 slide report with inputs, comparisons, evidence, assumptions
+            and sources. Browser print → Save as PDF.
           </p>
           <span>
             Open print view <ArrowUpRight size={17} />
@@ -2337,7 +2475,7 @@ function Export(p: DataProps & { save: () => void; deletePlan: () => void }) {
           className="export-tile"
           onClick={() =>
             download(
-              "fieldshift-plan.json",
+              "agrorithm-plan.json",
               JSON.stringify(packet(), null, 2),
               "application/json",
             )
@@ -2688,234 +2826,5 @@ function DesignReview({ start }: { start: (c: Concept) => void }) {
         </section>
       ))}
     </main>
-  );
-}
-
-function PrintPlan({
-  farm,
-  scenario,
-  results,
-  weatherSource,
-}: {
-  farm: Farm;
-  scenario: Scenario;
-  results: Result[];
-  weatherSource: string;
-}) {
-  return (
-    <div className="print-only">
-      <section className="print-cover">
-        <span className="eyebrow">PUNJAB PILOT · ROTATION SCREENING</span>
-        <h1>{BRAND.name}</h1>
-        <p className="print-subtitle">
-          A field conversation, with the evidence in view.
-        </p>
-        <p>
-          {farm.name} · {farm.areaHa} hectares · {farm.lat}°, {farm.lon}°<br />1
-          July 2021 – 30 June 2024 · {MODEL_VERSION}
-        </p>
-        <h2>Inputs and assumptions</h2>
-        <table>
-          <tbody>
-            {[
-              ["Irrigation", farm.irrigation],
-              [
-                "Delivered limit",
-                rounded(farm.waterLimitMm, " mm / 36 months"),
-              ],
-              ["Delivery efficiency", farm.efficiency ?? "Unknown"],
-              [
-                "Soil pH / EC",
-                String(farm.soil.ph ?? "Unknown") +
-                  " / " +
-                  String(farm.soil.ec ?? "Unknown") +
-                  " dS/m",
-              ],
-              [
-                "Available storage / depth",
-                String(farm.soil.capacityMm ?? "Unknown") +
-                  " mm / " +
-                  String(farm.soil.depthCm ?? "Unknown") +
-                  " cm",
-              ],
-              [
-                "Soil test source / date",
-                farm.soil.source + " / " + (farm.soil.date || "Unknown"),
-              ],
-              [
-                "Equipment / markets",
-                farm.equipment.join(", ") + " / " + farm.markets.join(", "),
-              ],
-              [
-                "Budget",
-                farm.budget === null
-                  ? "Unknown; economics unavailable"
-                  : farm.budget + " PKR",
-              ],
-              ["Farmer observations", farm.observations || "None entered"],
-            ].map(([a, b]) => (
-              <tr key={a}>
-                <th>{a}</th>
-                <td>{b}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <h2>Hypothetical stress test</h2>
-        <p>
-          Rainfall {scenario.rainFactor * 100}% of history · temperature{" "}
-          {scenario.tempDelta}°C offset · water availability{" "}
-          {scenario.waterFactor * 100}% · Kc multiplier {scenario.kcFactor}.
-          These perturb past weather; they are not a forecast.
-        </p>
-        <h2>Compare components first</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Sequence</th>
-              <th>Status</th>
-              <th>Delivered mm</th>
-              <th>Live crop days</th>
-              <th>Families</th>
-            </tr>
-          </thead>
-          <tbody>
-            {results.map((r) => (
-              <tr key={r.id}>
-                <td>{r.name}</td>
-                <td>{r.status}</td>
-                <td>{rounded(r.delivered)}</td>
-                <td>{Math.round(r.liveCover * 100)}%</td>
-                <td>{r.families}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <p className="print-disclaimer">
-          Exploratory screening only. The sample's soil, baseline and management
-          are demonstration assumptions. Obtain a local soil test and
-          cultivar/market/irrigation confirmation. No yield, profit, nitrogen,
-          carbon or erosion improvement is guaranteed.
-        </p>
-      </section>
-      {results.map((r) => (
-        <section className="print-rotation" key={r.id}>
-          <span className="eyebrow">
-            36-MONTH CALENDAR · {r.id.toUpperCase()}
-          </span>
-          <h2>{r.name}</h2>
-          <p>
-            {r.description} · {r.status}
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>Crop</th>
-                <th>Sow</th>
-                <th>Harvest / terminate</th>
-                <th>Residue</th>
-              </tr>
-            </thead>
-            <tbody>
-              {r.sequence.map((p, i) => (
-                <tr key={i}>
-                  <td>{(farm.cropTable ?? CROPS)[p.crop].name}</td>
-                  <td>{p.sow}</td>
-                  <td>{p.harvest}</td>
-                  <td>{p.residue ? "45-day assumption" : "None assumed"}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <h3>Water and exposure</h3>
-          <p>
-            Crop ET {rounded(r.etc)} mm; effective rainfall{" "}
-            {rounded(r.effectiveRain)} mm; initial/final storage{" "}
-            {rounded(r.initialStorage)} / {rounded(r.finalStorage)} mm;
-            uncropped evaporation {rounded(r.soilEvaporation)} mm; drainage{" "}
-            {rounded(r.drainage)} mm. Net irrigation {rounded(r.netIrrigation)}{" "}
-            mm; delivered {rounded(r.delivered)} mm / {rounded(r.volume)} m³.
-            Heat/frost exposure {rounded(r.heatDays)} / {rounded(r.frostDays)}{" "}
-            days.
-          </p>
-          <h3>What would make this viable?</h3>
-          <ul>
-            {[...r.constraints, ...r.unknowns].length ? (
-              [...r.constraints, ...r.unknowns].map((x, i) => (
-                <li key={i}>{x}</li>
-              ))
-            ) : (
-              <li>
-                Current inputs pass the demo screening rules. Confirm local
-                suitability before planting.
-              </li>
-            )}
-          </ul>
-          <h3>Management limits</h3>
-          <ul>
-            {r.warnings.map((x) => (
-              <li key={x}>{x}</li>
-            ))}
-          </ul>
-          <p>
-            Seven-day transition buffer. Legume inclusion is not a fertilizer
-            credit. Cover needs seed, labor and timely termination; costs are
-            unknown. Paddy irrigation requires additional preparation, ponding
-            and seepage/percolation terms.
-          </p>
-        </section>
-      ))}
-      <section className="print-sources">
-        <h2>Evidence and model notes</h2>
-        <p>
-          {weatherSource}. Cache: 2018–2024, 2,557 UTC days; regional MERRA-2
-          weather grid, not a field sensor. HLS L30 v2.0: 2023 observations, 9×9
-          native 30 m pixels, recorded Fmask/coverage filtering. Regional
-          vegetation context cannot establish crop identity, absent residue,
-          soil carbon or nutrients.
-        </p>
-        <p>
-          Daily Hargreaves screening ET0 uses FAO extraterrestrial radiation and
-          the 0.408 radiation-to-mm conversion. Stage Kc, 80% effective
-          rainfall, 50% initial storage, 0.25 ET0 uncropped evaporation and a
-          single carrying bucket are assumptions. Delivered = net / efficiency;
-          1 mm over 1 ha = 10 m³. This is not an aquifer or yield model.
-        </p>
-        <p>
-          Pareto uses water, live cover, families and exposure among feasible
-          options only. Optional weights: {JSON.stringify(scenario.weights)}.
-          Fixed scales and missing dimensions are described in Methods. Four
-          overlapping historical windows and six sensitivity cases are not
-          independent trials or probabilities.
-        </p>
-        <h3>References</h3>
-        <ul>
-          {[
-            "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
-            "https://hls.gsfc.nasa.gov/products-description/l30/",
-            "https://www.fao.org/4/X0490E/x0490e00.htm",
-            "https://www.fao.org/4/s2022e/s2022e08.htm",
-            ...[
-              ...new Set(
-                results.flatMap((r) =>
-                  r.sequence.map(
-                    (p) => (farm.cropTable ?? CROPS)[p.crop].source,
-                  ),
-                ),
-              ),
-            ],
-          ].map((u) => (
-            <li key={u}>{u}</li>
-          ))}
-        </ul>
-        <p>
-          Crop applicability, dates, provisional parameters, exact data granules
-          and processing metadata are included in JSON/CSV export. English
-          technical content is authoritative for this prototype; Urdu requires
-          fluent review. Software verification does not establish agronomic
-          validity.
-        </p>
-      </section>
-    </div>
   );
 }

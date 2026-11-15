@@ -72,7 +72,7 @@ test("scroll changes the soil story and reduced motion keeps it static", async (
       .locator("h1")
       .first()
       .evaluate((e) => getComputedStyle(e).fontFamily),
-  ).toContain("DM Sans");
+  ).toContain("Century Gothic");
 });
 test("opening menu actions and genuine sample", async ({ page }) => {
   await page.goto("./");
@@ -145,22 +145,27 @@ for (const concept of ["studio", "console", "companion"])
       page.getByRole("button", { name: /Resume your saved plan/ }),
     ).toBeVisible();
   });
-test("Urdu RTL, keyboard navigation and reduced motion", async ({ page }) => {
+test("English remains accessible after removal of the incomplete translation control", async ({
+  page,
+}) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.addInitScript(() => localStorage.setItem("fieldshift-lang", "ur"));
   await page.goto("./#/companion/setup");
   await expect(
     page.getByRole("button", { name: "Reduced motion", exact: true }),
   ).toBeVisible();
-  await page.getByRole("button", { name: "Switch language" }).click();
-  await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
   await expect(
-    page.getByRole("heading", { name: "آپ کا کھیت", exact: true }),
+    page.getByRole("button", { name: "Switch language" }),
+  ).toHaveCount(0);
+  await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  await expect(page.locator("html")).toHaveAttribute("dir", "ltr");
+  await expect(
+    page.getByRole("heading", { name: "Your field", exact: true }),
   ).toBeVisible();
   await page.keyboard.press("Tab");
   await expect(page.locator(":focus")).toHaveCount(1);
-  await page.getByRole("button", { name: "Switch language" }).click();
-  await expect(page.locator("html")).toHaveAttribute("dir", "ltr");
 });
+
 test("cached sample is usable offline after installation", async ({
   browser,
 }) => {
@@ -205,7 +210,7 @@ test("failed live request preserves cached observations", async ({
   await page.route("https://power.larc.nasa.gov/**", (r) => r.abort("failed"));
   await page.goto("./#/studio/evidence");
   await page
-    .getByRole("button", { name: "Fetch matching POWER history" })
+    .getByRole("button", { name: "Update historical weather from NASA" })
     .click();
   await expect(page.getByRole("alert")).toContainText("Cached data remains");
   await expect(page.getByText("2,557 days")).toBeVisible();
@@ -236,16 +241,27 @@ test("WebGL context loss restores static fallback; layer and groundwater control
   await page
     .getByRole("slider", { name: "Illustrative water table depth" })
     .fill("12");
+  await page
+    .getByText("Model labels & scientific context", { exact: true })
+    .click();
   await expect(
-    page.getByText("Water table 12 m · user-controlled"),
+    page
+      .getByLabel("Model descriptions")
+      .getByText("Water table 12 m · user-controlled"),
   ).toBeVisible();
   await page.getByRole("button", { name: "Separate layers" }).click();
   await page.getByRole("button", { name: "Reset view" }).click();
+  await page.locator("canvas").scrollIntoViewIfNeeded();
+  await expect(
+    page.getByRole("button", { name: "Inspect model", exact: true }),
+  ).toBeVisible();
   await page.locator("canvas").evaluate((c) => {
     const gl = (c as HTMLCanvasElement).getContext("webgl2");
     gl?.getExtension("WEBGL_lose_context")?.loseContext();
   });
-  await expect(page.getByText("3D is unavailable.").first()).toBeVisible();
+  await expect(
+    page.getByText(/3D is unavailable or paused/).first(),
+  ).toBeVisible();
   await expect(page.locator(".poster")).toHaveCSS("opacity", "1");
 });
 test("missing model keeps the poster and navigation usable", async ({
@@ -254,9 +270,12 @@ test("missing model keeps the poster and navigation usable", async ({
   const context = await browser.newContext({ serviceWorkers: "block" });
   const page = await context.newPage();
   await page.route("**/models/*.glb", (r) => r.abort());
-  await page.goto("./");
-  await expect(page.getByText("3D is unavailable.").first()).toBeVisible();
+  await page.goto("./#/soil");
+  await expect(page.locator(".model-fallback")).toContainText(
+    "3D is unavailable or paused",
+  );
   await expect(page.locator(".poster").first()).toBeVisible();
+  await page.getByRole("link", { name: "Agrorithm home", exact: true }).click();
   await page.getByRole("button", { name: "Try a sample farm" }).click();
   await expect(page.locator(".lab-summary")).toContainText("2 of 2");
   await context.close();

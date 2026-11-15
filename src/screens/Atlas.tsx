@@ -13,6 +13,8 @@ import {
 import { asset, cropAsset } from "../config";
 import LocationSearch from "../components/LocationSearch";
 import CropProfile from "../components/CropProfile";
+import { sessionValue, saveSession } from "../state/viewState";
+import { equirectangularPoint } from "../engine/presentation";
 import {
   ATLAS_CROPS,
   broadFit,
@@ -41,13 +43,54 @@ export default function Atlas({
 }) {
   const [data, setData] = useState<ClimateGrid | null>(null);
   const [err, setErr] = useState("");
-  const [crop, setCrop] = useState<AtlasCropId>("wheat");
-  const [soil, setSoil] = useState<SoilType>("unknown");
-  const [irrigated, setIrrigated] = useState(false);
-  const [mode, setMode] = useState("climate");
-  const [point, setPoint] = useState({ lat: 32.1, lon: 73 });
-  const [zoom, setZoom] = useState(1);
-  const [opacity, setOpacity] = useState(55);
+  const initial = sessionValue("agrorithm-atlas", {
+    crop: "wheat",
+    soil: "unknown",
+    irrigated: false,
+    mode: "climate",
+    point: { lat: 32.1, lon: 73 },
+    zoom: 1,
+    opacity: 55,
+  });
+  const [crop, setCrop] = useState<AtlasCropId>(
+    ATLAS_CROPS.some((c) => c.id === initial.crop)
+      ? (initial.crop as AtlasCropId)
+      : "wheat",
+  );
+  const [soil, setSoil] = useState<SoilType>(
+    ["unknown", "sand", "loam", "clay", "waterlogged"].includes(initial.soil)
+      ? (initial.soil as SoilType)
+      : "unknown",
+  );
+  const [irrigated, setIrrigated] = useState(initial.irrigated === true);
+  const [mode, setMode] = useState(
+    initial.mode === "crop" ? "crop" : "climate",
+  );
+  const [point, setPoint] = useState(
+    Number.isFinite(initial.point?.lat) && Number.isFinite(initial.point?.lon)
+      ? {
+          lat: Math.max(-89.75, Math.min(89.75, initial.point.lat)),
+          lon: Math.max(-179.75, Math.min(179.75, initial.point.lon)),
+        }
+      : { lat: 32.1, lon: 73 },
+  );
+  const [zoom, setZoom] = useState(Math.max(1, Math.min(4, initial.zoom || 1)));
+  const [opacity, setOpacity] = useState(
+    Math.max(0, Math.min(100, initial.opacity ?? 55)),
+  );
+  useEffect(
+    () =>
+      saveSession("agrorithm-atlas", {
+        crop,
+        soil,
+        irrigated,
+        mode,
+        point,
+        zoom,
+        opacity,
+      }),
+    [crop, soil, irrigated, mode, point, zoom, opacity],
+  );
   const [basemapFailed, setBasemapFailed] = useState(false);
   const canvas = useRef<HTMLCanvasElement>(null);
   const c = ATLAS_CROPS.find((x) => x.id === crop)!;
@@ -280,9 +323,12 @@ export default function Atlas({
               </svg>
               <span
                 className="world-pin"
+                data-latitude={point.lat}
+                data-longitude={point.lon}
+                aria-label={`Selected location ${point.lat} latitude, ${point.lon} longitude`}
                 style={{
-                  left: `${((point.lon + 180) / 360) * 100}%`,
-                  top: `${((90 - point.lat) / 180) * 100}%`,
+                  left: `${equirectangularPoint(point.lat, point.lon).x * 100}%`,
+                  top: `${equirectangularPoint(point.lat, point.lon).y * 100}%`,
                 }}
               >
                 <MapPin size={25} />

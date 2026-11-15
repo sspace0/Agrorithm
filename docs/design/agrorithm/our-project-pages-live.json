@@ -1,0 +1,18 @@
+{
+  "url": "https://sspace0.github.io/Agrorithm/",
+  "release": {
+    "schema": 1,
+    "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4",
+    "base": "/Agrorithm/",
+    "preparedAt": "2026-11-15T19:49:25.567Z",
+    "publication": "Prepared artifact branch; a separate authenticated Pages build trigger is required."
+  },
+  "opening": {
+    "overflow": false,
+    "headerHidden": "hidden",
+    "chatOpacity": "1"
+  },
+  "ourProjectOpensAbout": true,
+  "buttonShadow": "rgba(23, 61, 50, 0.094) 0px 4px 12px 0px",
+  "errors": []
+}

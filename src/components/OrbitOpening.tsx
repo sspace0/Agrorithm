@@ -244,7 +244,7 @@ export default function OrbitOpening({
               Try a sample farm
               <ArrowRight size={17} />
             </button>
-            <a className="text-action orbit-project-link" href="#/about">Our project <ArrowUpRight size={17}/></a>
+            <a className="text-action orbit-project-link" href="#/about">Our Project <ArrowUpRight size={17}/></a>
           </div>
           {saved && (
             <button className="resume" onClick={resume}>

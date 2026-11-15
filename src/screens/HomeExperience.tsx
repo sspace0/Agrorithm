@@ -49,16 +49,18 @@ export default function HomeExperience({
       />
       <section className="exhibition-prologue" aria-labelledby="prologue-title">
         <div className="prologue-heading">
-          <span className="eyebrow">01 / A CLOSER LOOK</span>
+          <span className="eyebrow">01 / OUR PROJECT</span>
           <h2 id="prologue-title">
             From a planet.
             <br />
             <em>To your next season.</em>
           </h2>
           <p>
-            Begin with what we can observe. Add what you know about your field.
-            Explore the choices between them.
+            Agrorithm brings NASA weather and vegetation observations together
+            with your soil, crops and farming priorities. Compare rotations,
+            understand the trade-offs, and explore your next season.
           </p>
+          <a className="project-about-link" href="#/about">About Agrorithm & jt_1 <ArrowUpRight size={18}/></a>
           <button className="primary sample-judge-entry" onClick={() => start(true)}>Load Punjab example → open Rotation lab <ArrowUpRight size={18}/></button>
         </div>
         <div className="prologue-evidence">

@@ -1,0 +1,4 @@
+/* The wheel animator owns its damping; native scrolling stays instantaneous. */
+html[data-cinematic-scroll] {
+  scroll-behavior: auto !important;
+}

@@ -187,5 +187,6 @@
       "sha256": "4a6ddb1f67bce08df153f1d901524f26aa1cceeefd72503d7ab048d2a5fa1f65",
       "gitBlobSha": "fd47a01fcbb7d31ea433782f0520cd2c859cee22"
     }
-  ]
+  ],
+  "releaseRevision": 2
 }

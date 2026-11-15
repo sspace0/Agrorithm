@@ -66,7 +66,7 @@ function Earth({
       globe.current.rotation.y = motion
         ? THREE.MathUtils.damp(
             globe.current.rotation.y,
-            (THREE.MathUtils.lerp(-12, -36.5, turn) * Math.PI) / 180,
+            (THREE.MathUtils.lerp(-12, -110, turn) * Math.PI) / 180,
             2.3,
             Math.min(0.05, delta),
           )

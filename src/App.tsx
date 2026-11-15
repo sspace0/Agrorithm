@@ -1,5 +1,6 @@
 import { observationDates } from "./state/observationDates";
 import { formatNumber } from "./engine/format";
+import { useCinematicScroll } from "./motion/useCinematicScroll";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { flushSync } from "react-dom";
 import {
@@ -178,6 +179,7 @@ export default function App() {
   const [motion, setMotion] = useState(
     !matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
+  useCinematicScroll(motion);
   const [quality, setQuality] = useState(stored("fieldshift-quality", "auto"));
   const [settingsOpen, setSettingsOpen] = useState(false);
   useEffect(() => setSettingsOpen(false), [route]);

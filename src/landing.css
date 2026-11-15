@@ -300,6 +300,25 @@ html[data-orbit-navigation="ready"] .app.home-route .orbit-meta {
   font-size: 15px;
   line-height: 1.9;
 }
+.project-about-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  min-height: 48px;
+  margin-top: 18px;
+  color: #284b37;
+  font-size: 14px;
+  text-underline-offset: 5px;
+}
+.app.home-route .orbit-title .orbit-project-link {
+  border: 1px solid #dce8c957;
+  border-radius: 999px;
+  padding: 10px 17px;
+  min-height: 44px;
+  background: #071b23a6;
+  box-shadow: 0 5px 18px #0003;
+}
 .prologue-evidence {
   padding-top: 15px;
 }

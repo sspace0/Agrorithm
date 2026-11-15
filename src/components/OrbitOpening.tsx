@@ -54,8 +54,22 @@ export default function OrbitOpening({
     ob.observe(el);
     return () => ob.disconnect();
   }, []);
-  const loaded = useCallback(() => setReady(true), []),
-    fail = useCallback(() => setFailed(true), []);
+  const loaded = useCallback(() => {
+      setReady(true);
+      window.dispatchEvent(
+        new CustomEvent("agrorithm:scene-ready", {
+          detail: { fallback: false },
+        }),
+      );
+    }, []),
+    fail = useCallback(() => {
+      setFailed(true);
+      window.dispatchEvent(
+        new CustomEvent("agrorithm:scene-ready", {
+          detail: { fallback: true },
+        }),
+      );
+    }, []);
   const phase =
     progress < 0.22
       ? "A new perspective"

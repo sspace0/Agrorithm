@@ -4,7 +4,7 @@
 
 Explore crop rotations using NASA Earth observations, local soil information, crop characteristics and farmer priorities. The initial configurable Punjab, Pakistan pilot compares the entered rotation with two alternatives over an equal 36-month horizon. It supports a conversation with a local agronomist, not a guaranteed planting recommendation.
 
-Display name, tagline and team are centralized in `src/config.ts`. Deployment base is separately configured by `DEPLOY_BASE`, default `/FieldShift/`.
+Display name, tagline and team are centralized in `src/config.ts`. Deployment base is separately configured by `DEPLOY_BASE`, default `/Agrorithm/`.
 
 ## Application
 
@@ -40,7 +40,7 @@ Explanatory rainfall, infiltration, uptake and evaporation are not aquifer simul
 
 Feature branch and review PR with source, small redistributable caches, editable sources, scripts, credits and reproducible setup. CI installs from lockfile, checks types/lint/tests and produces a static build. Separate manual Pages workflow uses official supported actions, least necessary deployment permissions, concurrency and the github-pages environment. No automatic publication or merge.
 
-Verification covers leap/cross-year dates, constraints, missingness, water units/accounting, rice limitations, scoring, imports and scenario changes; an independent worked reference; normal/constrained/insufficient cases; production `/FieldShift/` entry/refresh, three concepts, mobile/desktop, removed language control, reduced motion, offline cache, denied requests, failed assets, WebGL loss and exports. Remaining scientific, language, access and deployment limits must remain visible.
+Verification covers leap/cross-year dates, constraints, missingness, water units/accounting, rice limitations, scoring, imports and scenario changes; an independent worked reference; normal/constrained/insufficient cases; production `/Agrorithm/` entry/refresh, three concepts, mobile/desktop, removed language control, reduced motion, offline cache, denied requests, failed assets, WebGL loss and exports. Remaining scientific, language, access and deployment limits must remain visible.
 
 The atlas uses bundled NASA Blue Marble satellite imagery (August 2004 composite) beneath independent translucent classification colors. Opacity control, source/date labels, failure fallback and offline imagery are required. The imagery is historical context and does not imply live field mapping.
 

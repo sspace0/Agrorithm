@@ -4,6 +4,7 @@ import {
   Suspense,
   useCallback,
   useEffect,
+  useId,
   useRef,
   useState,
   type ReactNode,
@@ -115,6 +116,7 @@ export default function ModelStage({
   auto?: boolean;
   onAssetReady?: () => void;
 }) {
+  const leaderMarkerId = `model-arrow-${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
   const container = useRef<HTMLDivElement>(null);
   const [host, setHost] = useState<HTMLDivElement | null>(null);
   const [near, setNear] = useState(false),
@@ -172,11 +174,17 @@ export default function ModelStage({
   const onReady = useCallback(() => {
     setReady(true);
     setPercent(1);
+    window.dispatchEvent(
+      new CustomEvent("agrorithm:scene-ready", { detail: { fallback: false } }),
+    );
     onAssetReady?.();
   }, [onAssetReady]);
   const onFail = useCallback(() => {
     setFailed(true);
     setReady(false);
+    window.dispatchEvent(
+      new CustomEvent("agrorithm:scene-ready", { detail: { fallback: true } }),
+    );
   }, []);
   const onCommands = useCallback((v: ModelCommands) => {
     commands.current = v;
@@ -252,6 +260,38 @@ export default function ModelStage({
           </div>
         )}
         <div className="model-annotations" aria-hidden="true">
+          <svg
+            className="model-leaders"
+            width="100%"
+            height="100%"
+            aria-hidden="true"
+          >
+            <defs>
+              <marker
+                id={leaderMarkerId}
+                markerWidth="9"
+                markerHeight="9"
+                refX="7.8"
+                refY="4.5"
+                orient="auto"
+                markerUnits="userSpaceOnUse"
+              >
+                <path d="M1 1 L8 4.5 L1 8 Z" className="model-arrowhead" />
+              </marker>
+            </defs>
+            {ready &&
+              active &&
+              annotations.map((a) => (
+                <g key={a.id} data-annotation-leader={a.id} visibility="hidden">
+                  <path data-leader-outline className="model-leader-outline" />
+                  <path
+                    data-leader-path
+                    className="model-leader-path"
+                    markerEnd={`url(#${leaderMarkerId})`}
+                  />
+                </g>
+              ))}
+          </svg>
           {ready &&
             active &&
             annotations.map((a) => (

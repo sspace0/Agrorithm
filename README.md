@@ -24,11 +24,11 @@ pnpm exec playwright install chromium
 pnpm test:e2e
 ```
 
-Production preview: `http://127.0.0.1:4173/FieldShift/`. The build is entirely static. No login, paid API, server, database or LLM key is required. [Setup and manual Pages instructions](docs/SETUP.md).
+Production preview: `http://127.0.0.1:4173/Agrorithm/`. The build is entirely static. No login, paid API, server, database or LLM key is required. [Setup and manual Pages instructions](docs/SETUP.md).
 
 ## Explore
 
-| Route after `/FieldShift/` | Experience                                                              |
+| Route after `/Agrorithm/` | Experience                                                              |
 | -------------------------- | ----------------------------------------------------------------------- |
 | `#/`                       | Earth-to-map opening, sample, new plan, resume, motion and quality        |
 | `#/studio/lab`             | Field Studio — default editorial workspace                              |
@@ -69,6 +69,6 @@ CI verifies the locked install, types, lint, engine tests, static build and brow
 The opening page rotates a NASA-textured Earth in space and transitions into a satellite atlas. Model pages share large, transparent, scroll-driven presentations with manual orbit, cursor-centered Ctrl+wheel zoom, reset, collision-aware labels and static reduced-motion equivalents. Every major area has its own static-safe hash URL. Century Gothic is the primary local font; bundled DM Sans supplies a licensed fallback and Instrument Serif supplies italic accents. See [atlas methods](docs/ATLAS.md) for the limits of global crop/soil interpretation.
 
 ## Updated experience
-Explore the eight crop references and four shared category models at #/crops, search the satellite atlas at #/atlas, or find source-linked explanations at #/help. Global Search (Ctrl/Cmd K) opens pages and tools. See docs/EXPERIENCE_UPDATE.md for measurements, screenshots and scientific scope. The complete static core still builds for /FieldShift/. No Gemini/API key is required.
+Explore the eight crop references and four shared category models at #/crops, search the satellite atlas at #/atlas, or find source-linked explanations at #/help. Global Search (Ctrl/Cmd K) opens pages and tools. See docs/EXPERIENCE_UPDATE.md for measurements, screenshots and scientific scope. The complete static core still builds for /Agrorithm/. No Gemini/API key is required.
 
 The presentation PDF uses dynamically paginated1920×1080 sheets with a supplied cover, vector charts, all inputs and outcomes, feasibility, sensitivities and provenance. See [report export](docs/REPORT_EXPORT.md), [visual QA](docs/VISUAL_QA.md), and the [sample PDF](output/pdf/Agrorithm-sample-report.pdf).

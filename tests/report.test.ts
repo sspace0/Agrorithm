@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { display, linePaths, packMeasured, splitTableRow, splitText, summarizeWeather } from "../src/report/reportData";
+import { display, finiteExtent, linePaths, packMeasured, splitTableRow, splitText, summarizeWeather } from "../src/report/reportData";
+import { chartNumber, rangeFraction, wrapChartLabel } from "../src/report/chartLayout";
 
 describe("presentation report data and pagination", () => {
   it("preserves all characters when dividing long input or an unbroken polygon", () => {
@@ -22,5 +23,28 @@ describe("presentation report data and pagination", () => {
     expect(summarizeWeather(rows).months[0]).toMatchObject({complete:true,rain:29,temperature:15,expectedDays:29});
     expect(summarizeWeather(rows.slice(1)).months[0]).toMatchObject({complete:false,rain:null,temperature:null});
     expect(summarizeWeather(rows.map((r,i)=>i===4?{...r,rain:null}:r)).complete).toBe(28);
+  });
+  it("wraps wide letters and unbroken Unicode labels inside a measured column", () => {
+    const measure = (text: string) => Array.from(text).reduce((sum, c) => sum + (c === "W" ? 2 : 1), 0);
+    for (const name of ["WWW WWW WWW WWW", "W".repeat(80), "🌾".repeat(50)]) {
+      const lines = wrapChartLabel(name, 12, measure, 3);
+      expect(lines.length).toBeLessThanOrEqual(3);
+      expect(lines.every(line => measure(line) <= 12 && !line.includes("�"))).toBe(true);
+      expect(lines.at(-1)).toContain("...");
+    }
+  });
+  it("keeps a large number in scientific notation while preserving zero and missingness", () => {
+    const measure = (text: string) => text.length;
+    expect(chartNumber(1e24, " mm", 15, measure)).toBe("1.00e+24 mm");
+    expect(chartNumber(0, " mm", 15, measure)).toBe("0 mm");
+    expect(chartNumber(null, " mm", 15, measure)).toBe("Unknown");
+    expect(chartNumber(Infinity, " mm", 15, measure)).toBe("Unknown");
+  });
+  it("keeps extreme numeric axis geometry finite and ordered", () => {
+    expect(rangeFraction(-1e308, -1e308, 1e308)).toBe(0);
+    expect(rangeFraction(0, -1e308, 1e308)).toBe(.5);
+    expect(rangeFraction(1e308, -1e308, 1e308)).toBe(1);
+    const [low, high] = finiteExtent([Number.MAX_VALUE]);
+    expect(Number.isFinite(low) && Number.isFinite(high) && high > low).toBe(true);
   });
 });

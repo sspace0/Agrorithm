@@ -9,4 +9,4 @@ NASA Space Apps 2026 — Field Shift: Adapting Farms with NASA Data.
 - Muhammad Asil
 - Zayan Asif
 
-No individual roles, credentials, interviews or endorsements are assigned. The supplied space-themed logo.png is preserved unchanged in the workspace and included as public/images/team-logo.png for this project's team page.
+No individual roles, credentials, interviews or endorsements are assigned. The About page uses the supplied Agrorithm logo. The original space-themed logo.png and its project copy are preserved unchanged as source artwork.

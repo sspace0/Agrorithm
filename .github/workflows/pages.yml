@@ -30,6 +30,8 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - name: Set repository deployment path
+        run: echo "DEPLOY_BASE=/${GITHUB_REPOSITORY#*/}/" >> "$GITHUB_ENV"
       - run: pnpm typecheck && pnpm lint && pnpm test && pnpm build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

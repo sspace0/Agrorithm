@@ -1,7 +1,8 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { Script } from "node:vm";
-const base = process.env.DEPLOY_BASE || "/FieldShift/";
+const deployment = JSON.parse(await readFile(new URL("../deployment.config.json", import.meta.url), "utf8"));
+const base = process.env.DEPLOY_BASE || deployment.base;
 if (!base.startsWith("/") || !base.endsWith("/"))
   throw Error("DEPLOY_BASE must start and end with /");
 async function files(dir) {

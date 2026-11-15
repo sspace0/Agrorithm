@@ -6,6 +6,8 @@ import "./atlas.css";
 import "./experience.css";
 import "./exhibition.css";
 import "./space.css";
+import "./layout.css";
+import "./motion.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />

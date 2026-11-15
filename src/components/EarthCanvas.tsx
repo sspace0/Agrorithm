@@ -70,14 +70,8 @@ function Earth({
     if (halo.current) halo.current.uniforms.strength.value = 1 - flat;
     const distance = THREE.MathUtils.lerp(
       size.width < 760 ? 6.8 : 5.3,
-      Math.max(
-        5.7,
-        5.7 /
-          (2 *
-            Math.tan((34 * Math.PI) / 360) *
-            (size.width / size.height) *
-            0.88),
-      ),
+      5.7 /
+        (2 * Math.tan((34 * Math.PI) / 360) * (size.width / size.height) * 1),
       flat,
     );
     camera.position.set(0, 0, distance + 1.2 * flat);

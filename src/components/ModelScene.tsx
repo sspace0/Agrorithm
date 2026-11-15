@@ -43,6 +43,63 @@ export type ModelSceneProps = {
   onCommands: (commands: ModelCommands) => void;
   host: HTMLDivElement | null;
 };
+function boundsInLocalSpace(object: THREE.Object3D) {
+  object.updateWorldMatrix(true, true);
+  const inverse = object.matrixWorld.clone().invert(),
+    box = new THREE.Box3();
+  object.traverse((child) => {
+    if (!(child as THREE.Mesh).isMesh) return;
+    const mesh = child as THREE.Mesh;
+    if (!mesh.geometry.boundingBox) mesh.geometry.computeBoundingBox();
+    if (mesh.geometry.boundingBox)
+      box.union(
+        mesh.geometry.boundingBox
+          .clone()
+          .applyMatrix4(
+            new THREE.Matrix4().multiplyMatrices(inverse, child.matrixWorld),
+          ),
+      );
+  });
+  return box;
+}
+function closestSurfaceAnchor(object: THREE.Object3D, desired: THREE.Vector3) {
+  object.updateWorldMatrix(true, true);
+  const inverse = object.matrixWorld.clone().invert(),
+    triangle = new THREE.Triangle();
+  const candidate = new THREE.Vector3(),
+    closest = desired.clone();
+  let best = Infinity;
+  object.traverse((child) => {
+    if (!(child as THREE.Mesh).isMesh) return;
+    const geometry = (child as THREE.Mesh).geometry,
+      positions = geometry.attributes.position;
+    if (!positions) return;
+    const index = geometry.index,
+      count = index?.count ?? positions.count;
+    const relative = new THREE.Matrix4().multiplyMatrices(
+      inverse,
+      child.matrixWorld,
+    );
+    for (let i = 0; i + 2 < count; i += 3) {
+      triangle.a
+        .fromBufferAttribute(positions, index ? index.getX(i) : i)
+        .applyMatrix4(relative);
+      triangle.b
+        .fromBufferAttribute(positions, index ? index.getX(i + 1) : i + 1)
+        .applyMatrix4(relative);
+      triangle.c
+        .fromBufferAttribute(positions, index ? index.getX(i + 2) : i + 2)
+        .applyMatrix4(relative);
+      triangle.closestPointToPoint(desired, candidate);
+      const distance = candidate.distanceToSquared(desired);
+      if (distance < best) {
+        best = distance;
+        closest.copy(candidate);
+      }
+    }
+  });
+  return closest;
+}
 function Asset(p: ModelSceneProps) {
   const gltf = useLoader(GLTFLoader, p.url, undefined, (event) =>
     p.onProgress(
@@ -69,18 +126,36 @@ function Asset(p: ModelSceneProps) {
     () =>
       p.annotations.map((a) => {
         let box = bounds;
+        let target: THREE.Object3D = model;
         if (a.node) {
           let found: THREE.Object3D | undefined;
           model.traverse((o) => {
-            if (o.name.includes(a.node!)) found = o;
+            if (
+              o.name.includes(a.node!) ||
+              (a.node === "Leaves" && o.name.includes("Leaflets"))
+            )
+              found = o;
           });
-          if (found) box = new THREE.Box3().setFromObject(found);
+          if (found) {
+            const localBox = boundsInLocalSpace(found);
+            if (!localBox.isEmpty()) {
+              box = localBox;
+              target = found;
+            }
+          }
         }
-        const anchor = a.position
+        let anchor = a.position
           ? new THREE.Vector3(...a.position)
           : box.getCenter(new THREE.Vector3());
-        if (!a.position) anchor.z = box.max.z + 0.035 * radius;
-        return { ...a, anchor };
+        if (a.position) target = model;
+        if (!a.position) {
+          anchor.z = box.max.z + 0.035 * radius;
+          if (a.node === "Leaves")
+            anchor.x -= box.getSize(new THREE.Vector3()).x * 0.24;
+          // A combined-mesh box can contain empty space. Point to its actual surface.
+          anchor = closestSurfaceAnchor(target, anchor);
+        }
+        return { ...a, anchor, target };
       }),
     [p.annotations, model, bounds, radius],
   );
@@ -280,14 +355,27 @@ function Asset(p: ModelSceneProps) {
         `[data-annotation="${a.id}"]`,
       );
       if (!el) continue;
-      const world = model.localToWorld(a.anchor.clone()),
+      const world = a.target.localToWorld(a.anchor.clone()),
         v = world.clone().project(camera),
         ray = new THREE.Raycaster(
           camera.position,
           world.clone().sub(camera.position).normalize(),
         );
       const hit = ray.intersectObjects(occluders, false)[0];
+      let featureHidden = false;
+      for (
+        let object: THREE.Object3D | null = a.target;
+        object;
+        object = object.parent
+      ) {
+        if (!object.visible) {
+          featureHidden = true;
+          break;
+        }
+        if (object === model) break;
+      }
       const hidden =
+        featureHidden ||
         v.z > 1 ||
         v.z < -1 ||
         (hit &&
@@ -325,20 +413,58 @@ function Asset(p: ModelSceneProps) {
         (r) =>
           x < r.x + r.w && x + width > r.x && y < r.y + r.h && y + height > r.y,
       );
-      el.style.width = `${width}px`;
-      el.style.transform = `translate(${x}px,${y}px)`;
-      el.style.visibility =
-        hidden ||
-        collision ||
-        (viewport.width < 600 &&
+      const targetX = ((v.x + 1) * viewport.width) / 2;
+      const targetY = ((-v.y + 1) * viewport.height) / 2;
+      const targetOutside =
+        targetX < 8 ||
+        targetY < 8 ||
+        targetX > viewport.width - 8 ||
+        targetY > viewport.height - 8;
+      const isVisible =
+        !hidden &&
+        !targetOutside &&
+        !collision &&
+        !(
+          viewport.width < 600 &&
           annotations.indexOf(a) !==
             Math.min(
               annotations.length - 1,
               Math.floor(p.progress * annotations.length),
-            ))
-          ? "hidden"
-          : "visible";
-      if (!hidden && !collision) occupied.push({ x, y, w: width, h: height });
+            )
+        );
+      el.style.width = `${width}px`;
+      el.style.transform = `translate(${x}px,${y}px)`;
+      el.style.visibility = isVisible ? "visible" : "hidden";
+      const leader = p.host?.querySelector<SVGGElement>(
+        `[data-annotation-leader="${a.id}"]`,
+      );
+      if (leader) {
+        leader.setAttribute("visibility", isVisible ? "visible" : "hidden");
+        if (isVisible) {
+          // Intersect the feature direction with the annotation's padded edge.
+          const cx = x + width / 2,
+            cy = y + height / 2,
+            dx = targetX - cx,
+            dy = targetY - cy;
+          const edge =
+            1 /
+            Math.max(
+              Math.abs(dx) / (width / 2 + 4),
+              Math.abs(dy) / (height / 2 + 4),
+              1,
+            );
+          const fromX = cx + dx * edge,
+            fromY = cy + dy * edge;
+          const path = `M${fromX.toFixed(2)} ${fromY.toFixed(2)} L${targetX.toFixed(2)} ${targetY.toFixed(2)}`;
+          leader
+            .querySelector("[data-leader-outline]")
+            ?.setAttribute("d", path);
+          leader.querySelector("[data-leader-path]")?.setAttribute("d", path);
+          leader.dataset.featureX = targetX.toFixed(2);
+          leader.dataset.featureY = targetY.toFixed(2);
+        }
+      }
+      if (isVisible) occupied.push({ x, y, w: width, h: height });
     }
   });
   return (

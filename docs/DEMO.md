@@ -1,6 +1,6 @@
 # Five-minute walkthrough
 
-1. Open `/FieldShift/`. The poster appears immediately and the GLB replaces it when ready. Orbit the illustrative cutaway or select Static to use the whole planner without 3D.
+1. Open `/Agrorithm/`. The poster appears immediately and the GLB replaces it when ready. Orbit the illustrative cutaway or select Static to use the whole planner without 3D.
 2. Try a sample farm. Explain that observations are genuine and regional, while baseline, soil and management are demonstration inputs. No real farmer interview is claimed.
 3. Evidence: inspect seven POWER years and 43 HLS scenes, gaps, valid counts and source granules. Open the accessible tables. Low NDVI does not establish bare soil or absent residue.
 4. Rotation lab: compare aligned 36-month calendars. Inspect provisional crop parameters, exact dates, residue assumptions and crop-stage exposure.

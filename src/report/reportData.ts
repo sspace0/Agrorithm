@@ -85,7 +85,9 @@ export function finiteExtent(values: (number | null)[], fallback: [number, numbe
   const finite = values.filter((v): v is number => v !== null && Number.isFinite(v));
   if (!finite.length) return fallback;
   const min = Math.min(...finite), max = Math.max(...finite);
-  return min === max ? [min - .5, max + .5] : [min, max];
+  if (min !== max) return [min, max];
+  const padding = Math.max(.5, Math.abs(min) * .01);
+  return [Number.isFinite(min - padding) ? min - padding : min, Number.isFinite(max + padding) ? max + padding : max];
 }
 /** Separate SVG paths at missing values; missing evidence is never drawn as zero. */
 export function linePaths(values: (number | null)[], x: (i: number) => number, y: (v: number) => number) {

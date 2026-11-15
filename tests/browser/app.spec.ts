@@ -4,6 +4,7 @@ test("keyboard skip link focuses the current page without changing route", async
   page,
 }) => {
   await page.goto("./");
+  await page.locator(".boot-overlay").waitFor({ state: "hidden" });
   await page.keyboard.press("Tab");
   await expect(
     page.getByRole("link", { name: "Skip to content" }),

@@ -46,6 +46,7 @@ import HomeExperience from "./screens/HomeExperience";
 import Help from "./screens/Help";
 import NavigationSearch from "./components/NavigationSearch";
 import FindFarmLocation from "./components/FindFarmLocation";
+import BootOverlay from "./components/BootOverlay";
 import AgrorithmReport, {
   printAgrorithmReport,
 } from "./report/AgrorithmReport";
@@ -547,6 +548,11 @@ export default function App() {
     <div
       className={`app ${parts[0] === "atlas" ? "atlas-route" : ""} ${motion ? "" : "reduced-motion"} ${route === "/" ? "home-route" : ""}`}
     >
+      <BootOverlay
+        dataSteps={loadSteps}
+        initialRoute={route}
+        quality={quality}
+      />
       <a
         className="skip-link"
         href="#main-content"
@@ -1369,7 +1375,7 @@ function Evidence(p: DataProps) {
           aria-label={`Monthly rainfall totals ${dateFrom || availableStart} through ${dateTo || availableEnd}`}
         >
           <ResponsiveContainer>
-            <AreaChart data={monthly}>
+            <AreaChart data={monthly} margin={{ top: 18, right: 32, bottom: 16, left: 8 }}>
               <CartesianGrid vertical={false} stroke="#e1e4dc" />
               <XAxis dataKey="date" minTickGap={50} />
               <YAxis unit=" mm" width={65} />
@@ -1390,7 +1396,7 @@ function Evidence(p: DataProps) {
           aria-label="Monthly mean of daily maximum temperature"
         >
           <ResponsiveContainer>
-            <LineChart data={monthly}>
+            <LineChart data={monthly} margin={{ top: 18, right: 32, bottom: 16, left: 8 }}>
               <XAxis dataKey="date" minTickGap={50} />
               <YAxis unit="°C" width={65} />
               <Tooltip />
@@ -1482,7 +1488,7 @@ function Evidence(p: DataProps) {
               aria-label="Quality-filtered HLS NDVI time series"
             >
               <ResponsiveContainer>
-                <LineChart data={veg.observations}>
+                <LineChart data={veg.observations} margin={{ top: 18, right: 32, bottom: 16, left: 8 }}>
                   <CartesianGrid vertical={false} />
                   <XAxis dataKey="date" minTickGap={55} />
                   <YAxis domain={[-0.2, 1]} />
@@ -2782,8 +2788,8 @@ function About() {
           </p>
         </div>
         <img
-          src={asset("images/team-logo.png")}
-          alt="Original jt_1 space-themed team artwork"
+          src={asset("images/agrorithm-logo.png")}
+          alt="Agrorithm"
         />
       </div>
       <section className="paper">

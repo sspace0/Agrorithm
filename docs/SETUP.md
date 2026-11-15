@@ -16,7 +16,7 @@ pnpm exec playwright install chromium
 pnpm test:e2e
 ```
 
-Open http://127.0.0.1:4173/FieldShift/ for the production preview. Vite's development/preview servers are local development tools; deployment serves only `dist/`. Hash navigation supports refresh and direct entry. Set `DEPLOY_BASE=/another-path/` before build to change all runtime asset and service-worker URLs independently of display branding. A base must start and end with `/`.
+Open http://127.0.0.1:4173/Agrorithm/ for the production preview. Vite's development/preview servers are local development tools; deployment serves only `dist/`. Hash navigation supports refresh and direct entry. Set `DEPLOY_BASE=/another-path/` before build to change all runtime asset and service-worker URLs independently of display branding. A base must start and end with `/`.
 
 ## Source regeneration
 
@@ -38,7 +38,7 @@ Blender rebuilds root-zone.blend, groundwater.blend, GLBs, PNG posters and valid
 2. In repository **Settings → Pages → Build and deployment → Source**, select **GitHub Actions**.
 3. Review the **github-pages** environment. Configure required reviewers/allowed deployment branches if appropriate. A Pages site may be publicly reachable even when its source repository is private; review access before publishing.
 4. In **Actions → Deploy Pages manually → Run workflow**, select the approved branch and confirm the `publish` input. The workflow only deploys when deliberately dispatched with that explicit input.
-5. Observe the workflow environment URL after successful deployment, then verify `/FieldShift/`, direct hash entry, refresh, model URLs and offline reload. Do not assume a live URL before this succeeds.
+5. Observe the workflow environment URL after successful deployment, then verify `/Agrorithm/`, direct hash entry, refresh, model URLs and offline reload. Do not assume a live URL before this succeeds.
 
 CI is independent of publishing. It runs install, types, lint, engine tests, production build and browser checks. Official actions were verified against GitHub's current custom Pages documentation: checkout v7, configure-pages v5, upload-pages-artifact v4, deploy-pages v4; Node setup v7. Deployment permissions are scoped to its jobs, with deployment concurrency and github-pages environment.
 

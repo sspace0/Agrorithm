@@ -1,1 +1,67 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="theme-color" content="#f3f1e8"/><meta name="description" content="Explore crop rotations with NASA observations and transparent water screening for Punjab."/><title>Agrorithm · A different season starts here</title></head><body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#0b211d" />
+    <meta
+      name="description"
+      content="Explore crop rotations with NASA observations and transparent water screening for Punjab."
+    />
+    <title>Agrorithm · A different season starts here</title>
+    <link
+      rel="preload"
+      href="%BASE_URL%fonts/dm-sans-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <style>
+      .initial-loading {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        background: #0b211d;
+        color: #e3edcf;
+        font:
+          12px "Century Gothic",
+          "Segoe UI",
+          sans-serif;
+        letter-spacing: 1px;
+      }
+      .initial-loading img {
+        width: 220px;
+        height: auto;
+        filter: invert(1);
+      }
+      .initial-loading span {
+        width: 200px;
+        height: 2px;
+        background: linear-gradient(90deg, #6b825b, #daeab3, #6b825b);
+      }
+      body {
+        margin: 0;
+        background: #0b211d;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="initial-loading" role="status">
+        <img
+          src="%BASE_URL%images/agrorithm-logo.png"
+          alt="Agrorithm"
+        /><span></span>
+        <p>Preparing your field view</p>
+      </div>
+    </div>
+    <noscript
+      >Enable JavaScript to use the local crop-planning calculations.</noscript
+    >
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

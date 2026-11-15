@@ -8,7 +8,7 @@ Default: **Field Studio**. A broad editorial calendar makes multiyear sequence c
 
 All three consume the same React state and pure engine. They share actual workflows rather than separate mocked results. Switching concept routes preserves current in-memory inputs. The opening menu offers a normal planning-style choice; development previews are confined to `#/design`.
 
-Review at `/FieldShift/#/design`; live desktop/mobile iframes accompany links to complete sample journeys. The screenshots in this directory are production-browser captures at 1440×1000 and 390×844. They document observed layouts, not fabricated device renders.
+Review at `/Agrorithm/#/design`; live desktop/mobile iframes accompany links to complete sample journeys. The screenshots in this directory are production-browser captures at 1440×1000 and 390×844. They document observed layouts, not fabricated device renders.
 
 The menu's diorama is an editable Blender scene exported to glTF, with a poster used before loading or when WebGL fails. No unskippable introduction, hover-only navigation, audio or heavy environment-map download. Essential science labels remain HTML outside the canvas.
 

@@ -2,7 +2,7 @@ import { chromium } from "@playwright/test";
 import fs from "node:fs";
 import path from "node:path";
 
-const base = process.env.VISUAL_QA_URL || "http://127.0.0.1:4173/FieldShift/";
+const base = process.env.VISUAL_QA_URL || "http://127.0.0.1:4173/Agrorithm/";
 const filterArg = process.argv.find(a => a.startsWith("--filter="));
 const filter = filterArg ? new RegExp(filterArg.slice(9)) : null;
 const output = path.resolve("docs/design/agrorithm");

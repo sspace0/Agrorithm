@@ -1,6 +1,6 @@
 # World crop atlas
 
-Separate page: `/FieldShift/#/atlas`. This is a global educational overview feeding location into the Punjab planner, not a global agronomic recommendation engine.
+Separate page: `/Agrorithm/#/atlas`. This is a global educational overview feeding location into the Punjab planner, not a global agronomic recommendation engine.
 
 ## Genuine geographic layer
 

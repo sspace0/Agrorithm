@@ -1,6 +1,7 @@
 {
   "application": "Agrorithm",
-  "sourceCommit": "cb5f9ff0012ba4b27af227e0372e8fd3e0968c12",
+  "sourceCommit": "2da45713dca26ac69e90afd2f959ad1410a747e9",
   "builtBase": "/Agrorithm/",
-  "revision": "review-2026-11-15"
+  "revision": "immersive-2026-11-15",
+  "challenge": "https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/"
 }

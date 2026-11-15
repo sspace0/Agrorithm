@@ -1,0 +1,1738 @@
+{
+  "schemaVersion": "1.0.0",
+  "modelVersion": "power-monthly-kmeans-1.0.0",
+  "name": "Historical monthly weather patterns",
+  "status": "trained descriptive model derived from genuine cached NASA observations",
+  "scope": {
+    "latitude": 32.1,
+    "longitude": 73,
+    "timeStandard": "UTC",
+    "period": [
+      "2018-01-01",
+      "2024-12-31"
+    ],
+    "meteorologyGridDegrees": {
+      "latitude": 0.5,
+      "longitude": 0.625
+    },
+    "spatialInterpretation": "Regional gridded MERRA-2/POWER meteorology, not a farm sensor or field-resolution observation."
+  },
+  "featureOrder": [
+    "meanTminC",
+    "meanTmaxC",
+    "totalRainMm",
+    "dryDayFraction"
+  ],
+  "features": [
+    {
+      "key": "meanTminC",
+      "label": "Mean daily minimum temperature",
+      "unit": "deg C",
+      "parameter": "T2M_MIN",
+      "aggregation": "arithmetic mean of daily values"
+    },
+    {
+      "key": "meanTmaxC",
+      "label": "Mean daily maximum temperature",
+      "unit": "deg C",
+      "parameter": "T2M_MAX",
+      "aggregation": "arithmetic mean of daily values"
+    },
+    {
+      "key": "totalRainMm",
+      "label": "Monthly precipitation total",
+      "unit": "mm/month",
+      "parameter": "PRECTOTCORR",
+      "aggregation": "sum of daily mm/day values over the month"
+    },
+    {
+      "key": "dryDayFraction",
+      "label": "Fraction of days with precipitation below 1 mm",
+      "unit": "fraction (0-1)",
+      "parameter": "PRECTOTCORR",
+      "aggregation": "count(daily precipitation < 1 mm) / complete days; descriptive threshold"
+    }
+  ],
+  "aggregation": {
+    "minimumCompleteDayCoverage": 1,
+    "inputDailyRows": 2557,
+    "acceptedMonths": 84,
+    "excludedMonths": [],
+    "missingnessPolicy": "Exclude incomplete/invalid months; no imputation or rainfall upscaling.",
+    "observationStatus": "monthly aggregation of genuine cached observations"
+  },
+  "split": {
+    "training": [
+      "2018-01",
+      "2022-12"
+    ],
+    "heldout": [
+      "2023-01",
+      "2024-12"
+    ],
+    "policy": "chronological; heldout months never fit scaling, centers, names or restart selection"
+  },
+  "standardizer": {
+    "mean": [
+      18.360839402246,
+      32.334568670657,
+      60.645,
+      0.745248644879
+    ],
+    "scale": [
+      8.533893582562,
+      7.784133406133,
+      64.491375637884,
+      0.200234529656
+    ],
+    "populationVarianceDdof": 0,
+    "constantFeatureIndices": [],
+    "fittedOn": "training months only"
+  },
+  "clusters": [
+    {
+      "id": "pattern-1",
+      "label": "Cooler / lower monthly rainfall",
+      "center": {
+        "meanTminC": 8.178651540071,
+        "meanTmaxC": 22.913144721648,
+        "totalRainMm": 32.222,
+        "dryDayFraction": 0.869885719583
+      },
+      "centerStandardized": [
+        -1.193146804992,
+        -1.210336906814,
+        -0.440725596545,
+        0.622455452203
+      ],
+      "trainingMonths": 20,
+      "heldoutMonths": 8,
+      "representativeTrainingMonth": "2022-02",
+      "trainingCalendarMonthCounts": {
+        "01": 5,
+        "02": 5,
+        "03": 1,
+        "11": 4,
+        "12": 5
+      }
+    },
+    {
+      "id": "pattern-2",
+      "label": "Intermediate temperature / lower monthly rainfall",
+      "center": {
+        "meanTminC": 17.658734254992,
+        "meanTmaxC": 33.673323348694,
+        "totalRainMm": 22.670714285714,
+        "dryDayFraction": 0.866589861751
+      },
+      "centerStandardized": [
+        -0.082272545405,
+        0.171985063486,
+        -0.588827348443,
+        0.605995464822
+      ],
+      "trainingMonths": 14,
+      "heldoutMonths": 6,
+      "representativeTrainingMonth": "2019-10",
+      "trainingCalendarMonthCounts": {
+        "03": 3,
+        "04": 5,
+        "10": 5,
+        "11": 1
+      }
+    },
+    {
+      "id": "pattern-3",
+      "label": "Warmer / higher monthly rainfall",
+      "center": {
+        "meanTminC": 26.356422580645,
+        "meanTmaxC": 36.721088172043,
+        "totalRainMm": 186.097,
+        "dryDayFraction": 0.397096774194
+      },
+      "centerStandardized": [
+        0.936920890921,
+        0.563520596645,
+        1.945252349778,
+        -1.738720445885
+      ],
+      "trainingMonths": 10,
+      "heldoutMonths": 4,
+      "representativeTrainingMonth": "2022-08",
+      "trainingCalendarMonthCounts": {
+        "03": 1,
+        "06": 1,
+        "07": 5,
+        "08": 2,
+        "09": 1
+      }
+    },
+    {
+      "id": "pattern-4",
+      "label": "Warmer / lower monthly rainfall",
+      "center": {
+        "meanTminC": 26.705676747312,
+        "meanTmaxC": 40.198363575269,
+        "totalRainMm": 50.99375,
+        "dryDayFraction": 0.700873655914
+      },
+      "centerStandardized": [
+        0.977846426644,
+        1.010233830065,
+        -0.149651793043,
+        -0.221615068295
+      ],
+      "trainingMonths": 16,
+      "heldoutMonths": 6,
+      "representativeTrainingMonth": "2019-09",
+      "trainingCalendarMonthCounts": {
+        "05": 5,
+        "06": 4,
+        "08": 3,
+        "09": 4
+      }
+    }
+  ],
+  "observations": [
+    {
+      "month": "2018-01",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 6.126774193548,
+        "meanTmaxC": 22.864516129032,
+        "totalRainMm": 0.83,
+        "dryDayFraction": 1.0
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.846782137862,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-02",
+      "expectedDays": 28,
+      "observedDays": 28,
+      "completeDays": 28,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 9.198928571429,
+        "meanTmaxC": 25.403214285714,
+        "totalRainMm": 19.33,
+        "dryDayFraction": 0.892857142857
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.412002226834,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-03",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 15.367096774194,
+        "meanTmaxC": 32.664516129032,
+        "totalRainMm": 15.39,
+        "dryDayFraction": 0.903225806452
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.367596683292,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-04",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 20.403333333333,
+        "meanTmaxC": 36.722666666667,
+        "totalRainMm": 45.65,
+        "dryDayFraction": 0.8
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.703171009163,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-05",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 25.059677419355,
+        "meanTmaxC": 41.383870967742,
+        "totalRainMm": 23.4,
+        "dryDayFraction": 0.806451612903
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.722137222146,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-06",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 29.965333333333,
+        "meanTmaxC": 42.515666666667,
+        "totalRainMm": 64.43,
+        "dryDayFraction": 0.666666666667
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.554176398579,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-07",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 29.161935483871,
+        "meanTmaxC": 39.581935483871,
+        "totalRainMm": 149.56,
+        "dryDayFraction": 0.387096774194
+      },
+      "split": "training",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 0.752736338453,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-08",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 28.974516129032,
+        "meanTmaxC": 40.398387096774,
+        "totalRainMm": 39.51,
+        "dryDayFraction": 0.612903225806
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.544120955648,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-09",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 25.609666666667,
+        "meanTmaxC": 38.814,
+        "totalRainMm": 25.34,
+        "dryDayFraction": 0.8
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.671886974068,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-10",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 18.483870967742,
+        "meanTmaxC": 34.069032258065,
+        "totalRainMm": 11.02,
+        "dryDayFraction": 0.967741935484
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.547507189522,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-11",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 13.000666666667,
+        "meanTmaxC": 28.796,
+        "totalRainMm": 3.73,
+        "dryDayFraction": 0.933333333333
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.942277853207,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2018-12",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 7.026451612903,
+        "meanTmaxC": 22.203548387097,
+        "totalRainMm": 4.63,
+        "dryDayFraction": 0.935483870968
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.562949579214,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-01",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 5.045483870968,
+        "meanTmaxC": 18.713225806452,
+        "totalRainMm": 25.77,
+        "dryDayFraction": 0.774193548387
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.8150492003,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-02",
+      "expectedDays": 28,
+      "observedDays": 28,
+      "completeDays": 28,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 6.858214285714,
+        "meanTmaxC": 21.474642857143,
+        "totalRainMm": 35.44,
+        "dryDayFraction": 0.714285714286
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.815137091751,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-03",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 11.837741935484,
+        "meanTmaxC": 27.491612903226,
+        "totalRainMm": 22.16,
+        "dryDayFraction": 0.806451612903
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.809014426379,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-04",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 20.516333333333,
+        "meanTmaxC": 36.904333333333,
+        "totalRainMm": 43.79,
+        "dryDayFraction": 0.8
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.708696115935,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-05",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 24.460967741935,
+        "meanTmaxC": 40.581290322581,
+        "totalRainMm": 19.07,
+        "dryDayFraction": 0.870967741935
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 1.018943916682,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-06",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 29.415,
+        "meanTmaxC": 44.312,
+        "totalRainMm": 21.97,
+        "dryDayFraction": 0.766666666667
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.831004285342,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-07",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 29.905806451613,
+        "meanTmaxC": 40.560967741935,
+        "totalRainMm": 144.24,
+        "dryDayFraction": 0.387096774194
+      },
+      "split": "training",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 0.916550176026,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-08",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 28.044516129032,
+        "meanTmaxC": 39.101935483871,
+        "totalRainMm": 71.46,
+        "dryDayFraction": 0.451612903226
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 1.301844666583,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-09",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 27.249333333333,
+        "meanTmaxC": 39.069333333333,
+        "totalRainMm": 58.29,
+        "dryDayFraction": 0.633333333333
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.389449236281,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-10",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 19.073225806452,
+        "meanTmaxC": 32.56935483871,
+        "totalRainMm": 18.54,
+        "dryDayFraction": 0.870967741935
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.228401534453,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-11",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 13.649333333333,
+        "meanTmaxC": 26.027333333333,
+        "totalRainMm": 14.08,
+        "dryDayFraction": 0.866666666667
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.806472371799,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2019-12",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 6.607419354839,
+        "meanTmaxC": 21.181290322581,
+        "totalRainMm": 13.17,
+        "dryDayFraction": 0.903225806452
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.445415736745,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-01",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 5.11935483871,
+        "meanTmaxC": 17.432580645161,
+        "totalRainMm": 46.3,
+        "dryDayFraction": 0.774193548387
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.948823844098,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-02",
+      "expectedDays": 29,
+      "observedDays": 29,
+      "completeDays": 29,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 7.898965517241,
+        "meanTmaxC": 24.094482758621,
+        "totalRainMm": 93.76,
+        "dryDayFraction": 0.758620689655
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 1.115072362213,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-03",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 12.24,
+        "meanTmaxC": 23.464516129032,
+        "totalRainMm": 212.89,
+        "dryDayFraction": 0.516129032258
+      },
+      "split": "training",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 2.48244329645,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-04",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 17.521333333333,
+        "meanTmaxC": 30.316,
+        "totalRainMm": 44.73,
+        "dryDayFraction": 0.766666666667
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.743176904637,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-05",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 22.754838709677,
+        "meanTmaxC": 38.373870967742,
+        "totalRainMm": 95.4,
+        "dryDayFraction": 0.709677419355
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.863317327893,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-06",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 26.775,
+        "meanTmaxC": 39.458333333333,
+        "totalRainMm": 181.95,
+        "dryDayFraction": 0.5
+      },
+      "split": "training",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 0.627934219673,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-07",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 28.727419354839,
+        "meanTmaxC": 39.848387096774,
+        "totalRainMm": 143.73,
+        "dryDayFraction": 0.516129032258
+      },
+      "split": "training",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 1.011709040407,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-08",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 27.595806451613,
+        "meanTmaxC": 37.183870967742,
+        "totalRainMm": 283.39,
+        "dryDayFraction": 0.258064516129
+      },
+      "split": "training",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 1.668136580443,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-09",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 23.314,
+        "meanTmaxC": 34.321333333333,
+        "totalRainMm": 78.58,
+        "dryDayFraction": 0.766666666667
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 1.009414584092,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-10",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 16.859677419355,
+        "meanTmaxC": 33.555161290323,
+        "totalRainMm": 0.0,
+        "dryDayFraction": 1.0
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.759267104488,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-11",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 10.505,
+        "meanTmaxC": 25.105,
+        "totalRainMm": 92.91,
+        "dryDayFraction": 0.9
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 1.03041029534,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2020-12",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 6.818709677419,
+        "meanTmaxC": 20.663548387097,
+        "totalRainMm": 19.54,
+        "dryDayFraction": 0.838709677419
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.41451913106,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-01",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 4.672580645161,
+        "meanTmaxC": 19.781935483871,
+        "totalRainMm": 45.52,
+        "dryDayFraction": 0.935483870968
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.693140092359,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-02",
+      "expectedDays": 28,
+      "observedDays": 28,
+      "completeDays": 28,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 9.751071428571,
+        "meanTmaxC": 24.815357142857,
+        "totalRainMm": 53.53,
+        "dryDayFraction": 0.928571428571
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.537336538038,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-03",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 14.414516129032,
+        "meanTmaxC": 30.663225806452,
+        "totalRainMm": 28.84,
+        "dryDayFraction": 0.838709677419
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.567971419658,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-04",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 17.204333333333,
+        "meanTmaxC": 34.421333333333,
+        "totalRainMm": 28.47,
+        "dryDayFraction": 0.8
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.361595393346,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-05",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 25.192580645161,
+        "meanTmaxC": 40.463548387097,
+        "totalRainMm": 22.83,
+        "dryDayFraction": 0.774193548387
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.597820855632,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-06",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 29.518333333333,
+        "meanTmaxC": 42.854666666667,
+        "totalRainMm": 44.7,
+        "dryDayFraction": 0.633333333333
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.590233276684,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-07",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 29.862580645161,
+        "meanTmaxC": 40.828064516129,
+        "totalRainMm": 172.78,
+        "dryDayFraction": 0.354838709677
+      },
+      "split": "training",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 0.730990921985,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-08",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 27.97935483871,
+        "meanTmaxC": 39.891290322581,
+        "totalRainMm": 61.31,
+        "dryDayFraction": 0.516129032258
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.949045077407,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-09",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 25.266,
+        "meanTmaxC": 35.759,
+        "totalRainMm": 168.19,
+        "dryDayFraction": 0.6
+      },
+      "split": "training",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 1.065614269412,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-10",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 18.59064516129,
+        "meanTmaxC": 32.452903225806,
+        "totalRainMm": 48.16,
+        "dryDayFraction": 0.774193548387
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.636902085267,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-11",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 11.281333333333,
+        "meanTmaxC": 27.522666666667,
+        "totalRainMm": 0.02,
+        "dryDayFraction": 1.0
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 1.074441104518,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2021-12",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 6.681612903226,
+        "meanTmaxC": 21.645483870968,
+        "totalRainMm": 5.61,
+        "dryDayFraction": 0.935483870968
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.578701370297,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-01",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 6.059677419355,
+        "meanTmaxC": 18.627741935484,
+        "totalRainMm": 100.05,
+        "dryDayFraction": 0.741935483871
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 1.370843679923,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-02",
+      "expectedDays": 28,
+      "observedDays": 28,
+      "completeDays": 28,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 7.518571428571,
+        "meanTmaxC": 22.818928571429,
+        "totalRainMm": 15.63,
+        "dryDayFraction": 0.857142857143
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.276350332131,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-03",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 15.391612903226,
+        "meanTmaxC": 33.335483870968,
+        "totalRainMm": 17.81,
+        "dryDayFraction": 0.870967741935
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.280389001851,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-04",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 22.024666666667,
+        "meanTmaxC": 41.242,
+        "totalRainMm": 0.63,
+        "dryDayFraction": 1.0
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 1.329608270459,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-05",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 26.428709677419,
+        "meanTmaxC": 43.311290322581,
+        "totalRainMm": 18.4,
+        "dryDayFraction": 0.838709677419
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.943536990046,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-06",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 28.669333333333,
+        "meanTmaxC": 42.751333333333,
+        "totalRainMm": 86.67,
+        "dryDayFraction": 0.8
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.843570273785,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-07",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 27.87935483871,
+        "meanTmaxC": 35.526451612903,
+        "totalRainMm": 249.26,
+        "dryDayFraction": 0.096774193548
+      },
+      "split": "training",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 1.806707301275,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-08",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 26.150322580645,
+        "meanTmaxC": 34.99935483871,
+        "totalRainMm": 154.98,
+        "dryDayFraction": 0.354838709677
+      },
+      "split": "training",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 0.571708015579,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-09",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 24.654666666667,
+        "meanTmaxC": 35.03,
+        "totalRainMm": 84.54,
+        "dryDayFraction": 0.566666666667
+      },
+      "split": "training",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 1.10381761964,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-10",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 18.370967741935,
+        "meanTmaxC": 33.714516129032,
+        "totalRainMm": 10.63,
+        "dryDayFraction": 0.806451612903
+      },
+      "split": "training",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.363393614329,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-11",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 12.29,
+        "meanTmaxC": 27.009333333333,
+        "totalRainMm": 32.89,
+        "dryDayFraction": 0.866666666667
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.713705577563,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2022-12",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 8.625806451613,
+        "meanTmaxC": 23.386451612903,
+        "totalRainMm": 3.27,
+        "dryDayFraction": 0.967741935484
+      },
+      "split": "training",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.66844200073,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-01",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 4.441935483871,
+        "meanTmaxC": 19.568387096774,
+        "totalRainMm": 19.46,
+        "dryDayFraction": 0.838709677419
+      },
+      "split": "heldout",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.663145414467,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-02",
+      "expectedDays": 28,
+      "observedDays": 28,
+      "completeDays": 28,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 9.888571428571,
+        "meanTmaxC": 27.134642857143,
+        "totalRainMm": 2.96,
+        "dryDayFraction": 0.964285714286
+      },
+      "split": "heldout",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.873153618349,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-03",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 14.999032258065,
+        "meanTmaxC": 28.742580645161,
+        "totalRainMm": 67.39,
+        "dryDayFraction": 0.806451612903
+      },
+      "split": "heldout",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 1.034118878292,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-04",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 18.404333333333,
+        "meanTmaxC": 34.348,
+        "totalRainMm": 30.1,
+        "dryDayFraction": 0.833333333333
+      },
+      "split": "heldout",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.236646202804,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-05",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 22.514193548387,
+        "meanTmaxC": 37.271935483871,
+        "totalRainMm": 56.48,
+        "dryDayFraction": 0.612903225806
+      },
+      "split": "heldout",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.763430382505,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-06",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 28.410333333333,
+        "meanTmaxC": 40.493,
+        "totalRainMm": 147.93,
+        "dryDayFraction": 0.533333333333
+      },
+      "split": "heldout",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 1.051616415243,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-07",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 27.012580645161,
+        "meanTmaxC": 35.589032258065,
+        "totalRainMm": 259.09,
+        "dryDayFraction": 0.193548387097
+      },
+      "split": "heldout",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 1.530184719059,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-08",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 27.806774193548,
+        "meanTmaxC": 38.633548387097,
+        "totalRainMm": 57.1,
+        "dryDayFraction": 0.516129032258
+      },
+      "split": "heldout",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.957753114362,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-09",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 25.768,
+        "meanTmaxC": 38.12,
+        "totalRainMm": 85.85,
+        "dryDayFraction": 0.6
+      },
+      "split": "heldout",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.793266357038,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-10",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 18.275161290323,
+        "meanTmaxC": 32.474516129032,
+        "totalRainMm": 54.34,
+        "dryDayFraction": 0.806451612903
+      },
+      "split": "heldout",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.600234411629,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-11",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 13.881666666667,
+        "meanTmaxC": 26.326666666667,
+        "totalRainMm": 28.36,
+        "dryDayFraction": 0.966666666667
+      },
+      "split": "heldout",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.936002082359,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2023-12",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 8.658387096774,
+        "meanTmaxC": 22.931935483871,
+        "totalRainMm": 0.32,
+        "dryDayFraction": 1.0
+      },
+      "split": "heldout",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.818607015502,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-01",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 6.611935483871,
+        "meanTmaxC": 20.533548387097,
+        "totalRainMm": 10.55,
+        "dryDayFraction": 0.935483870968
+      },
+      "split": "heldout",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.589413342617,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-02",
+      "expectedDays": 29,
+      "observedDays": 29,
+      "completeDays": 29,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 7.026551724138,
+        "meanTmaxC": 22.977586206897,
+        "totalRainMm": 15.24,
+        "dryDayFraction": 0.793103448276
+      },
+      "split": "heldout",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.484433339104,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-03",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 12.506774193548,
+        "meanTmaxC": 28.943548387097,
+        "totalRainMm": 60.84,
+        "dryDayFraction": 0.774193548387
+      },
+      "split": "heldout",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 1.132558768159,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-04",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 17.966333333333,
+        "meanTmaxC": 34.329666666667,
+        "totalRainMm": 59.22,
+        "dryDayFraction": 0.666666666667
+      },
+      "split": "heldout",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 1.151731698494,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-05",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 24.837419354839,
+        "meanTmaxC": 42.887419354839,
+        "totalRainMm": 4.5,
+        "dryDayFraction": 0.935483870968
+      },
+      "split": "heldout",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 1.435211438988,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-06",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 30.913,
+        "meanTmaxC": 45.440333333333,
+        "totalRainMm": 19.45,
+        "dryDayFraction": 0.833333333333
+      },
+      "split": "heldout",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 1.171921249348,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-07",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 30.193548387097,
+        "meanTmaxC": 41.146129032258,
+        "totalRainMm": 203.53,
+        "dryDayFraction": 0.225806451613
+      },
+      "split": "heldout",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 1.15333870848,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-08",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 27.077741935484,
+        "meanTmaxC": 34.564193548387,
+        "totalRainMm": 267.42,
+        "dryDayFraction": 0.225806451613
+      },
+      "split": "heldout",
+      "clusterId": "pattern-3",
+      "standardizedDistance": 1.551067719338,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-09",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 25.290333333333,
+        "meanTmaxC": 35.562,
+        "totalRainMm": 62.8,
+        "dryDayFraction": 0.733333333333
+      },
+      "split": "heldout",
+      "clusterId": "pattern-4",
+      "standardizedDistance": 0.664874876624,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-10",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 19.956129032258,
+        "meanTmaxC": 35.052580645161,
+        "totalRainMm": 12.18,
+        "dryDayFraction": 0.935483870968
+      },
+      "split": "heldout",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 0.498709967099,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-11",
+      "expectedDays": 30,
+      "observedDays": 30,
+      "completeDays": 30,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 14.306666666667,
+        "meanTmaxC": 29.183666666667,
+        "totalRainMm": 0.42,
+        "dryDayFraction": 1.0
+      },
+      "split": "heldout",
+      "clusterId": "pattern-2",
+      "standardizedDistance": 1.024648325893,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    },
+    {
+      "month": "2024-12",
+      "expectedDays": 31,
+      "observedDays": 31,
+      "completeDays": 31,
+      "coverage": 1.0,
+      "features": {
+        "meanTminC": 6.569032258065,
+        "meanTmaxC": 22.144193548387,
+        "totalRainMm": 4.1,
+        "dryDayFraction": 0.967741935484
+      },
+      "split": "heldout",
+      "clusterId": "pattern-1",
+      "standardizedDistance": 0.688706241627,
+      "assignmentStatus": "modeled descriptive nearest-center assignment"
+    }
+  ],
+  "trainingMetrics": {
+    "months": 60,
+    "meanSquaredStandardizedDistance": 0.788236863132,
+    "rootMeanSquaredStandardizedDistance": 0.887827045732,
+    "meanStandardizedDistance": 0.80072355165
+  },
+  "heldoutMetrics": {
+    "months": 24,
+    "meanSquaredStandardizedDistance": 0.932762257034,
+    "rootMeanSquaredStandardizedDistance": 0.96579617779,
+    "meanStandardizedDistance": 0.908532261974
+  },
+  "fit": {
+    "algorithm": "Lloyd k-means with k-means++ initialization",
+    "k": 4,
+    "seed": 20261115,
+    "restarts": 24,
+    "selectedRunIterations": 4,
+    "maxIterations": 300,
+    "stoppingRule": "unchanged training memberships or maximum iterations",
+    "selectionCriterion": "lowest training inertia; deterministic tie break",
+    "trainingInertia": 47.294211787948
+  },
+  "labelRules": {
+    "fittedOn": "training months only",
+    "midpointTemperatureMeanC": 25.347704036451,
+    "midpointTemperatureStdC": 8.075200621439,
+    "coolerWarmerOffsetStd": 0.5,
+    "monthlyRainfallReferenceMm": 60.645,
+    "interpretation": "Relative descriptive names from learned centers, not crop thresholds or drought classes."
+  },
+  "metricInterpretation": "Quantization errors measure distance from learned historical centers in standardized feature space. They are not predictive accuracy, success probabilities or future-climate validation.",
+  "provenance": {
+    "publisher": "NASA POWER",
+    "product": "POWER daily point API",
+    "apiVersion": "v2.10.3",
+    "sourceFile": "data/weather.json",
+    "sourceSha256": "3570df074baf6ffe40802445972f37c2f689c83ebb92e136888ca9bbddd1d057",
+    "rawYearlyResponses": [
+      {
+        "file": "power-2018.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20180101&end=20181231&format=JSON&time-standard=UTC",
+        "retrieved": "2026-11-14",
+        "sha256": "581cc0bd1a417a29115a24fe0815827a1cf8b264f1919c591cfcecce75bd04ac",
+        "status": "genuine cached observation",
+        "checksumVerified": true
+      },
+      {
+        "file": "power-2019.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20190101&end=20191231&format=JSON&time-standard=UTC",
+        "retrieved": "2026-11-14",
+        "sha256": "e7b8bab17261b99b8e8091046bd677b919eafc8572599ce3936aca0a83c1e8c2",
+        "status": "genuine cached observation",
+        "checksumVerified": true
+      },
+      {
+        "file": "power-2020.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20200101&end=20201231&format=JSON&time-standard=UTC",
+        "retrieved": "2026-11-14",
+        "sha256": "61ee5c1e1b27ebb48c04f1f2943f570521a19b89b3ee5a67ddb821ae7eb79c4e",
+        "status": "genuine cached observation",
+        "checksumVerified": true
+      },
+      {
+        "file": "power-2021.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20210101&end=20211231&format=JSON&time-standard=UTC",
+        "retrieved": "2026-11-14",
+        "sha256": "149c2a0b506e2cbbf038ceafcc0400b92b50264f53194c4cfd06acdef4a80f05",
+        "status": "genuine cached observation",
+        "checksumVerified": true
+      },
+      {
+        "file": "power-2022.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20220101&end=20221231&format=JSON&time-standard=UTC",
+        "retrieved": "2026-11-14",
+        "sha256": "3533db9565b6daacf286145d33a6363a0d009ca9762ce4b07cdcd2582a905a0a",
+        "status": "genuine cached observation",
+        "checksumVerified": true
+      },
+      {
+        "file": "power-2023.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20230101&end=20231231&format=JSON&time-standard=UTC",
+        "retrieved": "2026-11-14",
+        "sha256": "4a3939fbc52cb2e99ae32e894f166b42c8ae128e069e21ebacb9a338d39530b1",
+        "status": "genuine cached observation",
+        "checksumVerified": true
+      },
+      {
+        "file": "power-2024.json",
+        "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20240101&end=20241231&format=JSON&time-standard=UTC",
+        "retrieved": "2026-11-14",
+        "sha256": "8dd484e83bc5706b533b261216a7707e5fec72f81d5710a1a5af6b5c60b3fddd",
+        "status": "genuine cached observation",
+        "checksumVerified": true
+      }
+    ],
+    "cachedHeaderScope": "The cache retains the final yearly (2024) response header; the daily rows cover all seven verified years.",
+    "documentation": [
+      "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+      "https://power.larc.nasa.gov/docs/methodology/",
+      "https://scikit-learn.org/stable/modules/clustering.html#k-means"
+    ],
+    "runtime": "Python standard library 3.12.14"
+  },
+  "limitations": [
+    "One regional point, seven years and only 60 training months; strong seasonality and correlated features limit independence.",
+    "Four clusters were chosen as a compact descriptive demonstration, not selected as a universal or optimal climate classification.",
+    "Tmin and Tmax are correlated and both enter the distance; rainfall totals and dry-day fraction can also be correlated.",
+    "Monthly rainfall totals depend partly on month length; dry-day fraction uses the stated 1 mm/day descriptive threshold.",
+    "No crop, soil, yield, irrigation, suitability, forecast or groundwater model is trained here; no agronomic validation is claimed.",
+    "A heldout nearest-center assignment describes a supplied historical month. It is not a forecast or calibrated probability."
+  ]
+}

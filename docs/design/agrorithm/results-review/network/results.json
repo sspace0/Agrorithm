@@ -1,0 +1,163 @@
+{
+  "generated": "2026-11-15T17:26:16.001Z",
+  "base": "http://127.0.0.1:4173/Agrorithm/",
+  "profile": {
+    "offline": false,
+    "latency": 150,
+    "downloadThroughput": 200000,
+    "uploadThroughput": 93750,
+    "connectionType": "cellular4g"
+  },
+  "note": "CDP network and viewport emulation, not physical-phone or FPS measurements. Fresh contexts, disabled HTTP cache and blocked service workers. Three successful-load cases run concurrently; each context has its own throttled connection.",
+  "cases": [
+    {
+      "id": "phone-root",
+      "width": 390,
+      "status": "passed",
+      "pageErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4173/Agrorithm/models/root-zone-v2.glb",
+          "requestTimestamp": 330619.16045,
+          "status": 200,
+          "contentLength": "7705588",
+          "fromDiskCache": false,
+          "encodedTransferBytes": 7705867,
+          "downloadSeconds": 41.19
+        }
+      ],
+      "beforeOptInGlbCount": 0,
+      "optInAtMs": 12498.899999976158,
+      "cameraControlsUsable": true,
+      "geometry": {
+        "bounds": {
+          "left": 42.19853944648216,
+          "top": 156.2813315233471,
+          "width": 256.31617169030915,
+          "height": 198.49913789625577,
+          "viewportWidth": 350,
+          "viewportHeight": 489.515625
+        },
+        "clearAlpha": "0",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+      },
+      "marks": {
+        "models/root-zone-v2.glb": {
+          "posterDecodedMs": 10489.199999988079,
+          "firstVisiblePosterMs": 11287.300000011921,
+          "renderReadyMs": 64362.80000001192
+        },
+        "planUsableMs": 11270
+      },
+      "readyAfterOptInSeconds": 51.86
+    },
+    {
+      "id": "desktop-root",
+      "width": 1440,
+      "status": "passed",
+      "pageErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4173/Agrorithm/models/root-zone-v2.glb",
+          "requestTimestamp": 330618.193181,
+          "status": 200,
+          "contentLength": "7705588",
+          "fromDiskCache": false,
+          "encodedTransferBytes": 7705867,
+          "downloadSeconds": 40.95
+        }
+      ],
+      "beforeOptInGlbCount": 1,
+      "cameraControlsUsable": true,
+      "geometry": {
+        "bounds": {
+          "left": 333.9270493994243,
+          "top": 168.34329825357153,
+          "width": 594.2714275405409,
+          "height": 460.9945661811013,
+          "viewportWidth": 1296,
+          "viewportHeight": 720
+        },
+        "clearAlpha": "0",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+      },
+      "marks": {
+        "models/root-zone-v2.glb": {
+          "posterDecodedMs": 10677.399999976158,
+          "firstVisiblePosterMs": 14456.800000011921,
+          "renderReadyMs": 62615.39999997616
+        },
+        "planUsableMs": 14152.199999988079
+      }
+    },
+    {
+      "id": "desktop-groundwater",
+      "width": 1440,
+      "status": "passed",
+      "pageErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4173/Agrorithm/models/groundwater-v2.glb",
+          "requestTimestamp": 330625.687873,
+          "status": 200,
+          "contentLength": "6029336",
+          "fromDiskCache": false,
+          "encodedTransferBytes": 6029615,
+          "downloadSeconds": 31.89
+        }
+      ],
+      "beforeOptInGlbCount": 0,
+      "cameraControlsUsable": true,
+      "geometry": {
+        "bounds": {
+          "left": 286.0604911432028,
+          "top": 183.57647208783072,
+          "width": 677.1135637618452,
+          "height": 444.2140613569305,
+          "viewportWidth": 1296,
+          "viewportHeight": 720
+        },
+        "clearAlpha": "0",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+      },
+      "marks": {
+        "models/root-zone-v2.glb": {
+          "posterDecodedMs": 8058.5,
+          "firstVisiblePosterMs": 14158.300000011921
+        },
+        "planUsableMs": 13860.800000011921,
+        "models/groundwater-v2.glb": {
+          "posterDecodedMs": 15737.199999988079,
+          "firstVisiblePosterMs": 15737.199999988079,
+          "renderReadyMs": 57493.60000002384
+        }
+      }
+    },
+    {
+      "id": "failed-model-planning",
+      "width": 1440,
+      "status": "passed",
+      "pageErrors": [
+        "Could not load /Agrorithm/models/root-zone-v2.glb: Failed to fetch"
+      ],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4173/Agrorithm/models/root-zone-v2.glb",
+          "requestTimestamp": 330686.929003,
+          "failure": "net::ERR_FAILED"
+        }
+      ],
+      "beforeOptInGlbCount": 1,
+      "planningUsableDuringDownload": true,
+      "fallbackVisible": true,
+      "posterRetained": true,
+      "marks": {
+        "models/root-zone-v2.glb": {
+          "posterDecodedMs": 9244.199999988079,
+          "firstVisiblePosterMs": 13113.099999964237
+        },
+        "planUsableMs": 12882.5
+      }
+    }
+  ]
+}

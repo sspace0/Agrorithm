@@ -229,9 +229,11 @@ export default function OrbitOpening({
             <em>{BRAND.headline.emphasis}</em>
           </h1>
           <p>
-            Your soil has a story.
+            Plan crop rotations with NASA observations.
             <br />
-            Explore its next chapter with NASA data.
+            Compare your soil, water and farming priorities.
+            <br />
+            Explore scenarios—not yield forecasts.
           </p>
           <div className="hero-actions">
             <button className="primary" onClick={() => start(false)}>

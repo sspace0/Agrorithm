@@ -1,0 +1,21 @@
+{
+  "base": "https://sspace0.github.io/Agrorithm/?revision=6",
+  "checks": [
+    {
+      "name": "Phone settings open/close, motion toggle, search open/close/result",
+      "detail": "settings, motion and search route work at 390px"
+    },
+    {
+      "name": "Field add/remove/demo sequence, area units and scenario reset",
+      "detail": {
+        "sequenceRows": 0,
+        "resetRain": "100"
+      }
+    },
+    {
+      "name": "Crop search result selection and no-result state",
+      "detail": "search selects mango and handles missing crop"
+    }
+  ],
+  "failures": []
+}

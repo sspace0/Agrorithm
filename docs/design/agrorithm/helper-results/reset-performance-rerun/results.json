@@ -1,0 +1,521 @@
+{
+  "at": "2026-11-15T17:10:38.625Z",
+  "errors": [],
+  "consoleErrors": [],
+  "checks": [
+    {
+      "name": "open setup",
+      "pass": true,
+      "ms": 2761.8986,
+      "detail": {
+        "url": "http://127.0.0.1:5188/Agrorithm/#/studio/setup",
+        "fonts": "loaded",
+        "scrollHeight": 3619,
+        "bodyHeight": 3619,
+        "scrollWidth": 1440,
+        "scrollY": 0,
+        "windowHeight": 1000,
+        "rootChildren": 1,
+        "nodeCount": 654,
+        "reportPages": 0,
+        "mainRect": {
+          "x": 210,
+          "y": 106,
+          "width": 1230,
+          "height": 3104.953125,
+          "top": 106,
+          "right": 1440,
+          "bottom": 3210.953125,
+          "left": 210
+        },
+        "longTasks": [
+          {
+            "name": "self",
+            "start": 403.89999997615814,
+            "duration": 108
+          },
+          {
+            "name": "self",
+            "start": 516.5,
+            "duration": 220
+          },
+          {
+            "name": "self",
+            "start": 924.0999999642372,
+            "duration": 946
+          },
+          {
+            "name": "self",
+            "start": 1891.8999999761581,
+            "duration": 784
+          }
+        ]
+      }
+    },
+    {
+      "name": "load sample",
+      "pass": true,
+      "ms": 1429.016,
+      "detail": {
+        "url": "http://127.0.0.1:5188/Agrorithm/#/studio/lab",
+        "fonts": "loaded",
+        "scrollHeight": 8545,
+        "bodyHeight": 8515,
+        "scrollWidth": 1440,
+        "scrollY": 0,
+        "windowHeight": 1000,
+        "rootChildren": 1,
+        "nodeCount": 1606,
+        "reportPages": 0,
+        "mainRect": {
+          "x": 210,
+          "y": 106,
+          "width": 1230,
+          "height": 7912.9375,
+          "top": 106,
+          "right": 1440,
+          "bottom": 8018.9375,
+          "left": 210
+        },
+        "longTasks": [
+          {
+            "name": "self",
+            "start": 403.89999997615814,
+            "duration": 108
+          },
+          {
+            "name": "self",
+            "start": 516.5,
+            "duration": 220
+          },
+          {
+            "name": "self",
+            "start": 924.0999999642372,
+            "duration": 946
+          },
+          {
+            "name": "self",
+            "start": 1891.8999999761581,
+            "duration": 784
+          },
+          {
+            "name": "self",
+            "start": 2799.899999976158,
+            "duration": 1007
+          },
+          {
+            "name": "self",
+            "start": 3810.399999976158,
+            "duration": 235
+          },
+          {
+            "name": "self",
+            "start": 4045.399999976158,
+            "duration": 74
+          }
+        ]
+      }
+    },
+    {
+      "name": "open export",
+      "pass": true,
+      "ms": 10449.8616,
+      "detail": {
+        "url": "http://127.0.0.1:5188/Agrorithm/#/studio/export",
+        "fonts": "loaded",
+        "scrollHeight": 8754,
+        "bodyHeight": 8724,
+        "scrollWidth": 1440,
+        "scrollY": 0,
+        "windowHeight": 1000,
+        "rootChildren": 1,
+        "nodeCount": 12445,
+        "reportReady": "true",
+        "reportPages": 63,
+        "reportRect": {
+          "x": -100000,
+          "y": 0,
+          "width": 1920,
+          "height": 68040,
+          "top": 0,
+          "right": -98080,
+          "bottom": 68040,
+          "left": -100000
+        },
+        "measureRect": {
+          "x": -200000,
+          "y": 0,
+          "width": 1728,
+          "height": 61131.90625,
+          "top": 0,
+          "right": -198272,
+          "bottom": 61131.90625,
+          "left": -200000
+        },
+        "mainRect": {
+          "x": 210,
+          "y": 106,
+          "width": 1230,
+          "height": 8121.703125,
+          "top": 106,
+          "right": 1440,
+          "bottom": 8227.703125,
+          "left": 210
+        },
+        "longTasks": [
+          {
+            "name": "self",
+            "start": 403.89999997615814,
+            "duration": 108
+          },
+          {
+            "name": "self",
+            "start": 516.5,
+            "duration": 220
+          },
+          {
+            "name": "self",
+            "start": 924.0999999642372,
+            "duration": 946
+          },
+          {
+            "name": "self",
+            "start": 1891.8999999761581,
+            "duration": 784
+          },
+          {
+            "name": "self",
+            "start": 2799.899999976158,
+            "duration": 1007
+          },
+          {
+            "name": "self",
+            "start": 3810.399999976158,
+            "duration": 235
+          },
+          {
+            "name": "self",
+            "start": 4045.399999976158,
+            "duration": 74
+          },
+          {
+            "name": "self",
+            "start": 4248.5,
+            "duration": 10245
+          },
+          {
+            "name": "self",
+            "start": 14498.899999976158,
+            "duration": 87
+          }
+        ]
+      }
+    },
+    {
+      "name": "wait fonts",
+      "pass": true,
+      "ms": 21.99829999999929,
+      "detail": {
+        "url": "http://127.0.0.1:5188/Agrorithm/#/studio/export",
+        "fonts": "loaded",
+        "scrollHeight": 8754,
+        "bodyHeight": 8724,
+        "scrollWidth": 1440,
+        "scrollY": 0,
+        "windowHeight": 1000,
+        "rootChildren": 1,
+        "nodeCount": 12445,
+        "reportReady": "true",
+        "reportPages": 63,
+        "reportRect": {
+          "x": -100000,
+          "y": 0,
+          "width": 1920,
+          "height": 68040,
+          "top": 0,
+          "right": -98080,
+          "bottom": 68040,
+          "left": -100000
+        },
+        "measureRect": {
+          "x": -200000,
+          "y": 0,
+          "width": 1728,
+          "height": 61131.90625,
+          "top": 0,
+          "right": -198272,
+          "bottom": 61131.90625,
+          "left": -200000
+        },
+        "mainRect": {
+          "x": 210,
+          "y": 106,
+          "width": 1230,
+          "height": 8121.703125,
+          "top": 106,
+          "right": 1440,
+          "bottom": 8227.703125,
+          "left": 210
+        },
+        "longTasks": [
+          {
+            "name": "self",
+            "start": 403.89999997615814,
+            "duration": 108
+          },
+          {
+            "name": "self",
+            "start": 516.5,
+            "duration": 220
+          },
+          {
+            "name": "self",
+            "start": 924.0999999642372,
+            "duration": 946
+          },
+          {
+            "name": "self",
+            "start": 1891.8999999761581,
+            "duration": 784
+          },
+          {
+            "name": "self",
+            "start": 2799.899999976158,
+            "duration": 1007
+          },
+          {
+            "name": "self",
+            "start": 3810.399999976158,
+            "duration": 235
+          },
+          {
+            "name": "self",
+            "start": 4045.399999976158,
+            "duration": 74
+          },
+          {
+            "name": "self",
+            "start": 4248.5,
+            "duration": 10245
+          },
+          {
+            "name": "self",
+            "start": 14498.899999976158,
+            "duration": 87
+          }
+        ]
+      }
+    },
+    {
+      "name": "reset all inputs native locator",
+      "pass": true,
+      "ms": 1853.5373999999993,
+      "detail": {
+        "buttonBefore": {
+          "x": 694.4375,
+          "y": 2448.484375,
+          "width": 126.28125,
+          "height": 44
+        },
+        "metrics": {
+          "url": "http://127.0.0.1:5188/Agrorithm/#/studio/export",
+          "fonts": "loaded",
+          "scrollHeight": 8786,
+          "bodyHeight": 8755,
+          "scrollWidth": 1440,
+          "scrollY": 1970,
+          "windowHeight": 1000,
+          "rootChildren": 1,
+          "nodeCount": 11999,
+          "reportReady": "true",
+          "reportPages": 65,
+          "reportRect": {
+            "x": -100000,
+            "y": 0,
+            "width": 1920,
+            "height": 70200,
+            "top": 0,
+            "right": -98080,
+            "bottom": 70200,
+            "left": -100000
+          },
+          "measureRect": {
+            "x": -200000,
+            "y": 0,
+            "width": 1728,
+            "height": 62910.734375,
+            "top": 0,
+            "right": -198272,
+            "bottom": 62910.734375,
+            "left": -200000
+          },
+          "mainRect": {
+            "x": 210,
+            "y": -1864,
+            "width": 1230,
+            "height": 8153.328125,
+            "top": -1864,
+            "right": 1440,
+            "bottom": 6289.328125,
+            "left": 210
+          },
+          "longTasks": [
+            {
+              "name": "self",
+              "start": 403.89999997615814,
+              "duration": 108
+            },
+            {
+              "name": "self",
+              "start": 516.5,
+              "duration": 220
+            },
+            {
+              "name": "self",
+              "start": 924.0999999642372,
+              "duration": 946
+            },
+            {
+              "name": "self",
+              "start": 1891.8999999761581,
+              "duration": 784
+            },
+            {
+              "name": "self",
+              "start": 2799.899999976158,
+              "duration": 1007
+            },
+            {
+              "name": "self",
+              "start": 3810.399999976158,
+              "duration": 235
+            },
+            {
+              "name": "self",
+              "start": 4045.399999976158,
+              "duration": 74
+            },
+            {
+              "name": "self",
+              "start": 4248.5,
+              "duration": 10245
+            },
+            {
+              "name": "self",
+              "start": 14498.899999976158,
+              "duration": 87
+            },
+            {
+              "name": "self",
+              "start": 15026.300000011921,
+              "duration": 1686
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "return to setup",
+      "pass": true,
+      "ms": 116.94839999999749,
+      "detail": {
+        "metrics": {
+          "url": "http://127.0.0.1:5188/Agrorithm/#/studio/setup",
+          "fonts": "loaded",
+          "scrollHeight": 8786,
+          "bodyHeight": 8755,
+          "scrollWidth": 1440,
+          "scrollY": 0,
+          "windowHeight": 1000,
+          "rootChildren": 1,
+          "nodeCount": 11999,
+          "reportReady": "true",
+          "reportPages": 65,
+          "reportRect": {
+            "x": -100000,
+            "y": 0,
+            "width": 1920,
+            "height": 70200,
+            "top": 0,
+            "right": -98080,
+            "bottom": 70200,
+            "left": -100000
+          },
+          "measureRect": {
+            "x": -200000,
+            "y": 0,
+            "width": 1728,
+            "height": 62910.734375,
+            "top": 0,
+            "right": -198272,
+            "bottom": 62910.734375,
+            "left": -200000
+          },
+          "mainRect": {
+            "x": 210,
+            "y": 106,
+            "width": 1230,
+            "height": 8153.328125,
+            "top": 106,
+            "right": 1440,
+            "bottom": 8259.328125,
+            "left": 210
+          },
+          "longTasks": [
+            {
+              "name": "self",
+              "start": 403.89999997615814,
+              "duration": 108
+            },
+            {
+              "name": "self",
+              "start": 516.5,
+              "duration": 220
+            },
+            {
+              "name": "self",
+              "start": 924.0999999642372,
+              "duration": 946
+            },
+            {
+              "name": "self",
+              "start": 1891.8999999761581,
+              "duration": 784
+            },
+            {
+              "name": "self",
+              "start": 2799.899999976158,
+              "duration": 1007
+            },
+            {
+              "name": "self",
+              "start": 3810.399999976158,
+              "duration": 235
+            },
+            {
+              "name": "self",
+              "start": 4045.399999976158,
+              "duration": 74
+            },
+            {
+              "name": "self",
+              "start": 4248.5,
+              "duration": 10245
+            },
+            {
+              "name": "self",
+              "start": 14498.899999976158,
+              "duration": 87
+            },
+            {
+              "name": "self",
+              "start": 15026.300000011921,
+              "duration": 1686
+            }
+          ]
+        },
+        "name": "My field"
+      }
+    }
+  ]
+}

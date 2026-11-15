@@ -43,10 +43,15 @@ try {
   }));
   const oversized = await page.locator(".agr-report").getAttribute("data-oversized-blocks");
   const pages = await page.locator(".agr-report-page").count();
+  const charts = await page.locator(".agr-report-page svg.agr-chart").count();
+  const cropImages = await page.locator(".agr-report-page .agr-crop-image img").count();
   if (geometry.length || oversized || errors.length || failedAssets.length) throw Error(JSON.stringify({ geometry, oversized, errors, failedAssets }));
+  if (!fixture && (charts < 7 || cropImages < 4)) throw Error(`Incomplete sample report: ${charts} charts / ${cropImages} crop images`);
   await page.emulateMedia({ media: "print" });
-  await page.pdf({ path: output, preferCSSPageSize: true, printBackground: true, tagged: true });
-  const result = { generated: new Date().toISOString(), base, fixture: fixture || "genuine sample with declared farm assumptions", pages, bytes: fs.statSync(output).size, geometry, oversized, errors, failedAssets, charts: await page.locator(".agr-report-page svg.agr-chart").count(), cropImages: await page.locator(".agr-report-page .agr-crop-image img").count() };
+  const pdf = await page.pdf({ path: output, preferCSSPageSize: true, printBackground: true, tagged: true });
+  const pdfPages = [...pdf.toString("latin1").matchAll(/\/Type\s*\/Page\b/g)].length;
+  if (pdfPages !== pages || await page.locator(".agr-report-page").count() !== pages) throw Error(`Print changed the measured snapshot: ${pages} layout pages / ${pdfPages} actual PDF pages`);
+  const result = { generated: new Date().toISOString(), base, fixture: fixture || "genuine sample with declared farm assumptions", pages, pdfPages, bytes: fs.statSync(output).size, geometry, oversized, errors, failedAssets, charts, cropImages };
   fs.mkdirSync(path.dirname(evidence), { recursive: true });
   fs.writeFileSync(evidence, JSON.stringify(result, null, 2));
   console.log(JSON.stringify(result));

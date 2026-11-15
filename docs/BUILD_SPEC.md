@@ -1,5 +1,9 @@
 # Agrorithm product and engineering specification
 
+## Review release requirements
+
+Keep the opening introduction concise and provide a centered farm-plan entry on every route. Results compare rotations side by side on a shared area, horizon, water scale and calendar. Show actual weather and satellite observation spans, QA coverage and each dataset's role. Separate observations, farmer entries, assumptions and model estimates. Comparable reference checks retain units and sources: known water-budget exceedance is red, provisional deviations require review, and missing evidence remains unclassified. Explain withheld ranking and the fixed score scales explicitly. Keep soil-health proxy limitations and unavailable-data recovery visible. Preserve CSV exports, vector PDF charts, measured slide margins, static routing, local data ownership and model fallback paths. Test native printing, input resets, service-worker updates and throttled model loading before publication.
+
 ## Purpose
 
 Explore crop rotations using NASA Earth observations, local soil information, crop characteristics and farmer priorities. The initial configurable Punjab, Pakistan pilot compares the entered rotation with two alternatives over an equal 36-month horizon. It supports a conversation with a local agronomist, not a guaranteed planting recommendation.
@@ -52,3 +56,9 @@ Persistent searchable navigation, separate map/soil/crop/guide pages, native-scr
 Use the supplied Agrorithm logo, transparent loading mark and report cover. Loading percentages correspond to measurable transfers; unknown totals use an indeterminate indicator. Ordinary scrolling remains on the document; manual camera interaction pauses guided motion until reset or resume. All important annotations have readable panels plus an accessible text alternative. Keep the main model canvas transparent.
 
 Execute production-browser visual checks at desktop, tablet and phone sizes across every route/model and multiple scroll positions. Assert framing, annotation bounds/overlap, control clearance, state continuity, failed assets, context loss and responsive overflow. Export and render the actual PDF; verify page boxes, embedded typography, content preservation and overflow. Retain real results and limits in docs/VISUAL_QA.md and docs/REPORT_EXPORT.md.
+
+## Final interaction and learning scope
+
+The full-screen borderless orbital intro hides navigation and the floating botanical-O helper until completion or skip; reduced-motion/static/failure paths keep navigation available. The atlas supports cursor-centered wheel/pinch zoom to24× without creating additional source detail. Soil layers separate during the guided story with manual override. Saturated groundwater material uses illustrative wet-blue shading below the user-controlled demo table, preserving porous geometry and a separate depth scale.
+
+Crop views hand an optional crop interest to setup without changing the existing sequence; unsupported annual references and perennial/orchard scope remain explicit. A deterministic historical weather-pattern model uses60training and24held-out months, with training-only scaling. A local conversational helper routes historical questions through that learned model and documented topics through the source guide; it does not provide language-model generation, forecasts or numerical crop advice. Reports add bounded crop illustrations and use at most2decimalplaces for numerical readouts while preserving export/calculation precision.

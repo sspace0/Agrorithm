@@ -1,4 +1,4 @@
-Legend linking the numeric values in the maps to the Kï¿½ppen-Geiger classes.
+Legend linking the numeric values in the maps to the Köppen-Geiger classes.
 The RGB colors used in Beck et al. (2023) are provided between brackets.
 
     1:  Af   Tropical, rainforest                  [0 0 255]
@@ -36,5 +36,5 @@ Please cite Beck et al. (2023) when using the maps in any publication:
 
    Beck, H. E., T. R. McVicar, N. Vergopolan, A. Berg, N. J. Lutsko, A. Dufour,
    Z. Zeng, X. Jiang, A. I. J. M. van Dijk, and D. G. Miralles. High-resolution
-   (1 km) Kï¿½ppen-Geiger maps for 1901ï¿½2099 based on constrained CMIP6 
+   (1 km) Köppen-Geiger maps for 1901–2099 based on constrained CMIP6 
    projections, Scientific Data 10, 724 (2023).

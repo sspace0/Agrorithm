@@ -3,7 +3,7 @@
   --agr-muted: #637568;
   --agr-paper: #f8f7f0;
   --agr-line: #d8dfd1;
-  position: absolute;
+  position: fixed;
   inset: 0 auto auto -100000px;
   width: 1920px;
   visibility: hidden;
@@ -33,6 +33,11 @@
 .agr-report .agr-report-page:last-child { break-after: auto; }
 .agr-report .agr-report-cover { padding: 0; background: #fff; }
 .agr-report .agr-report-cover img { display: block; width: 1920px; height: 1080px; object-fit: contain; }
+.agr-report .agr-cover-intro { position:absolute; left:96px; right:96px; top:820px; padding:24px 30px; background:#f8faf2ee; border-inline-start:4px solid #54754b; border-radius:8px; color:#193e32; }
+.agr-report .agr-cover-intro p { font-size:24px; line-height:1.55; margin:0; }
+.agr-report .agr-table tr[data-assessment-tone="exceeds"] td { background:#fff0ed; color:#861e18; border-bottom-color:#dfb2aa; }
+.agr-report .agr-table tr[data-assessment-tone="review"] td { background:#fff3df; color:#754719; border-bottom-color:#e0cba7; }
+.agr-report .agr-table tr[data-assessment-tone="unknown"] td { background:#edf0f2; color:#48515d; }
 .agr-report .agr-page-header { display: grid; grid-template-columns: minmax(0, 1fr) 180px; align-items: start; height: 158px; gap: 30px; border: 0; padding: 0; position: static; }
 .agr-report .agr-page-header > div { min-width: 0; max-width: 100%; }
 .agr-report .agr-kicker { display: block; color: #6c805b; font-size: 17px; line-height: 1.3; letter-spacing: 2.4px; font-weight: 700; margin-bottom: 12px; }

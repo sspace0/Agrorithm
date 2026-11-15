@@ -1,0 +1,346 @@
+{
+  "at": "2026-11-15T17:07:55.152Z",
+  "errors": [],
+  "consoleErrors": [],
+  "checks": [
+    {
+      "name": "open setup",
+      "pass": true,
+      "ms": 2776.2654999999995,
+      "detail": {
+        "url": "http://127.0.0.1:5188/Agrorithm/#/studio/setup",
+        "fonts": "loaded",
+        "scrollHeight": 3539,
+        "bodyHeight": 3539,
+        "scrollWidth": 1440,
+        "scrollY": 0,
+        "windowHeight": 1000,
+        "rootChildren": 1,
+        "nodeCount": 654,
+        "reportPages": 0,
+        "mainRect": {
+          "x": 210,
+          "y": 106,
+          "width": 1230,
+          "height": 3024.515625,
+          "top": 106,
+          "right": 1440,
+          "bottom": 3130.515625,
+          "left": 210
+        },
+        "longTasks": [
+          {
+            "name": "self",
+            "start": 507.69999998807907,
+            "duration": 124
+          },
+          {
+            "name": "self",
+            "start": 637.3000000119209,
+            "duration": 269
+          },
+          {
+            "name": "self",
+            "start": 1189.800000011921,
+            "duration": 1520
+          }
+        ]
+      }
+    },
+    {
+      "name": "load sample",
+      "pass": false,
+      "ms": 32043.2708,
+      "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.rotation-card').first() to be visible\u001b[22m\n\u001b[2m    62 × locator resolved to hidden <article class=\"rotation-card selected\">…</article>\u001b[22m\n"
+    },
+    {
+      "name": "open export",
+      "pass": true,
+      "ms": 11424.0262,
+      "detail": {
+        "url": "http://127.0.0.1:5188/Agrorithm/#/studio/export",
+        "fonts": "loaded",
+        "scrollHeight": 8613,
+        "bodyHeight": 8613,
+        "scrollWidth": 1440,
+        "scrollY": 0,
+        "windowHeight": 1000,
+        "rootChildren": 1,
+        "nodeCount": 12445,
+        "reportReady": "true",
+        "reportPages": 63,
+        "reportRect": {
+          "x": -100000,
+          "y": 0,
+          "width": 1920,
+          "height": 68040,
+          "top": 0,
+          "right": -98080,
+          "bottom": 68040,
+          "left": -100000
+        },
+        "measureRect": {
+          "x": -200000,
+          "y": 0,
+          "width": 1728,
+          "height": 61131.90625,
+          "top": 0,
+          "right": -198272,
+          "bottom": 61131.90625,
+          "left": -200000
+        },
+        "mainRect": {
+          "x": 210,
+          "y": 106,
+          "width": 1230,
+          "height": 8098.875,
+          "top": 106,
+          "right": 1440,
+          "bottom": 8204.875,
+          "left": 210
+        },
+        "longTasks": [
+          {
+            "name": "self",
+            "start": 507.69999998807907,
+            "duration": 124
+          },
+          {
+            "name": "self",
+            "start": 637.3000000119209,
+            "duration": 269
+          },
+          {
+            "name": "self",
+            "start": 1189.800000011921,
+            "duration": 1520
+          },
+          {
+            "name": "self",
+            "start": 2842.300000011921,
+            "duration": 1477
+          },
+          {
+            "name": "self",
+            "start": 4323.199999988079,
+            "duration": 351
+          },
+          {
+            "name": "self",
+            "start": 4674.399999976158,
+            "duration": 89
+          },
+          {
+            "name": "self",
+            "start": 34881.5,
+            "duration": 11244
+          },
+          {
+            "name": "self",
+            "start": 46131.39999997616,
+            "duration": 83
+          }
+        ]
+      }
+    },
+    {
+      "name": "wait fonts",
+      "pass": true,
+      "ms": 7.501600000003236,
+      "detail": {
+        "url": "http://127.0.0.1:5188/Agrorithm/#/studio/export",
+        "fonts": "loaded",
+        "scrollHeight": 8613,
+        "bodyHeight": 8613,
+        "scrollWidth": 1440,
+        "scrollY": 0,
+        "windowHeight": 1000,
+        "rootChildren": 1,
+        "nodeCount": 12445,
+        "reportReady": "true",
+        "reportPages": 63,
+        "reportRect": {
+          "x": -100000,
+          "y": 0,
+          "width": 1920,
+          "height": 68040,
+          "top": 0,
+          "right": -98080,
+          "bottom": 68040,
+          "left": -100000
+        },
+        "measureRect": {
+          "x": -200000,
+          "y": 0,
+          "width": 1728,
+          "height": 61131.90625,
+          "top": 0,
+          "right": -198272,
+          "bottom": 61131.90625,
+          "left": -200000
+        },
+        "mainRect": {
+          "x": 210,
+          "y": 106,
+          "width": 1230,
+          "height": 8098.875,
+          "top": 106,
+          "right": 1440,
+          "bottom": 8204.875,
+          "left": 210
+        },
+        "longTasks": [
+          {
+            "name": "self",
+            "start": 507.69999998807907,
+            "duration": 124
+          },
+          {
+            "name": "self",
+            "start": 637.3000000119209,
+            "duration": 269
+          },
+          {
+            "name": "self",
+            "start": 1189.800000011921,
+            "duration": 1520
+          },
+          {
+            "name": "self",
+            "start": 2842.300000011921,
+            "duration": 1477
+          },
+          {
+            "name": "self",
+            "start": 4323.199999988079,
+            "duration": 351
+          },
+          {
+            "name": "self",
+            "start": 4674.399999976158,
+            "duration": 89
+          },
+          {
+            "name": "self",
+            "start": 34881.5,
+            "duration": 11244
+          },
+          {
+            "name": "self",
+            "start": 46131.39999997616,
+            "duration": 83
+          }
+        ]
+      }
+    },
+    {
+      "name": "reset all inputs native locator",
+      "pass": true,
+      "ms": 1973.699999999997,
+      "detail": {
+        "buttonBefore": {
+          "x": 694.4375,
+          "y": 2441.265625,
+          "width": 126.28125,
+          "height": 44
+        },
+        "metrics": {
+          "url": "http://127.0.0.1:5188/Agrorithm/#/studio/export",
+          "fonts": "loaded",
+          "scrollHeight": 8645,
+          "bodyHeight": 8645,
+          "scrollWidth": 1440,
+          "scrollY": 1963,
+          "windowHeight": 1000,
+          "rootChildren": 1,
+          "nodeCount": 11999,
+          "reportReady": "true",
+          "reportPages": 65,
+          "reportRect": {
+            "x": -100000,
+            "y": -1963,
+            "width": 1920,
+            "height": 70200,
+            "top": -1963,
+            "right": -98080,
+            "bottom": 68237,
+            "left": -100000
+          },
+          "measureRect": {
+            "x": -200000,
+            "y": -1963,
+            "width": 1728,
+            "height": 62910.734375,
+            "top": -1963,
+            "right": -198272,
+            "bottom": 60947.734375,
+            "left": -200000
+          },
+          "mainRect": {
+            "x": 210,
+            "y": -1857,
+            "width": 1230,
+            "height": 8130.5,
+            "top": -1857,
+            "right": 1440,
+            "bottom": 6273.5,
+            "left": 210
+          },
+          "longTasks": [
+            {
+              "name": "self",
+              "start": 507.69999998807907,
+              "duration": 124
+            },
+            {
+              "name": "self",
+              "start": 637.3000000119209,
+              "duration": 269
+            },
+            {
+              "name": "self",
+              "start": 1189.800000011921,
+              "duration": 1520
+            },
+            {
+              "name": "self",
+              "start": 2842.300000011921,
+              "duration": 1477
+            },
+            {
+              "name": "self",
+              "start": 4323.199999988079,
+              "duration": 351
+            },
+            {
+              "name": "self",
+              "start": 4674.399999976158,
+              "duration": 89
+            },
+            {
+              "name": "self",
+              "start": 34881.5,
+              "duration": 11244
+            },
+            {
+              "name": "self",
+              "start": 46131.39999997616,
+              "duration": 83
+            },
+            {
+              "name": "self",
+              "start": 46651.80000001192,
+              "duration": 1805
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "return to setup",
+      "pass": false,
+      "ms": 30010.399300000005,
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Field setup' }).first()\u001b[22m\n"
+    }
+  ]
+}

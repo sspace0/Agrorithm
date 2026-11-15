@@ -1,0 +1,261 @@
+[
+  {
+    "id": "RH2M",
+    "name": "Relative Humidity at 2 Meters",
+    "metadataUrl": "https://power.larc.nasa.gov/api/website/metadata/parameters/RH2M",
+    "retrieved": "2026-11-15T17:13:46Z",
+    "description": "The ratio of vapor pressure to the saturation vapor pressure with respect to a plane surface of pure water, expressed in percent.",
+    "dailySources": [
+      {
+        "id": "geosit",
+        "short": "GEOS-IT",
+        "tag": "nrt",
+        "resolution": "0.5 x 0.625 Degrees",
+        "start": "2020/01/01",
+        "end": "2026/11/12",
+        "units": "%",
+        "unitName": "Percentage",
+        "minimum": 0.0,
+        "maximum": 100.0
+      },
+      {
+        "id": "hydroscs",
+        "short": "HydroSCS",
+        "tag": "nrt",
+        "resolution": "0.05 x 0.05 Degrees",
+        "start": "2001/12/31",
+        "end": "2029/12/31",
+        "units": "%",
+        "unitName": "Percentage",
+        "minimum": 0.0,
+        "maximum": 100.0
+      },
+      {
+        "id": "merra2",
+        "short": "MERRA-2",
+        "tag": "primary",
+        "resolution": "0.5 x 0.625 Degrees",
+        "start": "1981/01/01",
+        "end": "2026/09/30",
+        "units": "%",
+        "unitName": "Percentage",
+        "minimum": 0.0,
+        "maximum": 100.0
+      },
+      {
+        "id": "nexgddp",
+        "short": "NEX-GDDP",
+        "tag": "nrt",
+        "resolution": "0.25 x 0.25 Degrees",
+        "start": "2015/01/01",
+        "end": "2100/12/31",
+        "units": "%",
+        "unitName": "Percentage",
+        "minimum": 0.0,
+        "maximum": 100.0
+      }
+    ],
+    "dailyAGUnits": "%",
+    "status": "Verified metadata only; not downloaded or used in Agrorithm calculations"
+  },
+  {
+    "id": "QV2M",
+    "name": "Specific Humidity at 2 Meters",
+    "metadataUrl": "https://power.larc.nasa.gov/api/website/metadata/parameters/QV2M",
+    "retrieved": "2026-11-15T17:13:47Z",
+    "description": "The ratio of the mass of water vapor to the total mass of air at 2 meters.",
+    "dailySources": [
+      {
+        "id": "geosit",
+        "short": "GEOS-IT",
+        "tag": "nrt",
+        "resolution": "0.5 x 0.625 Degrees",
+        "start": "2020/01/01",
+        "end": "2026/11/12",
+        "units": "g/kg",
+        "unitName": "Grams per Kilogram",
+        "minimum": 0.0,
+        "maximum": 35.0
+      },
+      {
+        "id": "hydroscs",
+        "short": "HydroSCS",
+        "tag": "nrt",
+        "resolution": "0.05 x 0.05 Degrees",
+        "start": "2001/12/31",
+        "end": "2029/12/31",
+        "units": "g/kg",
+        "unitName": "Grams per Kilogram",
+        "minimum": 0.0,
+        "maximum": 35.0
+      },
+      {
+        "id": "merra2",
+        "short": "MERRA-2",
+        "tag": "primary",
+        "resolution": "0.5 x 0.625 Degrees",
+        "start": "1981/01/01",
+        "end": "2026/09/30",
+        "units": "g/kg",
+        "unitName": "Grams per Kilogram",
+        "minimum": 0.0,
+        "maximum": 35.0
+      },
+      {
+        "id": "nexgddp",
+        "short": "NEX-GDDP",
+        "tag": "nrt",
+        "resolution": "0.25 x 0.25 Degrees",
+        "start": "2015/01/01",
+        "end": "2100/12/31",
+        "units": "g/kg",
+        "unitName": "Grams per Kilogram",
+        "minimum": 0.0,
+        "maximum": 35.0
+      }
+    ],
+    "dailyAGUnits": "g/kg",
+    "status": "Verified metadata only; not downloaded or used in Agrorithm calculations"
+  },
+  {
+    "id": "GWETTOP",
+    "name": "Surface Soil Wetness",
+    "metadataUrl": "https://power.larc.nasa.gov/api/website/metadata/parameters/GWETTOP",
+    "retrieved": "2026-11-15T17:13:48Z",
+    "description": "The amount of water and water vapor present in the soil. Top indicates the upper 5 cm of soil. Values range from 0 for completely dry conditions to 1 for completely saturated soil.",
+    "dailySources": [
+      {
+        "id": "geosit",
+        "short": "GEOS-IT",
+        "tag": "nrt",
+        "resolution": "0.5 x 0.625 Degrees",
+        "start": "2020/01/01",
+        "end": "2026/11/12",
+        "units": "1",
+        "unitName": "Fraction",
+        "minimum": 0.0,
+        "maximum": 1.0
+      },
+      {
+        "id": "merra2",
+        "short": "MERRA-2",
+        "tag": "primary",
+        "resolution": "0.5 x 0.625 Degrees",
+        "start": "1981/01/01",
+        "end": "2026/09/30",
+        "units": "1",
+        "unitName": "Fraction",
+        "minimum": 0.0,
+        "maximum": 1.0
+      },
+      {
+        "id": "smap",
+        "short": "SMAP",
+        "tag": "nrt",
+        "resolution": "0.09 x 0.09 Degrees",
+        "start": "2015/03/31",
+        "end": "2029/12/31",
+        "units": "1",
+        "unitName": "Fraction",
+        "minimum": 0.0,
+        "maximum": 1.0
+      }
+    ],
+    "dailyAGUnits": "1",
+    "status": "Verified metadata only; not downloaded or used in Agrorithm calculations"
+  },
+  {
+    "id": "GWETROOT",
+    "name": "Root Zone Soil Wetness",
+    "metadataUrl": "https://power.larc.nasa.gov/api/website/metadata/parameters/GWETROOT",
+    "retrieved": "2026-11-15T17:13:48Z",
+    "description": "The amount of water and water vapor available to plants in the root zone, generally considered to be the upper 1 m of soil, expressed as the proportion of water present in a given amount of soil. Values range from 0 for completely dry conditions to 1 for completely saturated soil.",
+    "dailySources": [
+      {
+        "id": "geosit",
+        "short": "GEOS-IT",
+        "tag": "nrt",
+        "resolution": "0.5 x 0.625 Degrees",
+        "start": "2020/01/01",
+        "end": "2026/11/12",
+        "units": "1",
+        "unitName": "Fraction",
+        "minimum": 0.0,
+        "maximum": 1.0
+      },
+      {
+        "id": "merra2",
+        "short": "MERRA-2",
+        "tag": "primary",
+        "resolution": "0.5 x 0.625 Degrees",
+        "start": "1981/01/01",
+        "end": "2026/09/30",
+        "units": "1",
+        "unitName": "Fraction",
+        "minimum": 0.0,
+        "maximum": 1.0
+      },
+      {
+        "id": "smap",
+        "short": "SMAP",
+        "tag": "nrt",
+        "resolution": "0.09 x 0.09 Degrees",
+        "start": "2015/03/31",
+        "end": "2029/12/31",
+        "units": "1",
+        "unitName": "Fraction",
+        "minimum": 0.0,
+        "maximum": 1.0
+      }
+    ],
+    "dailyAGUnits": "1",
+    "status": "Verified metadata only; not downloaded or used in Agrorithm calculations"
+  },
+  {
+    "id": "GWETPROF",
+    "name": "Profile Soil Wetness",
+    "metadataUrl": "https://power.larc.nasa.gov/api/website/metadata/parameters/GWETPROF",
+    "retrieved": "2026-11-15T17:13:50Z",
+    "description": "The amount of water and water vapor present in the soil. Profile indicates the layer from the surface down to the bedrock. Values range from 0 for completely dry conditions to 1 for completely saturated soil.",
+    "dailySources": [
+      {
+        "id": "geosit",
+        "short": "GEOS-IT",
+        "tag": "nrt",
+        "resolution": "0.5 x 0.625 Degrees",
+        "start": "2020/01/01",
+        "end": "2026/11/12",
+        "units": "1",
+        "unitName": "Fraction",
+        "minimum": 0.0,
+        "maximum": 1.0
+      },
+      {
+        "id": "merra2",
+        "short": "MERRA-2",
+        "tag": "primary",
+        "resolution": "0.5 x 0.625 Degrees",
+        "start": "1981/01/01",
+        "end": "2026/09/30",
+        "units": "1",
+        "unitName": "Fraction",
+        "minimum": 0.0,
+        "maximum": 1.0
+      },
+      {
+        "id": "smap",
+        "short": "SMAP",
+        "tag": "nrt",
+        "resolution": "0.09 x 0.09 Degrees",
+        "start": "2015/03/31",
+        "end": "2029/12/31",
+        "units": "1",
+        "unitName": "Fraction",
+        "minimum": 0.0,
+        "maximum": 1.0
+      }
+    ],
+    "dailyAGUnits": "1",
+    "status": "Verified metadata only; not downloaded or used in Agrorithm calculations"
+  }
+]

@@ -1,0 +1,59 @@
+.nasa-evidence-panel { min-width: 0; border: 1px solid #cdd8c8; border-radius: 18px; padding: clamp(20px,2.5vw,34px); background: #f5f6ee; color: #244437; margin-block: 28px; overflow-wrap: anywhere; }
+.weather-data-strip { min-width: 0; margin-block: 25px; padding: 20px 24px; border: 1px solid #c5d3c1; border-radius: 13px; background: #eff3e8; color: #284735; overflow-wrap: anywhere; }
+.weather-strip-heading { display: flex; align-items: center; justify-content: space-between; gap: 17px; margin-bottom: 13px; }
+.weather-strip-heading > strong { display: flex; align-items: center; gap: 9px; font-size: 14px; line-height: 1.5; }
+.weather-strip-heading button { min-height: 44px; font-size: 13px; border-radius: 22px; padding: 9px 14px; background: #fafbf3; border: 1px solid #bdcdb1; flex-shrink: 0; }
+.weather-strip-datasets { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px 28px; }
+.weather-strip-datasets > div { min-width: 0; border-inline-start: 3px solid #789e9e; padding-inline-start: 14px; }
+.weather-strip-datasets > div[data-available="false"] { border-color: #c16732; }
+.weather-strip-datasets span { display: block; font-size: 12px; line-height: 1.6; color: #48644c; }
+.weather-strip-datasets strong { display: block; font-size: 15px; line-height: 1.5; font-variant-numeric: tabular-nums; margin-top: 4px; }
+.weather-strip-datasets p { font-size: 12px; line-height: 1.75; margin: 6px 0 0; color: #4f644c; }
+.weather-strip-alert { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; line-height: 1.7; color: #783415; border: 1px solid #cc865a; border-radius: 7px; background: #ffefe2; padding: 12px 14px; margin: 18px 0 0; }
+.weather-strip-alert svg { flex-shrink: 0; margin-top: 3px; }
+.weather-strip-limit { font-size: 12px; line-height: 1.6; color: #596d53; margin: 14px 0 0; }
+.evidence-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 25px; }
+.evidence-panel-heading h3 { font-size: clamp(22px,2vw,30px); line-height: 1.25; letter-spacing: -.5px; margin: 9px 0 0; }
+.evidence-kicker { display: flex; align-items: center; gap: 9px; color: #536747; font-size: 12px; font-weight: 600; line-height: 1.6; letter-spacing: .7px; }
+.evidence-panel-heading button { flex-shrink: 0; min-height: 46px; font-size: 13px; padding: 12px 16px; border: 1px solid #b4c5a7; border-radius: 24px; background: #edf2e4; }
+.evidence-datasets { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; }
+.evidence-dataset { min-width: 0; padding: clamp(18px,2vw,27px); border-radius: 12px; border: 1px solid #d3ddcd; background: #fffef7; }
+.evidence-dataset-title { display: flex; align-items: center; justify-content: space-between; gap: 14px; color: #46734c; }
+.evidence-source-chip { display: inline-block; border: 1px solid #d4dfc7; background: #edf3e4; color: #47613d; padding: 5px 9px; font-size: 11px; line-height: 1.5; border-radius: 6px; }
+.evidence-dataset h4 { font-size: 21px; line-height: 1.3; margin: 19px 0 11px; }
+.evidence-date-range { display: block; font-size: clamp(15px,1.4vw,19px); line-height: 1.5; font-variant-numeric: tabular-nums; }
+.evidence-dataset p { font-size: 14px; line-height: 1.75; margin: 14px 0 0; color: #47604e; }
+.evidence-dataset .evidence-coverage { margin-top: 6px; font-size: 13px; color: #4b6444; }
+.evidence-dataset .evidence-impact { padding-top: 16px; margin-top: 18px; border-top: 1px solid #dfe6d5; }
+.evidence-method { margin-top: 11px; }
+.evidence-method summary { cursor: pointer; padding-block: 8px; min-height: 42px; font-size: 13px; line-height: 1.7; color: #3e5d3d; }
+.evidence-method p { padding-bottom: 10px; }
+.evidence-dataset .evidence-retrieval { font-size: 12px; line-height: 1.7; color: #60725f; }
+.evidence-dataset a { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; line-height: 1.65; margin-top: 14px; min-height: 32px; }
+.evidence-unavailable { display: flex; align-items: flex-start; gap: 14px; background: #fff0e6; border: 1px solid #c46c3d; border-inline-start: 5px solid #b34c20; border-radius: 9px; padding: 20px; margin-top: 23px; color: #702b12; }
+.evidence-unavailable > svg { flex-shrink: 0; margin-top: 2px; }
+.evidence-unavailable > div { min-width: 0; }
+.evidence-unavailable strong { display: block; font-size: 16px; line-height: 1.5; }
+.evidence-unavailable p { margin: 10px 0 0; font-size: 14px; line-height: 1.75; color: #702b12; }
+.evidence-fallback-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.evidence-fallback-actions:empty { display: none; }
+.evidence-fallback-actions button { background: #fffaf4; color: #702b12; border: 1px solid #c67550; font-size: 13px; min-height: 46px; padding: 11px 14px; }
+.evidence-limit-line { font-size: 13px; line-height: 1.8; margin: 20px 0 0; color: #53694f; }
+.evidence-origins { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; padding-top: 24px; margin-top: 24px; border-top: 1px solid #cdd8c2; }
+.evidence-origins > div { min-width: 0; border-inline-start: 3px solid #688c98; padding: 4px 0 0 14px; }
+.evidence-origins > div[data-origin="farmer"] { border-color: #648254; }
+.evidence-origins > div[data-origin="assumed"] { border-color: #b38b45; }
+.evidence-origins > div[data-origin="modeled"] { border-color: #9278aa; }
+.evidence-origins svg { display: block; margin-bottom: 9px; }
+.evidence-origins strong { display: block; font-size: 13px; line-height: 1.5; }
+.evidence-origins p { margin: 7px 0 0; font-size: 12px; line-height: 1.8; color: #5c6c59; }
+.soil-health-note { padding: clamp(20px,2vw,28px); margin-block: 26px; background: #ecefe4; border: 1px solid #c7d2bc; border-radius: 12px; color: #294b39; overflow-wrap: anywhere; }
+.soil-health-note h3 { font-size: clamp(21px,2vw,27px); line-height: 1.3; margin: 13px 0 14px; }
+.soil-health-note p { font-size: 14px; line-height: 1.8; margin: 12px 0 0; color: #496047; }
+.soil-health-note details { margin-top: 17px; }
+.soil-health-note summary { min-height: 44px; padding-block: 10px; font-size: 14px; line-height: 1.6; cursor: pointer; font-weight: 600; }
+.nasa-evidence-panel .soil-health-note { margin-bottom: 0; }
+@media(max-width:1000px) { .evidence-origins { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; } }
+@media(max-width:700px) { .evidence-panel-heading { flex-direction: column; align-items: flex-start; gap: 17px; } .evidence-datasets { grid-template-columns: minmax(0,1fr); gap: 17px; } .evidence-date-range { font-size: 16px; } .evidence-unavailable { padding: 17px 14px; gap: 10px; } .evidence-origins { gap: 20px 14px; } .evidence-origins > div { padding-left: 11px; } }
+@media(max-width:600px) { .weather-data-strip { padding: 18px; } .weather-strip-datasets { grid-template-columns: minmax(0,1fr); gap: 17px; } .weather-strip-heading { gap: 10px; } .weather-strip-heading button { font-size: 12px; padding-inline: 12px; } }
+@media(max-width:360px) { .evidence-origins { grid-template-columns: 1fr; } }

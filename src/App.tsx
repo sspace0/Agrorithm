@@ -27,6 +27,7 @@ import {
   Layers,
   Settings2,
   ChevronDown,
+  RefreshCw,
 } from "lucide-react";
 import {
   Area,
@@ -50,6 +51,15 @@ import AgrorithmHelper from "./components/AgrorithmHelper";
 import NavigationSearch from "./components/NavigationSearch";
 import FindFarmLocation from "./components/FindFarmLocation";
 import BootOverlay from "./components/BootOverlay";
+import RotationComparison from "./components/RotationComparison";
+import { rankingReasons } from "./engine/ranking";
+import { NasaEvidencePanel, WeatherDataStrip } from "./components/NasaEvidencePanel";
+import NasaScopePanel from "./components/NasaScopePanel";
+import InputAssessment from "./components/InputAssessment";
+import { assessInputs } from "./engine/inputAssessment";
+import { createHelperPlanContext } from "./engine/helperPlanContext";
+import { requestAgrorithmHelp } from "./components/helperEvents";
+import "./review.css";
 import AgrorithmReport, {
   printAgrorithmReport,
 } from "./report/AgrorithmReport";
@@ -199,6 +209,12 @@ export default function App() {
   const [error, setError] = useState("");
   const [toast, setToast] = useState("");
   const [saved, setSaved] = useState(() => !!stored("fieldshift-plan", null));
+  const [updateAvailable, setUpdateAvailable] = useState(false);
+  useEffect(() => {
+    const available = () => setUpdateAvailable(true);
+    addEventListener("agrorithm-update-ready", available);
+    return () => removeEventListener("agrorithm-update-ready", available);
+  }, []);
   const [loading, setLoading] = useState(true);
   const [loadSteps, setLoadSteps] = useState(0);
   const [latitudeData, setLatitudeData] = useState(32.1);
@@ -266,6 +282,8 @@ export default function App() {
     () => compare(farm, aligned ? weather : [], scenario),
     [farm, weather, scenario, aligned],
   );
+  const inputAssessment = useMemo(() => assessInputs(farm, scenario, results, aligned ? weather : []), [farm, scenario, results, aligned, weather]);
+  const helperPlanContext = useMemo(() => createHelperPlanContext(farm, scenario, results, weather, weatherSource, aligned), [farm, scenario, results, weather, weatherSource, aligned]);
   const parts = route.split("?")[0].split("/").filter(Boolean);
   const currentConcept = (
     ["studio", "console", "companion"].includes(parts[0]) ? parts[0] : concept
@@ -521,7 +539,15 @@ export default function App() {
             available.
           </div>
         )}
+        {["lab", "tradeoffs", "export"].includes(page) && <>
+          <WeatherDataStrip weather={weather} weatherSource={weatherSource} vegetation={veg} weatherMatchesFarm={aligned} vegetationMatchesFarm={Math.abs(farm.lat - 32.1) < .001 && Math.abs(farm.lon - 73) < .001} onOpenEvidence={() => navigate(`/${currentConcept}/evidence`)} />
+          <div className="results-explain"><div><h3>Understand your results</h3><p>Ask about this field’s water estimates, differences between rotations, or the exact reasons an option is not ranked.</p></div><button className="primary" onClick={event => requestAgrorithmHelp(helperPlanContext, undefined, event.currentTarget)}>Explain my results <Info size={18}/></button></div>
+        </>}
         <div className="panel-content">{panel}</div>
+        {["lab", "tradeoffs", "export"].includes(page) && <div className="results-context">
+          <InputAssessment assessment={inputAssessment}/>
+          <NasaEvidencePanel weather={weather} weatherSource={weatherSource} vegetation={veg} weatherMatchesFarm={aligned} vegetationMatchesFarm={Math.abs(farm.lat - 32.1) < .001 && Math.abs(farm.lon - 73) < .001} onOpenEvidence={() => navigate(`/${currentConcept}/evidence`)} showSoilNote/>
+        </div>}
         {currentConcept === "console" && (
           <div className="console-inspector">
             <Diorama compact motion={motion} quality={quality} />
@@ -554,7 +580,7 @@ export default function App() {
   );
   return (
     <div
-      className={`app ${parts[0] === "atlas" ? "atlas-route" : ""} ${motion ? "" : "reduced-motion"} ${route === "/" ? "home-route" : ""}`}
+      className={`app ${parts[0] === "atlas" ? "atlas-route" : ""} ${STEPS.includes(page) && ["lab", "tradeoffs", "export"].includes(page) && ["studio", "console", "companion"].includes(parts[0]) ? "results-route" : ""} ${route !== "/" && !["atlas", "soil", "crops"].includes(parts[0]) ? "reading-route" : ""} ${motion ? "" : "reduced-motion"} ${route === "/" ? "home-route" : ""}`}
     >
       <BootOverlay
         dataSteps={loadSteps}
@@ -574,6 +600,7 @@ export default function App() {
         Skip to content
       </a>
       {header}
+      {updateAvailable && <aside className="update-banner" role="status"><div><strong>A newer version is ready.</strong><span>Save the current plan on this device, then reload the updated app.</span></div><button onClick={() => { save(); location.reload(); }}>Save and reload <RefreshCw size={16}/></button></aside>}
       {loading && (
         <div
           className="dataset-loading"
@@ -687,7 +714,13 @@ export default function App() {
       ) : (
         workspace
       )}
-      <AgrorithmHelper />
+      <section className="plan-entry" aria-label="Open farm planning">
+        <span className="eyebrow"><Sprout size={16} /> FROM EXPLORATION TO A FIELD PLAN</span>
+        <h2>Your field. Your next season.</h2>
+        <p>Keep your current inputs and bring the evidence into one plan.</p>
+        <a className="primary" href={`#/${currentConcept}/setup`}>Open your farm plan <ArrowRight size={21} /></a>
+      </section>
+      <AgrorithmHelper planContext={helperPlanContext} />
       {toast && (
         <div className="toast" role="status">
           <Check size={17} />
@@ -796,6 +829,7 @@ function Setup({ farm: f, setFarm }: DataProps) {
         </p>
       </div>
       <CropInterestPicker farm={f} onChange={setFarm} />
+      <aside className="baseline-note"><Info size={21}/><div><h3>About the demonstration baseline</h3><p>The regional example uses maize–wheat to illustrate the annual calendar and water comparison. It is an assumed sequence, not a documented farmer case or a confirmed rice–wheat field. Enter your actual crops and dates below. Rice can be entered, but missing land-preparation, ponding, seepage and percolation terms keep its total irrigation and ranking unresolved.</p></div></aside>
       <div className="setup-grid">
         <section className="paper">
           <h3>
@@ -1527,7 +1561,7 @@ function Evidence(p: DataProps) {
               <div>
                 <strong>Source footprint</strong>
                 <code>
-                  32.1000° N · 73.0000° E<br />
+                  32.10° N · 73.00° E<br />
                   270 m × 270 m · UTM 43N
                 </code>
                 <p>{veg.note}</p>
@@ -1851,7 +1885,7 @@ function Metric({ name, value }: { name: string; value: string }) {
     </div>
   );
 }
-function Lab({ results, farm }: DataProps) {
+function Lab({ results, farm, scenario }: DataProps) {
   const crops = farm.cropTable ?? CROPS;
   const [selected, setSelected] = useState("baseline");
   const r = results.find((v) => v.id === selected) || results[0];
@@ -1877,7 +1911,8 @@ function Lab({ results, farm }: DataProps) {
           No yield or profit forecast
         </span>
       </div>
-      {results.map((r) => (
+      <RotationComparison results={results} farm={farm} scenario={scenario} onInspect={id => { setSelected(id); document.getElementById("rotation-inspector")?.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); }} />
+      <details className="rotation-calendar-detail"><summary>Detailed rotation calendars and assumptions</summary>{results.map((r) => (
         <ResultCard
           crops={crops}
           key={r.id}
@@ -1885,8 +1920,8 @@ function Lab({ results, farm }: DataProps) {
           selected={r.id === selected}
           onSelect={() => setSelected(r.id)}
         />
-      ))}
-      <section className="paper">
+      ))}</details>
+      <section className="paper" id="rotation-inspector">
         <h3>Inside “{r.name}”</h3>
         <div className="two-cols">
           <div>
@@ -2240,6 +2275,7 @@ function Tradeoffs({
           diversity and exposure before choosing priorities.
         </p>
       </div>
+      <RotationComparison results={results} farm={farm} scenario={s} />
       <section className="paper">
         <div className="table-scroll">
           <table className="comparison-table">
@@ -2354,14 +2390,15 @@ function Tradeoffs({
           </table>
         </div>
       </section>
-      <details className="paper">
-        <summary>Optional priorities & aggregate index</summary>
+      <section className="paper score-method">
+        <h3>Optional priorities & aggregate index</h3>
         <p>
           Fixed normalization: water 1 − delivered/6000 mm; live cover fraction;
           families/3; exposure 1 − (heat + frost days)/horizon days, each
           bounded 0–1. Weights are normalized by their sum. Unknown dimensions
           prevent ranking. Zero weights give no aggregate index.
         </p>
+        <div className="score-formula" aria-label="Exact score formula"><dl><div><dt>Water</dt><dd>max(0, 1 − delivered irrigation / 6,000 mm)</dd></div><div><dt>Cover</dt><dd>Live crop days / 1,096 horizon days</dd></div><div><dt>Diversity</dt><dd>min(1, plant families / 3)</dd></div><div><dt>Exposure</dt><dd>max(0, 1 − (heat + frost days) / 1,096)</dd></div></dl><p>Index = 100 × weighted component sum / total weight. <strong>Why 6,000 mm?</strong> It is a fixed comparison scale chosen for this 36-month demonstration, not a NASA observation, an ideal crop-water requirement or a feasibility limit. Your entered water budget sets feasibility. The family divisor of 3 is also a fixed comparison scale. Scores depend on these choices and your priorities; Pareto comparison uses the original component values.</p></div>
         <div className="two-cols">
           {Object.entries(s.weights).map(([key, v]) => (
             <Slider
@@ -2377,14 +2414,14 @@ function Tradeoffs({
           ))}
         </div>
         {results.map((r) => (
-          <div className="scenario-result" key={r.id}>
+          <div className="ranking-option" key={r.id}><div className="scenario-result">
             <strong>{r.name}</strong>
             <span>
               {r.score === null ? "Not ranked" : `${r.score.toFixed(1)} / 100`}
             </span>
-          </div>
+          </div>{r.score === null && <div className="ranking-reasons"><h4>Why “{r.name}” is not ranked</h4><ul>{rankingReasons(r,s).map(reason=><li key={reason}>{reason}</li>)}</ul></div>}</div>
         ))}
-      </details>
+      </section>
       <section className="paper">
         <h3>Sensitivity before certainty</h3>
         <p>
@@ -2481,6 +2518,7 @@ function Tradeoffs({
 }
 function Export(p: DataProps & { save: () => void; deletePlan: () => void }) {
   const { farm, scenario, results, say } = p;
+  const [printing, setPrinting] = useState(false);
   const packet = () => ({
     schema: 1,
     modelVersion: MODEL_VERSION,
@@ -2517,10 +2555,12 @@ function Export(p: DataProps & { save: () => void; deletePlan: () => void }) {
           choose a live data request.
         </p>
       </div>
+      <RotationComparison results={results} farm={farm} scenario={scenario} />
       <div className="export-grid">
         <button
           className="export-tile"
-          onClick={() => void printAgrorithmReport()}
+          disabled={printing}
+          onClick={async () => { setPrinting(true); try { await printAgrorithmReport(); } catch (error) { say(error instanceof Error ? error.message : "The report could not prepare. Please try again."); } finally { setPrinting(false); } }}
         >
           <Printer />
           <h3>Presentation PDF</h3>
@@ -2529,7 +2569,7 @@ function Export(p: DataProps & { save: () => void; deletePlan: () => void }) {
             and sources. Browser print → Save as PDF.
           </p>
           <span>
-            Open print view <ArrowUpRight size={17} />
+            {printing ? "Preparing measured report…" : "Open print view"} <ArrowUpRight size={17} />
           </span>
         </button>
         <button
@@ -2707,6 +2747,7 @@ function Sources() {
           </p>
         </article>
       </div>
+      <NasaScopePanel />
       <section className="paper">
         <h2>Source notebook</h2>
         {[

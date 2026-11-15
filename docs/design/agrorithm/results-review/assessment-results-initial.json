@@ -1,0 +1,34 @@
+{
+  "generated": "2026-11-15T17:03:34.642Z",
+  "base": "http://127.0.0.1:5188/Agrorithm/",
+  "checks": [
+    {
+      "width": 1440,
+      "case": "sample-layout-and-provenance",
+      "pass": true,
+      "detail": {
+        "viewport": 1440,
+        "assessmentWidth": 1143.625,
+        "pageOverflow": false,
+        "rowCount": 15,
+        "issues": []
+      }
+    },
+    {
+      "width": 1440,
+      "case": "known-water-limit-exceeded",
+      "pass": true,
+      "colors": {
+        "background": "rgb(255, 241, 239)",
+        "border": "rgb(180, 35, 24)"
+      }
+    }
+  ],
+  "errors": [],
+  "failures": [
+    {
+      "width": 1440,
+      "error": "TimeoutError: locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Reset all inputs', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"secondary\">Reset all inputs</button>\u001b[22m\n"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-15T17:12:07.413Z",
+  "results": [
+    {
+      "width": 1440,
+      "before": 0,
+      "after": {
+        "scrollY": 0,
+        "active": "Explain my results",
+        "floatingStyle": "relative"
+      },
+      "scrollDelta": 0,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "before": 619,
+      "after": {
+        "scrollY": 619,
+        "active": "Explain my results",
+        "floatingStyle": "relative"
+      },
+      "scrollDelta": 0,
+      "errors": []
+    }
+  ]
+}

@@ -6,10 +6,10 @@
   view-transition-name: main-view;
 }
 ::view-transition-old(main-view) {
-  animation: page-out 0.22s ease both;
+  animation: page-out 0.26s cubic-bezier(0.4, 0, 1, 1) both;
 }
 ::view-transition-new(main-view) {
-  animation: page-in 0.52s cubic-bezier(0.22, 0.72, 0.18, 1) both;
+  animation: page-in 0.58s cubic-bezier(0.22, 0.72, 0.18, 1) both;
 }
 ::view-transition-group(site-header) {
   animation-duration: 0.25s;
@@ -17,20 +17,17 @@
 @keyframes page-out {
   to {
     opacity: 0;
-    transform: translateY(-12px);
-    filter: blur(2px);
+    transform: translateY(-5px);
   }
 }
 @keyframes page-in {
   from {
     opacity: 0;
-    transform: translateY(24px);
-    clip-path: inset(4% 0 0 0);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-    clip-path: inset(0);
   }
 }
 .app button,

@@ -1,7 +1,7 @@
 {
-  "name": "Agrorithm",
-  "sourceCommit": "4a0e61f45a3cfb96005cbd54242161f3d1d7fc83",
-  "localCommit": "313decf1889b9aaac689d66f7ab2ad5e97ef736b",
+  "schema": 1,
+  "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4",
   "base": "/Agrorithm/",
-  "builtAt": "2026-11-15T18:13:59.024Z"
+  "preparedAt": "2026-11-15T19:49:25.567Z",
+  "publication": "Prepared artifact branch; a separate authenticated Pages build trigger is required."
 }

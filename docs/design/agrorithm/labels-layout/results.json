@@ -1,0 +1,5445 @@
+{
+  "generated": "2026-11-15T12:21:07.513Z",
+  "base": "http://127.0.0.1:4173/Agrorithm/",
+  "cases": [
+    {
+      "id": "grains",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M236.39 437.74 L371.82 437.74",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 371.82000732421875,
+                  "y": 437.739990234375
+                },
+                "target": {
+                  "x": 371.82,
+                  "y": 437.74
+                },
+                "label": {
+                  "x": 42.38652038574219,
+                  "y": 378.7425537109375,
+                  "width": 190.00001525878906,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M682.11 377.53 L477.29 377.53",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 477.2900085449219,
+                  "y": 377.5299987792969
+                },
+                "target": {
+                  "x": 477.29,
+                  "y": 377.53
+                },
+                "label": {
+                  "x": 686.1119384765625,
+                  "y": 337.0263977050781,
+                  "width": 190,
+                  "height": 81.28121948242188
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M236.39 437.74 L371.82 437.74",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 371.82000732421875,
+                  "y": 437.739990234375
+                },
+                "target": {
+                  "x": 371.82,
+                  "y": 437.74
+                },
+                "label": {
+                  "x": 42.38652038574219,
+                  "y": 378.7425537109375,
+                  "width": 190.00001525878906,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M682.11 377.53 L477.29 377.53",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 477.2900085449219,
+                  "y": 377.5299987792969
+                },
+                "target": {
+                  "x": 477.29,
+                  "y": 377.53
+                },
+                "label": {
+                  "x": 686.1119384765625,
+                  "y": 337.0263977050781,
+                  "width": 190,
+                  "height": 81.28121948242188
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M236.39 437.74 L371.82 437.74",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 371.82000732421875,
+                  "y": 437.739990234375
+                },
+                "target": {
+                  "x": 371.82,
+                  "y": 437.74
+                },
+                "label": {
+                  "x": 42.38652038574219,
+                  "y": 378.7425537109375,
+                  "width": 190.00001525878906,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M682.11 377.53 L477.29 377.53",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 477.2900085449219,
+                  "y": 377.5299987792969
+                },
+                "target": {
+                  "x": 477.29,
+                  "y": 377.53
+                },
+                "label": {
+                  "x": 686.1119384765625,
+                  "y": 337.0263977050781,
+                  "width": 190,
+                  "height": 81.28121948242188
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M234.69 446.88 L381.34 446.88",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 381.3399963378906,
+                  "y": 446.8800048828125
+                },
+                "target": {
+                  "x": 381.34,
+                  "y": 446.88
+                },
+                "label": {
+                  "x": 40.693328857421875,
+                  "y": 387.878173828125,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M682.01 384.95 L480.13 384.95",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 480.1300048828125,
+                  "y": 384.95001220703125
+                },
+                "target": {
+                  "x": 480.13,
+                  "y": 384.95
+                },
+                "label": {
+                  "x": 686.0108032226562,
+                  "y": 344.4537048339844,
+                  "width": 190,
+                  "height": 81.28128051757812
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M234.69 446.88 L381.34 446.88",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 381.3399963378906,
+                  "y": 446.8800048828125
+                },
+                "target": {
+                  "x": 381.34,
+                  "y": 446.88
+                },
+                "label": {
+                  "x": 40.693328857421875,
+                  "y": 387.878173828125,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M682.01 384.95 L480.13 384.95",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 480.1300048828125,
+                  "y": 384.95001220703125
+                },
+                "target": {
+                  "x": 480.13,
+                  "y": 384.95
+                },
+                "label": {
+                  "x": 686.0108032226562,
+                  "y": 344.4537048339844,
+                  "width": 190,
+                  "height": 81.28128051757812
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M234.69 446.88 L381.34 446.88",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 381.3399963378906,
+                  "y": 446.8800048828125
+                },
+                "target": {
+                  "x": 381.34,
+                  "y": 446.88
+                },
+                "label": {
+                  "x": 40.693328857421875,
+                  "y": 387.878173828125,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M682.01 384.95 L480.13 384.95",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 480.1300048828125,
+                  "y": 384.95001220703125
+                },
+                "target": {
+                  "x": 480.13,
+                  "y": 384.95
+                },
+                "label": {
+                  "x": 686.0108032226562,
+                  "y": 344.4537048339844,
+                  "width": 190,
+                  "height": 81.28128051757812
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M213.67 440.52 L398.21 440.52",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 398.2099914550781,
+                  "y": 440.5199890136719
+                },
+                "target": {
+                  "x": 398.21,
+                  "y": 440.52
+                },
+                "label": {
+                  "x": 19.6666259765625,
+                  "y": 381.5174865722656,
+                  "width": 190,
+                  "height": 117.56246948242188
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M687.63 376.93 L482.81 376.93",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 482.80999755859375,
+                  "y": 376.92999267578125
+                },
+                "target": {
+                  "x": 482.81,
+                  "y": 376.93
+                },
+                "label": {
+                  "x": 691.6285400390625,
+                  "y": 336.4302673339844,
+                  "width": 190,
+                  "height": 81.28128051757812
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M213.67 440.52 L398.21 440.52",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 398.2099914550781,
+                  "y": 440.5199890136719
+                },
+                "target": {
+                  "x": 398.21,
+                  "y": 440.52
+                },
+                "label": {
+                  "x": 19.6666259765625,
+                  "y": 381.5174865722656,
+                  "width": 190,
+                  "height": 117.56246948242188
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M687.63 376.93 L482.81 376.93",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 482.80999755859375,
+                  "y": 376.92999267578125
+                },
+                "target": {
+                  "x": 482.81,
+                  "y": 376.93
+                },
+                "label": {
+                  "x": 691.6285400390625,
+                  "y": 336.4302673339844,
+                  "width": 190,
+                  "height": 81.28128051757812
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M213.67 440.52 L398.21 440.52",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 398.2099914550781,
+                  "y": 440.5199890136719
+                },
+                "target": {
+                  "x": 398.21,
+                  "y": 440.52
+                },
+                "label": {
+                  "x": 19.6666259765625,
+                  "y": 381.5174865722656,
+                  "width": 190,
+                  "height": 117.56246948242188
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M687.63 376.93 L482.81 376.93",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 482.80999755859375,
+                  "y": 376.92999267578125
+                },
+                "target": {
+                  "x": 482.81,
+                  "y": 376.93
+                },
+                "label": {
+                  "x": 691.6285400390625,
+                  "y": 336.4302673339844,
+                  "width": 190,
+                  "height": 81.28128051757812
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 6
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-grains-8.jpg",
+        "desktop-grains-50.jpg",
+        "desktop-grains-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "pulses",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 343.33 L378.73 343.33",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 378.7300109863281,
+                  "y": 343.3299865722656
+                },
+                "target": {
+                  "x": 378.73,
+                  "y": 343.33
+                },
+                "label": {
+                  "x": 12,
+                  "y": 284.3285827636719,
+                  "width": 190,
+                  "height": 117.56253051757812
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M206.00 420.80 L450.89 341.57",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 450.8900146484375,
+                  "y": 341.57000732421875
+                },
+                "target": {
+                  "x": 450.89,
+                  "y": 341.57
+                },
+                "label": {
+                  "x": 12,
+                  "y": 412.32861328125,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 343.33 L378.73 343.33",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 378.7300109863281,
+                  "y": 343.3299865722656
+                },
+                "target": {
+                  "x": 378.73,
+                  "y": 343.33
+                },
+                "label": {
+                  "x": 12,
+                  "y": 284.3285827636719,
+                  "width": 190,
+                  "height": 117.56253051757812
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M206.00 420.80 L450.89 341.57",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 450.8900146484375,
+                  "y": 341.57000732421875
+                },
+                "target": {
+                  "x": 450.89,
+                  "y": 341.57
+                },
+                "label": {
+                  "x": 12,
+                  "y": 412.32861328125,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 343.33 L378.73 343.33",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 378.7300109863281,
+                  "y": 343.3299865722656
+                },
+                "target": {
+                  "x": 378.73,
+                  "y": 343.33
+                },
+                "label": {
+                  "x": 12,
+                  "y": 284.3285827636719,
+                  "width": 190,
+                  "height": 117.56253051757812
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M206.00 420.80 L450.89 341.57",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 450.8900146484375,
+                  "y": 341.57000732421875
+                },
+                "target": {
+                  "x": 450.89,
+                  "y": 341.57
+                },
+                "label": {
+                  "x": 12,
+                  "y": 412.32861328125,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 350.55 L411.62 350.55",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 411.6199951171875,
+                  "y": 350.54998779296875
+                },
+                "target": {
+                  "x": 411.62,
+                  "y": 350.55
+                },
+                "label": {
+                  "x": 12,
+                  "y": 291.5477294921875,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 350.55 L411.62 350.55",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 411.6199951171875,
+                  "y": 350.54998779296875
+                },
+                "target": {
+                  "x": 411.62,
+                  "y": 350.55
+                },
+                "label": {
+                  "x": 12,
+                  "y": 291.5477294921875,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 350.55 L411.62 350.55",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 411.6199951171875,
+                  "y": 350.54998779296875
+                },
+                "target": {
+                  "x": 411.62,
+                  "y": 350.55
+                },
+                "label": {
+                  "x": 12,
+                  "y": 291.5477294921875,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 344.75 L454.59 344.75",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 454.5899963378906,
+                  "y": 344.75
+                },
+                "target": {
+                  "x": 454.59,
+                  "y": 344.75
+                },
+                "label": {
+                  "x": 12,
+                  "y": 285.7472229003906,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 344.75 L454.59 344.75",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 454.5899963378906,
+                  "y": 344.75
+                },
+                "target": {
+                  "x": 454.59,
+                  "y": 344.75
+                },
+                "label": {
+                  "x": 12,
+                  "y": 285.7472229003906,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 344.75 L454.59 344.75",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 454.5899963378906,
+                  "y": 344.75
+                },
+                "target": {
+                  "x": 454.59,
+                  "y": 344.75
+                },
+                "label": {
+                  "x": 12,
+                  "y": 285.7472229003906,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 4
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-pulses-8.jpg",
+        "desktop-pulses-50.jpg",
+        "desktop-pulses-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "vegetables",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M210.43 356.08 L416.65 356.08",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 416.6499938964844,
+                  "y": 356.0799865722656
+                },
+                "target": {
+                  "x": 416.65,
+                  "y": 356.08
+                },
+                "label": {
+                  "x": 16.42554473876953,
+                  "y": 297.0754699707031,
+                  "width": 190,
+                  "height": 117.56246948242188
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M210.43 444.61 L437.24 396.58",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 437.239990234375,
+                  "y": 396.5799865722656
+                },
+                "target": {
+                  "x": 437.24,
+                  "y": 396.58
+                },
+                "label": {
+                  "x": 16.42554473876953,
+                  "y": 425.075439453125,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M210.43 356.08 L416.65 356.08",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 416.6499938964844,
+                  "y": 356.0799865722656
+                },
+                "target": {
+                  "x": 416.65,
+                  "y": 356.08
+                },
+                "label": {
+                  "x": 16.42554473876953,
+                  "y": 297.0754699707031,
+                  "width": 190,
+                  "height": 117.56246948242188
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M210.43 444.61 L437.24 396.58",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 437.239990234375,
+                  "y": 396.5799865722656
+                },
+                "target": {
+                  "x": 437.24,
+                  "y": 396.58
+                },
+                "label": {
+                  "x": 16.42554473876953,
+                  "y": 425.075439453125,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M210.43 356.08 L416.65 356.08",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 416.6499938964844,
+                  "y": 356.0799865722656
+                },
+                "target": {
+                  "x": 416.65,
+                  "y": 356.08
+                },
+                "label": {
+                  "x": 16.42554473876953,
+                  "y": 297.0754699707031,
+                  "width": 190,
+                  "height": 117.56246948242188
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M210.43 444.61 L437.24 396.58",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 437.239990234375,
+                  "y": 396.5799865722656
+                },
+                "target": {
+                  "x": 437.24,
+                  "y": 396.58
+                },
+                "label": {
+                  "x": 16.42554473876953,
+                  "y": 425.075439453125,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 363.24 L451.67 363.24",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 451.6700134277344,
+                  "y": 363.239990234375
+                },
+                "target": {
+                  "x": 451.67,
+                  "y": 363.24
+                },
+                "label": {
+                  "x": 12,
+                  "y": 304.2378845214844,
+                  "width": 190,
+                  "height": 117.56253051757812
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M206.00 453.53 L464.96 403.30",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 464.9599914550781,
+                  "y": 403.29998779296875
+                },
+                "target": {
+                  "x": 464.96,
+                  "y": 403.3
+                },
+                "label": {
+                  "x": 12,
+                  "y": 432.2379150390625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 363.24 L451.67 363.24",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 451.6700134277344,
+                  "y": 363.239990234375
+                },
+                "target": {
+                  "x": 451.67,
+                  "y": 363.24
+                },
+                "label": {
+                  "x": 12,
+                  "y": 304.2378845214844,
+                  "width": 190,
+                  "height": 117.56253051757812
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M206.00 453.53 L464.96 403.30",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 464.9599914550781,
+                  "y": 403.29998779296875
+                },
+                "target": {
+                  "x": 464.96,
+                  "y": 403.3
+                },
+                "label": {
+                  "x": 12,
+                  "y": 432.2379150390625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 363.24 L451.67 363.24",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 451.6700134277344,
+                  "y": 363.239990234375
+                },
+                "target": {
+                  "x": 451.67,
+                  "y": 363.24
+                },
+                "label": {
+                  "x": 12,
+                  "y": 304.2378845214844,
+                  "width": 190,
+                  "height": 117.56253051757812
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M206.00 453.53 L464.96 403.30",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 464.9599914550781,
+                  "y": 403.29998779296875
+                },
+                "target": {
+                  "x": 464.96,
+                  "y": 403.3
+                },
+                "label": {
+                  "x": 12,
+                  "y": 432.2379150390625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M701.80 356.69 L493.52 356.69",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 493.5199890136719,
+                  "y": 356.69000244140625
+                },
+                "target": {
+                  "x": 493.52,
+                  "y": 356.69
+                },
+                "label": {
+                  "x": 705.8005981445312,
+                  "y": 297.6911926269531,
+                  "width": 190,
+                  "height": 117.56246948242188
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M701.80 443.31 L497.35 396.07",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 497.3500061035156,
+                  "y": 396.07000732421875
+                },
+                "target": {
+                  "x": 497.35,
+                  "y": 396.07
+                },
+                "label": {
+                  "x": 705.8005981445312,
+                  "y": 425.691162109375,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M701.80 356.69 L493.52 356.69",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 493.5199890136719,
+                  "y": 356.69000244140625
+                },
+                "target": {
+                  "x": 493.52,
+                  "y": 356.69
+                },
+                "label": {
+                  "x": 705.8005981445312,
+                  "y": 297.6911926269531,
+                  "width": 190,
+                  "height": 117.56246948242188
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M701.80 443.31 L497.35 396.07",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 497.3500061035156,
+                  "y": 396.07000732421875
+                },
+                "target": {
+                  "x": 497.35,
+                  "y": 396.07
+                },
+                "label": {
+                  "x": 705.8005981445312,
+                  "y": 425.691162109375,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M701.80 356.69 L493.52 356.69",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 493.5199890136719,
+                  "y": 356.69000244140625
+                },
+                "target": {
+                  "x": 493.52,
+                  "y": 356.69
+                },
+                "label": {
+                  "x": 705.8005981445312,
+                  "y": 297.6911926269531,
+                  "width": 190,
+                  "height": 117.56246948242188
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M701.80 443.31 L497.35 396.07",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 497.3500061035156,
+                  "y": 396.07000732421875
+                },
+                "target": {
+                  "x": 497.35,
+                  "y": 396.07
+                },
+                "label": {
+                  "x": 705.8005981445312,
+                  "y": 425.691162109375,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 6
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-vegetables-8.jpg",
+        "desktop-vegetables-50.jpg",
+        "desktop-vegetables-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "fruit",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M216.51 262.46 L354.08 262.46",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 354.0799865722656,
+                  "y": 262.4599914550781
+                },
+                "target": {
+                  "x": 354.08,
+                  "y": 262.46
+                },
+                "label": {
+                  "x": 22.505691528320312,
+                  "y": 203.45529174804688,
+                  "width": 189.99998474121094,
+                  "height": 117.5625
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M216.51 262.46 L354.08 262.46",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 354.0799865722656,
+                  "y": 262.4599914550781
+                },
+                "target": {
+                  "x": 354.08,
+                  "y": 262.46
+                },
+                "label": {
+                  "x": 22.505691528320312,
+                  "y": 203.45529174804688,
+                  "width": 189.99998474121094,
+                  "height": 117.5625
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M216.51 262.46 L354.08 262.46",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 354.0799865722656,
+                  "y": 262.4599914550781
+                },
+                "target": {
+                  "x": 354.08,
+                  "y": 262.46
+                },
+                "label": {
+                  "x": 22.505691528320312,
+                  "y": 203.45529174804688,
+                  "width": 189.99998474121094,
+                  "height": 117.5625
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M210.38 270.25 L380.46 270.25",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 380.4599914550781,
+                  "y": 270.25
+                },
+                "target": {
+                  "x": 380.46,
+                  "y": 270.25
+                },
+                "label": {
+                  "x": 16.381637573242188,
+                  "y": 211.2523193359375,
+                  "width": 190.00001525878906,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M210.38 347.04 L461.74 264.00",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 461.739990234375,
+                  "y": 264
+                },
+                "target": {
+                  "x": 461.74,
+                  "y": 264
+                },
+                "label": {
+                  "x": 16.381637573242188,
+                  "y": 339.2523193359375,
+                  "width": 190.00001525878906,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M210.38 270.25 L380.46 270.25",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 380.4599914550781,
+                  "y": 270.25
+                },
+                "target": {
+                  "x": 380.46,
+                  "y": 270.25
+                },
+                "label": {
+                  "x": 16.381637573242188,
+                  "y": 211.2523193359375,
+                  "width": 190.00001525878906,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M210.38 347.04 L461.74 264.00",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 461.739990234375,
+                  "y": 264
+                },
+                "target": {
+                  "x": 461.74,
+                  "y": 264
+                },
+                "label": {
+                  "x": 16.381637573242188,
+                  "y": 339.2523193359375,
+                  "width": 190.00001525878906,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M210.38 270.25 L380.46 270.25",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 380.4599914550781,
+                  "y": 270.25
+                },
+                "target": {
+                  "x": 380.46,
+                  "y": 270.25
+                },
+                "label": {
+                  "x": 16.381637573242188,
+                  "y": 211.2523193359375,
+                  "width": 190.00001525878906,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M210.38 347.04 L461.74 264.00",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 461.739990234375,
+                  "y": 264
+                },
+                "target": {
+                  "x": 461.74,
+                  "y": 264
+                },
+                "label": {
+                  "x": 16.381637573242188,
+                  "y": 339.2523193359375,
+                  "width": 190.00001525878906,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 263.21 L415.31 263.21",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 415.30999755859375,
+                  "y": 263.2099914550781
+                },
+                "target": {
+                  "x": 415.31,
+                  "y": 263.21
+                },
+                "label": {
+                  "x": 12,
+                  "y": 204.21405029296875,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M694.43 257.68 L490.05 257.68",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 490.04998779296875,
+                  "y": 257.67999267578125
+                },
+                "target": {
+                  "x": 490.05,
+                  "y": 257.68
+                },
+                "label": {
+                  "x": 698.4281616210938,
+                  "y": 217.18365478515625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 263.21 L415.31 263.21",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 415.30999755859375,
+                  "y": 263.2099914550781
+                },
+                "target": {
+                  "x": 415.31,
+                  "y": 263.21
+                },
+                "label": {
+                  "x": 12,
+                  "y": 204.21405029296875,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M694.43 257.68 L490.05 257.68",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 490.04998779296875,
+                  "y": 257.67999267578125
+                },
+                "target": {
+                  "x": 490.05,
+                  "y": 257.68
+                },
+                "label": {
+                  "x": 698.4281616210938,
+                  "y": 217.18365478515625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M206.00 263.21 L415.31 263.21",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 415.30999755859375,
+                  "y": 263.2099914550781
+                },
+                "target": {
+                  "x": 415.31,
+                  "y": 263.21
+                },
+                "label": {
+                  "x": 12,
+                  "y": 204.21405029296875,
+                  "width": 190,
+                  "height": 117.5625
+                }
+              },
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M694.43 257.68 L490.05 257.68",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 490.04998779296875,
+                  "y": 257.67999267578125
+                },
+                "target": {
+                  "x": 490.05,
+                  "y": 257.68
+                },
+                "label": {
+                  "x": 698.4281616210938,
+                  "y": 217.18365478515625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 936.734375,
+            "height": 720
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 5
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-fruit-8.jpg",
+        "desktop-fruit-50.jpg",
+        "desktop-fruit-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "root-zone",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M294.39 245.37 L565.94 245.37",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 565.9400024414062,
+                  "y": 245.3699951171875
+                },
+                "target": {
+                  "x": 565.94,
+                  "y": 245.37
+                },
+                "label": {
+                  "x": 100.39108276367188,
+                  "y": 213.87109375,
+                  "width": 190,
+                  "height": 63.140625
+                }
+              },
+              {
+                "id": "roots",
+                "leaderVisible": "visible",
+                "d": "M958.48 395.21 L821.04 395.21",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 821.0399780273438,
+                  "y": 395.2099914550781
+                },
+                "target": {
+                  "x": 821.04,
+                  "y": 395.21
+                },
+                "label": {
+                  "x": 962.48046875,
+                  "y": 354.70556640625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M294.39 434.01 L563.56 434.01",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 563.5599975585938,
+                  "y": 434.010009765625
+                },
+                "target": {
+                  "x": 563.56,
+                  "y": 434.01
+                },
+                "label": {
+                  "x": 100.39108276367188,
+                  "y": 393.50848388671875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M294.39 245.37 L565.94 245.37",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 565.9400024414062,
+                  "y": 245.3699951171875
+                },
+                "target": {
+                  "x": 565.94,
+                  "y": 245.37
+                },
+                "label": {
+                  "x": 100.39108276367188,
+                  "y": 213.87109375,
+                  "width": 190,
+                  "height": 63.140625
+                }
+              },
+              {
+                "id": "roots",
+                "leaderVisible": "visible",
+                "d": "M958.48 395.21 L821.04 395.21",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 821.0399780273438,
+                  "y": 395.2099914550781
+                },
+                "target": {
+                  "x": 821.04,
+                  "y": 395.21
+                },
+                "label": {
+                  "x": 962.48046875,
+                  "y": 354.70556640625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M294.39 434.01 L563.56 434.01",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 563.5599975585938,
+                  "y": 434.010009765625
+                },
+                "target": {
+                  "x": 563.56,
+                  "y": 434.01
+                },
+                "label": {
+                  "x": 100.39108276367188,
+                  "y": 393.50848388671875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M294.39 245.37 L565.94 245.37",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 565.9400024414062,
+                  "y": 245.3699951171875
+                },
+                "target": {
+                  "x": 565.94,
+                  "y": 245.37
+                },
+                "label": {
+                  "x": 100.39108276367188,
+                  "y": 213.87109375,
+                  "width": 190,
+                  "height": 63.140625
+                }
+              },
+              {
+                "id": "roots",
+                "leaderVisible": "visible",
+                "d": "M958.48 395.21 L821.04 395.21",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 821.0399780273438,
+                  "y": 395.2099914550781
+                },
+                "target": {
+                  "x": 821.04,
+                  "y": 395.21
+                },
+                "label": {
+                  "x": 962.48046875,
+                  "y": 354.70556640625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M294.39 434.01 L563.56 434.01",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 563.5599975585938,
+                  "y": 434.010009765625
+                },
+                "target": {
+                  "x": 563.56,
+                  "y": 434.01
+                },
+                "label": {
+                  "x": 100.39108276367188,
+                  "y": 393.50848388671875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M284.61 253.91 L598.39 253.91",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 598.3900146484375,
+                  "y": 253.91000366210938
+                },
+                "target": {
+                  "x": 598.39,
+                  "y": 253.91
+                },
+                "label": {
+                  "x": 90.60858154296875,
+                  "y": 222.40530395507812,
+                  "width": 190,
+                  "height": 63.140625
+                }
+              },
+              {
+                "id": "roots",
+                "leaderVisible": "visible",
+                "d": "M963.98 387.82 L853.41 387.82",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 853.4099731445312,
+                  "y": 387.82000732421875
+                },
+                "target": {
+                  "x": 853.41,
+                  "y": 387.82
+                },
+                "label": {
+                  "x": 967.978515625,
+                  "y": 347.3193359375,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M284.61 442.64 L600.57 442.64",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 600.5700073242188,
+                  "y": 442.6400146484375
+                },
+                "target": {
+                  "x": 600.57,
+                  "y": 442.64
+                },
+                "label": {
+                  "x": 90.60858154296875,
+                  "y": 402.138671875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M284.61 253.91 L598.39 253.91",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 598.3900146484375,
+                  "y": 253.91000366210938
+                },
+                "target": {
+                  "x": 598.39,
+                  "y": 253.91
+                },
+                "label": {
+                  "x": 90.60858154296875,
+                  "y": 222.40530395507812,
+                  "width": 190,
+                  "height": 63.140625
+                }
+              },
+              {
+                "id": "roots",
+                "leaderVisible": "visible",
+                "d": "M963.98 387.82 L853.41 387.82",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 853.4099731445312,
+                  "y": 387.82000732421875
+                },
+                "target": {
+                  "x": 853.41,
+                  "y": 387.82
+                },
+                "label": {
+                  "x": 967.978515625,
+                  "y": 347.3193359375,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M284.61 442.64 L600.57 442.64",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 600.5700073242188,
+                  "y": 442.6400146484375
+                },
+                "target": {
+                  "x": 600.57,
+                  "y": 442.64
+                },
+                "label": {
+                  "x": 90.60858154296875,
+                  "y": 402.138671875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M284.61 253.91 L598.39 253.91",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 598.3900146484375,
+                  "y": 253.91000366210938
+                },
+                "target": {
+                  "x": 598.39,
+                  "y": 253.91
+                },
+                "label": {
+                  "x": 90.60858154296875,
+                  "y": 222.40530395507812,
+                  "width": 190,
+                  "height": 63.140625
+                }
+              },
+              {
+                "id": "roots",
+                "leaderVisible": "visible",
+                "d": "M963.98 387.82 L853.41 387.82",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 853.4099731445312,
+                  "y": 387.82000732421875
+                },
+                "target": {
+                  "x": 853.41,
+                  "y": 387.82
+                },
+                "label": {
+                  "x": 967.978515625,
+                  "y": 347.3193359375,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M284.61 442.64 L600.57 442.64",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 600.5700073242188,
+                  "y": 442.6400146484375
+                },
+                "target": {
+                  "x": 600.57,
+                  "y": 442.64
+                },
+                "label": {
+                  "x": 90.60858154296875,
+                  "y": 402.138671875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M229.84 251.12 L639.19 251.12",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 639.1900024414062,
+                  "y": 251.1199951171875
+                },
+                "target": {
+                  "x": 639.19,
+                  "y": 251.12
+                },
+                "label": {
+                  "x": 35.840431213378906,
+                  "y": 219.62353515625,
+                  "width": 190,
+                  "height": 63.140625
+                }
+              },
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M229.84 438.13 L646.80 438.13",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 646.7999877929688,
+                  "y": 438.1300048828125
+                },
+                "target": {
+                  "x": 646.8,
+                  "y": 438.13
+                },
+                "label": {
+                  "x": 35.840431213378906,
+                  "y": 397.63037109375,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M229.84 251.12 L639.19 251.12",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 639.1900024414062,
+                  "y": 251.1199951171875
+                },
+                "target": {
+                  "x": 639.19,
+                  "y": 251.12
+                },
+                "label": {
+                  "x": 35.840431213378906,
+                  "y": 219.62353515625,
+                  "width": 190,
+                  "height": 63.140625
+                }
+              },
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M229.84 438.13 L646.80 438.13",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 646.7999877929688,
+                  "y": 438.1300048828125
+                },
+                "target": {
+                  "x": 646.8,
+                  "y": 438.13
+                },
+                "label": {
+                  "x": 35.840431213378906,
+                  "y": 397.63037109375,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M229.84 251.12 L639.19 251.12",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 639.1900024414062,
+                  "y": 251.1199951171875
+                },
+                "target": {
+                  "x": 639.19,
+                  "y": 251.12
+                },
+                "label": {
+                  "x": 35.840431213378906,
+                  "y": 219.62353515625,
+                  "width": 190,
+                  "height": 63.140625
+                }
+              },
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M229.84 438.13 L646.80 438.13",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 646.7999877929688,
+                  "y": 438.1300048828125
+                },
+                "target": {
+                  "x": 646.8,
+                  "y": 438.13
+                },
+                "label": {
+                  "x": 35.840431213378906,
+                  "y": 397.63037109375,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 8
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-root-zone-8.jpg",
+        "desktop-root-zone-50.jpg",
+        "desktop-root-zone-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "groundwater",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M245.03 384.86 L574.43 384.86",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 574.4299926757812,
+                  "y": 384.8599853515625
+                },
+                "target": {
+                  "x": 574.43,
+                  "y": 384.86
+                },
+                "label": {
+                  "x": 51.0338134765625,
+                  "y": 344.3553466796875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M245.03 437.87 L538.92 325.11",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 538.9199829101562,
+                  "y": 325.1099853515625
+                },
+                "target": {
+                  "x": 538.92,
+                  "y": 325.11
+                },
+                "label": {
+                  "x": 51.0338134765625,
+                  "y": 435.3553466796875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M245.03 384.86 L574.43 384.86",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 574.4299926757812,
+                  "y": 384.8599853515625
+                },
+                "target": {
+                  "x": 574.43,
+                  "y": 384.86
+                },
+                "label": {
+                  "x": 51.0338134765625,
+                  "y": 344.3553466796875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M245.03 437.87 L538.92 325.11",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 538.9199829101562,
+                  "y": 325.1099853515625
+                },
+                "target": {
+                  "x": 538.92,
+                  "y": 325.11
+                },
+                "label": {
+                  "x": 51.0338134765625,
+                  "y": 435.3553466796875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M245.03 384.86 L574.43 384.86",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 574.4299926757812,
+                  "y": 384.8599853515625
+                },
+                "target": {
+                  "x": 574.43,
+                  "y": 384.86
+                },
+                "label": {
+                  "x": 51.0338134765625,
+                  "y": 344.3553466796875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M245.03 437.87 L538.92 325.11",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 538.9199829101562,
+                  "y": 325.1099853515625
+                },
+                "target": {
+                  "x": 538.92,
+                  "y": 325.11
+                },
+                "label": {
+                  "x": 51.0338134765625,
+                  "y": 435.3553466796875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M231.12 392.50 L630.61 392.50",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 630.6099853515625,
+                  "y": 392.5
+                },
+                "target": {
+                  "x": 630.61,
+                  "y": 392.5
+                },
+                "label": {
+                  "x": 37.121978759765625,
+                  "y": 352.00360107421875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M231.12 451.26 L587.85 335.08",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 587.8499755859375,
+                  "y": 335.0799865722656
+                },
+                "target": {
+                  "x": 587.85,
+                  "y": 335.08
+                },
+                "label": {
+                  "x": 37.121978759765625,
+                  "y": 443.00360107421875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M231.12 392.50 L630.61 392.50",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 630.6099853515625,
+                  "y": 392.5
+                },
+                "target": {
+                  "x": 630.61,
+                  "y": 392.5
+                },
+                "label": {
+                  "x": 37.121978759765625,
+                  "y": 352.00360107421875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M231.12 451.26 L587.85 335.08",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 587.8499755859375,
+                  "y": 335.0799865722656
+                },
+                "target": {
+                  "x": 587.85,
+                  "y": 335.08
+                },
+                "label": {
+                  "x": 37.121978759765625,
+                  "y": 443.00360107421875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M231.12 392.50 L630.61 392.50",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 630.6099853515625,
+                  "y": 392.5
+                },
+                "target": {
+                  "x": 630.61,
+                  "y": 392.5
+                },
+                "label": {
+                  "x": 37.121978759765625,
+                  "y": 352.00360107421875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M231.12 451.26 L587.85 335.08",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 587.8499755859375,
+                  "y": 335.0799865722656
+                },
+                "target": {
+                  "x": 587.85,
+                  "y": 335.08
+                },
+                "label": {
+                  "x": 37.121978759765625,
+                  "y": 443.00360107421875,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M1030.57 385.55 L691.55 385.55",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 691.5499877929688,
+                  "y": 385.54998779296875
+                },
+                "target": {
+                  "x": 691.55,
+                  "y": 385.55
+                },
+                "label": {
+                  "x": 1034.572021484375,
+                  "y": 345.05181884765625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M206.00 331.66 L644.91 331.66",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 644.9099731445312,
+                  "y": 331.6600036621094
+                },
+                "target": {
+                  "x": 644.91,
+                  "y": 331.66
+                },
+                "label": {
+                  "x": 12,
+                  "y": 291.1643981933594,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M1030.57 385.55 L691.55 385.55",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 691.5499877929688,
+                  "y": 385.54998779296875
+                },
+                "target": {
+                  "x": 691.55,
+                  "y": 385.55
+                },
+                "label": {
+                  "x": 1034.572021484375,
+                  "y": 345.05181884765625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M206.00 331.66 L644.91 331.66",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 644.9099731445312,
+                  "y": 331.6600036621094
+                },
+                "target": {
+                  "x": 644.91,
+                  "y": 331.66
+                },
+                "label": {
+                  "x": 12,
+                  "y": 291.1643981933594,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M1030.57 385.55 L691.55 385.55",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 691.5499877929688,
+                  "y": 385.54998779296875
+                },
+                "target": {
+                  "x": 691.55,
+                  "y": 385.55
+                },
+                "label": {
+                  "x": 1034.572021484375,
+                  "y": 345.05181884765625,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              },
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M206.00 331.66 L644.91 331.66",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 644.9099731445312,
+                  "y": 331.6600036621094
+                },
+                "target": {
+                  "x": 644.91,
+                  "y": 331.66
+                },
+                "label": {
+                  "x": 12,
+                  "y": 291.1643981933594,
+                  "width": 190,
+                  "height": 81.28125
+                }
+              }
+            ],
+            "width": 1296,
+            "height": 720
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 6
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-groundwater-8.jpg",
+        "desktop-groundwater-50.jpg",
+        "desktop-groundwater-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "studio",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 43.2,
+            "rightPadding": 43.2,
+            "width": 1230
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 43.2,
+            "rightPadding": 43.2,
+            "width": 1230
+          }
+        },
+        {
+          "name": "Chart labels remain inside their padded web frames",
+          "passed": true,
+          "detail": [
+            {
+              "host": {
+                "x": 284.1875,
+                "y": 833.109375,
+                "width": 1081.625,
+                "height": 260
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 284.1875,
+                "y": 1117.109375,
+                "width": 1081.625,
+                "height": 150
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 284.1875,
+                "y": 1740.71875,
+                "width": 1081.625,
+                "height": 260
+              },
+              "outside": []
+            }
+          ]
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-studio.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "console",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 43.2,
+            "rightPadding": 43.2,
+            "width": 1235
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 43.2,
+            "rightPadding": 43.2,
+            "width": 1235
+          }
+        },
+        {
+          "name": "Chart labels remain inside their padded web frames",
+          "passed": true,
+          "detail": [
+            {
+              "host": {
+                "x": 279.1875,
+                "y": 798.109375,
+                "width": 1086.625,
+                "height": 260
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 279.1875,
+                "y": 1082.109375,
+                "width": 1086.625,
+                "height": 150
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 279.1875,
+                "y": 1693.71875,
+                "width": 1086.625,
+                "height": 260
+              },
+              "outside": []
+            }
+          ]
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-console.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "companion",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 43.2,
+            "rightPadding": 43.2,
+            "width": 900
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 43.2,
+            "rightPadding": 43.2,
+            "width": 900
+          }
+        },
+        {
+          "name": "Chart labels remain inside their padded web frames",
+          "passed": true,
+          "detail": [
+            {
+              "host": {
+                "x": 344.1875,
+                "y": 1035.1875,
+                "width": 751.625,
+                "height": 260
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 344.1875,
+                "y": 1319.1875,
+                "width": 751.625,
+                "height": 150
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 344.1875,
+                "y": 1987.984375,
+                "width": 751.625,
+                "height": 260
+              },
+              "outside": []
+            }
+          ]
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-companion.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "atlas",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 72,
+            "rightPadding": 72,
+            "width": 1440
+          }
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-atlas.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "grains",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M87.54 49.00 L113.17 319.86",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 113.16999816894531,
+                  "y": 319.8599853515625
+                },
+                "target": {
+                  "x": 113.17,
+                  "y": 319.86
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M87.54 49.00 L113.17 319.86",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 113.16999816894531,
+                  "y": 319.8599853515625
+                },
+                "target": {
+                  "x": 113.17,
+                  "y": 319.86
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M87.54 49.00 L113.17 319.86",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 113.16999816894531,
+                  "y": 319.8599853515625
+                },
+                "target": {
+                  "x": 113.17,
+                  "y": 319.86
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M257.66 49.00 L182.34 285.56",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 182.33999633789062,
+                  "y": 285.55999755859375
+                },
+                "target": {
+                  "x": 182.34,
+                  "y": 285.56
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M257.66 49.00 L182.34 285.56",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 182.33999633789062,
+                  "y": 285.55999755859375
+                },
+                "target": {
+                  "x": 182.34,
+                  "y": 285.56
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M257.66 49.00 L182.34 285.56",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 182.33999633789062,
+                  "y": 285.55999755859375
+                },
+                "target": {
+                  "x": 182.34,
+                  "y": 285.56
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M257.68 49.00 L183.98 281.48",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 183.97999572753906,
+                  "y": 281.4800109863281
+                },
+                "target": {
+                  "x": 183.98,
+                  "y": 281.48
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M257.68 49.00 L183.98 281.48",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 183.97999572753906,
+                  "y": 281.4800109863281
+                },
+                "target": {
+                  "x": 183.98,
+                  "y": 281.48
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M257.68 49.00 L183.98 281.48",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 183.97999572753906,
+                  "y": 281.4800109863281
+                },
+                "target": {
+                  "x": 183.98,
+                  "y": 281.48
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 3
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-grains-8.jpg",
+        "phone-grains-50.jpg",
+        "phone-grains-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "pulses",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M89.56 49.00 L129.71 261.42",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 129.7100067138672,
+                  "y": 261.4200134277344
+                },
+                "target": {
+                  "x": 129.71,
+                  "y": 261.42
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M89.56 49.00 L129.71 261.42",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 129.7100067138672,
+                  "y": 261.4200134277344
+                },
+                "target": {
+                  "x": 129.71,
+                  "y": 261.42
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M89.56 49.00 L129.71 261.42",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 129.7100067138672,
+                  "y": 261.4200134277344
+                },
+                "target": {
+                  "x": 129.71,
+                  "y": 261.42
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 1
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-pulses-8.jpg",
+        "phone-pulses-50.jpg",
+        "phone-pulses-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "vegetables",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M90.89 49.00 L145.69 267.60",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 145.69000244140625,
+                  "y": 267.6000061035156
+                },
+                "target": {
+                  "x": 145.69,
+                  "y": 267.6
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M90.89 49.00 L145.69 267.60",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 145.69000244140625,
+                  "y": 267.6000061035156
+                },
+                "target": {
+                  "x": 145.69,
+                  "y": 267.6
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M90.89 49.00 L145.69 267.60",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 145.69000244140625,
+                  "y": 267.6000061035156
+                },
+                "target": {
+                  "x": 145.69,
+                  "y": 267.6
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M92.35 49.00 L170.66 294.85",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 170.66000366210938,
+                  "y": 294.8500061035156
+                },
+                "target": {
+                  "x": 170.66,
+                  "y": 294.85
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M92.35 49.00 L170.66 294.85",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 170.66000366210938,
+                  "y": 294.8500061035156
+                },
+                "target": {
+                  "x": 170.66,
+                  "y": 294.85
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M92.35 49.00 L170.66 294.85",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 170.66000366210938,
+                  "y": 294.8500061035156
+                },
+                "target": {
+                  "x": 170.66,
+                  "y": 294.85
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M258.35 49.00 L188.96 291.71",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 188.9600067138672,
+                  "y": 291.7099914550781
+                },
+                "target": {
+                  "x": 188.96,
+                  "y": 291.71
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M258.35 49.00 L188.96 291.71",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 188.9600067138672,
+                  "y": 291.7099914550781
+                },
+                "target": {
+                  "x": 188.96,
+                  "y": 291.71
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M258.35 49.00 L188.96 291.71",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 188.9600067138672,
+                  "y": 291.7099914550781
+                },
+                "target": {
+                  "x": 188.96,
+                  "y": 291.71
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 3
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-vegetables-8.jpg",
+        "phone-vegetables-50.jpg",
+        "phone-vegetables-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "fruit",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M88.01 49.00 L107.01 211.53",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 107.01000213623047,
+                  "y": 211.52999877929688
+                },
+                "target": {
+                  "x": 107.01,
+                  "y": 211.53
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M88.01 49.00 L107.01 211.53",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 107.01000213623047,
+                  "y": 211.52999877929688
+                },
+                "target": {
+                  "x": 107.01,
+                  "y": 211.53
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "foliage",
+                "leaderVisible": "visible",
+                "d": "M88.01 49.00 L107.01 211.53",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 107.01000213623047,
+                  "y": 211.52999877929688
+                },
+                "target": {
+                  "x": 107.01,
+                  "y": 211.53
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M255.33 49.00 L186.85 209.60",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 186.85000610351562,
+                  "y": 209.60000610351562
+                },
+                "target": {
+                  "x": 186.85,
+                  "y": 209.6
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M255.33 49.00 L186.85 209.60",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 186.85000610351562,
+                  "y": 209.60000610351562
+                },
+                "target": {
+                  "x": 186.85,
+                  "y": 209.6
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "fruit",
+                "leaderVisible": "visible",
+                "d": "M255.33 49.00 L186.85 209.60",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 186.85000610351562,
+                  "y": 209.60000610351562
+                },
+                "target": {
+                  "x": 186.85,
+                  "y": 209.6
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 540.15625
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 2
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-fruit-8.jpg",
+        "phone-fruit-50.jpg",
+        "phone-fruit-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "root-zone",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M92.52 49.00 L140.85 197.12",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 140.85000610351562,
+                  "y": 197.1199951171875
+                },
+                "target": {
+                  "x": 140.85,
+                  "y": 197.12
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M92.52 49.00 L140.85 197.12",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 140.85000610351562,
+                  "y": 197.1199951171875
+                },
+                "target": {
+                  "x": 140.85,
+                  "y": 197.12
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "surface",
+                "leaderVisible": "visible",
+                "d": "M92.52 49.00 L140.85 197.12",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 140.85000610351562,
+                  "y": 197.1199951171875
+                },
+                "target": {
+                  "x": 140.85,
+                  "y": 197.12
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "roots",
+                "leaderVisible": "visible",
+                "d": "M264.16 49.00 L260.89 256.83",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 260.8900146484375,
+                  "y": 256.8299865722656
+                },
+                "target": {
+                  "x": 260.89,
+                  "y": 256.83
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "roots",
+                "leaderVisible": "visible",
+                "d": "M264.16 49.00 L260.89 256.83",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 260.8900146484375,
+                  "y": 256.8299865722656
+                },
+                "target": {
+                  "x": 260.89,
+                  "y": 256.83
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "roots",
+                "leaderVisible": "visible",
+                "d": "M264.16 49.00 L260.89 256.83",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 260.8900146484375,
+                  "y": 256.8299865722656
+                },
+                "target": {
+                  "x": 260.89,
+                  "y": 256.83
+                },
+                "label": {
+                  "x": 191,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M93.07 49.00 L173.50 277.59",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 173.5,
+                  "y": 277.5899963378906
+                },
+                "target": {
+                  "x": 173.5,
+                  "y": 277.59
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M93.07 49.00 L173.50 277.59",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 173.5,
+                  "y": 277.5899963378906
+                },
+                "target": {
+                  "x": 173.5,
+                  "y": 277.59
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "subsoil",
+                "leaderVisible": "visible",
+                "d": "M93.07 49.00 L173.50 277.59",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 173.5,
+                  "y": 277.5899963378906
+                },
+                "target": {
+                  "x": 173.5,
+                  "y": 277.59
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 3
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-root-zone-8.jpg",
+        "phone-root-zone-50.jpg",
+        "phone-root-zone-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "groundwater",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Progress0.08: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M91.52 49.00 L148.86 253.67",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 148.86000061035156,
+                  "y": 253.6699981689453
+                },
+                "target": {
+                  "x": 148.86,
+                  "y": 253.67
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.08: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M91.52 49.00 L148.86 253.67",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 148.86000061035156,
+                  "y": 253.6699981689453
+                },
+                "target": {
+                  "x": 148.86,
+                  "y": 253.67
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.08: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "water",
+                "leaderVisible": "visible",
+                "d": "M91.52 49.00 L148.86 253.67",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 148.86000061035156,
+                  "y": 253.6699981689453
+                },
+                "target": {
+                  "x": 148.86,
+                  "y": 253.67
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.5: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M92.40 49.00 L152.37 235.86",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 152.3699951171875,
+                  "y": 235.86000061035156
+                },
+                "target": {
+                  "x": 152.37,
+                  "y": 235.86
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.5: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M92.40 49.00 L152.37 235.86",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 152.3699951171875,
+                  "y": 235.86000061035156
+                },
+                "target": {
+                  "x": 152.37,
+                  "y": 235.86
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.5: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M92.40 49.00 L152.37 235.86",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 152.3699951171875,
+                  "y": 235.86000061035156
+                },
+                "target": {
+                  "x": 152.37,
+                  "y": 235.86
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.95: each visible label has an arrowed leader",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M94.42 49.00 L171.57 234.97",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 171.57000732421875,
+                  "y": 234.97000122070312
+                },
+                "target": {
+                  "x": 171.57,
+                  "y": 234.97
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.95: leader tips reach visible projected features",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M94.42 49.00 L171.57 234.97",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 171.57000732421875,
+                  "y": 234.97000122070312
+                },
+                "target": {
+                  "x": 171.57,
+                  "y": 234.97
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.95: labels remain within stage",
+          "passed": true,
+          "detail": {
+            "markers": [
+              "model-arrow-_r_0_"
+            ],
+            "labels": [
+              {
+                "id": "unsaturated",
+                "leaderVisible": "visible",
+                "d": "M94.42 49.00 L171.57 234.97",
+                "marker": "url(#model-arrow-_r_0_)",
+                "end": {
+                  "x": 171.57000732421875,
+                  "y": 234.97000122070312
+                },
+                "target": {
+                  "x": 171.57,
+                  "y": 234.97
+                },
+                "label": {
+                  "x": 12,
+                  "y": 10,
+                  "width": 147,
+                  "height": 34.5
+                }
+              }
+            ],
+            "width": 350,
+            "height": 489.515625
+          }
+        },
+        {
+          "name": "At least one actual annotation/arrow is inspected",
+          "passed": true,
+          "detail": 3
+        },
+        {
+          "name": "Essential model descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-groundwater-8.jpg",
+        "phone-groundwater-50.jpg",
+        "phone-groundwater-95.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "studio",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Chart labels remain inside their padded web frames",
+          "passed": true,
+          "detail": [
+            {
+              "host": {
+                "x": 39,
+                "y": 1123.34375,
+                "width": 312,
+                "height": 230
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 39,
+                "y": 1377.34375,
+                "width": 312,
+                "height": 140
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 39,
+                "y": 2141.21875,
+                "width": 312,
+                "height": 230
+              },
+              "outside": []
+            }
+          ]
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-studio.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "console",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Chart labels remain inside their padded web frames",
+          "passed": true,
+          "detail": [
+            {
+              "host": {
+                "x": 39,
+                "y": 1096.875,
+                "width": 312,
+                "height": 230
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 39,
+                "y": 1350.875,
+                "width": 312,
+                "height": 140
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 39,
+                "y": 2114.75,
+                "width": 312,
+                "height": 230
+              },
+              "outside": []
+            }
+          ]
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-console.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "companion",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Chart labels remain inside their padded web frames",
+          "passed": true,
+          "detail": [
+            {
+              "host": {
+                "x": 39,
+                "y": 1200.59375,
+                "width": 312,
+                "height": 230
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 39,
+                "y": 1454.59375,
+                "width": 312,
+                "height": 140
+              },
+              "outside": []
+            },
+            {
+              "host": {
+                "x": 39,
+                "y": 2224.46875,
+                "width": 312,
+                "height": 230
+              },
+              "outside": []
+            }
+          ]
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-companion.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "id": "atlas",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "Readable content has minimum20px gutters",
+          "passed": true,
+          "detail": {
+            "overflow": false,
+            "leftPadding": 20,
+            "rightPadding": 20,
+            "width": 390
+          }
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-atlas.jpg"
+      ],
+      "errors": []
+    }
+  ],
+  "failures": [],
+  "note": "Sequential headless browser checks; simulated viewport sizes are not physical-device/FPS validation."
+}

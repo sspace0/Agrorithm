@@ -1,0 +1,559 @@
+{
+  "date": "2026-11-15T18:44:32.119Z",
+  "base": "http://127.0.0.1:4173/Agrorithm/",
+  "scope": "Built production preview; headless Chromium, no generative model opt-in, no physical-device performance claim; route-specific assertions repeated after transition completion",
+  "checks": [
+    {
+      "scope": 390,
+      "name": "computed headline fits first screen",
+      "passed": true,
+      "detail": {
+        "headingBottom": 693.234375,
+        "numbersBottom": 827.015625,
+        "overflow": false
+      }
+    },
+    {
+      "scope": 390,
+      "name": "no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "headingBottom": 693.234375,
+        "numbersBottom": 827.015625,
+        "overflow": false
+      }
+    },
+    {
+      "scope": 390,
+      "name": "both extra panels collapsed",
+      "passed": true
+    },
+    {
+      "scope": 390,
+      "name": "soil proxy explanation present outside collapsed panels",
+      "passed": true
+    },
+    {
+      "scope": 390,
+      "name": "result helper retains superscript cubic-metre notation",
+      "passed": true
+    },
+    {
+      "scope": "390/about",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 330,
+        "right": 382,
+        "top": 768,
+        "bottom": 820,
+        "width": 52,
+        "height": 52,
+        "viewportHeight": 844,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "scope": "390/about",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": "390/sources",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 330,
+        "right": 382,
+        "top": 768,
+        "bottom": 820,
+        "width": 52,
+        "height": 52,
+        "viewportHeight": 844,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "scope": "390/sources",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": "390/sources",
+      "name": "dated source panel visible in document",
+      "passed": true
+    },
+    {
+      "scope": "390/studio/setup",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 330,
+        "right": 382,
+        "top": 768,
+        "bottom": 820,
+        "width": 52,
+        "height": 52,
+        "viewportHeight": 844,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "scope": "390/studio/setup",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": "390/atlas",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 330,
+        "right": 382,
+        "top": 768,
+        "bottom": 820,
+        "width": 52,
+        "height": 52,
+        "viewportHeight": 844,
+        "viewportWidth": 390
+      }
+    },
+    {
+      "scope": "390/atlas",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": 390,
+      "name": "Evidence table uses real max subscript",
+      "passed": true,
+      "detail": {
+        "subscripts": [
+          "max"
+        ],
+        "afterSettledRoute": true
+      }
+    },
+    {
+      "scope": 390,
+      "name": "friendly greeting resolves to welcome",
+      "passed": true
+    },
+    {
+      "scope": 768,
+      "name": "computed headline fits first screen",
+      "passed": true,
+      "detail": {
+        "headingBottom": 447.109375,
+        "numbersBottom": 524.296875,
+        "overflow": false
+      }
+    },
+    {
+      "scope": 768,
+      "name": "no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "headingBottom": 447.109375,
+        "numbersBottom": 524.296875,
+        "overflow": false
+      }
+    },
+    {
+      "scope": 768,
+      "name": "both extra panels collapsed",
+      "passed": true
+    },
+    {
+      "scope": 768,
+      "name": "soil proxy explanation present outside collapsed panels",
+      "passed": true
+    },
+    {
+      "scope": "768/about",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 686,
+        "right": 744,
+        "top": 942,
+        "bottom": 1000,
+        "width": 58,
+        "height": 58,
+        "viewportHeight": 1024,
+        "viewportWidth": 768
+      }
+    },
+    {
+      "scope": "768/about",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": "768/sources",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 686,
+        "right": 744,
+        "top": 942,
+        "bottom": 1000,
+        "width": 58,
+        "height": 58,
+        "viewportHeight": 1024,
+        "viewportWidth": 768
+      }
+    },
+    {
+      "scope": "768/sources",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": "768/sources",
+      "name": "dated source panel visible in document",
+      "passed": true
+    },
+    {
+      "scope": "768/studio/setup",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 686,
+        "right": 744,
+        "top": 942,
+        "bottom": 1000,
+        "width": 58,
+        "height": 58,
+        "viewportHeight": 1024,
+        "viewportWidth": 768
+      }
+    },
+    {
+      "scope": "768/studio/setup",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": "768/atlas",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 686,
+        "right": 744,
+        "top": 942,
+        "bottom": 1000,
+        "width": 58,
+        "height": 58,
+        "viewportHeight": 1024,
+        "viewportWidth": 768
+      }
+    },
+    {
+      "scope": "768/atlas",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": 768,
+      "name": "Evidence table uses real max subscript",
+      "passed": true,
+      "detail": {
+        "subscripts": [
+          "max"
+        ],
+        "afterSettledRoute": true
+      }
+    },
+    {
+      "scope": 768,
+      "name": "friendly greeting resolves to welcome",
+      "passed": true
+    },
+    {
+      "scope": 1440,
+      "name": "computed headline fits first screen",
+      "passed": true,
+      "detail": {
+        "headingBottom": 533.375,
+        "numbersBottom": 610.5625,
+        "overflow": false
+      }
+    },
+    {
+      "scope": 1440,
+      "name": "no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "headingBottom": 533.375,
+        "numbersBottom": 610.5625,
+        "overflow": false
+      }
+    },
+    {
+      "scope": 1440,
+      "name": "both extra panels collapsed",
+      "passed": true
+    },
+    {
+      "scope": 1440,
+      "name": "soil proxy explanation present outside collapsed panels",
+      "passed": true
+    },
+    {
+      "scope": "1440/about",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 1358,
+        "right": 1416,
+        "top": 918,
+        "bottom": 976,
+        "width": 58,
+        "height": 58,
+        "viewportHeight": 1000,
+        "viewportWidth": 1440
+      }
+    },
+    {
+      "scope": "1440/about",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": "1440/sources",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 1358,
+        "right": 1416,
+        "top": 918,
+        "bottom": 976,
+        "width": 58,
+        "height": 58,
+        "viewportHeight": 1000,
+        "viewportWidth": 1440
+      }
+    },
+    {
+      "scope": "1440/sources",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": "1440/sources",
+      "name": "dated source panel visible in document",
+      "passed": true
+    },
+    {
+      "scope": "1440/studio/setup",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 1358,
+        "right": 1416,
+        "top": 918,
+        "bottom": 976,
+        "width": 58,
+        "height": 58,
+        "viewportHeight": 1000,
+        "viewportWidth": 1440
+      }
+    },
+    {
+      "scope": "1440/studio/setup",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": "1440/atlas",
+      "name": "global O launcher visible, fixed and inside viewport",
+      "passed": true,
+      "detail": {
+        "position": "fixed",
+        "left": 1358,
+        "right": 1416,
+        "top": 918,
+        "bottom": 976,
+        "width": 58,
+        "height": 58,
+        "viewportHeight": 1000,
+        "viewportWidth": 1440
+      }
+    },
+    {
+      "scope": "1440/atlas",
+      "name": "route has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "scope": 1440,
+      "name": "Evidence table uses real max subscript",
+      "passed": true,
+      "detail": {
+        "subscripts": [
+          "max"
+        ],
+        "afterSettledRoute": true
+      }
+    },
+    {
+      "scope": 1440,
+      "name": "friendly greeting resolves to welcome",
+      "passed": true
+    },
+    {
+      "scope": "no JavaScript",
+      "name": "substantive fallback purpose and evidence summary",
+      "passed": true
+    },
+    {
+      "scope": "all routes",
+      "name": "no model weight downloads without opt-in",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "scope": "all routes",
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "modelWeightRequests": [],
+  "settledNavigationRechecks": [
+    {
+      "width": 390,
+      "route": "about",
+      "heading": [
+        "From our team.For the next season."
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "sources",
+      "heading": [
+        "Evidence you canfollow back."
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "studio/setup",
+      "heading": [
+        "Your field"
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "atlas",
+      "heading": [
+        "Different ground.Different possibilities."
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "about",
+      "heading": [
+        "From our team.For the next season."
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "sources",
+      "heading": [
+        "Evidence you canfollow back."
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "studio/setup",
+      "heading": [
+        "Your field"
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "route": "atlas",
+      "heading": [
+        "Different ground.Different possibilities."
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "about",
+      "heading": [
+        "From our team.For the next season."
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "sources",
+      "heading": [
+        "Evidence you canfollow back."
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "studio/setup",
+      "heading": [
+        "Your field"
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "atlas",
+      "heading": [
+        "Different ground.Different possibilities."
+      ],
+      "launcherVisible": true,
+      "position": "fixed",
+      "overflow": false
+    }
+  ]
+}

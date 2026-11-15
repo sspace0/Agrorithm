@@ -1,0 +1,83 @@
+Exporting trained checkpoint to ONNX on CPU
+`torch_dtype` is deprecated! Use `dtype` instead!
+Opset 14 is lower than the recommended minimum opset (18) to export t5. The ONNX export may fail or the exported model may be suboptimal.
+C:\Users\murp\Desktop\NASA Space Apps\.cache\generative-training-venv\Lib\site-packages\transformers\models\t5\modeling_t5.py:1271: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if sequence_length != 1:
+C:\Users\murp\Desktop\NASA Space Apps\.cache\generative-training-venv\Lib\site-packages\transformers\cache_utils.py:132: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if not self.is_initialized or self.keys.numel() == 0:
+Could not find ONNX initializer for torch parameter decoder.embed_tokens.weight. decoder.embed_tokens.weight will not be checked for deduplication.
+Could not find ONNX initializer for torch parameter encoder.embed_tokens.weight. encoder.embed_tokens.weight will not be checked for deduplication.
+Found different candidate ONNX initializers (likely duplicate) for the tied weights:
+	decoder.embed_tokens.weight: set() --> ignored (may be a parameter from a part of the model not exported)
+	encoder.embed_tokens.weight: set() --> ignored (may be a parameter from a part of the model not exported)
+	shared.weight: {'shared.weight'}
+Could not find ONNX initializer for torch parameter decoder.embed_tokens.weight. decoder.embed_tokens.weight will not be checked for deduplication.
+Could not find ONNX initializer for torch parameter encoder.embed_tokens.weight. encoder.embed_tokens.weight will not be checked for deduplication.
+Found different candidate ONNX initializers (likely duplicate) for the tied weights:
+	decoder.embed_tokens.weight: set() --> ignored (may be a parameter from a part of the model not exported)
+	encoder.embed_tokens.weight: set() --> ignored (may be a parameter from a part of the model not exported)
+	shared.weight: {'shared.weight'}
+		-[x] values not close enough, max diff: 6.67572021484375e-05 (atol: 1e-05)
+		-[x] values not close enough, max diff: 1.9788742065429688e-05 (atol: 1e-05)
+		-[x] values not close enough, max diff: 2.1696090698242188e-05 (atol: 1e-05)
+		-[x] values not close enough, max diff: 3.528594970703125e-05 (atol: 1e-05)
+		-[x] values not close enough, max diff: 3.528594970703125e-05 (atol: 1e-05)
+		-[x] values not close enough, max diff: 3.528594970703125e-05 (atol: 1e-05)
+The ONNX export succeeded with the warning: The maximum absolute difference between the output of the reference model and the ONNX exported model is not within the set tolerance 1e-05:
+- logits: max diff = 6.67572021484375e-05
+- present.3.decoder.value: max diff = 1.9788742065429688e-05
+- present.4.decoder.value: max diff = 2.1696090698242188e-05
+- present.5.decoder.value: max diff = 3.528594970703125e-05
+- present.6.decoder.value: max diff = 3.528594970703125e-05
+- present.7.decoder.value: max diff = 3.528594970703125e-05.
+ The exported model was saved at: .cache/generative-training/onnx-fp32
+Quantizing encoder_model.onnx
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+Quantizing decoder_model_merged.onnx
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+{
+  "schema": 1,
+  "model": "agrorithm-flan-t5-small-lora-1",
+  "base": "google/flan-t5-small",
+  "revision": "0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab",
+  "license": "Apache-2.0",
+  "trainingRun": "run-1",
+  "seconds": 34.06300000002375,
+  "dtype": "q8",
+  "backend": "Transformers.js 3.8.1 / ONNX Runtime WASM candidate; browser verification required",
+  "files": {
+    "config.json": {
+      "bytes": 1567,
+      "sha256": "e5643759103de0b3f18b53d95fab034ad69ff2978a183c1218a27d8cd0cdda10"
+    },
+    "generation_config.json": {
+      "bytes": 149,
+      "sha256": "b11865270fbffca0ff39067c2546f83ccc7b2d51266a4d3af117b5fa4aed0953"
+    },
+    "special_tokens_map.json": {
+      "bytes": 2668,
+      "sha256": "65d84a9271d68f1230ab99518c00f0f7eaef95c7b363001595ba6fa662d434b1"
+    },
+    "spiece.model": {
+      "bytes": 791656,
+      "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86"
+    },
+    "tokenizer.json": {
+      "bytes": 2422332,
+      "sha256": "32bc8b7f32713528c61de1f1a0449782ba27cfd2e04c9aa98bcb73beb34a474d"
+    },
+    "tokenizer_config.json": {
+      "bytes": 21770,
+      "sha256": "f0f4630efa94e1d9e93c877ecdf2e45a8b9685037f752eddf0611508425b967b"
+    },
+    "onnx/decoder_model_merged_quantized.onnx": {
+      "bytes": 233026965,
+      "sha256": "5749a5babbbbb6941821ed4a2218664a570413afa06bfec88f6f3604883abba4"
+    },
+    "onnx/encoder_model_quantized.onnx": {
+      "bytes": 84957100,
+      "sha256": "9ebdd630d9a55c4461bd2831f287e52434f5655f7b17f3466b02eda23020e143"
+    }
+  },
+  "totalBytes": 321224207
+}

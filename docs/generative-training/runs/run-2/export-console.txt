@@ -1,0 +1,74 @@
+Exporting trained checkpoint to ONNX on CPU
+`torch_dtype` is deprecated! Use `dtype` instead!
+C:\Users\murp\Desktop\NASA Space Apps\.cache\generative-training-venv\Lib\site-packages\transformers\models\t5\modeling_t5.py:1271: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if sequence_length != 1:
+C:\Users\murp\Desktop\NASA Space Apps\.cache\generative-training-venv\Lib\site-packages\transformers\cache_utils.py:132: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if not self.is_initialized or self.keys.numel() == 0:
+Could not find ONNX initializer for torch parameter decoder.embed_tokens.weight. decoder.embed_tokens.weight will not be checked for deduplication.
+Could not find ONNX initializer for torch parameter encoder.embed_tokens.weight. encoder.embed_tokens.weight will not be checked for deduplication.
+Found different candidate ONNX initializers (likely duplicate) for the tied weights:
+	decoder.embed_tokens.weight: set() --> ignored (may be a parameter from a part of the model not exported)
+	encoder.embed_tokens.weight: set() --> ignored (may be a parameter from a part of the model not exported)
+	shared.weight: {'shared.weight'}
+Could not find ONNX initializer for torch parameter decoder.embed_tokens.weight. decoder.embed_tokens.weight will not be checked for deduplication.
+Could not find ONNX initializer for torch parameter encoder.embed_tokens.weight. encoder.embed_tokens.weight will not be checked for deduplication.
+Found different candidate ONNX initializers (likely duplicate) for the tied weights:
+	decoder.embed_tokens.weight: set() --> ignored (may be a parameter from a part of the model not exported)
+	encoder.embed_tokens.weight: set() --> ignored (may be a parameter from a part of the model not exported)
+	shared.weight: {'shared.weight'}
+Quantizing encoder_model.onnx
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+Quantizing decoder_model_merged.onnx
+WARNING:root:Please consider to run pre-processing before quantization. Refer to example: https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+{
+  "schema": 1,
+  "model": "agrorithm-flan-t5-small-lora-2",
+  "base": "google/flan-t5-small",
+  "revision": "0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab",
+  "license": "Apache-2.0",
+  "trainingRun": "run-2",
+  "seconds": 43.54599999997299,
+  "dtype": "q8",
+  "backend": "Transformers.js 3.8.1 / ONNX Runtime WASM candidate; browser verification required",
+  "files": {
+    "config.json": {
+      "bytes": 1567,
+      "sha256": "e5643759103de0b3f18b53d95fab034ad69ff2978a183c1218a27d8cd0cdda10"
+    },
+    "generation_config.json": {
+      "bytes": 149,
+      "sha256": "b11865270fbffca0ff39067c2546f83ccc7b2d51266a4d3af117b5fa4aed0953"
+    },
+    "special_tokens_map.json": {
+      "bytes": 2668,
+      "sha256": "65d84a9271d68f1230ab99518c00f0f7eaef95c7b363001595ba6fa662d434b1"
+    },
+    "spiece.model": {
+      "bytes": 791656,
+      "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86"
+    },
+    "tokenizer.json": {
+      "bytes": 2422332,
+      "sha256": "32bc8b7f32713528c61de1f1a0449782ba27cfd2e04c9aa98bcb73beb34a474d"
+    },
+    "tokenizer_config.json": {
+      "bytes": 21770,
+      "sha256": "f0f4630efa94e1d9e93c877ecdf2e45a8b9685037f752eddf0611508425b967b"
+    },
+    "onnx/decoder_model_merged_quantized.onnx": {
+      "bytes": 59041884,
+      "sha256": "3e3483500e6cef570af09e025c2a00ad6c15bf1ad900cfefd3bec06e9579caae"
+    },
+    "onnx/encoder_model_quantized.onnx": {
+      "bytes": 35612499,
+      "sha256": "c22bdb829b7b6266fb9575610317a6cc9854635eadb65153ccedc41c5723e7e0"
+    }
+  },
+  "totalBytes": 97894525,
+  "onnxOpset": [
+    {
+      "domain": "",
+      "version": 18
+    }
+  ]
+}

@@ -1,0 +1,565 @@
+{
+  "generated": "2026-11-15T12:56:15.696Z",
+  "base": "http://127.0.0.1:5199/Agrorithm/",
+  "results": [
+    {
+      "id": "groundwater",
+      "viewport": "desktop",
+      "checks": [
+        {
+          "name": "Progress0.08: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 1296,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 255.68961297385184,
+              "top": 183.1717280189378,
+              "width": 725.493515412611,
+              "height": 462.3569709783823,
+              "viewportWidth": 1296,
+              "viewportHeight": 720
+            },
+            "layerOffsets": {
+              "Layer_LowPermeability": 0,
+              "Layer_Saturated": 0,
+              "Layer_Unsaturated": 0
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.08: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 255.68961297385184,
+            "top": 183.1717280189378,
+            "width": 725.493515412611,
+            "height": 462.3569709783823,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.08: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 1296,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 247.1285454172108,
+              "top": 188.52250260475432,
+              "width": 742.1477627551535,
+              "height": 469.5838875936662,
+              "viewportWidth": 1296,
+              "viewportHeight": 720
+            },
+            "layerOffsets": {
+              "Layer_LowPermeability": 0,
+              "Layer_Saturated": 0,
+              "Layer_Unsaturated": 0
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 247.1285454172108,
+            "top": 188.52250260475432,
+            "width": 742.1477627551535,
+            "height": 469.5838875936662,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Progress0.95: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 1296,
+            "height": 720,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 184.22701957431053,
+              "top": 179.14737752546756,
+              "width": 835.5480446780816,
+              "height": 508.31974538415596,
+              "viewportWidth": 1296,
+              "viewportHeight": 720
+            },
+            "layerOffsets": {
+              "Layer_LowPermeability": 0,
+              "Layer_Saturated": 0,
+              "Layer_Unsaturated": 0
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.95: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 184.22701957431053,
+            "top": 179.14737752546756,
+            "width": 835.5480446780816,
+            "height": 508.31974538415596,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Progress0.95: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Wet mineral shading uses the same depth plane as pore water",
+          "passed": false,
+          "detail": {
+            "wetPlane7": [
+              0,
+              -1,
+              0,
+              0.252677957713604
+            ],
+            "wetPlane12": [
+              0,
+              -1,
+              0,
+              -0.24732204228639598
+            ],
+            "before": [
+              1.3877787807814457e-17,
+              -0.9671013355255127,
+              -0.25439146161079407,
+              -2.1079564094543457
+            ],
+            "after": [
+              1.3877787807814457e-17,
+              -0.9671013355255127,
+              -0.25439146161079407,
+              -2.6079564094543457
+            ]
+          }
+        },
+        {
+          "name": "Detailed water has an active clipping plane in WebGL",
+          "passed": true,
+          "detail": {
+            "before": [
+              1.3877787807814457e-17,
+              -0.9671013355255127,
+              -0.25439146161079407,
+              -2.1079564094543457
+            ],
+            "after": [
+              1.3877787807814457e-17,
+              -0.9671013355255127,
+              -0.25439146161079407,
+              -2.6079564094543457
+            ]
+          }
+        },
+        {
+          "name": "User depth recomputes the real clipping uniform",
+          "passed": true,
+          "detail": {
+            "before": [
+              1.3877787807814457e-17,
+              -0.9671013355255127,
+              -0.25439146161079407,
+              -2.1079564094543457
+            ],
+            "after": [
+              1.3877787807814457e-17,
+              -0.9671013355255127,
+              -0.25439146161079407,
+              -2.6079564094543457
+            ]
+          }
+        },
+        {
+          "name": "Actual blue wet-area pixels shrink at12m and expand at3m",
+          "passed": true,
+          "detail": {
+            "blue7": 108831,
+            "blue12": 65220,
+            "blue3": 144241
+          }
+        },
+        {
+          "name": "Shallow depth updates the same clipping plane",
+          "passed": true,
+          "detail": {
+            "shallow": [
+              1.3877787807814457e-17,
+              -0.9671013355255127,
+              -0.25439146161079407,
+              -1.7079565525054932
+            ],
+            "after": [
+              1.3877787807814457e-17,
+              -0.9671013355255127,
+              -0.25439146161079407,
+              -2.6079564094543457
+            ]
+          }
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "desktop-groundwater-8.jpg",
+        "desktop-groundwater-50.jpg",
+        "desktop-groundwater-95.jpg",
+        "desktop-groundwater-depth12.jpg"
+      ]
+    },
+    {
+      "id": "groundwater",
+      "viewport": "phone",
+      "checks": [
+        {
+          "name": "Progress0.08: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 489.515625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 32.15884648684421,
+              "top": 170.9200005140613,
+              "width": 273.24014225473616,
+              "height": 171.17935171524348,
+              "viewportWidth": 350,
+              "viewportHeight": 489.515625
+            },
+            "layerOffsets": {
+              "Layer_LowPermeability": 0,
+              "Layer_Saturated": 0,
+              "Layer_Unsaturated": 0
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.08: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 32.15884648684421,
+            "top": 170.9200005140613,
+            "width": 273.24014225473616,
+            "height": 171.17935171524348,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.08: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Progress0.5: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 489.515625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 30.605509473988494,
+              "top": 172.6144290208293,
+              "width": 277.76354166993895,
+              "height": 172.56340730072773,
+              "viewportWidth": 350,
+              "viewportHeight": 489.515625
+            },
+            "layerOffsets": {
+              "Layer_LowPermeability": 0,
+              "Layer_Saturated": 0,
+              "Layer_Unsaturated": 0
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.5: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 30.605509473988494,
+            "top": 172.6144290208293,
+            "width": 277.76354166993895,
+            "height": 172.56340730072773,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.5: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Progress0.95: large transparent stage",
+          "passed": true,
+          "detail": {
+            "width": 350,
+            "height": 489.515625,
+            "clearAlpha": "0",
+            "bounds": {
+              "left": 9.542909999170938,
+              "top": 168.0311856416921,
+              "width": 312.91557873711946,
+              "height": 184.06854836941613,
+              "viewportWidth": 350,
+              "viewportHeight": 489.515625
+            },
+            "layerOffsets": {
+              "Layer_LowPermeability": 0,
+              "Layer_Saturated": 0,
+              "Layer_Unsaturated": 0
+            },
+            "invalidLabels": []
+          }
+        },
+        {
+          "name": "Progress0.95: fitted geometry is inside the canvas",
+          "passed": true,
+          "detail": {
+            "left": 9.542909999170938,
+            "top": 168.0311856416921,
+            "width": 312.91557873711946,
+            "height": 184.06854836941613,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          }
+        },
+        {
+          "name": "Progress0.95: backed annotations and arrows are safe",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "Manual zoom takes control",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Reset restores guided camera",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "Wet mineral shading uses the same depth plane as pore water",
+          "passed": false,
+          "detail": {
+            "wetPlane7": [
+              0,
+              -1,
+              0,
+              0.252677957713604
+            ],
+            "wetPlane12": [
+              0,
+              -1,
+              0,
+              -0.24732204228639598
+            ],
+            "before": [
+              -1.3877787807814457e-17,
+              -0.966438353061676,
+              -0.2568986713886261,
+              -3.923085927963257
+            ],
+            "after": [
+              -1.3877787807814457e-17,
+              -0.966438353061676,
+              -0.2568986713886261,
+              -4.423085689544678
+            ]
+          }
+        },
+        {
+          "name": "Detailed water has an active clipping plane in WebGL",
+          "passed": true,
+          "detail": {
+            "before": [
+              -1.3877787807814457e-17,
+              -0.966438353061676,
+              -0.2568986713886261,
+              -3.923085927963257
+            ],
+            "after": [
+              -1.3877787807814457e-17,
+              -0.966438353061676,
+              -0.2568986713886261,
+              -4.423085689544678
+            ]
+          }
+        },
+        {
+          "name": "User depth recomputes the real clipping uniform",
+          "passed": true,
+          "detail": {
+            "before": [
+              -1.3877787807814457e-17,
+              -0.966438353061676,
+              -0.2568986713886261,
+              -3.923085927963257
+            ],
+            "after": [
+              -1.3877787807814457e-17,
+              -0.966438353061676,
+              -0.2568986713886261,
+              -4.423085689544678
+            ]
+          }
+        },
+        {
+          "name": "Actual blue wet-area pixels shrink at12m and expand at3m",
+          "passed": true,
+          "detail": {
+            "blue7": 15159,
+            "blue12": 9212,
+            "blue3": 20052
+          }
+        },
+        {
+          "name": "Shallow depth updates the same clipping plane",
+          "passed": true,
+          "detail": {
+            "shallow": [
+              -1.3877787807814457e-17,
+              -0.966438353061676,
+              -0.2568986713886261,
+              -3.523085832595825
+            ],
+            "after": [
+              -1.3877787807814457e-17,
+              -0.966438353061676,
+              -0.2568986713886261,
+              -4.423085689544678
+            ]
+          }
+        },
+        {
+          "name": "Text descriptions remain accessible",
+          "passed": true,
+          "detail": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "screenshots": [
+        "phone-groundwater-8.jpg",
+        "phone-groundwater-50.jpg",
+        "phone-groundwater-95.jpg",
+        "phone-groundwater-depth12.jpg"
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "id": "groundwater",
+      "viewport": "desktop",
+      "name": "Wet mineral shading uses the same depth plane as pore water",
+      "passed": false,
+      "detail": {
+        "wetPlane7": [
+          0,
+          -1,
+          0,
+          0.252677957713604
+        ],
+        "wetPlane12": [
+          0,
+          -1,
+          0,
+          -0.24732204228639598
+        ],
+        "before": [
+          1.3877787807814457e-17,
+          -0.9671013355255127,
+          -0.25439146161079407,
+          -2.1079564094543457
+        ],
+        "after": [
+          1.3877787807814457e-17,
+          -0.9671013355255127,
+          -0.25439146161079407,
+          -2.6079564094543457
+        ]
+      }
+    },
+    {
+      "id": "groundwater",
+      "viewport": "phone",
+      "name": "Wet mineral shading uses the same depth plane as pore water",
+      "passed": false,
+      "detail": {
+        "wetPlane7": [
+          0,
+          -1,
+          0,
+          0.252677957713604
+        ],
+        "wetPlane12": [
+          0,
+          -1,
+          0,
+          -0.24732204228639598
+        ],
+        "before": [
+          -1.3877787807814457e-17,
+          -0.966438353061676,
+          -0.2568986713886261,
+          -3.923085927963257
+        ],
+        "after": [
+          -1.3877787807814457e-17,
+          -0.966438353061676,
+          -0.2568986713886261,
+          -4.423085689544678
+        ]
+      }
+    }
+  ],
+  "limitation": "Headless viewport checks and actual WebGL uniform observation; no physical-device or FPS claim."
+}

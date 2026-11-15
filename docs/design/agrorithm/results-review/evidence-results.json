@@ -1,0 +1,186 @@
+{
+  "generated": "2026-11-15T17:09:03.939Z",
+  "base": "http://127.0.0.1:5188/Agrorithm/",
+  "checks": [
+    {
+      "width": 1440,
+      "scenario": "settled-helper-footer-clearance",
+      "passed": true,
+      "detail": {
+        "trigger": {
+          "top": 1079.375,
+          "bottom": 1137.375,
+          "left": 639.6875,
+          "right": 800.3125
+        },
+        "footer": {
+          "top": 534.796875,
+          "bottom": 586.9375
+        },
+        "overlapArea": 0
+      }
+    },
+    {
+      "width": 1440,
+      "scenario": "sample",
+      "passed": true,
+      "layout": {
+        "width": 1143.625,
+        "left": 253.1875,
+        "right": 1396.8125,
+        "viewport": 1440,
+        "pageOverflow": false,
+        "originCount": 4,
+        "issues": []
+      }
+    },
+    {
+      "width": 1440,
+      "scenario": "missing-satellite",
+      "passed": true,
+      "layout": {
+        "width": 1143.625,
+        "left": 253.1875,
+        "right": 1396.8125,
+        "viewport": 1440,
+        "pageOverflow": false,
+        "originCount": 4,
+        "issues": []
+      },
+      "warningColors": {
+        "background": "rgb(255, 240, 230)",
+        "color": "rgb(112, 43, 18)",
+        "border": "rgb(179, 76, 32)"
+      }
+    },
+    {
+      "width": 1440,
+      "scenario": "mismatched-location",
+      "passed": true,
+      "layout": {
+        "width": 1143.625,
+        "left": 253.1875,
+        "right": 1396.8125,
+        "viewport": 1440,
+        "pageOverflow": false,
+        "originCount": 4,
+        "issues": []
+      },
+      "warningColors": {
+        "background": "rgb(255, 240, 230)",
+        "color": "rgb(112, 43, 18)",
+        "border": "rgb(179, 76, 32)"
+      }
+    },
+    {
+      "width": 1440,
+      "scenario": "imported-weather",
+      "passed": true,
+      "layout": {
+        "width": 1143.625,
+        "left": 253.1875,
+        "right": 1396.8125,
+        "viewport": 1440,
+        "pageOverflow": false,
+        "originCount": 4,
+        "issues": []
+      },
+      "warningColors": {
+        "background": "rgb(255, 240, 230)",
+        "color": "rgb(112, 43, 18)",
+        "border": "rgb(179, 76, 32)"
+      }
+    },
+    {
+      "width": 390,
+      "scenario": "settled-helper-footer-clearance",
+      "passed": true,
+      "detail": {
+        "trigger": {
+          "top": 1343.375,
+          "bottom": 1401.375,
+          "left": 166,
+          "right": 224
+        },
+        "footer": {
+          "top": 826.890625,
+          "bottom": 879.03125
+        },
+        "overlapArea": 0
+      }
+    },
+    {
+      "width": 390,
+      "scenario": "sample",
+      "passed": true,
+      "layout": {
+        "width": 350,
+        "left": 20,
+        "right": 370,
+        "viewport": 390,
+        "pageOverflow": false,
+        "originCount": 4,
+        "issues": []
+      }
+    },
+    {
+      "width": 390,
+      "scenario": "missing-satellite",
+      "passed": true,
+      "layout": {
+        "width": 350,
+        "left": 20,
+        "right": 370,
+        "viewport": 390,
+        "pageOverflow": false,
+        "originCount": 4,
+        "issues": []
+      },
+      "warningColors": {
+        "background": "rgb(255, 240, 230)",
+        "color": "rgb(112, 43, 18)",
+        "border": "rgb(179, 76, 32)"
+      }
+    },
+    {
+      "width": 390,
+      "scenario": "mismatched-location",
+      "passed": true,
+      "layout": {
+        "width": 350,
+        "left": 20,
+        "right": 370,
+        "viewport": 390,
+        "pageOverflow": false,
+        "originCount": 4,
+        "issues": []
+      },
+      "warningColors": {
+        "background": "rgb(255, 240, 230)",
+        "color": "rgb(112, 43, 18)",
+        "border": "rgb(179, 76, 32)"
+      }
+    },
+    {
+      "width": 390,
+      "scenario": "imported-weather",
+      "passed": true,
+      "layout": {
+        "width": 350,
+        "left": 20,
+        "right": 370,
+        "viewport": 390,
+        "pageOverflow": false,
+        "originCount": 4,
+        "issues": []
+      },
+      "warningColors": {
+        "background": "rgb(255, 240, 230)",
+        "color": "rgb(112, 43, 18)",
+        "border": "rgb(179, 76, 32)"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "failures": []
+}

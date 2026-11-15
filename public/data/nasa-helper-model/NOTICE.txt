@@ -1,0 +1,6 @@
+Model derivative: Google FLAN-T5-small
+Base: https://huggingface.co/google/flan-t5-small
+Base revision: 0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab
+License: Apache License, Version 2.0 (see LICENSE.txt)
+Adaptation: local LoRA training on Agrorithm NASA-derived record and source-explanation examples. Training and evaluation records: docs/generative-training/.
+This adapted model is not an official NASA or Google agricultural recommendation. Scientific calculations remain in the deterministic decision engine.

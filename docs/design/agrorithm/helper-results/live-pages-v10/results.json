@@ -1,0 +1,449 @@
+{
+  "at": "2026-11-15T19:52:02.719Z",
+  "base": "https://sspace0.github.io/Agrorithm/?revision=10",
+  "totalMs": 21117,
+  "outcome": "pass",
+  "checks": [
+    {
+      "name": "Published source revision",
+      "pass": true,
+      "release": {
+        "schema": 1,
+        "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4",
+        "base": "/Agrorithm/",
+        "preparedAt": "2026-11-15T19:49:25.567Z",
+        "publication": "Prepared artifact branch; a separate authenticated Pages build trigger is required."
+      }
+    },
+    {
+      "name": "Evidence T_max rendered as attached and visible table subscript",
+      "pass": true,
+      "text": "max"
+    },
+    {
+      "name": "Friendly exact social greeting",
+      "pass": true
+    },
+    {
+      "name": "No model weight requests before explicit consent",
+      "pass": true,
+      "count": 0
+    },
+    {
+      "name": "Actual live trained source reading accepted",
+      "pass": true,
+      "ms": 17036,
+      "text": "Experimental trained source reading\n\nFor 2023-07, NASA POWER recorded precipitation 259.09 mm. This is regional historical data, not a forecast.\n\nCheck this wording against the source answer below. Calculations are unchanged."
+    },
+    {
+      "name": "Observed worker loading/inference metrics",
+      "pass": true,
+      "metrics": [
+        {
+          "id": 1,
+          "type": "ready",
+          "loadMs": 14945.199999988079,
+          "model": "agrorithm-flan-t5-small-lora-2",
+          "observedAt": 18352.100000023842
+        },
+        {
+          "id": 2,
+          "type": "complete",
+          "text": "For 2023-07, NASA POWER recorded precipitation 259.09 mm. This is regional historical data, not a forecast.",
+          "tokens": 30,
+          "elapsedMs": 1348.2999999523163,
+          "observedAt": 19711.80000001192
+        }
+      ]
+    },
+    {
+      "name": "Live tokenizer bytes match the immutable manifest",
+      "pass": true,
+      "bytes": {
+        "status": 200,
+        "bytes": 2422332,
+        "expectedBytes": 2422332,
+        "sha256": "32bc8b7f32713528c61de1f1a0449782ba27cfd2e04c9aa98bcb73beb34a474d",
+        "expectedSHA256": "32bc8b7f32713528c61de1f1a0449782ba27cfd2e04c9aa98bcb73beb34a474d"
+      }
+    },
+    {
+      "name": "Phone-sized accepted reading remains in bounds",
+      "pass": true
+    },
+    {
+      "name": "Phone-sized failed download preserves source answer",
+      "pass": true
+    },
+    {
+      "name": "Primary live model/runtime and byte-verification responses HTTP200",
+      "pass": true,
+      "responses": 33
+    },
+    {
+      "name": "Injected blocked-download fixture produced expected virtual-file404 and preserved source fallback",
+      "pass": true,
+      "expected404": [
+        {
+          "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/v2/tokenizer_config.json",
+          "status": 404
+        }
+      ]
+    },
+    {
+      "name": "WASM asset actually served",
+      "pass": true
+    },
+    {
+      "name": "All model requests were GET",
+      "pass": true
+    },
+    {
+      "name": "No JavaScript page errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "modelRequests": [
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/manifest.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/tokenizer_config.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/config.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/generation_config.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.001.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.001.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.002.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.002.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.003.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.003.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.004.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.004.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.005.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.005.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.006.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.006.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.007.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.007.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.008.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.008.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.009.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.010.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.011.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.012.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.013.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.014.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/manifest.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/manifest.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/tokenizer_config.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/config.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/tokenizer_config.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/config.json.000.bin",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/v2/tokenizer.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/v2/tokenizer_config.json",
+      "method": "GET"
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/v2/config.json",
+      "method": "GET"
+    }
+  ],
+  "assetResponses": [
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/manifest.json",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/tokenizer_config.json.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/config.json.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/generation_config.json.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.001.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.001.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.002.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.002.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.003.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.003.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.004.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.004.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.005.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.005.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.006.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.006.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.007.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.007.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.008.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--encoder_model_quantized.onnx.008.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.009.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/assets/ort-wasm-simd-threaded.jsep-B0TxsgQ-.mjs",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.010.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/assets/ort-wasm-simd-threaded.jsep-B0T3yYHD.wasm",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.011.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.012.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.013.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/onnx--decoder_model_merged_quantized.onnx.014.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/manifest.json",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/parts/tokenizer.json.000.bin",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/manifest.json",
+      "status": 200
+    },
+    {
+      "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/v2/tokenizer_config.json",
+      "status": 404
+    }
+  ],
+  "originalAggregateCheck": {
+    "name": "All observed model/runtime responses successful",
+    "pass": false,
+    "responses": 35
+  },
+  "responsePhases": {
+    "primary": {
+      "firstIndex": 0,
+      "lastIndex": 32,
+      "responses": 33
+    },
+    "injectedFailure": {
+      "firstIndex": 33,
+      "lastIndex": 34,
+      "setup": "Disabled worker, removed model cache, and deliberately aborted all /nasa-helper-model/parts/ requests before re-enabling.",
+      "responses": [
+        {
+          "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/manifest.json",
+          "status": 200
+        },
+        {
+          "url": "https://sspace0.github.io/Agrorithm/data/nasa-helper-model/v2/tokenizer_config.json",
+          "status": 404
+        }
+      ]
+    }
+  },
+  "classificationNote": "The original aggregate treated the deliberate failed-download fixture HTTP404 as a deployment failure. The primary load and generation completed before the fixture. All original assetResponses and modelRequests are retained unchanged.",
+  "classifiedAt": "2026-11-15T19:55:34.856Z",
+  "cleanup": {
+    "browserClosed": true,
+    "contextClosed": true,
+    "verifiedBy": "Live script completed normally after its finally block closed the single browser context and browser."
+  }
+}

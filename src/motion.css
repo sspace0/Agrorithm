@@ -1,0 +1,117 @@
+.site-header {
+  view-transition-name: site-header;
+}
+.app > main,
+.app > .workspace {
+  view-transition-name: main-view;
+}
+::view-transition-old(main-view) {
+  animation: page-out 0.26s cubic-bezier(0.4, 0, 1, 1) both;
+}
+::view-transition-new(main-view) {
+  animation: page-in 0.58s cubic-bezier(0.22, 0.72, 0.18, 1) both;
+}
+::view-transition-group(site-header) {
+  animation-duration: 0.25s;
+}
+@keyframes page-out {
+  to {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+}
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.app button,
+.app a {
+  transition:
+    background-color 0.18s,
+    color 0.18s,
+    border-color 0.18s,
+    box-shadow 0.18s;
+}
+.app .primary:hover {
+  box-shadow: 0 5px 20px #203e2920;
+}
+.top-links a {
+  position: relative;
+}
+.top-links a::after {
+  content: "";
+  height: 1px;
+  background: currentColor;
+  position: absolute;
+  inset-inline: 0;
+  bottom: 6px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s;
+}
+.top-links a:hover::after,
+.top-links a:focus-visible::after {
+  transform: scaleX(1);
+}
+.exhibit-caption h2,
+.plant-description h2 {
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
+}
+.orbit-canvas {
+  transition: inset 0.15s linear;
+}
+@supports (animation-timeline: view()) {
+  .app:not(.reduced-motion) .prologue-heading,
+  .app:not(.reduced-motion) .prologue-evidence > a,
+  .app:not(.reduced-motion) .home-paths > div {
+    animation: exhibit-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 5% entry 90%;
+  }
+  @keyframes exhibit-reveal {
+    from {
+      opacity: 0.65;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.prologue-evidence > a > svg:last-child,
+.path-links > a > svg {
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.prologue-evidence > a:hover > svg:last-child,
+.prologue-evidence > a:focus-visible > svg:last-child,
+.path-links > a:hover > svg,
+.path-links > a:focus-visible > svg {
+  transform: translate(4px, -4px);
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation: none !important;
+  }
+  .app button,
+  .app a,
+  .top-links a::after,
+  .orbit-canvas {
+    transition: none !important;
+  }
+  .app .prologue-heading,
+  .app .prologue-evidence > a,
+  .app .home-paths > div {
+    animation: none !important;
+  }
+}

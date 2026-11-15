@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-15T13:10:41.621Z",
+  "base": "http://127.0.0.1:4191/Agrorithm/",
+  "results": [
+    {
+      "name": "desktop",
+      "trigger": {
+        "x": 1268.703125,
+        "y": 918,
+        "width": 147.296875,
+        "height": 58
+      },
+      "errors": [],
+      "visibleHeading": true,
+      "offlineGuide": true,
+      "preservedAcrossNavigation": true,
+      "overflow": false
+    },
+    {
+      "name": "tablet",
+      "trigger": {
+        "x": 596.703125,
+        "y": 942,
+        "width": 147.296875,
+        "height": 58
+      },
+      "errors": [],
+      "visibleHeading": true,
+      "offlineGuide": true,
+      "preservedAcrossNavigation": true,
+      "overflow": false
+    },
+    {
+      "name": "phone",
+      "trigger": {
+        "x": 218.703125,
+        "y": 762,
+        "width": 147.296875,
+        "height": 58
+      },
+      "errors": [],
+      "visibleHeading": true,
+      "offlineGuide": true,
+      "preservedAcrossNavigation": true,
+      "overflow": false
+    }
+  ]
+}

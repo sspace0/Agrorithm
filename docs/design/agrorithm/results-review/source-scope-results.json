@@ -1,0 +1,28 @@
+{
+  "generated": "2026-11-15T17:18:31.656Z",
+  "base": "http://127.0.0.1:5188/Agrorithm/",
+  "cases": [
+    {
+      "width": 1440,
+      "passed": true,
+      "layout": {
+        "panelWidth": 976,
+        "viewport": 1440,
+        "pageOverflow": false,
+        "issues": []
+      }
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "layout": {
+        "panelWidth": 350,
+        "viewport": 390,
+        "pageOverflow": false,
+        "issues": []
+      }
+    }
+  ],
+  "errors": [],
+  "failures": []
+}

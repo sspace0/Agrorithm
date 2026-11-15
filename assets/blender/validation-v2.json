@@ -1,0 +1,116 @@
+{
+  "seed": 20261114,
+  "textureProcessing": "Existing CC0 PBR maps, 512px packed copies; diffuse chroma removed and warm mineral tint baked to image pixels. Physical planar UV tile 1.6 m. No moss or grass diffuse in underground layers.",
+  "scenes": [
+    {
+      "scene": "root-zone-v2",
+      "triangles": 138786,
+      "meshObjects": 12,
+      "meshNodes": [
+        "Layer_Topsoil",
+        "Layer_Subsoil",
+        "Layer_Parent",
+        "Surface_Grass",
+        "Surface_Stalks",
+        "Surface_Leaves",
+        "Surface_Grain",
+        "Surface_Awns",
+        "Roots_Illustrative_Fibrous",
+        "Roots_Fine_Laterals",
+        "Roots_Right_Section",
+        "Soil_Aggregates"
+      ],
+      "blenderBoundsMeters": {
+        "min": [
+          -2.2182,
+          -1.5957,
+          -2.0392
+        ],
+        "max": [
+          2.2311,
+          1.6166,
+          1.0433
+        ]
+      },
+      "coordinateConvention": "Blender Z up, front cut face Y=-1.5; glTF exported Y up. Groundwater vertical units are conceptual with an explicit scale break.",
+      "glbBytes": 7705588,
+      "gzipGlbBytes": 5749173,
+      "blendBytes": 10422223,
+      "posterBytes": 2492304,
+      "sha256": "a88f99deb71d4db861d05e194255cc51e1434dfe2506c45f6bf0e5996109e68d",
+      "blender": "5.2.1 LTS",
+      "geometryStatus": "Illustrative alluvial-style soil, not a measured profile. Approximate boundaries 0.39, 1.13 and 2.02 m vary smoothly. Illustrative wheat/fibrous roots and planting density; no cultivar or future growth claim.",
+      "runtimePosterWebpBytes": 188574,
+      "browserRender": {
+        "model": "root-zone-v2",
+        "loadMs": 97.7999999821186,
+        "triangles": 138786,
+        "drawCalls": 18,
+        "errors": [],
+        "glbBytes": 7705588,
+        "gzipBytes": 5929948
+      }
+    },
+    {
+      "scene": "groundwater-v2",
+      "triangles": 73660,
+      "meshObjects": 14,
+      "meshNodes": [
+        "Layer_Unsaturated",
+        "Layer_Saturated",
+        "Layer_LowPermeability",
+        "Surface_Grass",
+        "Roots_Illustrative_Fibrous",
+        "Roots_Right_Section",
+        "Soil_Aggregates",
+        "Pore_Mineral_Rims_Illustrative",
+        "Pore_Section_Openings_Illustrative",
+        "Mineral_Fractures_Illustrative",
+        "Compacted_Fine_Sediment_Laminae",
+        "Water_Detailed_Pores_Illustrative",
+        "Water_Detailed_Fractures_Illustrative",
+        "Water_Table_Boundary"
+      ],
+      "coordinateConvention": "Blender Z up; glTF Y up. Groundwater vertical scale is conceptual with a scale break.",
+      "glbBytes": 6029336,
+      "gzipGlbBytes": 4869866,
+      "blendBytes": 9045051,
+      "posterBytes": 2014139,
+      "sha256": "f8b5bfe32eda3e3468755b7f377b75204f71a7a5758b30d2350a69533df1d7f6",
+      "blender": "5.2.1 LTS",
+      "geometryStatus": "Illustrative unconfined groundwater, conceptual 0–20 m vertical scale with demo table at 7 m. Enlarged pore openings, mineral grains, water films and fine fractures explain porous material; they are not measured porosity, a site-specific horizon, water storage or field depth. No aquifer dynamics or recharge prediction. No free underground pool.",
+      "detailRevision": "porous-section-2026-11-15",
+      "runtimeWater": "Named detailed water meshes use a user-controlled clipping plane in the browser; no inferred water depth.",
+      "runtimePosterWebpBytes": 77858,
+      "posterProcessing": {
+        "encoder": "Chromium canvas WebP",
+        "browser": "158.0.8127.18",
+        "quality": 0.82,
+        "maxWidth": 1200
+      },
+      "blenderBoundsMeters": {
+        "min": [
+          -2.0664,
+          -1.5456,
+          -2.0375
+        ],
+        "max": [
+          2.0443,
+          1.5133,
+          0.1321
+        ]
+      },
+      "wetDisplay": "Blue wet saturation is an illustrative display color: Blender poster uses the default 7 m plane; browser uses the selected plane, preserving mineral luminance/normal detail."
+    }
+  ],
+  "posterProcessing": {
+    "encoder": "Chromium canvas WebP",
+    "browser": "158.0.8127.18",
+    "quality": 0.82,
+    "maxWidth": 1200
+  },
+  "browserReview": {
+    "browser": "158.0.8127.18",
+    "renderer": "Headless Chromium WebGL; single rendered frame, not a device FPS benchmark"
+  }
+}

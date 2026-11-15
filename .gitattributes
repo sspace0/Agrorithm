@@ -1,0 +1,3 @@
+public/data/nasa-helper-model/parts/*.bin -text
+public/data/nasa-helper-model/*.json text eol=lf
+*.wasm -text

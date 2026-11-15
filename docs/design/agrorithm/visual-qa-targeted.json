@@ -1,0 +1,2666 @@
+{
+  "startedAt": "2026-11-15T17:45:17.121Z",
+  "updatedAt": "2026-11-15T17:45:58.835Z",
+  "base": "http://127.0.0.1:4173/Agrorithm/",
+  "browser": "158.0.8127.18",
+  "filteredRun": "studio-|sources|about|help|console|companion",
+  "note": "Sequential headless Chromium checks, not physical mobile/GPU FPS measurements. Service workers are blocked to avoid a stale production build.",
+  "cases": [
+    {
+      "id": "studio-setup",
+      "route": "/studio/setup",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-studio-setup-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-evidence",
+      "route": "/studio/evidence",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "Non-italic metric values use the shared UI font",
+          "passed": true,
+          "detail": [
+            {
+              "value": "2,557 days",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "43 scenes",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "Not measured",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-studio-evidence-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": [
+        {
+          "value": "2,557 days",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "43 scenes",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "Not measured",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "studio-lab",
+      "route": "/studio/lab",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "Non-italic metric values use the shared UI font",
+          "passed": true,
+          "detail": [
+            {
+              "value": "1,518 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "69%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "239 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1,092 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "65%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "256 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2,991 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "86%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "399 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-studio-lab-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": [
+        {
+          "value": "1,518 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "69%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "239 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1,092 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "65%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "256 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2,991 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "86%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "399 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "studio-scenarios",
+      "route": "/studio/scenarios",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-studio-scenarios-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-tradeoffs",
+      "route": "/studio/tradeoffs",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-studio-tradeoffs-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-export",
+      "route": "/studio/export",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-studio-export-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "console",
+      "route": "/console/lab",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "Non-italic metric values use the shared UI font",
+          "passed": true,
+          "detail": [
+            {
+              "value": "1,518 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "69%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "239 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1,092 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "65%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "256 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2,991 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "86%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "399 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-console-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": [
+        {
+          "value": "1,518 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "69%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "239 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1,092 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "65%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "256 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2,991 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "86%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "399 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "companion",
+      "route": "/companion/setup",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-companion-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "sources",
+      "route": "/sources",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-sources-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "help",
+      "route": "/help",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-help-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "about",
+      "route": "/about",
+      "viewport": "desktop",
+      "size": [
+        1440,
+        1000
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-about-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-setup",
+      "route": "/studio/setup",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-studio-setup-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-evidence",
+      "route": "/studio/evidence",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "Non-italic metric values use the shared UI font",
+          "passed": true,
+          "detail": [
+            {
+              "value": "2,557 days",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "43 scenes",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "Not measured",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-studio-evidence-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": [
+        {
+          "value": "2,557 days",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "43 scenes",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "Not measured",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "studio-lab",
+      "route": "/studio/lab",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "Non-italic metric values use the shared UI font",
+          "passed": true,
+          "detail": [
+            {
+              "value": "1,518 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "69%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "239 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1,092 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "65%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "256 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2,991 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "86%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "399 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-studio-lab-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": [
+        {
+          "value": "1,518 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "69%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "239 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1,092 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "65%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "256 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2,991 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "86%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "399 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "studio-scenarios",
+      "route": "/studio/scenarios",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-studio-scenarios-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-tradeoffs",
+      "route": "/studio/tradeoffs",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-studio-tradeoffs-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-export",
+      "route": "/studio/export",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-studio-export-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "console",
+      "route": "/console/lab",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "Non-italic metric values use the shared UI font",
+          "passed": true,
+          "detail": [
+            {
+              "value": "1,518 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "69%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "239 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1,092 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "65%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "256 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2,991 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "86%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "399 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-console-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": [
+        {
+          "value": "1,518 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "69%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "239 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1,092 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "65%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "256 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2,991 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "86%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "399 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "companion",
+      "route": "/companion/setup",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-companion-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "sources",
+      "route": "/sources",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-sources-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "help",
+      "route": "/help",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-help-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "about",
+      "route": "/about",
+      "viewport": "tablet",
+      "size": [
+        768,
+        1024
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-about-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-setup",
+      "route": "/studio/setup",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-studio-setup-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-evidence",
+      "route": "/studio/evidence",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "Non-italic metric values use the shared UI font",
+          "passed": true,
+          "detail": [
+            {
+              "value": "2,557 days",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "43 scenes",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "Not measured",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-studio-evidence-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": [
+        {
+          "value": "2,557 days",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "43 scenes",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "Not measured",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "studio-lab",
+      "route": "/studio/lab",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "Non-italic metric values use the shared UI font",
+          "passed": true,
+          "detail": [
+            {
+              "value": "1,518 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "69%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "239 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1,092 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "65%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "256 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2,991 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "86%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "399 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-studio-lab-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": [
+        {
+          "value": "1,518 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "69%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "239 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1,092 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "65%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "256 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2,991 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "86%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "399 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "studio-scenarios",
+      "route": "/studio/scenarios",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-studio-scenarios-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-tradeoffs",
+      "route": "/studio/tradeoffs",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-studio-tradeoffs-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "studio-export",
+      "route": "/studio/export",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-studio-export-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "console",
+      "route": "/console/lab",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "Non-italic metric values use the shared UI font",
+          "passed": true,
+          "detail": [
+            {
+              "value": "1,518 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "69%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "239 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "1,092 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "65%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "256 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2,991 mm",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "86%",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "2",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            },
+            {
+              "value": "399 / 0 d",
+              "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-console-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": [
+        {
+          "value": "1,518 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "69%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "239 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "1,092 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "65%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "256 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2,991 mm",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "86%",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "2",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        },
+        {
+          "value": "399 / 0 d",
+          "family": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "id": "companion",
+      "route": "/companion/setup",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-companion-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "sources",
+      "route": "/sources",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-sources-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "help",
+      "route": "/help",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-help-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    },
+    {
+      "id": "about",
+      "route": "/about",
+      "viewport": "phone",
+      "size": [
+        390,
+        844
+      ],
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": false
+        },
+        {
+          "name": "English LTR document",
+          "passed": true,
+          "detail": {
+            "lang": "en",
+            "dir": "ltr"
+          }
+        },
+        {
+          "name": "Visible images load",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "name": "No failed production asset responses",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-about-route.jpg"
+      ],
+      "errors": [],
+      "failedResponses": [],
+      "frames": [],
+      "layout": {
+        "overflow": false,
+        "title": "Agrorithm · A different season starts here",
+        "lang": "en",
+        "dir": "ltr",
+        "font": "\"Century Gothic\", \"DM Sans\", \"Segoe UI\", sans-serif",
+        "missingVisibleImages": []
+      },
+      "metricFonts": []
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,91 @@
+{
+  "base": "http://127.0.0.1:5189/Agrorithm/",
+  "checks": [
+    {
+      "name": "Actual page wheel is intercepted",
+      "passed": true
+    },
+    {
+      "name": "500px wheel settles at exactly 125px page travel",
+      "passed": true,
+      "detail": 625
+    },
+    {
+      "name": "No animation frames remain while idle",
+      "passed": true,
+      "detail": 32
+    },
+    {
+      "name": "Small trackpad ticks retain their fractional travel",
+      "passed": true,
+      "detail": {
+        "fineStart": 625,
+        "fineEnd": 629
+      }
+    },
+    {
+      "name": "Map native preventDefault wins",
+      "passed": true
+    },
+    {
+      "name": "Nested scroll container stays native",
+      "passed": true
+    },
+    {
+      "name": "Input stays native",
+      "passed": true
+    },
+    {
+      "name": "Editable stays native",
+      "passed": true
+    },
+    {
+      "name": "Ctrl wheel stays native",
+      "passed": true
+    },
+    {
+      "name": "Meta wheel stays native",
+      "passed": true
+    },
+    {
+      "name": "Horizontal gesture stays native",
+      "passed": true
+    },
+    {
+      "name": "pointerdown cancels pending wheel travel",
+      "passed": true
+    },
+    {
+      "name": "keydown cancels pending wheel travel",
+      "passed": true
+    },
+    {
+      "name": "hashchange cancels pending wheel travel",
+      "passed": true
+    },
+    {
+      "name": "external-scroll cancels pending wheel travel",
+      "passed": true
+    },
+    {
+      "name": "Cleanup restores native CSS and listeners",
+      "passed": true
+    },
+    {
+      "name": "Hook enables cinematic CSS when motion is allowed",
+      "passed": true
+    },
+    {
+      "name": "Reduced motion restores native wheel handling",
+      "passed": true
+    },
+    {
+      "name": "Actual reduced-motion wheel keeps full native travel",
+      "passed": true,
+      "detail": {
+        "nativeStart": 1500,
+        "nativeEnd": 2000
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+.agr-report {
+  --agr-ink: #173d32;
+  --agr-muted: #637568;
+  --agr-paper: #f8f7f0;
+  --agr-line: #d8dfd1;
+  position: fixed;
+  inset: 0 auto auto -100000px;
+  width: 1920px;
+  visibility: hidden;
+  pointer-events: none;
+  font-family: "Century Gothic", "DM Sans", "Segoe UI", sans-serif;
+  font-size: 24px;
+  line-height: 1.48;
+  color: var(--agr-ink);
+  background: #d4dbcf;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+.agr-report *, .agr-report *::before, .agr-report *::after { box-sizing: border-box; }
+.agr-report h1, .agr-report h2, .agr-report h3, .agr-report p, .agr-report table, .agr-report svg, .agr-report div { margin: 0; }
+.agr-report h1, .agr-report h2, .agr-report h3, .agr-report p, .agr-report td, .agr-report th, .agr-report caption { font-family: inherit; color: inherit; }
+.agr-report .agr-report-page {
+  page: agrorithmreport;
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  padding: 62px 96px 46px;
+  background: var(--agr-paper);
+  break-after: page;
+  break-inside: avoid;
+  overflow: hidden;
+}
+.agr-report .agr-report-page:last-child { break-after: auto; }
+.agr-report .agr-report-cover { padding: 0; background: #fff; }
+.agr-report .agr-report-cover img { display: block; width: 1920px; height: 1080px; object-fit: contain; }
+.agr-report .agr-cover-intro { position:absolute; left:96px; right:96px; top:820px; padding:24px 30px; background:#f8faf2ee; border-inline-start:4px solid #54754b; border-radius:8px; color:#193e32; }
+.agr-report .agr-cover-intro p { font-size:24px; line-height:1.55; margin:0; }
+.agr-report .agr-table tr[data-assessment-tone="exceeds"] td { background:#fff0ed; color:#861e18; border-bottom-color:#dfb2aa; }
+.agr-report .agr-table tr[data-assessment-tone="review"] td { background:#fff3df; color:#754719; border-bottom-color:#e0cba7; }
+.agr-report .agr-table tr[data-assessment-tone="unknown"] td { background:#edf0f2; color:#48515d; }
+.agr-report .agr-page-header { display: grid; grid-template-columns: minmax(0, 1fr) 180px; align-items: start; height: 158px; gap: 30px; border: 0; padding: 0; position: static; }
+.agr-report .agr-page-header > div { min-width: 0; max-width: 100%; }
+.agr-report .agr-kicker { display: block; color: #6c805b; font-size: 17px; line-height: 1.3; letter-spacing: 2.4px; font-weight: 700; margin-bottom: 12px; }
+.agr-report .agr-page-header h1 { font-size: 53px; letter-spacing: -1.5px; line-height: 1.12; font-weight: 400; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.agr-report .agr-page-header p { font-size: 19px; line-height: 1.35; max-width: 100%; margin-top: 10px; color: var(--agr-muted); overflow-wrap: anywhere; }
+.agr-report .agr-wordmark { font-size: 30px; letter-spacing: -1.4px; white-space: normal; padding-top: 33px; text-align: right; overflow-wrap: anywhere; }
+.agr-report .agr-page-body { display: flex; flex-direction: column; gap: 22px; height: 752px; width: 1728px; }
+.agr-report .agr-page-body > * { flex-shrink: 0; }
+.agr-report .agr-copy { border-inline-start: 3px solid #a1b18a; padding: 13px 22px; background: #eef1e6; }
+.agr-report .agr-copy h3 { font-size: 25px; line-height: 1.35; font-weight: 700; margin-bottom: 9px; }
+.agr-report .agr-copy p { font-size: 24px; line-height: 1.5; overflow-wrap: anywhere; white-space: pre-wrap; }
+.agr-report .agr-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; padding: 27px 0 38px; border-bottom: 1px solid var(--agr-line); }
+.agr-report .agr-metrics > div { border-inline-start: 1px solid #c2cfba; padding-left: 26px; min-width: 0; }
+.agr-report .agr-metrics span { display: block; font-size: 19px; color: var(--agr-muted); margin-bottom: 12px; }
+.agr-report .agr-metrics strong { display: block; font-size: 53px; font-weight: 400; letter-spacing: -1px; line-height: 1.15; overflow-wrap: anywhere; }
+.agr-report .agr-metrics strong em { font-size: 32px; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+.agr-report .agr-metrics small { display: block; font-size: 20px; margin-top: 12px; color: var(--agr-muted); }
+.agr-report .agr-table { width: 1728px; border-collapse: collapse; table-layout: fixed; font-size: 23px; line-height: 1.38; border: 0; margin: 0; }
+.agr-report .agr-table caption { text-align: left; caption-side: top; font-size: 25px; font-weight: 700; line-height: 1.35; padding: 0 0 13px; overflow-wrap: anywhere; }
+.agr-report .agr-table th { background: #e8eddf; color: #365345; font-size: 18px; font-weight: 700; text-align: left; line-height: 1.3; letter-spacing: .2px; border: 0; padding: 13px 17px; overflow-wrap: anywhere; white-space: normal; }
+.agr-report .agr-table td { padding: 12px 17px; border: 0; border-bottom: 1px solid var(--agr-line); vertical-align: top; overflow-wrap: anywhere; white-space: pre-wrap; }
+.agr-report .agr-table tr:nth-child(even) td { background: #f0f2e9; }
+.agr-report .agr-table a { color: #204c3f; font: inherit; line-height: inherit; text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.agr-report .agr-chart { display: block; width: 1728px; height: auto; max-width: none; overflow: hidden; background: #f3f5ec; border: 1px solid var(--agr-line); border-radius: 10px; }
+.agr-report .agr-chart text { font-family: "Century Gothic", "DM Sans", "Segoe UI", sans-serif; font-size: 22px; fill: var(--agr-ink); }
+.agr-report .agr-chart .agr-svg-title { font-size: 27px; font-weight: 700; }
+.agr-report .agr-model-figure { display: grid; grid-template-rows: 535px 167px; gap: 18px; height: 720px; width: 1728px; }
+.agr-report .agr-model-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; height: 535px; }
+.agr-report .agr-model-panel { margin: 0; height: 535px; padding: 18px 24px; border: 1px solid var(--agr-line); border-radius: 12px; background: radial-gradient(ellipse at 50% 45%, #fffefa, #eef1e7); }
+.agr-report .agr-model-kicker { display: block; font-size: 16px; line-height: 1.3; letter-spacing: 1.4px; color: var(--agr-muted); font-weight: 700; }
+.agr-report .agr-model-panel h3 { font-size: 28px; line-height: 1.2; margin-top: 7px; font-weight: 400; letter-spacing: -.5px; }
+.agr-report .agr-model-panel img { display: block; width: 100%; height: 350px; object-fit: contain; margin: 5px 0 8px; }
+.agr-report .agr-model-panel figcaption { font-size: 18px; line-height: 1.35; color: var(--agr-muted); }
+.agr-report .agr-model-panel figcaption strong { display: block; font-size: 18px; line-height: 1.3; margin-bottom: 3px; color: var(--agr-ink); }
+.agr-report .agr-water-key { display: inline-block; width: 25px; height: 4px; margin: 0 9px 4px 0; background: #4c9eae; }
+.agr-report .agr-crop-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; width: 1728px; }
+.agr-report .agr-crop-panel { margin: 0; padding: 28px; border: 1px solid var(--agr-line); border-radius: 12px; background: #f2f5e9; }
+.agr-report .agr-crop-image { height: 300px; display: grid; place-items: center; background: radial-gradient(ellipse, #fffefa, #edf1e3); border-radius: 10px; overflow: hidden; }
+.agr-report .agr-crop-image img { display: block; width: 100%; height: 300px; max-height: 300px; min-height: 0; min-width: 0; object-fit: contain; }
+.agr-report .agr-crop-panel h3 { margin: 20px 0 8px; overflow-wrap: anywhere; font-size: 32px; line-height: 1.2; }
+.agr-report .agr-crop-panel figcaption > strong { display: block; font-size: 20px; color: var(--agr-ink); }
+.agr-report .agr-crop-panel p { font-size: 20px; line-height: 1.4; margin: 10px 0; }
+.agr-report .agr-crop-panel small { display: block; font-size: 17px; line-height: 1.4; color: var(--agr-muted); }
+.agr-report .agr-model-disclosures { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; height: 167px; }
+.agr-report .agr-model-disclosures > div { padding: 14px 18px; border-inline-start: 3px solid #a1b18a; background: #edf1e5; }
+.agr-report .agr-model-disclosures h3 { font-size: 21px; line-height: 1.3; font-weight: 700; margin-bottom: 8px; }
+.agr-report .agr-model-disclosures p { font-size: 18px; line-height: 1.4; color: var(--agr-muted); }
+.agr-report .agr-page-footer { position: absolute; left: 96px; right: 96px; bottom: 34px; display: flex; align-items: center; gap: 24px; border-top: 1px solid #bfcbb6; padding-top: 18px; font-size: 17px; color: var(--agr-muted); height: 47px; }
+.agr-report .agr-footer-field { max-width: 500px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.agr-report .agr-page-footer > span:nth-child(2) { margin-inline-start: auto; }
+.agr-report .agr-page-footer strong { color: var(--agr-ink); font-size: 20px; font-weight: 700; white-space: nowrap; }
+.agr-report .agr-report-measure { position: absolute; top: 0; left: -100000px; width: 1728px; visibility: hidden; }
+.agr-report .agr-measure-block { display: flow-root; width: 1728px; }
+.agr-report.agr-report-preview { position: relative; inset: auto; visibility: visible; pointer-events: auto; margin: 0 auto; }
+.agr-report-preview .agr-report-page { margin-bottom: 26px; box-shadow: 0 8px 30px #173d321a; }
+@page agrorithmreport { size: 20in 11.25in; margin: 0; }
+@media print {
+  html:has(.agr-report), body:has(.agr-report) { width: auto !important; margin: 0 !important; padding: 0 !important; background: #fff !important; }
+  body:has(.agr-report) > :not(.agr-report) { display: none !important; }
+  .agr-report { position: static !important; inset: auto !important; display: block !important; visibility: visible !important; width: 1920px !important; margin: 0 !important; background: #fff !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .agr-report .agr-report-page { margin: 0 !important; box-shadow: none !important; }
+  .agr-report .agr-report-measure { display: none !important; }
+  .agr-report a::after { content: none !important; }
+}

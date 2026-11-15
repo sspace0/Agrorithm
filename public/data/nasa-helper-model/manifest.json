@@ -1,0 +1,217 @@
+{
+  "schema": 1,
+  "model": "agrorithm-flan-t5-small-lora-2",
+  "trainingRun": "run-2",
+  "base": "google/flan-t5-small",
+  "baseRevision": "0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab",
+  "license": "Apache-2.0",
+  "totalBytes": 97894525,
+  "files": [
+    {
+      "path": "config.json",
+      "bytes": 1567,
+      "sha256": "e5643759103de0b3f18b53d95fab034ad69ff2978a183c1218a27d8cd0cdda10",
+      "parts": [
+        {
+          "url": "parts/config.json.000.bin",
+          "bytes": 1567,
+          "sha256": "e5643759103de0b3f18b53d95fab034ad69ff2978a183c1218a27d8cd0cdda10"
+        }
+      ]
+    },
+    {
+      "path": "generation_config.json",
+      "bytes": 149,
+      "sha256": "b11865270fbffca0ff39067c2546f83ccc7b2d51266a4d3af117b5fa4aed0953",
+      "parts": [
+        {
+          "url": "parts/generation_config.json.000.bin",
+          "bytes": 149,
+          "sha256": "b11865270fbffca0ff39067c2546f83ccc7b2d51266a4d3af117b5fa4aed0953"
+        }
+      ]
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 2668,
+      "sha256": "65d84a9271d68f1230ab99518c00f0f7eaef95c7b363001595ba6fa662d434b1",
+      "parts": [
+        {
+          "url": "parts/special_tokens_map.json.000.bin",
+          "bytes": 2668,
+          "sha256": "65d84a9271d68f1230ab99518c00f0f7eaef95c7b363001595ba6fa662d434b1"
+        }
+      ]
+    },
+    {
+      "path": "spiece.model",
+      "bytes": 791656,
+      "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+      "parts": [
+        {
+          "url": "parts/spiece.model.000.bin",
+          "bytes": 791656,
+          "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86"
+        }
+      ]
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 2422332,
+      "sha256": "32bc8b7f32713528c61de1f1a0449782ba27cfd2e04c9aa98bcb73beb34a474d",
+      "parts": [
+        {
+          "url": "parts/tokenizer.json.000.bin",
+          "bytes": 2422332,
+          "sha256": "32bc8b7f32713528c61de1f1a0449782ba27cfd2e04c9aa98bcb73beb34a474d"
+        }
+      ]
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 21770,
+      "sha256": "f0f4630efa94e1d9e93c877ecdf2e45a8b9685037f752eddf0611508425b967b",
+      "parts": [
+        {
+          "url": "parts/tokenizer_config.json.000.bin",
+          "bytes": 21770,
+          "sha256": "f0f4630efa94e1d9e93c877ecdf2e45a8b9685037f752eddf0611508425b967b"
+        }
+      ]
+    },
+    {
+      "path": "onnx/decoder_model_merged_quantized.onnx",
+      "bytes": 59041884,
+      "sha256": "3e3483500e6cef570af09e025c2a00ad6c15bf1ad900cfefd3bec06e9579caae",
+      "parts": [
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.000.bin",
+          "bytes": 4194304,
+          "sha256": "c76ef911c42ef9a69932e66a564988320a08e598716f66493f9f89a168fc5fc5"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.001.bin",
+          "bytes": 4194304,
+          "sha256": "806694804ca6ce6b84e2152864b6f98ebd78467bf84b0a0c8771d18e162906ac"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.002.bin",
+          "bytes": 4194304,
+          "sha256": "451e7da08e87119b9743ee0e0af81e97e12f6a5c2867766aa6e4d78011b3a430"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.003.bin",
+          "bytes": 4194304,
+          "sha256": "ef91f52eb9e6c4bb1598429e24962f397ce1f24deb2671e94f26c825fceb77be"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.004.bin",
+          "bytes": 4194304,
+          "sha256": "1d83a2e2cf166013f95c521f72c0d726be3e4bff6b9301ce8fe992fd18721e8f"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.005.bin",
+          "bytes": 4194304,
+          "sha256": "6cc882fd2ff397830eaf1f4716e900746dd8e35499aeada45c81e9486498efc7"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.006.bin",
+          "bytes": 4194304,
+          "sha256": "aa1604de7afbd2d234c53a16a3fe26c1d9ce5a70af7d98d4cbfc45a1cff393dd"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.007.bin",
+          "bytes": 4194304,
+          "sha256": "cca7a7a61d0ac6ceece67e85c6bde12e9e6f68527dbf18b2076e27cbe6c55a2b"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.008.bin",
+          "bytes": 4194304,
+          "sha256": "3639bacd56d970b01e1cc8f11d89d002a154f57bafcca0f86ade1049902dbba2"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.009.bin",
+          "bytes": 4194304,
+          "sha256": "608d989b8058db555536706a8d074a8202b5d987a1ee493c168fa215eb00ae1c"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.010.bin",
+          "bytes": 4194304,
+          "sha256": "f3c0b82a40f9e2e14338ce25f4c418056c727a354d0854117a7ccf5edc0869b3"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.011.bin",
+          "bytes": 4194304,
+          "sha256": "d29dfb5a2b24419c3963231bc20ae771a45bf156bdd8c5f35027e7863531288f"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.012.bin",
+          "bytes": 4194304,
+          "sha256": "a6d6e05c505e4433cb54f11e6d942e053c9d1ffd4a64c74038d2ea80b4e43eb6"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.013.bin",
+          "bytes": 4194304,
+          "sha256": "fa61778092d97b43b0dea6289b9b52105d4c17dfe6eb0982995da23e98434a39"
+        },
+        {
+          "url": "parts/onnx--decoder_model_merged_quantized.onnx.014.bin",
+          "bytes": 321628,
+          "sha256": "da7dee41a6e38c8541cab574abfee8d8af1a71d22b000a523cb0a7be872811cb"
+        }
+      ]
+    },
+    {
+      "path": "onnx/encoder_model_quantized.onnx",
+      "bytes": 35612499,
+      "sha256": "c22bdb829b7b6266fb9575610317a6cc9854635eadb65153ccedc41c5723e7e0",
+      "parts": [
+        {
+          "url": "parts/onnx--encoder_model_quantized.onnx.000.bin",
+          "bytes": 4194304,
+          "sha256": "dc213cfbdd899b66be463269b040dac700e8e52f9810d59865cea752c83653cb"
+        },
+        {
+          "url": "parts/onnx--encoder_model_quantized.onnx.001.bin",
+          "bytes": 4194304,
+          "sha256": "c31eb4ebcd402923f749e0347f84471522dd680419c4e904411eb819a2776e38"
+        },
+        {
+          "url": "parts/onnx--encoder_model_quantized.onnx.002.bin",
+          "bytes": 4194304,
+          "sha256": "f8f565d786187c50b7e9dde192f16d204a271d2ec9f9149a60410490644b3143"
+        },
+        {
+          "url": "parts/onnx--encoder_model_quantized.onnx.003.bin",
+          "bytes": 4194304,
+          "sha256": "1f29edf857090f82e9a02d2d933065f9e4c1810f73ac7d5b78fa98be7ecadcd1"
+        },
+        {
+          "url": "parts/onnx--encoder_model_quantized.onnx.004.bin",
+          "bytes": 4194304,
+          "sha256": "6a7eb6d6cfbec77c3838c0181759526defac072ef3ad705048111747040629d6"
+        },
+        {
+          "url": "parts/onnx--encoder_model_quantized.onnx.005.bin",
+          "bytes": 4194304,
+          "sha256": "d9c1586b2234db85dfee9d73eac943ccfca05b70ae92e4b5f7531e00e7ba4559"
+        },
+        {
+          "url": "parts/onnx--encoder_model_quantized.onnx.006.bin",
+          "bytes": 4194304,
+          "sha256": "f13efff9c17162bc1025d91fdbad1ddd70099a52d2d4eeb0eae9533d8b99f441"
+        },
+        {
+          "url": "parts/onnx--encoder_model_quantized.onnx.007.bin",
+          "bytes": 4194304,
+          "sha256": "7ae1fb079a2d2defafaed7325b91cccec5c0a785adfabe893033ecc93d31e68e"
+        },
+        {
+          "url": "parts/onnx--encoder_model_quantized.onnx.008.bin",
+          "bytes": 2058067,
+          "sha256": "4a6ddb1f67bce08df153f1d901524f26aa1cceeefd72503d7ab048d2a5fa1f65"
+        }
+      ]
+    }
+  ]
+}

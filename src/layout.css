@@ -1,0 +1,106 @@
+:root {
+  --page-gutter: clamp(20px, 5vw, 96px);
+  --workspace-gutter: clamp(20px, 3vw, 52px);
+  --card-gutter: clamp(18px, 2.2vw, 30px);
+}
+
+/* Full-bleed scene backgrounds stay separate from readable content gutters. */
+.app .standalone,
+.app .atlas-page,
+.app .crop-library.standalone,
+.app .soil-page.standalone {
+  padding-inline: var(--page-gutter);
+}
+.app .workspace-main,
+.app .concept-console .workspace-main,
+.app .concept-companion .workspace-main {
+  padding-inline: var(--workspace-gutter);
+}
+.app .paper,
+.app .rotation-card,
+.app .export-tile {
+  padding-inline: var(--card-gutter);
+}
+.app .chart {
+  min-width: 0;
+  padding: 12px 12px 8px 4px;
+  margin-block: 24px 18px;
+}
+.app .page-heading,
+.app .section-intro,
+.app .library-heading,
+.app .atlas-heading {
+  min-width: 0;
+}
+.app .lede,
+.app .section-intro p,
+.app .atlas-heading p {
+  overflow-wrap: break-word;
+}
+.about-hero img {
+  width: min(100%, 420px);
+  height: auto;
+  max-width: 420px;
+  max-height: 180px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 0;
+  filter: none;
+}
+.model-leaders {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  pointer-events: none;
+}
+.model-leader-outline,
+.model-leader-path {
+  fill: none;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+.model-leader-outline {
+  stroke: #fffef6;
+  stroke-opacity: 0.9;
+  stroke-width: 4;
+}
+.model-leader-path {
+  stroke: #365a43;
+  stroke-width: 1.5;
+}
+.model-arrowhead {
+  fill: #365a43;
+  stroke: #fffef6;
+  stroke-width: 0.65;
+  stroke-linejoin: round;
+}
+@media (max-width: 760px) {
+  .app .chart {
+    padding-inline: 0 8px;
+  }
+  .app .workspace-top {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+  .app .step-footer {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+}
+@media (min-width: 761px) and (max-width: 1180px) {
+  .app .scenario-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .app .scenario-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 28px;
+    align-items: start;
+  }
+  .app .scenario-controls > .source-tag,
+  .app .scenario-controls > h3,
+  .app .scenario-controls > p {
+    grid-column: 1 / -1;
+  }
+}

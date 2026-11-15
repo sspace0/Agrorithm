@@ -1,9 +1,14 @@
 node_modules/
 dist/
 .cache/
+.helper-review-dist/
 test-results/
 playwright-report/
 *.blend1
 .env*
+! .env.example
 private-farms/
 *.log
+*.tsbuildinfo
+__pycache__/
+*.py[cod]

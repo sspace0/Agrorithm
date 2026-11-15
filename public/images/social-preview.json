@@ -1,0 +1,69 @@
+{
+  "width": 1200,
+  "height": 630,
+  "renderer": "Playwright Chromium",
+  "sources": [
+    {
+      "file": "public/images/agrorithm-logo.png",
+      "bytes": 150523,
+      "sha256": "41863592b3fe4ae64e16b68099ffabcf46dae5d98e1e46f959c4e78d7b29e249"
+    },
+    {
+      "file": "public/images/earth-poster.webp",
+      "bytes": 89460,
+      "sha256": "39c1366decd5360c269b9000ad948d58503e82edbfd5b208b604cddd9fdd9810"
+    },
+    {
+      "file": "public/images/root-zone-v2.webp",
+      "bytes": 188574,
+      "sha256": "f101376088138ae03d428d379a9cf18d1069a048bc98170274627c6d46c61e05"
+    },
+    {
+      "file": "public/fonts/dm-sans-normal.woff2",
+      "bytes": 36932,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    {
+      "file": "public/fonts/instrument-serif-italic.ttf",
+      "bytes": 64208,
+      "sha256": "fecf4861d5202405b8bd45c683858b6870642a026784fe0dbf88ff55dedee8a0"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "public/images/social-preview.svg",
+      "bytes": 709636,
+      "sha256": "767dad73d94db2515a0719a23fde7d65b60e99a5c844786aedc48658134015e3"
+    },
+    {
+      "file": "public/images/social-preview.png",
+      "bytes": 541110,
+      "sha256": "b77941a7bf540a0436cf11d47f8b675068c46f77f4df87501cc8459a4ed97d44"
+    }
+  ],
+  "notes": "Original SVG composition using existing project assets. NASA Earth imagery is historical presentation material; soil and roots are illustrative. Existing asset and font terms remain applicable; see docs/ASSET_CREDITS.md.",
+  "layout": {
+    "width": 1200,
+    "height": 630,
+    "textElements": 8,
+    "clippedText": 0
+  },
+  "metadata": {
+    "canonical": "https://sspace0.github.io/Agrorithm/",
+    "title": "Agrorithm · A different season starts here",
+    "description": "Explore crop rotations using historical NASA weather, satellite vegetation and transparent water screening for a Punjab, Pakistan pilot.",
+    "url": "https://sspace0.github.io/Agrorithm/",
+    "image": "https://sspace0.github.io/Agrorithm/images/social-preview.png",
+    "width": "1200",
+    "height": "630",
+    "twitterCard": "summary_large_image",
+    "twitterImage": "https://sspace0.github.io/Agrorithm/images/social-preview.png"
+  },
+  "servedCheck": {
+    "base": "http://127.0.0.1:5188/Agrorithm/",
+    "imageStatus": 200,
+    "width": 1200,
+    "height": 630,
+    "crawlerVisibleMetadata": true
+  }
+}

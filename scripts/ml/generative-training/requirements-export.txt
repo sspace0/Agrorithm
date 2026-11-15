@@ -1,0 +1,5 @@
+-r requirements.txt
+optimum==2.1.0
+optimum-onnx[onnxruntime]==0.1.0
+onnx==1.19.1
+onnxruntime==1.23.2

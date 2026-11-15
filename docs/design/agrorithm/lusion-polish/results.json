@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-15T13:23:57.468Z",
+  "base": "http://127.0.0.1:5201/Agrorithm/",
+  "results": [
+    {
+      "name": "phone-opening",
+      "overflow": false,
+      "width": 390,
+      "header": 106
+    },
+    {
+      "name": "phone-turn",
+      "overflow": false,
+      "width": 390,
+      "header": 106
+    },
+    {
+      "name": "phone-map",
+      "overflow": false,
+      "width": 390,
+      "header": 106
+    },
+    {
+      "name": "phone-editorial",
+      "overflow": false,
+      "width": 390,
+      "header": 106
+    },
+    {
+      "name": "phone-atlas-world",
+      "overflow": false,
+      "width": 390,
+      "header": 106
+    },
+    {
+      "name": "phone-atlas-zoom24",
+      "overflow": false,
+      "width": 390,
+      "header": 106
+    },
+    {
+      "name": "phone-scenario-layout",
+      "columns": "260px minmax(0px, 1fr)",
+      "children": [
+        {
+          "x": 20,
+          "width": 350
+        },
+        {
+          "x": 20,
+          "width": 350
+        }
+      ]
+    },
+    {
+      "name": "phone-scenarios",
+      "overflow": false,
+      "width": 390,
+      "header": 106
+    },
+    {
+      "name": "phone-reduced-motion",
+      "overflow": false,
+      "width": 390,
+      "header": 106
+    },
+    {
+      "name": "reduced-motion-static",
+      "height": 844,
+      "cursor": 0
+    }
+  ]
+}

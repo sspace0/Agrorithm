@@ -1,0 +1,3987 @@
+{
+  "generated": "2026-11-15T14:16:52.720Z",
+  "base": "https://sspace0.github.io/Agrorithm/?revision=6",
+  "inventory": [
+    {
+      "route": "home",
+      "controls": [
+        {
+          "tag": "a",
+          "text": "Agrorithm home",
+          "href": "#/",
+          "type": null,
+          "width": 267,
+          "height": 58,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Plan",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 25,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Map",
+          "href": "#/atlas",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "3D explorer",
+          "href": "#/soil",
+          "type": null,
+          "width": 66,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Help",
+          "href": "#/help",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Search pages and tools",
+          "href": null,
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close search",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "HomeStart, sample and visual introduction",
+          "href": "#/",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Field setupLocation, crops, soil and practical limits",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "EvidenceNASA weather and satellite observations",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Rotation labCompare the baseline and alternatives",
+          "href": "#/studio/lab",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "What if?Water, weather and priority controls",
+          "href": "#/studio/scenarios",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Trade-offsFeasibility, metrics and sensitivity",
+          "href": "#/studio/tradeoffs",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Save & exportJSON, CSV, print and local save",
+          "href": "#/studio/export",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Satellite crop atlasSearch places, climate zones and crop fit",
+          "href": "#/atlas",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D soil explorerCrop models, roots and groundwater",
+          "href": "#/soil",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D crop libraryFour models: grains, pulses, vegetables and fruit trees",
+          "href": "#/crops",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Question helperSearch source-linked explanations",
+          "href": "#/help",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Learned weather patternsExplore a model trained on historical NASA POWER data",
+          "href": "#/weather-patterns",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Sources & methodsData provenance and scientific limits",
+          "href": "#/sources",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "About jt_1Meet the project team",
+          "href": "#/about",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Display settings",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Motion on",
+          "href": null,
+          "type": null,
+          "width": 105,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Graphics quality",
+          "href": null,
+          "type": null,
+          "width": 132,
+          "height": 42,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Start planning",
+          "href": null,
+          "type": null,
+          "width": 179,
+          "height": 53,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Try a sample farm",
+          "href": null,
+          "type": null,
+          "width": 123,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Satellite atlas",
+          "href": "#/atlas",
+          "type": null,
+          "width": 106,
+          "height": 30,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Beneath the surface",
+          "href": "#/soil",
+          "type": null,
+          "width": 142,
+          "height": 30,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Open the satellite atlas",
+          "href": "#/atlas",
+          "type": null,
+          "width": 234,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Skip to map",
+          "href": "#/atlas",
+          "type": null,
+          "width": 76,
+          "height": 15,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Earth observationsHistorical NASA weather and a quality-filtered vegetation record.",
+          "href": "#/sources",
+          "type": null,
+          "width": 361,
+          "height": 129,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Beneath the surfaceRoots, soil layers and water. Measurements stay separate from illustrations.",
+          "href": "#/soil",
+          "type": null,
+          "width": 361,
+          "height": 129,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Explore crop optionsEight crop references. Four botanical models. A clearer place to start.",
+          "href": "#/crops",
+          "type": null,
+          "width": 361,
+          "height": 130,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Open the soil explorer",
+          "href": "#/soil",
+          "type": null,
+          "width": 158,
+          "height": 36,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Search the crop atlas",
+          "href": "#/atlas",
+          "type": null,
+          "width": 230,
+          "height": 52,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "01Plan a fieldSet your crops, soil and practical limits.",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 604,
+          "height": 109,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "02Go beneath the surfaceInspect roots, layers and water in 3D.",
+          "href": "#/soil",
+          "type": null,
+          "width": 604,
+          "height": 109,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "03Find an answerSearch the guide. No key or account needed.",
+          "href": "#/help",
+          "type": null,
+          "width": 604,
+          "height": 109,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Agrorithm",
+          "href": "#/",
+          "type": null,
+          "width": 110,
+          "height": 39,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Sources & methods",
+          "href": "#/sources",
+          "type": null,
+          "width": 103,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Meet the team",
+          "href": "#/about",
+          "type": null,
+          "width": 81,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close Agrorithm helper",
+          "href": null,
+          "type": "button",
+          "width": 0,
+          "height": 0,
+          "visible": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "help",
+      "controls": [
+        {
+          "tag": "a",
+          "text": "Agrorithm home",
+          "href": "#/",
+          "type": null,
+          "width": 267,
+          "height": 58,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Plan",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 25,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Map",
+          "href": "#/atlas",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "3D explorer",
+          "href": "#/soil",
+          "type": null,
+          "width": 66,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Help",
+          "href": "#/help",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Search pages and tools",
+          "href": null,
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close search",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "HomeStart, sample and visual introduction",
+          "href": "#/",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Field setupLocation, crops, soil and practical limits",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "EvidenceNASA weather and satellite observations",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Rotation labCompare the baseline and alternatives",
+          "href": "#/studio/lab",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "What if?Water, weather and priority controls",
+          "href": "#/studio/scenarios",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Trade-offsFeasibility, metrics and sensitivity",
+          "href": "#/studio/tradeoffs",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Save & exportJSON, CSV, print and local save",
+          "href": "#/studio/export",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Satellite crop atlasSearch places, climate zones and crop fit",
+          "href": "#/atlas",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D soil explorerCrop models, roots and groundwater",
+          "href": "#/soil",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D crop libraryFour models: grains, pulses, vegetables and fruit trees",
+          "href": "#/crops",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Question helperSearch source-linked explanations",
+          "href": "#/help",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Learned weather patternsExplore a model trained on historical NASA POWER data",
+          "href": "#/weather-patterns",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Sources & methodsData provenance and scientific limits",
+          "href": "#/sources",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "About jt_1Meet the project team",
+          "href": "#/about",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Display settings",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Motion on",
+          "href": null,
+          "type": null,
+          "width": 105,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Graphics quality",
+          "href": null,
+          "type": null,
+          "width": 132,
+          "height": 42,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Explore learned weather patterns",
+          "href": "#/weather-patterns",
+          "type": null,
+          "width": 250,
+          "height": 36,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "text": "Search the question guide",
+          "href": null,
+          "type": "search",
+          "width": 646,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Water",
+          "href": null,
+          "type": null,
+          "width": 86,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Map",
+          "href": null,
+          "type": null,
+          "width": 78,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Soil",
+          "href": null,
+          "type": null,
+          "width": 70,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Rice",
+          "href": null,
+          "type": null,
+          "width": 76,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Weather",
+          "href": null,
+          "type": null,
+          "width": 101,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Offline",
+          "href": null,
+          "type": null,
+          "width": 89,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "All questions",
+          "href": null,
+          "type": null,
+          "width": 122,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Open field setup",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 121,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Read the source",
+          "href": "#/sources",
+          "type": null,
+          "width": 105,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Search the map",
+          "href": "#/atlas",
+          "type": null,
+          "width": 118,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Read the source",
+          "href": "#/sources",
+          "type": null,
+          "width": 105,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Test water limits",
+          "href": "#/studio/scenarios",
+          "type": null,
+          "width": 113,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Read the source",
+          "href": "https://www.fao.org/4/X0490E/x0490e0a.htm",
+          "type": null,
+          "width": 105,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Explore crop references",
+          "href": "#/atlas",
+          "type": null,
+          "width": 166,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Read the source",
+          "href": "https://www.fao.org/4/s2022e/s2022e08.htm",
+          "type": null,
+          "width": 105,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Inspect evidence",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 126,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Read the source",
+          "href": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+          "type": null,
+          "width": 105,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "View satellite observations",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 181,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Read the source",
+          "href": "https://hls.gsfc.nasa.gov/data-products/",
+          "type": null,
+          "width": 105,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Explore the cutaway",
+          "href": "#/soil",
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Read the source",
+          "href": "https://www.usgs.gov/water-science-school/science/aquifers-and-groundwater",
+          "type": null,
+          "width": 105,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Inspect trade-offs",
+          "href": "#/studio/tradeoffs",
+          "type": null,
+          "width": 126,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Read the source",
+          "href": "#/sources",
+          "type": null,
+          "width": 105,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Compare components",
+          "href": "#/studio/tradeoffs",
+          "type": null,
+          "width": 161,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Read the source",
+          "href": "#/sources",
+          "type": null,
+          "width": 105,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Open exports",
+          "href": "#/studio/export",
+          "type": null,
+          "width": 102,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Read the source",
+          "href": "#/sources",
+          "type": null,
+          "width": 105,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close Agrorithm helper",
+          "href": null,
+          "type": "button",
+          "width": 0,
+          "height": 0,
+          "visible": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "weather-patterns",
+      "controls": [
+        {
+          "tag": "a",
+          "text": "Agrorithm home",
+          "href": "#/",
+          "type": null,
+          "width": 267,
+          "height": 58,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Plan",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 25,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Map",
+          "href": "#/atlas",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "3D explorer",
+          "href": "#/soil",
+          "type": null,
+          "width": 66,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Help",
+          "href": "#/help",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Search pages and tools",
+          "href": null,
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close search",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "HomeStart, sample and visual introduction",
+          "href": "#/",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Field setupLocation, crops, soil and practical limits",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "EvidenceNASA weather and satellite observations",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Rotation labCompare the baseline and alternatives",
+          "href": "#/studio/lab",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "What if?Water, weather and priority controls",
+          "href": "#/studio/scenarios",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Trade-offsFeasibility, metrics and sensitivity",
+          "href": "#/studio/tradeoffs",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Save & exportJSON, CSV, print and local save",
+          "href": "#/studio/export",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Satellite crop atlasSearch places, climate zones and crop fit",
+          "href": "#/atlas",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D soil explorerCrop models, roots and groundwater",
+          "href": "#/soil",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D crop libraryFour models: grains, pulses, vegetables and fruit trees",
+          "href": "#/crops",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Question helperSearch source-linked explanations",
+          "href": "#/help",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Learned weather patternsExplore a model trained on historical NASA POWER data",
+          "href": "#/weather-patterns",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Sources & methodsData provenance and scientific limits",
+          "href": "#/sources",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "About jt_1Meet the project team",
+          "href": "#/about",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Display settings",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Motion on",
+          "href": null,
+          "type": null,
+          "width": 105,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Graphics quality",
+          "href": null,
+          "type": null,
+          "width": 132,
+          "height": 42,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Home",
+          "href": "#/",
+          "type": null,
+          "width": 54,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Cooler / lower monthly rainfall20 training months · 8 held out",
+          "href": null,
+          "type": null,
+          "width": 451,
+          "height": 88,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Intermediate temperature / lower monthly rainfall14 training months · 6 held out",
+          "href": null,
+          "type": null,
+          "width": 451,
+          "height": 88,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Warmer / higher monthly rainfall10 training months · 4 held out",
+          "href": null,
+          "type": null,
+          "width": 451,
+          "height": 88,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Warmer / lower monthly rainfall16 training months · 6 held out",
+          "href": null,
+          "type": null,
+          "width": 451,
+          "height": 88,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "January 2018 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "February 2018 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "March 2018 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "April 2018 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "May 2018 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "June 2018 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "July 2018 · Warmer / higher monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "August 2018 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "September 2018 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "October 2018 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "November 2018 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "December 2018 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "January 2019 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "February 2019 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "March 2019 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "April 2019 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "May 2019 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "June 2019 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "July 2019 · Warmer / higher monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "August 2019 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "September 2019 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "October 2019 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "November 2019 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "December 2019 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "January 2020 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "February 2020 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "March 2020 · Warmer / higher monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "April 2020 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "May 2020 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "June 2020 · Warmer / higher monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "July 2020 · Warmer / higher monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "August 2020 · Warmer / higher monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "September 2020 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "October 2020 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "November 2020 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "December 2020 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "January 2021 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "February 2021 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "March 2021 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "April 2021 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "May 2021 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "June 2021 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "July 2021 · Warmer / higher monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "August 2021 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "September 2021 · Warmer / higher monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "October 2021 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "November 2021 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "December 2021 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "January 2022 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "February 2022 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "March 2022 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "April 2022 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "May 2022 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "June 2022 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "July 2022 · Warmer / higher monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "August 2022 · Warmer / higher monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "September 2022 · Warmer / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "October 2022 · Intermediate temperature / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "November 2022 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "December 2022 · Cooler / lower monthly rainfall · training",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "January 2023 · Cooler / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "February 2023 · Cooler / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "March 2023 · Intermediate temperature / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "April 2023 · Intermediate temperature / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "May 2023 · Warmer / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "June 2023 · Warmer / higher monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "July 2023 · Warmer / higher monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "August 2023 · Warmer / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "September 2023 · Warmer / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "October 2023 · Intermediate temperature / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "November 2023 · Cooler / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "December 2023 · Cooler / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "January 2024 · Cooler / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "February 2024 · Cooler / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "March 2024 · Cooler / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "April 2024 · Intermediate temperature / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "May 2024 · Warmer / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "June 2024 · Warmer / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "July 2024 · Warmer / higher monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "August 2024 · Warmer / higher monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "September 2024 · Warmer / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "October 2024 · Intermediate temperature / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "November 2024 · Intermediate temperature / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "December 2024 · Cooler / lower monthly rainfall · held out",
+          "href": null,
+          "type": null,
+          "width": 65,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Historical month",
+          "href": null,
+          "type": null,
+          "width": 196,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Compare custom monthly conditions",
+          "href": null,
+          "type": null,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "NASA POWER 2018",
+          "href": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20180101&end=20181231&format=JSON&time-standard=UTC",
+          "type": null,
+          "width": 118,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "NASA POWER 2019",
+          "href": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20190101&end=20191231&format=JSON&time-standard=UTC",
+          "type": null,
+          "width": 118,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "NASA POWER 2020",
+          "href": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20200101&end=20201231&format=JSON&time-standard=UTC",
+          "type": null,
+          "width": 118,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "NASA POWER 2021",
+          "href": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20210101&end=20211231&format=JSON&time-standard=UTC",
+          "type": null,
+          "width": 118,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "NASA POWER 2022",
+          "href": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20220101&end=20221231&format=JSON&time-standard=UTC",
+          "type": null,
+          "width": 118,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "NASA POWER 2023",
+          "href": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20230101&end=20231231&format=JSON&time-standard=UTC",
+          "type": null,
+          "width": 118,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "NASA POWER 2024",
+          "href": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MIN,T2M_MAX,PRECTOTCORR&community=AG&longitude=73&latitude=32.1&start=20240101&end=20241231&format=JSON&time-standard=UTC",
+          "type": null,
+          "width": 118,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Download model and observations",
+          "href": "/Agrorithm/data/weather-patterns.json",
+          "type": null,
+          "width": 264,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "NASA POWER documentation",
+          "href": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+          "type": null,
+          "width": 193,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Open the farm evidence",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 165,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close Agrorithm helper",
+          "href": null,
+          "type": "button",
+          "width": 0,
+          "height": 0,
+          "visible": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "crops",
+      "controls": [
+        {
+          "tag": "a",
+          "text": "Agrorithm home",
+          "href": "#/",
+          "type": null,
+          "width": 267,
+          "height": 58,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Plan",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 25,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Map",
+          "href": "#/atlas",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "3D explorer",
+          "href": "#/soil",
+          "type": null,
+          "width": 66,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Help",
+          "href": "#/help",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Search pages and tools",
+          "href": null,
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close search",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "HomeStart, sample and visual introduction",
+          "href": "#/",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Field setupLocation, crops, soil and practical limits",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "EvidenceNASA weather and satellite observations",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Rotation labCompare the baseline and alternatives",
+          "href": "#/studio/lab",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "What if?Water, weather and priority controls",
+          "href": "#/studio/scenarios",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Trade-offsFeasibility, metrics and sensitivity",
+          "href": "#/studio/tradeoffs",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Save & exportJSON, CSV, print and local save",
+          "href": "#/studio/export",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Satellite crop atlasSearch places, climate zones and crop fit",
+          "href": "#/atlas",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D soil explorerCrop models, roots and groundwater",
+          "href": "#/soil",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D crop libraryFour models: grains, pulses, vegetables and fruit trees",
+          "href": "#/crops",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Question helperSearch source-linked explanations",
+          "href": "#/help",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Learned weather patternsExplore a model trained on historical NASA POWER data",
+          "href": "#/weather-patterns",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Sources & methodsData provenance and scientific limits",
+          "href": "#/sources",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "About jt_1Meet the project team",
+          "href": "#/about",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Display settings",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Motion on",
+          "href": null,
+          "type": null,
+          "width": 105,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Graphics quality",
+          "href": null,
+          "type": null,
+          "width": 132,
+          "height": 42,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Soil & water",
+          "href": "#/soil",
+          "type": null,
+          "width": 136,
+          "height": 46,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Crop models",
+          "href": "#/crops",
+          "type": null,
+          "width": 143,
+          "height": 46,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "text": "Search crop references",
+          "href": null,
+          "type": "search",
+          "width": 1224,
+          "height": 46,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "GrainsWheat · Maize",
+          "href": null,
+          "type": null,
+          "width": 315,
+          "height": 86,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "PulsesMungbean · Chickpea",
+          "href": null,
+          "type": null,
+          "width": 315,
+          "height": 86,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "VegetablesTomato · Potato",
+          "href": null,
+          "type": null,
+          "width": 315,
+          "height": 86,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Fruit treesCitrus · Mango",
+          "href": null,
+          "type": null,
+          "width": 315,
+          "height": 86,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Wheat",
+          "href": null,
+          "type": null,
+          "width": 93,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Maize",
+          "href": null,
+          "type": null,
+          "width": 89,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Plan with maize",
+          "href": null,
+          "type": null,
+          "width": 249,
+          "height": 62,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Find its climate context",
+          "href": "#/atlas",
+          "type": null,
+          "width": 324,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Explore roots & soil",
+          "href": "#/soil",
+          "type": null,
+          "width": 324,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Crop reference",
+          "href": "https://inspection.canada.ca/en/plant-health/plant-varieties/novel-traits/applicants/directive-94-08/biology-documents/zea-mays-maize",
+          "type": null,
+          "width": 324,
+          "height": 17,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "[1] FAO/IIASA GAEZ v4: Maize crop profile",
+          "href": "https://s3.eu-west-1.amazonaws.com/data.gaezdev.aws.fao.org/crop_profiles/GAEZ_Crop_profile_maize.pdf",
+          "type": null,
+          "width": 240,
+          "height": 13,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "[2] Punjab Agriculture: Manual of Maize Cultivation with HEIS, crop calendar",
+          "href": "https://agripunjab.gov.pk/system/files/Maize-Cultivation-with-HEIS.pdf",
+          "type": null,
+          "width": 422,
+          "height": 13,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "[3] FAO Irrigation Water Management: Crop water needs, Table 14",
+          "href": "https://www.fao.org/4/s2022e/s2022e07.htm",
+          "type": null,
+          "width": 374,
+          "height": 13,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "[4] FAO Plant nutrition for food security: Figure 18, optimal soil pH",
+          "href": "https://www.fao.org/4/a0443e/a0443e02.pdf",
+          "type": null,
+          "width": 360,
+          "height": 13,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close Agrorithm helper",
+          "href": null,
+          "type": "button",
+          "width": 0,
+          "height": 0,
+          "visible": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "atlas",
+      "controls": [
+        {
+          "tag": "a",
+          "text": "Agrorithm home",
+          "href": "#/",
+          "type": null,
+          "width": 267,
+          "height": 58,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Plan",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 25,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Map",
+          "href": "#/atlas",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "3D explorer",
+          "href": "#/soil",
+          "type": null,
+          "width": 66,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Help",
+          "href": "#/help",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Search pages and tools",
+          "href": null,
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close search",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "HomeStart, sample and visual introduction",
+          "href": "#/",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Field setupLocation, crops, soil and practical limits",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "EvidenceNASA weather and satellite observations",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Rotation labCompare the baseline and alternatives",
+          "href": "#/studio/lab",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "What if?Water, weather and priority controls",
+          "href": "#/studio/scenarios",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Trade-offsFeasibility, metrics and sensitivity",
+          "href": "#/studio/tradeoffs",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Save & exportJSON, CSV, print and local save",
+          "href": "#/studio/export",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Satellite crop atlasSearch places, climate zones and crop fit",
+          "href": "#/atlas",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D soil explorerCrop models, roots and groundwater",
+          "href": "#/soil",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D crop libraryFour models: grains, pulses, vegetables and fruit trees",
+          "href": "#/crops",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Question helperSearch source-linked explanations",
+          "href": "#/help",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Learned weather patternsExplore a model trained on historical NASA POWER data",
+          "href": "#/weather-patterns",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Sources & methodsData provenance and scientific limits",
+          "href": "#/sources",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "About jt_1Meet the project team",
+          "href": "#/about",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Display settings",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Motion on",
+          "href": null,
+          "type": null,
+          "width": 105,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Graphics quality",
+          "href": null,
+          "type": null,
+          "width": 132,
+          "height": 42,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Find your farm’s location",
+          "href": null,
+          "type": "button",
+          "width": 210,
+          "height": 46,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "text": "Search map locations",
+          "href": null,
+          "type": "search",
+          "width": 960,
+          "height": 46,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Find location",
+          "href": null,
+          "type": "submit",
+          "width": 140,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Lahore, Pakistan",
+          "href": null,
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Faisalabad, Pakistan",
+          "href": null,
+          "type": null,
+          "width": 170,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Multan, Pakistan",
+          "href": null,
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Islamabad, Pakistan",
+          "href": null,
+          "type": null,
+          "width": 168,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Open-Meteo / GeoNames",
+          "href": "https://open-meteo.com/en/docs/geocoding-api",
+          "type": null,
+          "width": 142,
+          "height": 13,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "View the satellite map",
+          "href": null,
+          "type": null,
+          "width": 183,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Climate families",
+          "href": null,
+          "type": null,
+          "width": 136,
+          "height": 38,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Crop climate fit",
+          "href": null,
+          "type": null,
+          "width": 135,
+          "height": 38,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Atlas crop",
+          "href": null,
+          "type": null,
+          "width": 155,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Atlas soil filter",
+          "href": null,
+          "type": null,
+          "width": 210,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "text": "",
+          "href": null,
+          "type": "checkbox",
+          "width": 18,
+          "height": 18,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "text": "Overlay opacity",
+          "href": null,
+          "type": "range",
+          "width": 170,
+          "height": 26,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Zoom world map in",
+          "href": null,
+          "type": null,
+          "width": 44,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Zoom world map out",
+          "href": null,
+          "type": null,
+          "width": 44,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Reset map view",
+          "href": null,
+          "type": null,
+          "width": 73,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Scroll zoom on",
+          "href": null,
+          "type": null,
+          "width": 121,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Punjab",
+          "href": null,
+          "type": null,
+          "width": 84,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Corn belt",
+          "href": null,
+          "type": null,
+          "width": 97,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Sahel",
+          "href": null,
+          "type": null,
+          "width": 76,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "SE Asia",
+          "href": null,
+          "type": null,
+          "width": 84,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Europe",
+          "href": null,
+          "type": null,
+          "width": 85,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "text": "Atlas latitude",
+          "href": null,
+          "type": "number",
+          "width": 113,
+          "height": 37,
+          "visible": true
+        },
+        {
+          "tag": "input",
+          "text": "Atlas longitude",
+          "href": null,
+          "type": "number",
+          "width": 113,
+          "height": 37,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "WheatSeason / water check",
+          "href": null,
+          "type": null,
+          "width": 235,
+          "height": 69,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "MaizeSeason / water check",
+          "href": null,
+          "type": null,
+          "width": 235,
+          "height": 69,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "MungbeanSeason / water check",
+          "href": null,
+          "type": null,
+          "width": 235,
+          "height": 69,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "ChickpeaSeason / water check",
+          "href": null,
+          "type": null,
+          "width": 235,
+          "height": 69,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "TomatoSeason / water check",
+          "href": null,
+          "type": null,
+          "width": 235,
+          "height": 69,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "PotatoSeason / water check",
+          "href": null,
+          "type": null,
+          "width": 235,
+          "height": 69,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "CitrusSeason / water check",
+          "href": null,
+          "type": null,
+          "width": 235,
+          "height": 69,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "MangoSeason / water check",
+          "href": null,
+          "type": null,
+          "width": 235,
+          "height": 69,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Use location in field setup",
+          "href": null,
+          "type": null,
+          "width": 235,
+          "height": 48,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Inspect the 3D plant",
+          "href": "#/crops?crop=wheat",
+          "type": null,
+          "width": 220,
+          "height": 277,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Crop adaptation reference",
+          "href": "https://www.arso-oran.org/wp-content/uploads/2022/10/GAPM-20-2018-Good-Agricultural-Practices-Outreach-Information-for-African-Standards-on-Wheat.pdf",
+          "type": null,
+          "width": 164,
+          "height": 13,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "[1] Bangladesh Department of Agricultural Extension, BAMIS: Wheat",
+          "href": "https://www.bamis.gov.bd/en/crops/view/9/",
+          "type": null,
+          "width": 377,
+          "height": 13,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "[2] Punjab Agriculture: Manual of Maize Cultivation with HEIS, crop calendar",
+          "href": "https://agripunjab.gov.pk/system/files/Maize-Cultivation-with-HEIS.pdf",
+          "type": null,
+          "width": 422,
+          "height": 13,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "[3] FAO Irrigation Water Management: Crop water needs, Table 14",
+          "href": "https://www.fao.org/4/s2022e/s2022e07.htm",
+          "type": null,
+          "width": 374,
+          "height": 13,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "[4] FAO: Environmental factors and wheat soil pH",
+          "href": "https://www.fao.org/4/x8234e/x8234e08.htm",
+          "type": null,
+          "width": 280,
+          "height": 13,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Scientific Data paper",
+          "href": "https://doi.org/10.1038/s41597-023-02549-6",
+          "type": null,
+          "width": 124,
+          "height": 15,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "data archive",
+          "href": "https://doi.org/10.6084/m9.figshare.21789074",
+          "type": null,
+          "width": 76,
+          "height": 15,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "CC BY 4.0",
+          "href": "https://creativecommons.org/licenses/by/4.0/",
+          "type": null,
+          "width": 57,
+          "height": 15,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "FAO ECOCROP context",
+          "href": "https://www.fao.org/geospatial/data-and-tools/data-portals/ecocrop/en",
+          "type": null,
+          "width": 138,
+          "height": 15,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close Agrorithm helper",
+          "href": null,
+          "type": "button",
+          "width": 0,
+          "height": 0,
+          "visible": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "soil",
+      "controls": [
+        {
+          "tag": "a",
+          "text": "Agrorithm home",
+          "href": "#/",
+          "type": null,
+          "width": 267,
+          "height": 58,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Plan",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 25,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Map",
+          "href": "#/atlas",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "3D explorer",
+          "href": "#/soil",
+          "type": null,
+          "width": 66,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Help",
+          "href": "#/help",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Search pages and tools",
+          "href": null,
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close search",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "HomeStart, sample and visual introduction",
+          "href": "#/",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Field setupLocation, crops, soil and practical limits",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "EvidenceNASA weather and satellite observations",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Rotation labCompare the baseline and alternatives",
+          "href": "#/studio/lab",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "What if?Water, weather and priority controls",
+          "href": "#/studio/scenarios",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Trade-offsFeasibility, metrics and sensitivity",
+          "href": "#/studio/tradeoffs",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Save & exportJSON, CSV, print and local save",
+          "href": "#/studio/export",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Satellite crop atlasSearch places, climate zones and crop fit",
+          "href": "#/atlas",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D soil explorerCrop models, roots and groundwater",
+          "href": "#/soil",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D crop libraryFour models: grains, pulses, vegetables and fruit trees",
+          "href": "#/crops",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Question helperSearch source-linked explanations",
+          "href": "#/help",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Learned weather patternsExplore a model trained on historical NASA POWER data",
+          "href": "#/weather-patterns",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Sources & methodsData provenance and scientific limits",
+          "href": "#/sources",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "About jt_1Meet the project team",
+          "href": "#/about",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Display settings",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Motion on",
+          "href": null,
+          "type": null,
+          "width": 105,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Graphics quality",
+          "href": null,
+          "type": null,
+          "width": 132,
+          "height": 42,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "← Back to the field",
+          "href": "#/",
+          "type": null,
+          "width": 110,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Soil & water",
+          "href": "#/soil",
+          "type": null,
+          "width": 136,
+          "height": 46,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Crop models",
+          "href": "#/crops",
+          "type": null,
+          "width": 143,
+          "height": 46,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Root zone",
+          "href": null,
+          "type": null,
+          "width": 106,
+          "height": 38,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Groundwater",
+          "href": null,
+          "type": null,
+          "width": 124,
+          "height": 38,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Reset view",
+          "href": null,
+          "type": null,
+          "width": 47,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Separate layers",
+          "href": null,
+          "type": null,
+          "width": 138,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Soil",
+          "href": null,
+          "type": null,
+          "width": 72,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Roots",
+          "href": null,
+          "type": null,
+          "width": 84,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "noneraininfiltrationuptakeevaporation",
+          "href": null,
+          "type": null,
+          "width": 280,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close Agrorithm helper",
+          "href": null,
+          "type": "button",
+          "width": 0,
+          "height": 0,
+          "visible": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "sources",
+      "controls": [
+        {
+          "tag": "a",
+          "text": "Agrorithm home",
+          "href": "#/",
+          "type": null,
+          "width": 267,
+          "height": 58,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Plan",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 25,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Map",
+          "href": "#/atlas",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "3D explorer",
+          "href": "#/soil",
+          "type": null,
+          "width": 66,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Help",
+          "href": "#/help",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Search pages and tools",
+          "href": null,
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close search",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "HomeStart, sample and visual introduction",
+          "href": "#/",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Field setupLocation, crops, soil and practical limits",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "EvidenceNASA weather and satellite observations",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Rotation labCompare the baseline and alternatives",
+          "href": "#/studio/lab",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "What if?Water, weather and priority controls",
+          "href": "#/studio/scenarios",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Trade-offsFeasibility, metrics and sensitivity",
+          "href": "#/studio/tradeoffs",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Save & exportJSON, CSV, print and local save",
+          "href": "#/studio/export",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Satellite crop atlasSearch places, climate zones and crop fit",
+          "href": "#/atlas",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D soil explorerCrop models, roots and groundwater",
+          "href": "#/soil",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D crop libraryFour models: grains, pulses, vegetables and fruit trees",
+          "href": "#/crops",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Question helperSearch source-linked explanations",
+          "href": "#/help",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Learned weather patternsExplore a model trained on historical NASA POWER data",
+          "href": "#/weather-patterns",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Sources & methodsData provenance and scientific limits",
+          "href": "#/sources",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "About jt_1Meet the project team",
+          "href": "#/about",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Display settings",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Motion on",
+          "href": null,
+          "type": null,
+          "width": 105,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Graphics quality",
+          "href": null,
+          "type": null,
+          "width": 132,
+          "height": 42,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "← Home",
+          "href": "#/",
+          "type": null,
+          "width": 50,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "NASA POWER daily API",
+          "href": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+          "type": null,
+          "width": 342,
+          "height": 43,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "HLS L30 v2.0",
+          "href": "https://hls.gsfc.nasa.gov/products-description/l30/",
+          "type": null,
+          "width": 342,
+          "height": 43,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Punjab maize manual",
+          "href": "https://agripunjab.gov.pk/system/files/Maize-Cultivation-with-HEIS.pdf",
+          "type": null,
+          "width": 342,
+          "height": 22,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Mungbean production manual",
+          "href": "https://worldveg.tind.io/record/66217/files/English_mungbean%20production%20manual.pdf",
+          "type": null,
+          "width": 342,
+          "height": 22,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Pakistan Meteorological Department",
+          "href": "https://namc.pmd.gov.pk/assets/crop-reports/1038294586Model-crop-report-Faisalabad-wheat-2022-23.pdf",
+          "type": null,
+          "width": 342,
+          "height": 22,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "FAO Irrigation and Drainage Paper 56",
+          "href": "https://www.fao.org/4/X0490E/x0490e00.htm",
+          "type": null,
+          "width": 342,
+          "height": 22,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "FAO rice irrigation",
+          "href": "https://www.fao.org/4/s2022e/s2022e08.htm",
+          "type": null,
+          "width": 342,
+          "height": 22,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "USGS aquifers & groundwater",
+          "href": "https://www.usgs.gov/water-science-school/science/aquifers-and-groundwater",
+          "type": null,
+          "width": 342,
+          "height": 22,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Poly Haven texture assets · CC0",
+          "href": "https://polyhaven.com/license",
+          "type": null,
+          "width": 342,
+          "height": 43,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close Agrorithm helper",
+          "href": null,
+          "type": "button",
+          "width": 0,
+          "height": 0,
+          "visible": false
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "route": "about",
+      "controls": [
+        {
+          "tag": "a",
+          "text": "Agrorithm home",
+          "href": "#/",
+          "type": null,
+          "width": 267,
+          "height": 58,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Plan",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 25,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Map",
+          "href": "#/atlas",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "3D explorer",
+          "href": "#/soil",
+          "type": null,
+          "width": 66,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Help",
+          "href": "#/help",
+          "type": null,
+          "width": 27,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Search pages and tools",
+          "href": null,
+          "type": null,
+          "width": 146,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close search",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "HomeStart, sample and visual introduction",
+          "href": "#/",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Field setupLocation, crops, soil and practical limits",
+          "href": "#/studio/setup",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "EvidenceNASA weather and satellite observations",
+          "href": "#/studio/evidence",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Rotation labCompare the baseline and alternatives",
+          "href": "#/studio/lab",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "What if?Water, weather and priority controls",
+          "href": "#/studio/scenarios",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Trade-offsFeasibility, metrics and sensitivity",
+          "href": "#/studio/tradeoffs",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Save & exportJSON, CSV, print and local save",
+          "href": "#/studio/export",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Satellite crop atlasSearch places, climate zones and crop fit",
+          "href": "#/atlas",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D soil explorerCrop models, roots and groundwater",
+          "href": "#/soil",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "3D crop libraryFour models: grains, pulses, vegetables and fruit trees",
+          "href": "#/crops",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Question helperSearch source-linked explanations",
+          "href": "#/help",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Learned weather patternsExplore a model trained on historical NASA POWER data",
+          "href": "#/weather-patterns",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "Sources & methodsData provenance and scientific limits",
+          "href": "#/sources",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "a",
+          "text": "About jt_1Meet the project team",
+          "href": "#/about",
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Display settings",
+          "href": null,
+          "type": null,
+          "width": 0,
+          "height": 0,
+          "visible": false
+        },
+        {
+          "tag": "button",
+          "text": "Motion on",
+          "href": null,
+          "type": null,
+          "width": 105,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "tag": "select",
+          "text": "Graphics quality",
+          "href": null,
+          "type": null,
+          "width": 132,
+          "height": 42,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "← Home",
+          "href": "#/",
+          "type": null,
+          "width": 50,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "tag": "a",
+          "text": "Official challenge reference",
+          "href": "https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/",
+          "type": null,
+          "width": 239,
+          "height": 20,
+          "visible": true
+        },
+        {
+          "tag": "button",
+          "text": "Close Agrorithm helper",
+          "href": null,
+          "type": "button",
+          "width": 0,
+          "height": 0,
+          "visible": false
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "assets": [],
+  "checks": [
+    {
+      "name": "Valid and invalid plan JSON restore without reset",
+      "detail": {
+        "bytes": 43001,
+        "rejectedInvalid": true,
+        "restoredValid": true
+      }
+    },
+    {
+      "name": "Crop registry download/import/restore and malformed weather rejected",
+      "detail": {
+        "tableBytes": 4401,
+        "imported": true,
+        "restored": true,
+        "weatherError": true
+      }
+    },
+    {
+      "name": "Inventory home",
+      "detail": 42
+    },
+    {
+      "name": "Inventory help",
+      "detail": 54
+    },
+    {
+      "name": "Inventory weather-patterns",
+      "detail": 126
+    },
+    {
+      "name": "Inventory crops",
+      "detail": 42
+    },
+    {
+      "name": "Inventory atlas",
+      "detail": 70
+    },
+    {
+      "name": "Inventory soil",
+      "detail": 35
+    },
+    {
+      "name": "Inventory sources",
+      "detail": 35
+    },
+    {
+      "name": "Inventory about",
+      "detail": 27
+    }
+  ],
+  "failures": [],
+  "errors": []
+}

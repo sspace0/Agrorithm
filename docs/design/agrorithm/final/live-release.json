@@ -1,0 +1,25 @@
+{
+  "verifiedAt": "2026-11-15T13:58:34.691Z",
+  "sourceCommit": "2da45713dca26ac69e90afd2f959ad1410a747e9",
+  "results": [
+    {
+      "name": "pages",
+      "base": "https://sspace0.github.io/Agrorithm/",
+      "status": 200,
+      "sample": "2 of 2 alternatives pass current screensNo yield or profit forecast",
+      "challenge": "https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/",
+      "modelBytes": 6029336,
+      "errors": []
+    },
+    {
+      "name": "sites",
+      "base": "https://fieldshift-jt1.spacetime24.chatgpt.site/",
+      "status": 200,
+      "sample": "2 of 2 alternatives pass current screensNo yield or profit forecast",
+      "challenge": "https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/",
+      "modelBytes": 6029336,
+      "errors": []
+    }
+  ],
+  "phoneOverflow": false
+}

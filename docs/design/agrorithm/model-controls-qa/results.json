@@ -1,0 +1,2852 @@
+{
+  "base": "http://127.0.0.1:5189/Agrorithm/",
+  "results": [
+    {
+      "name": "home",
+      "checks": [
+        {
+          "name": "Reset framing starts inside transparent canvas",
+          "passed": true,
+          "detail": {
+            "left": 67.41479670796627,
+            "top": 142.33200518841488,
+            "width": 566.6418542046149,
+            "height": 417.5205335673878,
+            "viewportWidth": 743.03125,
+            "viewportHeight": 620
+          }
+        },
+        {
+          "name": "Inspect enables manual orbit and touch gestures",
+          "passed": true,
+          "detail": {
+            "mode": "manual",
+            "camera": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            },
+            "bounds": {
+              "left": 67.4427960061346,
+              "top": 142.24374903357878,
+              "width": 566.7416370977882,
+              "height": 417.6475343939114,
+              "viewportWidth": 743.03125,
+              "viewportHeight": 620
+            },
+            "layers": {
+              "Layer_Parent": 0,
+              "Layer_Subsoil": 0,
+              "Layer_Topsoil": 0
+            },
+            "clearAlpha": "0",
+            "touchAction": "none"
+          }
+        },
+        {
+          "name": "Plus reduces real camera distance and enlarges projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.093159572301135,
+                  2.865211700610794,
+                  9.823582973522727
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 11.021169439370897
+              },
+              "bounds": {
+                "left": 67.4427960061346,
+                "top": 142.24374903357878,
+                "width": 566.7416370977882,
+                "height": 417.6475343939114,
+                "viewportWidth": 743.03125,
+                "viewportHeight": 620
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  2.783348509164771,
+                  1.9483439564153402,
+                  6.680036421995455
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 7.494395218772211
+              },
+              "bounds": {
+                "left": -102.43882390410164,
+                "top": 80.83427979298936,
+                "width": 854.5009176339236,
+                "height": 644.7261805381262,
+                "viewportWidth": 743.03125,
+                "viewportHeight": 620
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Minus increases real camera distance and shrinks projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  2.783348509164771,
+                  1.9483439564153402,
+                  6.680036421995455
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 7.494395218772211
+              },
+              "bounds": {
+                "left": -102.43882390410164,
+                "top": 80.83427979298936,
+                "width": 854.5009176339236,
+                "height": 644.7261805381262,
+                "viewportWidth": 743.03125,
+                "viewportHeight": 620
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.119355793563861,
+                  2.8835490554947034,
+                  9.886453904553274
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 11.091704923782872
+              },
+              "bounds": {
+                "left": 69.58545331432238,
+                "top": 143.23162417673768,
+                "width": 562.8567771331064,
+                "height": 414.6454984010669,
+                "viewportWidth": 743.03125,
+                "viewportHeight": 620
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Mouse drag changes the real camera orientation",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                4.119355793563861,
+                2.8835490554947034,
+                9.886453904553274
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.091704923782872
+            },
+            "after": {
+              "position": [
+                -4.840267125174544,
+                5.719275560968971,
+                8.1784851489091
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.091704923782867
+            }
+          }
+        },
+        {
+          "name": "Right drag pans the camera target",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                -4.840267125174544,
+                5.719275560968971,
+                8.1784851489091
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.091704923782867
+            },
+            "after": {
+              "position": [
+                -5.794685656075254,
+                6.062346811579738,
+                7.280851509850059
+              ],
+              "target": [
+                -0.372140644626786,
+                0.10608439888786846,
+                -0.34442630713722855
+              ],
+              "distance": 11.091704923782865
+            }
+          }
+        },
+        {
+          "name": "Ctrl+wheel zooms toward the pointer",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                -5.794685656075254,
+                6.062346811579738,
+                7.280851509850059
+              ],
+              "target": [
+                -0.372140644626786,
+                0.10608439888786846,
+                -0.34442630713722855
+              ],
+              "distance": 11.091704923782865
+            },
+            "after": {
+              "position": [
+                -5.167195326667046,
+                5.556269648926107,
+                6.569021028129486
+              ],
+              "target": [
+                -0.2710621574948018,
+                0.1797687121117836,
+                -0.3104045935234843
+              ],
+              "distance": 10.010263693714032
+            }
+          }
+        },
+        {
+          "name": "Ordinary wheel scrolls the page without camera zoom",
+          "passed": true,
+          "detail": {
+            "scrollBefore": 4541,
+            "scrollAfter": 4641,
+            "before": {
+              "position": [
+                -5.167195326667046,
+                5.556269648926107,
+                6.569021028129486
+              ],
+              "target": [
+                -0.2710621574948018,
+                0.1797687121117836,
+                -0.3104045935234843
+              ],
+              "distance": 10.010263693714032
+            },
+            "after": {
+              "position": [
+                -5.174376254255073,
+                5.558372950425692,
+                6.562315055222804
+              ],
+              "target": [
+                -0.277855219057609,
+                0.18170671502890967,
+                -0.31670530836838495
+              ],
+              "distance": 10.010263693714032
+            }
+          }
+        },
+        {
+          "name": "Reset restores fitted guided camera",
+          "passed": true,
+          "detail": {
+            "initial": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            },
+            "reset": {
+              "position": [
+                4.097408575846136,
+                2.868215948364773,
+                9.833828594340751
+              ],
+              "target": [
+                -0.000027616253533496336,
+                0.010103184459072446,
+                -0.000025614685954226796
+              ],
+              "distance": 11.030071646363915
+            }
+          }
+        },
+        {
+          "name": "Resume scroll returns to guided camera",
+          "passed": true
+        },
+        {
+          "name": "Poster control releases the canvas",
+          "passed": true
+        },
+        {
+          "name": "Reloaded canvas registers working zoom commands",
+          "passed": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "states": {
+        "initial": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              4.093159572301135,
+              2.865211700610794,
+              9.823582973522727
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.021169439370897
+          },
+          "bounds": {
+            "left": 67.41479670796627,
+            "top": 142.33200518841488,
+            "width": 566.6418542046149,
+            "height": 417.5205335673878,
+            "viewportWidth": 743.03125,
+            "viewportHeight": 620
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        },
+        "zoom-in": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              2.783348509164771,
+              1.9483439564153402,
+              6.680036421995455
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 7.494395218772211
+          },
+          "bounds": {
+            "left": -102.43882390410164,
+            "top": 80.83427979298936,
+            "width": 854.5009176339236,
+            "height": 644.7261805381262,
+            "viewportWidth": 743.03125,
+            "viewportHeight": 620
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "orbit": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              -4.840267125174544,
+              5.719275560968971,
+              8.1784851489091
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.091704923782867
+          },
+          "bounds": {
+            "left": 90.45437798418183,
+            "top": 90.80236700163337,
+            "width": 598.2208963746762,
+            "height": 520.5337556113373,
+            "viewportWidth": 743.03125,
+            "viewportHeight": 620
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "reset": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              4.097408575846136,
+              2.868215948364773,
+              9.833828594340751
+            ],
+            "target": [
+              -0.000027616253533496336,
+              0.010103184459072446,
+              -0.000025614685954226796
+            ],
+            "distance": 11.030071646363915
+          },
+          "bounds": {
+            "left": 73.4813162336306,
+            "top": 143.6317887275279,
+            "width": 557.0816800874115,
+            "height": 413.8169905619518,
+            "viewportWidth": 743.03125,
+            "viewportHeight": 620
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        }
+      },
+      "errors": []
+    },
+    {
+      "name": "home-reduced",
+      "checks": [
+        {
+          "name": "Reset framing starts inside transparent canvas",
+          "passed": true,
+          "detail": {
+            "left": 101.06391753839318,
+            "top": 144.96228460724214,
+            "width": 511.7337292710213,
+            "height": 396.96754310039285,
+            "viewportWidth": 743.03125,
+            "viewportHeight": 620
+          }
+        },
+        {
+          "name": "Inspect enables manual orbit and touch gestures",
+          "passed": true,
+          "detail": {
+            "mode": "manual",
+            "camera": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            },
+            "bounds": {
+              "left": 101.06391753839318,
+              "top": 144.96228460724214,
+              "width": 511.7337292710213,
+              "height": 396.96754310039285,
+              "viewportWidth": 743.03125,
+              "viewportHeight": 620
+            },
+            "layers": {
+              "Layer_Parent": 0,
+              "Layer_Subsoil": 0,
+              "Layer_Topsoil": 0
+            },
+            "clearAlpha": "0",
+            "touchAction": "none"
+          }
+        },
+        {
+          "name": "Plus reduces real camera distance and enlarges projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.093159572301135,
+                  2.865211700610794,
+                  9.823582973522727
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 11.021169439370897
+              },
+              "bounds": {
+                "left": 101.06391753839318,
+                "top": 144.96228460724214,
+                "width": 511.7337292710213,
+                "height": 396.96754310039285,
+                "viewportWidth": 743.03125,
+                "viewportHeight": 620
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  2.7833485091647714,
+                  1.9483439564153402,
+                  6.680036421995455
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 7.494395218772211
+              },
+              "bounds": {
+                "left": -45.941996618666955,
+                "top": 82.72116992979085,
+                "width": 769.2652475861343,
+                "height": 604.3086991223759,
+                "viewportWidth": 743.03125,
+                "viewportHeight": 620
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Minus increases real camera distance and shrinks projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  2.7833485091647714,
+                  1.9483439564153402,
+                  6.680036421995455
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 7.494395218772211
+              },
+              "bounds": {
+                "left": -45.941996618666955,
+                "top": 82.72116992979085,
+                "width": 769.2652475861343,
+                "height": 604.3086991223759,
+                "viewportWidth": 743.03125,
+                "viewportHeight": 620
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.119355793563861,
+                  2.8835490554947034,
+                  9.886453904553274
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 11.091704923782872
+              },
+              "bounds": {
+                "left": 102.95536445720943,
+                "top": 145.86128401177766,
+                "width": 508.3357018487423,
+                "height": 394.29701410029475,
+                "viewportWidth": 743.03125,
+                "viewportHeight": 620
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Mouse drag changes the real camera orientation",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                4.119355793563861,
+                2.8835490554947034,
+                9.886453904553274
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.091704923782872
+            },
+            "after": {
+              "position": [
+                -5.425646027779077,
+                5.957583710601919,
+                7.6220390728915115
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.091704923782867
+            }
+          }
+        },
+        {
+          "name": "Right drag pans the camera target",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                -5.425646027779077,
+                5.957583710601919,
+                7.6220390728915115
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.091704923782867
+            },
+            "after": {
+              "position": [
+                -5.844759349353486,
+                6.077535539308448,
+                7.229941425455198
+              ],
+              "target": [
+                -0.4191133215744096,
+                0.11995182870652854,
+                -0.3920976474363128
+              ],
+              "distance": 11.091704923782867
+            }
+          }
+        },
+        {
+          "name": "Ctrl+wheel zooms toward the pointer",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                -5.844759349353486,
+                6.077535539308448,
+                7.229941425455198
+              ],
+              "target": [
+                -0.4191133215744096,
+                0.11995182870652854,
+                -0.3920976474363128
+              ],
+              "distance": 11.091704923782867
+            },
+            "after": {
+              "position": [
+                -5.174520318389487,
+                5.559343211539701,
+                6.557801940744748
+              ],
+              "target": [
+                -0.27787477831886953,
+                0.1826239127214686,
+                -0.3210883225398397
+              ],
+              "distance": 10.010263693714037
+            }
+          }
+        },
+        {
+          "name": "Ordinary wheel scrolls the page without camera zoom",
+          "passed": true,
+          "detail": {
+            "scrollBefore": 1723,
+            "scrollAfter": 1823,
+            "before": {
+              "position": [
+                -5.174520318389487,
+                5.559343211539701,
+                6.557801940744748
+              ],
+              "target": [
+                -0.27787477831886953,
+                0.1826239127214686,
+                -0.3210883225398397
+              ],
+              "distance": 10.010263693714037
+            },
+            "after": {
+              "position": [
+                -5.1745203183894874,
+                5.559343211539701,
+                6.557801940744748
+              ],
+              "target": [
+                -0.27787477831886953,
+                0.1826239127214686,
+                -0.32108832253983977
+              ],
+              "distance": 10.010263693714037
+            }
+          }
+        },
+        {
+          "name": "Reset restores fitted guided camera",
+          "passed": true,
+          "detail": {
+            "initial": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            },
+            "reset": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            }
+          }
+        },
+        {
+          "name": "Resume scroll returns to guided camera",
+          "passed": true
+        },
+        {
+          "name": "Poster control releases the canvas",
+          "passed": true
+        },
+        {
+          "name": "Reloaded canvas registers working zoom commands",
+          "passed": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "states": {
+        "initial": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              4.093159572301135,
+              2.865211700610794,
+              9.823582973522727
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.021169439370897
+          },
+          "bounds": {
+            "left": 101.06391753839318,
+            "top": 144.96228460724214,
+            "width": 511.7337292710213,
+            "height": 396.96754310039285,
+            "viewportWidth": 743.03125,
+            "viewportHeight": 620
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        },
+        "zoom-in": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              2.7833485091647714,
+              1.9483439564153402,
+              6.680036421995455
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 7.494395218772211
+          },
+          "bounds": {
+            "left": -45.941996618666955,
+            "top": 82.72116992979085,
+            "width": 769.2652475861343,
+            "height": 604.3086991223759,
+            "viewportWidth": 743.03125,
+            "viewportHeight": 620
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "orbit": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              -5.425646027779077,
+              5.957583710601919,
+              7.6220390728915115
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.091704923782867
+          },
+          "bounds": {
+            "left": 100.86262130374112,
+            "top": 90.54667641231077,
+            "width": 542.1237102725454,
+            "height": 500.4546408424414,
+            "viewportWidth": 743.03125,
+            "viewportHeight": 620
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "reset": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              4.093159572301135,
+              2.865211700610794,
+              9.823582973522727
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.021169439370897
+          },
+          "bounds": {
+            "left": 101.06391753839318,
+            "top": 144.96228460724214,
+            "width": 511.7337292710213,
+            "height": 396.96754310039285,
+            "viewportWidth": 743.03125,
+            "viewportHeight": 620
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        }
+      },
+      "errors": []
+    },
+    {
+      "name": "soil",
+      "checks": [
+        {
+          "name": "Reset framing starts inside transparent canvas",
+          "passed": true,
+          "detail": {
+            "left": 297.70743034451567,
+            "top": 165.7733929268402,
+            "width": 653.6989212909161,
+            "height": 483.29336299983504,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Inspect enables manual orbit and touch gestures",
+          "passed": true,
+          "detail": {
+            "mode": "manual",
+            "camera": {
+              "position": [
+                4.0948974432373335,
+                2.8664282102661325,
+                9.827753863769598
+              ],
+              "target": [
+                0,
+                0.004109667045710156,
+                0
+              ],
+              "distance": 11.02478110986034
+            },
+            "bounds": {
+              "left": 297.5460701398288,
+              "top": 165.8244223253079,
+              "width": 653.6066720910048,
+              "height": 483.1637627000365,
+              "viewportWidth": 1296,
+              "viewportHeight": 720
+            },
+            "layers": {
+              "Layer_Parent": 0,
+              "Layer_Subsoil": 0,
+              "Layer_Topsoil": 0
+            },
+            "clearAlpha": "0",
+            "touchAction": "none"
+          }
+        },
+        {
+          "name": "Plus reduces real camera distance and enlarges projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.0948974432373335,
+                  2.8664282102661325,
+                  9.827753863769598
+                ],
+                "target": [
+                  0,
+                  0.004109667045710156,
+                  0
+                ],
+                "distance": 11.02478110986034
+              },
+              "bounds": {
+                "left": 297.5460701398288,
+                "top": 165.8244223253079,
+                "width": 653.6066720910048,
+                "height": 483.1637627000365,
+                "viewportWidth": 1296,
+                "viewportHeight": 720
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  2.784530261401387,
+                  1.950486276435597,
+                  6.682872627363327
+                ],
+                "target": [
+                  0,
+                  0.004109667045710156,
+                  0
+                ],
+                "distance": 7.496851154705031
+              },
+              "bounds": {
+                "left": 102.51163242245865,
+                "top": 95.10594746279357,
+                "width": 984.6115002206407,
+                "height": 744.5607268540012,
+                "viewportWidth": 1296,
+                "viewportHeight": 720
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Minus increases real camera distance and shrinks projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  2.784530261401387,
+                  1.950486276435597,
+                  6.682872627363327
+                ],
+                "target": [
+                  0,
+                  0.004109667045710156,
+                  0
+                ],
+                "distance": 7.496851154705031
+              },
+              "bounds": {
+                "left": 102.51163242245865,
+                "top": 95.10594746279357,
+                "width": 984.6115002206407,
+                "height": 744.5607268540012,
+                "viewportWidth": 1296,
+                "viewportHeight": 720
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.121104786874053,
+                  2.884747048942743,
+                  9.890651488497724
+                ],
+                "target": [
+                  0,
+                  0.004109667045710156,
+                  0
+                ],
+                "distance": 11.095339708963447
+              },
+              "bounds": {
+                "left": 299.9255384990984,
+                "top": 166.72422385801164,
+                "width": 649.3609330175084,
+                "height": 479.98078354008715,
+                "viewportWidth": 1296,
+                "viewportHeight": 720
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Mouse drag changes the real camera orientation",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                4.121104786874053,
+                2.884747048942743,
+                9.890651488497724
+              ],
+              "target": [
+                0,
+                0.004109667045710156,
+                0
+              ],
+              "distance": 11.095339708963447
+            },
+            "after": {
+              "position": [
+                -3.696363117093951,
+                5.301431905111819,
+                9.021188395659347
+              ],
+              "target": [
+                0,
+                0.004109667045710156,
+                0
+              ],
+              "distance": 11.095339708963449
+            }
+          }
+        },
+        {
+          "name": "Right drag pans the camera target",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                -3.696363117093951,
+                5.301431905111819,
+                9.021188395659347
+              ],
+              "target": [
+                0,
+                0.004109667045710156,
+                0
+              ],
+              "distance": 11.095339708963449
+            },
+            "after": {
+              "position": [
+                -4.710283729509806,
+                5.633821215894172,
+                8.33343877526038
+              ],
+              "target": [
+                -0.31086163986180404,
+                0.08460733323939908,
+                -0.20809936602131054
+              ],
+              "distance": 11.095339708963449
+            }
+          }
+        },
+        {
+          "name": "Ctrl+wheel zooms toward the pointer",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                -4.710283729509806,
+                5.633821215894172,
+                8.33343877526038
+              ],
+              "target": [
+                -0.31086163986180404,
+                0.08460733323939908,
+                -0.20809936602131054
+              ],
+              "distance": 11.095339708963449
+            },
+            "after": {
+              "position": [
+                -4.158202500013851,
+                5.18686676794808,
+                7.539228656944401
+              ],
+              "target": [
+                -0.17578153531816612,
+                0.17427315899760457,
+                -0.1604657370269107
+              ],
+              "distance": 10.013544087339513
+            }
+          }
+        },
+        {
+          "name": "Ordinary wheel scrolls the page without camera zoom",
+          "passed": true,
+          "detail": {
+            "scrollBefore": 434,
+            "scrollAfter": 534,
+            "before": {
+              "position": [
+                -4.158202500013851,
+                5.18686676794808,
+                7.539228656944401
+              ],
+              "target": [
+                -0.17578153531816612,
+                0.17427315899760457,
+                -0.1604657370269107
+              ],
+              "distance": 10.013544087339513
+            },
+            "after": {
+              "position": [
+                -4.176250038497318,
+                5.191822783084888,
+                7.526866211005625
+              ],
+              "target": [
+                -0.19135641360972766,
+                0.1783115763880884,
+                -0.17095123082474925
+              ],
+              "distance": 10.013544087339511
+            }
+          }
+        },
+        {
+          "name": "Reset restores fitted guided camera",
+          "passed": true,
+          "detail": {
+            "initial": {
+              "position": [
+                4.094897443237317,
+                2.866428210266121,
+                9.827753863769559
+              ],
+              "target": [
+                0,
+                0.004109667045671959,
+                0
+              ],
+              "distance": 11.024781109860307
+            },
+            "reset": {
+              "position": [
+                4.102636831691243,
+                2.8719737862305097,
+                9.846581055478119
+              ],
+              "target": [
+                -0.0001072815118597747,
+                0.022433984579449985,
+                -0.00007222525956031892
+              ],
+              "distance": 11.041239385625074
+            }
+          }
+        },
+        {
+          "name": "Separate layers moves actual parent geometry",
+          "passed": true,
+          "detail": {
+            "Layer_Parent": -0.3999999480555383,
+            "Layer_Subsoil": -0.19999997402776915,
+            "Layer_Topsoil": 0
+          }
+        },
+        {
+          "name": "Follow scroll restores assembled actual parent geometry",
+          "passed": true,
+          "detail": {
+            "Layer_Parent": -0.000007634060092214335,
+            "Layer_Subsoil": -0.0000038170300461071674,
+            "Layer_Topsoil": 0
+          }
+        },
+        {
+          "name": "Cached Groundwater camera commands remain live",
+          "passed": true
+        },
+        {
+          "name": "Cached Root zone camera commands remain live",
+          "passed": true
+        },
+        {
+          "name": "Resume scroll returns to guided camera",
+          "passed": true
+        },
+        {
+          "name": "Poster control releases the canvas",
+          "passed": true
+        },
+        {
+          "name": "Reloaded canvas registers working zoom commands",
+          "passed": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "states": {
+        "initial": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              4.094897443237317,
+              2.866428210266121,
+              9.827753863769559
+            ],
+            "target": [
+              0,
+              0.004109667045671959,
+              0
+            ],
+            "distance": 11.024781109860307
+          },
+          "bounds": {
+            "left": 297.70743034451567,
+            "top": 165.7733929268402,
+            "width": 653.6989212909161,
+            "height": 483.29336299983504,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        },
+        "zoom-in": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              2.784530261401387,
+              1.950486276435597,
+              6.682872627363327
+            ],
+            "target": [
+              0,
+              0.004109667045710156,
+              0
+            ],
+            "distance": 7.496851154705031
+          },
+          "bounds": {
+            "left": 102.51163242245865,
+            "top": 95.10594746279357,
+            "width": 984.6115002206407,
+            "height": 744.5607268540012,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "orbit": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              -3.696363117093951,
+              5.301431905111819,
+              9.021188395659347
+            ],
+            "target": [
+              0,
+              0.004109667045710156,
+              0
+            ],
+            "distance": 11.095339708963449
+          },
+          "bounds": {
+            "left": 346.998210494773,
+            "top": 121.04707225544583,
+            "width": 668.7391749442343,
+            "height": 564.619568884513,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "reset": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              4.102636831691243,
+              2.8719737862305097,
+              9.846581055478119
+            ],
+            "target": [
+              -0.0001072815118597747,
+              0.022433984579449985,
+              -0.00007222525956031892
+            ],
+            "distance": 11.041239385625074
+          },
+          "bounds": {
+            "left": 310.84748629304954,
+            "top": 169.153178626281,
+            "width": 632.1984767433252,
+            "height": 474.50905656559314,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        }
+      },
+      "errors": []
+    },
+    {
+      "name": "soil-reduced",
+      "checks": [
+        {
+          "name": "Reset framing starts inside transparent canvas",
+          "passed": true,
+          "detail": {
+            "left": 333.9270493994243,
+            "top": 168.34329825357153,
+            "width": 594.2714275405409,
+            "height": 460.9945661811013,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          }
+        },
+        {
+          "name": "Inspect enables manual orbit and touch gestures",
+          "passed": true,
+          "detail": {
+            "mode": "manual",
+            "camera": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            },
+            "bounds": {
+              "left": 333.9270493994243,
+              "top": 168.34329825357153,
+              "width": 594.2714275405409,
+              "height": 460.9945661811013,
+              "viewportWidth": 1296,
+              "viewportHeight": 720
+            },
+            "layers": {
+              "Layer_Parent": 0,
+              "Layer_Subsoil": 0,
+              "Layer_Topsoil": 0
+            },
+            "clearAlpha": "0",
+            "touchAction": "none"
+          }
+        },
+        {
+          "name": "Plus reduces real camera distance and enlarges projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.093159572301135,
+                  2.865211700610794,
+                  9.823582973522727
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 11.021169439370897
+              },
+              "bounds": {
+                "left": 333.9270493994243,
+                "top": 168.34329825357153,
+                "width": 594.2714275405409,
+                "height": 460.9945661811013,
+                "viewportWidth": 1296,
+                "viewportHeight": 720
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  2.7833485091647714,
+                  1.9483439564153402,
+                  6.680036421995455
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 7.494395218772211
+              },
+              "bounds": {
+                "left": 163.21050392670926,
+                "top": 96.06329411201517,
+                "width": 893.3402875193818,
+                "height": 701.7778441421137,
+                "viewportWidth": 1296,
+                "viewportHeight": 720
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Minus increases real camera distance and shrinks projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  2.7833485091647714,
+                  1.9483439564153402,
+                  6.680036421995455
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 7.494395218772211
+              },
+              "bounds": {
+                "left": 163.21050392670926,
+                "top": 96.06329411201517,
+                "width": 893.3402875193818,
+                "height": 701.7778441421137,
+                "viewportWidth": 1296,
+                "viewportHeight": 720
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.119355793563861,
+                  2.8835490554947034,
+                  9.886453904553274
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 11.091704923782872
+              },
+              "bounds": {
+                "left": 336.12356840192064,
+                "top": 169.38729756206436,
+                "width": 590.3253311791846,
+                "height": 457.89330669711654,
+                "viewportWidth": 1296,
+                "viewportHeight": 720
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Mouse drag changes the real camera orientation",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                4.119355793563861,
+                2.8835490554947034,
+                9.886453904553274
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.091704923782872
+            },
+            "after": {
+              "position": [
+                -4.414531361333726,
+                5.557330609685891,
+                8.523726149444192
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.091704923782883
+            }
+          }
+        },
+        {
+          "name": "Right drag pans the camera target",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                -4.414531361333726,
+                5.557330609685891,
+                8.523726149444192
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.091704923782883
+            },
+            "after": {
+              "position": [
+                -4.821264463590784,
+                5.663306892062914,
+                8.243979800047882
+              ],
+              "target": [
+                -0.4067331022570582,
+                0.10597628237702196,
+                -0.27974634939631016
+              ],
+              "distance": 11.091704923782883
+            }
+          }
+        },
+        {
+          "name": "Ctrl+wheel zooms toward the pointer",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                -4.821264463590784,
+                5.663306892062914,
+                8.243979800047882
+              ],
+              "target": [
+                -0.4067331022570582,
+                0.10597628237702196,
+                -0.27974634939631016
+              ],
+              "distance": 11.091704923782883
+            },
+            "after": {
+              "position": [
+                -4.180704276530155,
+                5.191586050040915,
+                7.511397225830002
+              ],
+              "target": [
+                -0.19658972292646704,
+                0.17609517479939818,
+                -0.18126562404337943
+              ],
+              "distance": 10.010263693714052
+            }
+          }
+        },
+        {
+          "name": "Ordinary wheel scrolls the page without camera zoom",
+          "passed": true,
+          "detail": {
+            "scrollBefore": 434,
+            "scrollAfter": 534,
+            "before": {
+              "position": [
+                -4.180704276530155,
+                5.191586050040915,
+                7.511397225830002
+              ],
+              "target": [
+                -0.19658972292646704,
+                0.17609517479939818,
+                -0.18126562404337943
+              ],
+              "distance": 10.010263693714052
+            },
+            "after": {
+              "position": [
+                -4.180704276530155,
+                5.191586050040915,
+                7.511397225830002
+              ],
+              "target": [
+                -0.19658972292646704,
+                0.17609517479939818,
+                -0.18126562404337943
+              ],
+              "distance": 10.010263693714052
+            }
+          }
+        },
+        {
+          "name": "Reset restores fitted guided camera",
+          "passed": true,
+          "detail": {
+            "initial": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            },
+            "reset": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            }
+          }
+        },
+        {
+          "name": "Separate layers moves actual parent geometry",
+          "passed": true,
+          "detail": {
+            "Layer_Parent": -0.4,
+            "Layer_Subsoil": -0.2,
+            "Layer_Topsoil": 0
+          }
+        },
+        {
+          "name": "Follow scroll restores assembled actual parent geometry",
+          "passed": true,
+          "detail": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          }
+        },
+        {
+          "name": "Cached Groundwater camera commands remain live",
+          "passed": true
+        },
+        {
+          "name": "Cached Root zone camera commands remain live",
+          "passed": true
+        },
+        {
+          "name": "Resume scroll returns to guided camera",
+          "passed": true
+        },
+        {
+          "name": "Poster control releases the canvas",
+          "passed": true
+        },
+        {
+          "name": "Reloaded canvas registers working zoom commands",
+          "passed": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "states": {
+        "initial": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              4.093159572301135,
+              2.865211700610794,
+              9.823582973522727
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.021169439370897
+          },
+          "bounds": {
+            "left": 333.9270493994243,
+            "top": 168.34329825357153,
+            "width": 594.2714275405409,
+            "height": 460.9945661811013,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        },
+        "zoom-in": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              2.7833485091647714,
+              1.9483439564153402,
+              6.680036421995455
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 7.494395218772211
+          },
+          "bounds": {
+            "left": 163.21050392670926,
+            "top": 96.06329411201517,
+            "width": 893.3402875193818,
+            "height": 701.7778441421137,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "orbit": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              -4.414531361333726,
+              5.557330609685891,
+              8.523726149444192
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.091704923782883
+          },
+          "bounds": {
+            "left": 348.4326167541659,
+            "top": 117.56943226399191,
+            "width": 620.0972287019381,
+            "height": 551.9106918191536,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "reset": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              4.093159572301135,
+              2.865211700610794,
+              9.823582973522727
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.021169439370897
+          },
+          "bounds": {
+            "left": 333.9270493994243,
+            "top": 168.34329825357153,
+            "width": 594.2714275405409,
+            "height": 460.9945661811013,
+            "viewportWidth": 1296,
+            "viewportHeight": 720
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        }
+      },
+      "errors": []
+    },
+    {
+      "name": "home-phone",
+      "checks": [
+        {
+          "name": "Reset framing starts inside transparent canvas",
+          "passed": true,
+          "detail": {
+            "left": 42.75631225903031,
+            "top": 69.06532234122764,
+            "width": 243.808622778948,
+            "height": 189.12982364699914,
+            "viewportWidth": 343.21875,
+            "viewportHeight": 295.390625
+          }
+        },
+        {
+          "name": "Inspect enables manual orbit and touch gestures",
+          "passed": true,
+          "detail": {
+            "mode": "manual",
+            "camera": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            },
+            "bounds": {
+              "left": 42.75631225903031,
+              "top": 69.06532234122764,
+              "width": 243.808622778948,
+              "height": 189.12982364699914,
+              "viewportWidth": 343.21875,
+              "viewportHeight": 295.390625
+            },
+            "layers": {
+              "Layer_Parent": 0,
+              "Layer_Subsoil": 0,
+              "Layer_Topsoil": 0
+            },
+            "clearAlpha": "0",
+            "touchAction": "none"
+          }
+        },
+        {
+          "name": "Plus reduces real camera distance and enlarges projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.093159572301135,
+                  2.865211700610794,
+                  9.823582973522727
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 11.021169439370897
+              },
+              "bounds": {
+                "left": 42.75631225903031,
+                "top": 69.06532234122764,
+                "width": 243.808622778948,
+                "height": 189.12982364699914,
+                "viewportWidth": 343.21875,
+                "viewportHeight": 295.390625
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  2.7833485091647714,
+                  1.9483439564153402,
+                  6.680036421995455
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 7.494395218772211
+              },
+              "bounds": {
+                "left": -27.282669775728323,
+                "top": 39.41138401014859,
+                "width": 366.5060359278193,
+                "height": 287.91471665596055,
+                "viewportWidth": 343.21875,
+                "viewportHeight": 295.390625
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Minus increases real camera distance and shrinks projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  2.7833485091647714,
+                  1.9483439564153402,
+                  6.680036421995455
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 7.494395218772211
+              },
+              "bounds": {
+                "left": -27.282669775728323,
+                "top": 39.41138401014859,
+                "width": 366.5060359278193,
+                "height": 287.91471665596055,
+                "viewportWidth": 343.21875,
+                "viewportHeight": 295.390625
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.119355793563861,
+                  2.8835490554947034,
+                  9.886453904553274
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 11.091704923782872
+              },
+              "bounds": {
+                "left": 43.65746659371331,
+                "top": 69.49363846377662,
+                "width": 242.18967851437685,
+                "height": 187.85748617858047,
+                "viewportWidth": 343.21875,
+                "viewportHeight": 295.390625
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Touch drag changes the real camera orientation",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                4.119355793563861,
+                2.8835490554947034,
+                9.886453904553274
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.091704923782872
+            },
+            "after": {
+              "position": [
+                -8.29157773398903,
+                6.297385097072598,
+                3.8234274854709174
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.09170492378287
+            }
+          }
+        },
+        {
+          "name": "Reset restores fitted guided camera",
+          "passed": true,
+          "detail": {
+            "initial": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            },
+            "reset": {
+              "position": [
+                4.093159572301135,
+                2.865211700610794,
+                9.823582973522727
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 11.021169439370897
+            }
+          }
+        },
+        {
+          "name": "Resume scroll returns to guided camera",
+          "passed": true
+        },
+        {
+          "name": "Poster control releases the canvas",
+          "passed": true
+        },
+        {
+          "name": "Reloaded canvas registers working zoom commands",
+          "passed": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "states": {
+        "initial": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              4.093159572301135,
+              2.865211700610794,
+              9.823582973522727
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.021169439370897
+          },
+          "bounds": {
+            "left": 42.75631225903031,
+            "top": 69.06532234122764,
+            "width": 243.808622778948,
+            "height": 189.12982364699914,
+            "viewportWidth": 343.21875,
+            "viewportHeight": 295.390625
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        },
+        "zoom-in": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              2.7833485091647714,
+              1.9483439564153402,
+              6.680036421995455
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 7.494395218772211
+          },
+          "bounds": {
+            "left": -27.282669775728323,
+            "top": 39.41138401014859,
+            "width": 366.5060359278193,
+            "height": 287.91471665596055,
+            "viewportWidth": 343.21875,
+            "viewportHeight": 295.390625
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "orbit": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              -8.29157773398903,
+              6.297385097072598,
+              3.8234274854709174
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.09170492378287
+          },
+          "bounds": {
+            "left": 44.826760449723515,
+            "top": 38.99602521077961,
+            "width": 228.72815819783943,
+            "height": 247.3136177460391,
+            "viewportWidth": 343.21875,
+            "viewportHeight": 295.390625
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "reset": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              4.093159572301135,
+              2.865211700610794,
+              9.823582973522727
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.021169439370897
+          },
+          "bounds": {
+            "left": 42.75631225903031,
+            "top": 69.06532234122764,
+            "width": 243.808622778948,
+            "height": 189.12982364699914,
+            "viewportWidth": 343.21875,
+            "viewportHeight": 295.390625
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        }
+      },
+      "errors": []
+    },
+    {
+      "name": "soil-phone",
+      "checks": [
+        {
+          "name": "Reset framing starts inside transparent canvas",
+          "passed": true,
+          "detail": {
+            "left": 42.19853944648216,
+            "top": 156.2813315233471,
+            "width": 256.31617169030915,
+            "height": 198.49913789625577,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          }
+        },
+        {
+          "name": "Inspect enables manual orbit and touch gestures",
+          "passed": true,
+          "detail": {
+            "mode": "manual",
+            "camera": {
+              "position": [
+                6.354289684443499,
+                4.448002779110447,
+                15.250295242664395
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 17.10944859150147
+            },
+            "bounds": {
+              "left": 42.19853944648216,
+              "top": 156.2813315233471,
+              "width": 256.31617169030915,
+              "height": 198.49913789625577,
+              "viewportWidth": 350,
+              "viewportHeight": 489.515625
+            },
+            "layers": {
+              "Layer_Parent": 0,
+              "Layer_Subsoil": 0,
+              "Layer_Topsoil": 0
+            },
+            "clearAlpha": "0",
+            "touchAction": "none"
+          }
+        },
+        {
+          "name": "Plus reduces real camera distance and enlarges projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  6.354289684443499,
+                  4.448002779110447,
+                  15.250295242664395
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 17.10944859150147
+              },
+              "bounds": {
+                "left": 42.19853944648216,
+                "top": 156.2813315233471,
+                "width": 256.31617169030915,
+                "height": 198.49913789625577,
+                "viewportWidth": 350,
+                "viewportHeight": 489.515625
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.320916985421579,
+                  3.0246418897951046,
+                  10.37020076501179
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 11.634425042221
+              },
+              "bounds": {
+                "left": -26.211967518612354,
+                "top": 120.37664862981353,
+                "width": 381.846264497136,
+                "height": 296.0137064735607,
+                "viewportWidth": 350,
+                "viewportHeight": 489.515625
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Minus increases real camera distance and shrinks projected geometry",
+          "passed": true,
+          "detail": {
+            "before": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  4.320916985421579,
+                  3.0246418897951046,
+                  10.37020076501179
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 11.634425042221
+              },
+              "bounds": {
+                "left": -26.211967518612354,
+                "top": 120.37664862981353,
+                "width": 381.846264497136,
+                "height": 296.0137064735607,
+                "viewportWidth": 350,
+                "viewportHeight": 489.515625
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            },
+            "after": {
+              "mode": "manual",
+              "camera": {
+                "position": [
+                  6.394957138423939,
+                  4.476469996896754,
+                  15.34789713221745
+                ],
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "distance": 17.21894906248708
+              },
+              "bounds": {
+                "left": 43.0954697727565,
+                "top": 156.78920344133837,
+                "width": 254.64300221080444,
+                "height": 197.20701312218654,
+                "viewportWidth": 350,
+                "viewportHeight": 489.515625
+              },
+              "layers": {
+                "Layer_Parent": 0,
+                "Layer_Subsoil": 0,
+                "Layer_Topsoil": 0
+              },
+              "clearAlpha": "0",
+              "touchAction": "none"
+            }
+          }
+        },
+        {
+          "name": "Touch drag changes the real camera orientation",
+          "passed": true,
+          "detail": {
+            "before": {
+              "position": [
+                6.394957138423939,
+                4.476469996896754,
+                15.34789713221745
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 17.21894906248708
+            },
+            "after": {
+              "position": [
+                -7.747595360744523,
+                7.769964735936453,
+                13.270064843285374
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 17.218949062487077
+            }
+          }
+        },
+        {
+          "name": "Reset restores fitted guided camera",
+          "passed": true,
+          "detail": {
+            "initial": {
+              "position": [
+                6.354289684443499,
+                4.448002779110447,
+                15.250295242664395
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 17.10944859150147
+            },
+            "reset": {
+              "position": [
+                6.354289684443499,
+                4.448002779110447,
+                15.250295242664395
+              ],
+              "target": [
+                0,
+                0,
+                0
+              ],
+              "distance": 17.10944859150147
+            }
+          }
+        },
+        {
+          "name": "Separate layers moves actual parent geometry",
+          "passed": true,
+          "detail": {
+            "Layer_Parent": -0.4,
+            "Layer_Subsoil": -0.2,
+            "Layer_Topsoil": 0
+          }
+        },
+        {
+          "name": "Follow scroll restores assembled actual parent geometry",
+          "passed": true,
+          "detail": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          }
+        },
+        {
+          "name": "Cached Groundwater camera commands remain live",
+          "passed": true
+        },
+        {
+          "name": "Cached Root zone camera commands remain live",
+          "passed": true
+        },
+        {
+          "name": "Resume scroll returns to guided camera",
+          "passed": true
+        },
+        {
+          "name": "Poster control releases the canvas",
+          "passed": true
+        },
+        {
+          "name": "Reloaded canvas registers working zoom commands",
+          "passed": true
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "states": {
+        "initial": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              6.354289684443499,
+              4.448002779110447,
+              15.250295242664395
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 17.10944859150147
+          },
+          "bounds": {
+            "left": 42.19853944648216,
+            "top": 156.2813315233471,
+            "width": 256.31617169030915,
+            "height": 198.49913789625577,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        },
+        "zoom-in": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              4.320916985421579,
+              3.0246418897951046,
+              10.37020076501179
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 11.634425042221
+          },
+          "bounds": {
+            "left": -26.211967518612354,
+            "top": 120.37664862981353,
+            "width": 381.846264497136,
+            "height": 296.0137064735607,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "orbit": {
+          "mode": "manual",
+          "camera": {
+            "position": [
+              -7.747595360744523,
+              7.769964735936453,
+              13.270064843285374
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 17.218949062487077
+          },
+          "bounds": {
+            "left": 44.550849983046554,
+            "top": 137.76685435372045,
+            "width": 264.6918009494437,
+            "height": 235.04888261955128,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "none"
+        },
+        "reset": {
+          "mode": "scroll",
+          "camera": {
+            "position": [
+              6.354289684443499,
+              4.448002779110447,
+              15.250295242664395
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "distance": 17.10944859150147
+          },
+          "bounds": {
+            "left": 42.19853944648216,
+            "top": 156.2813315233471,
+            "width": 256.31617169030915,
+            "height": 198.49913789625577,
+            "viewportWidth": 350,
+            "viewportHeight": 489.515625
+          },
+          "layers": {
+            "Layer_Parent": 0,
+            "Layer_Subsoil": 0,
+            "Layer_Topsoil": 0
+          },
+          "clearAlpha": "0",
+          "touchAction": "pan-y"
+        }
+      },
+      "errors": []
+    }
+  ],
+  "limitation": "Actual headless Chromium WebGL and emulated touch; no physical-device or FPS claim."
+}

@@ -1,0 +1,157 @@
+{
+  "at": "2026-11-15T20:06:10.201Z",
+  "target": "cd3b37f9f8a9214aad013d0655e89131ef6c4aff",
+  "base": "https://sspace0.github.io/Agrorithm/?revision=greeting-fix",
+  "outcome": "pass",
+  "checks": [
+    {
+      "name": "Exact greeting-fix release published",
+      "pass": true,
+      "release": {
+        "schema": 1,
+        "sourceSha": "cd3b37f9f8a9214aad013d0655e89131ef6c4aff",
+        "base": "/Agrorithm/",
+        "preparedAt": "2026-11-15T20:05:19.372Z",
+        "publication": "Prepared artifact branch; a separate authenticated Pages build trigger is required."
+      }
+    },
+    {
+      "width": 1440,
+      "name": "Exact screenshot greeting",
+      "pass": true,
+      "text": "ON THIS DEVICE\nHi. Ready when you are.\n\nHi! I’m ready to help. What would you like to explore—NASA observations, crop options or your plan? You can ask in your own words.\n\nOpen the pattern lab\nBrowse the field guide"
+    },
+    {
+      "width": 1440,
+      "name": "Curly-apostrophe conversational greeting",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "Thanks response",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "Mixed greeting does not swallow farming question",
+      "pass": true,
+      "text": "DOCUMENTED SOURCE GUIDE\nWhat do the water numbers mean?\n\nCrop ET describes estimated evapotranspiration. Effective rainfall is the part of rain used by the screening model. Net irrigation also accounts for the stated root-zone storage assumptions. Delivered irrigation divides net irrigation by application efficiency. One millimetre over one hectare is 10 cubic metres. These are screening estimates, not metered water use.\n\nTest water limits\nSee this in the Rotation lab\nSource: What do the water numbers mean?"
+    },
+    {
+      "width": 1440,
+      "name": "Following historical question remains functional",
+      "pass": true,
+      "text": "LEARNED HISTORICAL PATTERN\nJuly 2023 · Hot, wetter months\n\nThis complete NASA POWER month was held out of fitting. Its nearest learned center is a descriptive assignment for the Punjab regional point, not a crop recommendation.\n\nMean daily minimum 27.01 °C; mean daily maximum 35.59 °C.\nMonthly precipitation 259.09 mm; 19.35% of days had less than 1 mm rainfall.\nCoverage 31/31 complete days. Standardized distance 1.53; not a confidence score.\nRegional MERRA-2/POWER meteorology (~0.5° × 0.63° grid), not a field sensor. Model power-monthly-kmeans-1.0.0.\nExplore learned weather patterns\nNASA POWER source\nSee this in the Rotation lab"
+    },
+    {
+      "width": 1440,
+      "name": "No overflow and no optional model/runtime requests",
+      "pass": true,
+      "weightRequests": 0
+    },
+    {
+      "width": 390,
+      "name": "Exact screenshot greeting",
+      "pass": true,
+      "text": "ON THIS DEVICE\nHi. Ready when you are.\n\nHi! I’m ready to help. What would you like to explore—NASA observations, crop options or your plan? You can ask in your own words.\n\nOpen the pattern lab\nBrowse the field guide"
+    },
+    {
+      "width": 390,
+      "name": "Curly-apostrophe conversational greeting",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "Thanks response",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "Mixed greeting does not swallow farming question",
+      "pass": true,
+      "text": "DOCUMENTED SOURCE GUIDE\nWhat do the water numbers mean?\n\nCrop ET describes estimated evapotranspiration. Effective rainfall is the part of rain used by the screening model. Net irrigation also accounts for the stated root-zone storage assumptions. Delivered irrigation divides net irrigation by application efficiency. One millimetre over one hectare is 10 cubic metres. These are screening estimates, not metered water use.\n\nTest water limits\nSee this in the Rotation lab\nSource: What do the water numbers mean?"
+    },
+    {
+      "width": 390,
+      "name": "Following historical question remains functional",
+      "pass": true,
+      "text": "LEARNED HISTORICAL PATTERN\nJuly 2023 · Hot, wetter months\n\nThis complete NASA POWER month was held out of fitting. Its nearest learned center is a descriptive assignment for the Punjab regional point, not a crop recommendation.\n\nMean daily minimum 27.01 °C; mean daily maximum 35.59 °C.\nMonthly precipitation 259.09 mm; 19.35% of days had less than 1 mm rainfall.\nCoverage 31/31 complete days. Standardized distance 1.53; not a confidence score.\nRegional MERRA-2/POWER meteorology (~0.5° × 0.63° grid), not a field sensor. Model power-monthly-kmeans-1.0.0.\nExplore learned weather patterns\nNASA POWER source\nSee this in the Rotation lab"
+    },
+    {
+      "width": 390,
+      "name": "No overflow and no optional model/runtime requests",
+      "pass": true,
+      "weightRequests": 0
+    },
+    {
+      "name": "No JavaScript errors",
+      "pass": true
+    },
+    {
+      "name": "Exact additional Hi there how are you",
+      "width": 1440,
+      "pass": true,
+      "text": "ON THIS DEVICE\nHi. Ready when you are.\n\nHi! I’m ready to help. What would you like to explore—NASA observations, crop options or your plan? You can ask in your own words.\n\nOpen the pattern lab\nBrowse the field guide",
+      "optionalRequests": 0,
+      "errors": []
+    },
+    {
+      "name": "Exact additional Hi there how are you",
+      "width": 390,
+      "pass": true,
+      "text": "ON THIS DEVICE\nHi. Ready when you are.\n\nHi! I’m ready to help. What would you like to explore—NASA observations, crop options or your plan? You can ask in your own words.\n\nOpen the pattern lab\nBrowse the field guide",
+      "optionalRequests": 0,
+      "errors": []
+    }
+  ],
+  "polls": [
+    {
+      "at": "2026-11-15T20:04:02.053Z",
+      "status": 200,
+      "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4"
+    },
+    {
+      "at": "2026-11-15T20:04:17.181Z",
+      "status": 200,
+      "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4"
+    },
+    {
+      "at": "2026-11-15T20:04:32.513Z",
+      "status": 200,
+      "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4"
+    },
+    {
+      "at": "2026-11-15T20:04:47.638Z",
+      "status": 200,
+      "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4"
+    },
+    {
+      "at": "2026-11-15T20:05:02.779Z",
+      "status": 200,
+      "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4"
+    },
+    {
+      "at": "2026-11-15T20:05:18.013Z",
+      "status": 200,
+      "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4"
+    },
+    {
+      "at": "2026-11-15T20:05:33.143Z",
+      "status": 200,
+      "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4"
+    },
+    {
+      "at": "2026-11-15T20:05:48.278Z",
+      "status": 200,
+      "sourceSha": "1a5f81ce90e09f578c4d084933694ce0195be5e4"
+    },
+    {
+      "at": "2026-11-15T20:06:03.574Z",
+      "status": 200,
+      "sourceSha": "cd3b37f9f8a9214aad013d0655e89131ef6c4aff"
+    }
+  ],
+  "errors": [],
+  "browserClosed": true,
+  "additionalVerifiedAt": "2026-11-15T20:07:14.603Z"
+}

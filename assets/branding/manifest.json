@@ -1,0 +1,130 @@
+{
+  "retrieved": "2026-11-15",
+  "assets": [
+    {
+      "file": "assets/branding/agrorithm-original-transparent.png",
+      "bytes": 190675,
+      "sha256": "74af1c2829d1490cf5d73cc76b7402f3f30f9d56f215a79c016f1db2fd96a082",
+      "title": "Agrorithm supplied brand artwork",
+      "creator": "Not independently specified",
+      "source": "Supplied by the project user",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Unmodified copy."
+    },
+    {
+      "file": "assets/branding/agrorithm-original.png",
+      "bytes": 77287,
+      "sha256": "290e06d03ffedaf94838888a3da8d5cfe1a49858378c4e2bc2ebce3db71a5d2a",
+      "title": "Agrorithm supplied brand artwork",
+      "creator": "Not independently specified",
+      "source": "Supplied by the project user",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Unmodified copy."
+    },
+    {
+      "file": "assets/branding/agrorithm-logo.pdn",
+      "bytes": 269366,
+      "sha256": "46d20711f6a2ea33d6906627b6845ed58deb35e2f268e46ee642254bade14132",
+      "title": "Agrorithm supplied brand artwork",
+      "creator": "Not independently specified",
+      "source": "Supplied by the project user",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Unmodified copy."
+    },
+    {
+      "file": "public/images/agrorithm-logo.png",
+      "bytes": 150523,
+      "sha256": "41863592b3fe4ae64e16b68099ffabcf46dae5d98e1e46f959c4e78d7b29e249",
+      "title": "Agrorithm supplied brand artwork",
+      "creator": "Not independently specified",
+      "source": "Supplied by the project user",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Transparent alpha bounding-box crop (325,613,1595,1119)."
+    },
+    {
+      "file": "public/images/report-cover.png",
+      "bytes": 781932,
+      "sha256": "49537730ec1a1fd93ab72105417b19470f86bb822785e36ab92963ba51692830",
+      "title": "Agrorithm report cover",
+      "creator": "Not independently specified",
+      "source": "Supplied by the project user",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Unmodified copy."
+    },
+    {
+      "file": "public/images/earth-2004.webp",
+      "bytes": 142082,
+      "sha256": "f456b5da202458dce95177cd12171d90060fd6636cc651b24e1740bd9c1618bd",
+      "title": "Blue Marble: Next Generation · August 2004",
+      "creators": [
+        "Reto Stöckli",
+        "Robert Simmon"
+      ],
+      "publisher": "NASA Earth Observatory",
+      "page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+      "download": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/august/world.200408.3x5400x2700.jpg",
+      "license": "NASA imagery use guidelines; source offered for public use",
+      "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "observationPeriod": "2004-08",
+      "modifications": "Lanczos resize from 5400×2700 to 2048×1024; WebP quality85, method6. Used on an illustrative globe-to-map deformation; not recent observations."
+    },
+    {
+      "file": "public/fonts/instrument-serif-italic.ttf",
+      "bytes": 64208,
+      "sha256": "fecf4861d5202405b8bd45c683858b6870642a026784fe0dbf88ff55dedee8a0",
+      "title": "Instrument Serif Italic",
+      "creator": "The Instrument Serif Project Authors",
+      "page": "https://github.com/Instrument/instrument-serif",
+      "download": "https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zATiw.ttf",
+      "license": "SIL Open Font License1.1",
+      "licenseUrl": "https://github.com/google/fonts/blob/main/ofl/instrumentserif/OFL.txt",
+      "modifications": "Unmodified TrueType binary; packaged locally with its license."
+    },
+    {
+      "file": "public/images/earth-poster.webp",
+      "bytes": 89460,
+      "sha256": "39c1366decd5360c269b9000ad948d58503e82edbfd5b208b604cddd9fdd9810",
+      "title": "NASA VTAD clouded Earth presentation poster",
+      "creators": [
+        "NASA VTAD"
+      ],
+      "publisher": "NASA Visualization Technology Applications and Development (VTAD)",
+      "page": "https://science.nasa.gov/resource/earth-with-clouds-3d-model/",
+      "download": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/e/EarthClouds_1_12756.glb?emrc=6af96c145f135",
+      "license": "NASA imagery use guidelines; source offered for public use",
+      "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "observationPeriod": "Not specified for this historical presentation model",
+      "modifications": "Actual transparent WebGL capture of the optimized NASA model with illustrative Sun lighting;690×690 crop, WebP90. Rebuild via capture-earth-poster.mjs and prepare-exhibition-assets.py."
+    },
+    {
+      "file": "assets/branding/agrorithm-o-edited.png",
+      "bytes": 255107,
+      "sha256": "7bbe7b9bd562568032bca9e514d014626a677428230ab794a2c4995b3c3e82b5",
+      "title": "Isolated Agrorithm botanical O",
+      "source": "Project-supplied Agrorithm wordmark",
+      "creator": "Not independently specified",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Neighboring letters removed from the supplied wordmark; transparent botanical O preserved as source."
+    },
+    {
+      "file": "public/images/agrorithm-o.png",
+      "bytes": 10996,
+      "sha256": "8ab63c92877ba073635dc6736b2028df0d9dc9aac6e59ce2a008d854e9d42f94",
+      "title": "Agrorithm chat launcher mark",
+      "source": "Project-supplied Agrorithm wordmark",
+      "creator": "Not independently specified",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Trimmed transparent padding, resized and centered on a256pixeltransparentcanvas; prepare-brand-mark.py."
+    },
+    {
+      "file": "public/images/agrorithm-mark.svg",
+      "bytes": 14880,
+      "sha256": "a7780b0e1c9afecad1e59abeae092616514df7af75a4b74f88d3b81784bb0614",
+      "title": "Agrorithm browser icon",
+      "source": "Project-supplied Agrorithm wordmark",
+      "creator": "Not independently specified",
+      "license": "Project use authorized by supplier; no third-party open license asserted",
+      "modifications": "Isolated botanicalOonroundedpalebackplate; build-brand-icon.mjs."
+    }
+  ]
+}

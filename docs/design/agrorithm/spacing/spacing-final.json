@@ -1,0 +1,4346 @@
+{
+  "startedAt": "2026-11-15T08:22:27.587Z",
+  "updatedAt": "2026-11-15T08:23:30.771Z",
+  "browser": "158.0.8127.18",
+  "base": "http://127.0.0.1:4173/FieldShift/",
+  "records": [
+    {
+      "viewport": "desktop",
+      "id": "home",
+      "route": "/",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "Quality pill is 44px and icon/caret are vertically centered",
+          "passed": true,
+          "detail": {
+            "quality": {
+              "x": 1200.40625,
+              "y": 30.5,
+              "width": 182,
+              "height": 44
+            },
+            "centers": [
+              22,
+              22
+            ],
+            "motionLabel": {
+              "width": 54.109375,
+              "display": "block"
+            },
+            "contrast": {
+              "motion": 10.055630295372659,
+              "quality": 11.831503472913969,
+              "trigger": 12.797902731271598
+            },
+            "popover": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "documentOverflow": false
+          }
+        },
+        {
+          "name": "Quality pill stays in the viewport",
+          "passed": true,
+          "detail": {
+            "x": 1200.40625,
+            "y": 30.5,
+            "width": 182,
+            "height": 44
+          }
+        },
+        {
+          "name": "Display control labels have 4.5:1 text contrast",
+          "passed": true,
+          "detail": {
+            "motion": 10.055630295372659,
+            "quality": 11.831503472913969,
+            "trigger": 12.797902731271598
+          }
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-home-top.jpg",
+        "desktop-home-quality-poster.jpg",
+        "desktop-home-mid.jpg"
+      ],
+      "errors": [],
+      "header": {
+        "quality": {
+          "x": 1200.40625,
+          "y": 30.5,
+          "width": 182,
+          "height": 44
+        },
+        "centers": [
+          22,
+          22
+        ],
+        "motionLabel": {
+          "width": 54.109375,
+          "display": "block"
+        },
+        "contrast": {
+          "motion": 10.055630295372659,
+          "quality": 11.831503472913969,
+          "trigger": 12.797902731271598
+        },
+        "popover": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "documentOverflow": false
+      }
+    },
+    {
+      "viewport": "desktop",
+      "id": "atlas",
+      "route": "/atlas",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "Map zoom and context targets are at least 44px",
+          "passed": true,
+          "detail": [
+            {
+              "width": 44,
+              "height": 44
+            },
+            {
+              "width": 44,
+              "height": 44
+            },
+            {
+              "width": 72.984375,
+              "height": 44
+            },
+            {
+              "width": 84.171875,
+              "height": 44
+            },
+            {
+              "width": 96.796875,
+              "height": 44
+            },
+            {
+              "width": 76.0625,
+              "height": 44
+            },
+            {
+              "width": 83.546875,
+              "height": 44
+            },
+            {
+              "width": 84.75,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-atlas-top.jpg",
+        "desktop-atlas-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "id": "soil",
+      "route": "/soil",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-soil-top.jpg",
+        "desktop-soil-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "id": "crops",
+      "route": "/crops?crop=maize",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-crops-top.jpg",
+        "desktop-crops-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "id": "setup",
+      "route": "/studio/setup",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "Quality pill is 44px and icon/caret are vertically centered",
+          "passed": true,
+          "detail": {
+            "quality": {
+              "x": 1200.40625,
+              "y": 30.5,
+              "width": 182,
+              "height": 44
+            },
+            "centers": [
+              22,
+              22
+            ],
+            "motionLabel": {
+              "width": 54.109375,
+              "display": "block"
+            },
+            "contrast": {
+              "motion": 10.27595931695206,
+              "quality": 10.27595931695206,
+              "trigger": 10.27595931695206
+            },
+            "popover": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "documentOverflow": false
+          }
+        },
+        {
+          "name": "Quality pill stays in the viewport",
+          "passed": true,
+          "detail": {
+            "x": 1200.40625,
+            "y": 30.5,
+            "width": 182,
+            "height": 44
+          }
+        },
+        {
+          "name": "Display control labels have 4.5:1 text contrast",
+          "passed": true,
+          "detail": {
+            "motion": 10.27595931695206,
+            "quality": 10.27595931695206,
+            "trigger": 10.27595931695206
+          }
+        },
+        {
+          "name": "Every sequence date has at least 140px of readable width",
+          "passed": true,
+          "detail": [
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 183.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 229.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 183.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 229.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 198.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 216.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 185.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 229.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 198.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 213.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 185.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 229.125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 308.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 354.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 308.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 354.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 323.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 341.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 310.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 354.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 323.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 338.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 310.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 354.125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 433.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 479.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 433.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 479.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 448.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 466.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 435.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 479.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 448.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 463.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 435.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 479.125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 558.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 604.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 558.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 604.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 573.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 591.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 560.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 604.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 573.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 588.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 560.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 604.125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 683.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 729.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 683.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 729.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 698.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 716.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 685.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 729.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 698.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 713.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 685.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 729.125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 808.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 854.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 808.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 854.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 823.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 841.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 810.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 854.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 823.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 838.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 810.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 854.125
+              },
+              "overlap": 0
+            }
+          ]
+        },
+        {
+          "name": "Residue label and separate delete target fit their cells",
+          "passed": true,
+          "detail": [
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 183.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 229.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 183.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 229.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 198.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 216.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 185.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 229.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 198.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 213.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 185.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 229.125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 308.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 354.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 308.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 354.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 323.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 341.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 310.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 354.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 323.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 338.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 310.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 354.125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 433.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 479.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 433.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 479.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 448.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 466.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 435.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 479.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 448.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 463.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 435.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 479.125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 558.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 604.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 558.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 604.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 573.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 591.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 560.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 604.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 573.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 588.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 560.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 604.125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 683.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 729.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 683.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 729.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 698.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 716.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 685.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 729.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 698.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 713.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 685.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 729.125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 593.0625,
+                  "y": 808.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 835.46875,
+                  "bottom": 854.125
+                },
+                {
+                  "x": 851.46875,
+                  "y": 808.125,
+                  "width": 242.40625,
+                  "height": 46,
+                  "right": 1093.875,
+                  "bottom": 854.125
+                }
+              ],
+              "checkbox": {
+                "x": 1109.875,
+                "y": 823.125,
+                "width": 18,
+                "height": 18,
+                "right": 1127.875,
+                "bottom": 841.125
+              },
+              "label": {
+                "x": 1109.875,
+                "y": 810.125,
+                "width": 193.9375,
+                "height": 44,
+                "right": 1303.8125,
+                "bottom": 854.125
+              },
+              "text": [
+                {
+                  "x": 1137.875,
+                  "y": 823.71875,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 1220.046875,
+                  "bottom": 838.71875
+                }
+              ],
+              "remove": {
+                "x": 1319.8125,
+                "y": 810.125,
+                "width": 44,
+                "height": 44,
+                "right": 1363.8125,
+                "bottom": 854.125
+              },
+              "overlap": 0
+            }
+          ]
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-setup-top.jpg",
+        "desktop-setup-quality-poster.jpg",
+        "desktop-setup-mid.jpg"
+      ],
+      "errors": [],
+      "header": {
+        "quality": {
+          "x": 1200.40625,
+          "y": 30.5,
+          "width": 182,
+          "height": 44
+        },
+        "centers": [
+          22,
+          22
+        ],
+        "motionLabel": {
+          "width": 54.109375,
+          "display": "block"
+        },
+        "contrast": {
+          "motion": 10.27595931695206,
+          "quality": 10.27595931695206,
+          "trigger": 10.27595931695206
+        },
+        "popover": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "documentOverflow": false
+      },
+      "rows": [
+        {
+          "dates": [
+            {
+              "x": 593.0625,
+              "y": 183.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 835.46875,
+              "bottom": 229.125
+            },
+            {
+              "x": 851.46875,
+              "y": 183.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 1093.875,
+              "bottom": 229.125
+            }
+          ],
+          "checkbox": {
+            "x": 1109.875,
+            "y": 198.125,
+            "width": 18,
+            "height": 18,
+            "right": 1127.875,
+            "bottom": 216.125
+          },
+          "label": {
+            "x": 1109.875,
+            "y": 185.125,
+            "width": 193.9375,
+            "height": 44,
+            "right": 1303.8125,
+            "bottom": 229.125
+          },
+          "text": [
+            {
+              "x": 1137.875,
+              "y": 198.71875,
+              "width": 82.171875,
+              "height": 15,
+              "right": 1220.046875,
+              "bottom": 213.71875
+            }
+          ],
+          "remove": {
+            "x": 1319.8125,
+            "y": 185.125,
+            "width": 44,
+            "height": 44,
+            "right": 1363.8125,
+            "bottom": 229.125
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 593.0625,
+              "y": 308.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 835.46875,
+              "bottom": 354.125
+            },
+            {
+              "x": 851.46875,
+              "y": 308.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 1093.875,
+              "bottom": 354.125
+            }
+          ],
+          "checkbox": {
+            "x": 1109.875,
+            "y": 323.125,
+            "width": 18,
+            "height": 18,
+            "right": 1127.875,
+            "bottom": 341.125
+          },
+          "label": {
+            "x": 1109.875,
+            "y": 310.125,
+            "width": 193.9375,
+            "height": 44,
+            "right": 1303.8125,
+            "bottom": 354.125
+          },
+          "text": [
+            {
+              "x": 1137.875,
+              "y": 323.71875,
+              "width": 82.171875,
+              "height": 15,
+              "right": 1220.046875,
+              "bottom": 338.71875
+            }
+          ],
+          "remove": {
+            "x": 1319.8125,
+            "y": 310.125,
+            "width": 44,
+            "height": 44,
+            "right": 1363.8125,
+            "bottom": 354.125
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 593.0625,
+              "y": 433.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 835.46875,
+              "bottom": 479.125
+            },
+            {
+              "x": 851.46875,
+              "y": 433.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 1093.875,
+              "bottom": 479.125
+            }
+          ],
+          "checkbox": {
+            "x": 1109.875,
+            "y": 448.125,
+            "width": 18,
+            "height": 18,
+            "right": 1127.875,
+            "bottom": 466.125
+          },
+          "label": {
+            "x": 1109.875,
+            "y": 435.125,
+            "width": 193.9375,
+            "height": 44,
+            "right": 1303.8125,
+            "bottom": 479.125
+          },
+          "text": [
+            {
+              "x": 1137.875,
+              "y": 448.71875,
+              "width": 82.171875,
+              "height": 15,
+              "right": 1220.046875,
+              "bottom": 463.71875
+            }
+          ],
+          "remove": {
+            "x": 1319.8125,
+            "y": 435.125,
+            "width": 44,
+            "height": 44,
+            "right": 1363.8125,
+            "bottom": 479.125
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 593.0625,
+              "y": 558.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 835.46875,
+              "bottom": 604.125
+            },
+            {
+              "x": 851.46875,
+              "y": 558.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 1093.875,
+              "bottom": 604.125
+            }
+          ],
+          "checkbox": {
+            "x": 1109.875,
+            "y": 573.125,
+            "width": 18,
+            "height": 18,
+            "right": 1127.875,
+            "bottom": 591.125
+          },
+          "label": {
+            "x": 1109.875,
+            "y": 560.125,
+            "width": 193.9375,
+            "height": 44,
+            "right": 1303.8125,
+            "bottom": 604.125
+          },
+          "text": [
+            {
+              "x": 1137.875,
+              "y": 573.71875,
+              "width": 82.171875,
+              "height": 15,
+              "right": 1220.046875,
+              "bottom": 588.71875
+            }
+          ],
+          "remove": {
+            "x": 1319.8125,
+            "y": 560.125,
+            "width": 44,
+            "height": 44,
+            "right": 1363.8125,
+            "bottom": 604.125
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 593.0625,
+              "y": 683.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 835.46875,
+              "bottom": 729.125
+            },
+            {
+              "x": 851.46875,
+              "y": 683.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 1093.875,
+              "bottom": 729.125
+            }
+          ],
+          "checkbox": {
+            "x": 1109.875,
+            "y": 698.125,
+            "width": 18,
+            "height": 18,
+            "right": 1127.875,
+            "bottom": 716.125
+          },
+          "label": {
+            "x": 1109.875,
+            "y": 685.125,
+            "width": 193.9375,
+            "height": 44,
+            "right": 1303.8125,
+            "bottom": 729.125
+          },
+          "text": [
+            {
+              "x": 1137.875,
+              "y": 698.71875,
+              "width": 82.171875,
+              "height": 15,
+              "right": 1220.046875,
+              "bottom": 713.71875
+            }
+          ],
+          "remove": {
+            "x": 1319.8125,
+            "y": 685.125,
+            "width": 44,
+            "height": 44,
+            "right": 1363.8125,
+            "bottom": 729.125
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 593.0625,
+              "y": 808.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 835.46875,
+              "bottom": 854.125
+            },
+            {
+              "x": 851.46875,
+              "y": 808.125,
+              "width": 242.40625,
+              "height": 46,
+              "right": 1093.875,
+              "bottom": 854.125
+            }
+          ],
+          "checkbox": {
+            "x": 1109.875,
+            "y": 823.125,
+            "width": 18,
+            "height": 18,
+            "right": 1127.875,
+            "bottom": 841.125
+          },
+          "label": {
+            "x": 1109.875,
+            "y": 810.125,
+            "width": 193.9375,
+            "height": 44,
+            "right": 1303.8125,
+            "bottom": 854.125
+          },
+          "text": [
+            {
+              "x": 1137.875,
+              "y": 823.71875,
+              "width": 82.171875,
+              "height": 15,
+              "right": 1220.046875,
+              "bottom": 838.71875
+            }
+          ],
+          "remove": {
+            "x": 1319.8125,
+            "y": 810.125,
+            "width": 44,
+            "height": 44,
+            "right": 1363.8125,
+            "bottom": 854.125
+          },
+          "overlap": 0
+        }
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "id": "scenarios",
+      "route": "/studio/scenarios",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-scenarios-top.jpg",
+        "desktop-scenarios-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "id": "export",
+      "route": "/studio/export",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 1440
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "desktop-export-top.jpg",
+        "desktop-export-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "tablet",
+      "id": "home",
+      "route": "/",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "Quality pill is 44px and icon/caret are vertically centered",
+          "passed": true,
+          "detail": {
+            "quality": {
+              "x": 434.28125,
+              "y": 158,
+              "width": 286,
+              "height": 44
+            },
+            "centers": [
+              22,
+              22
+            ],
+            "motionLabel": {
+              "width": 54.109375,
+              "display": "block"
+            },
+            "contrast": {
+              "motion": 13.003290294800355,
+              "quality": 13.003290294800355,
+              "trigger": 9.415900295200636
+            },
+            "popover": {
+              "x": 417.28125,
+              "y": 87,
+              "width": 320,
+              "height": 132
+            },
+            "documentOverflow": false
+          }
+        },
+        {
+          "name": "Quality pill stays in the viewport",
+          "passed": true,
+          "detail": {
+            "x": 434.28125,
+            "y": 158,
+            "width": 286,
+            "height": 44
+          }
+        },
+        {
+          "name": "Display control labels have 4.5:1 text contrast",
+          "passed": true,
+          "detail": {
+            "motion": 13.003290294800355,
+            "quality": 13.003290294800355,
+            "trigger": 9.415900295200636
+          }
+        },
+        {
+          "name": "Popover shows its motion label",
+          "passed": true,
+          "detail": {
+            "width": 54.109375,
+            "display": "block"
+          }
+        },
+        {
+          "name": "Settings trigger is visible and popover fits the viewport",
+          "passed": true,
+          "detail": {
+            "quality": {
+              "x": 434.28125,
+              "y": 158,
+              "width": 286,
+              "height": 44
+            },
+            "centers": [
+              22,
+              22
+            ],
+            "motionLabel": {
+              "width": 54.109375,
+              "display": "block"
+            },
+            "contrast": {
+              "motion": 13.003290294800355,
+              "quality": 13.003290294800355,
+              "trigger": 9.415900295200636
+            },
+            "popover": {
+              "x": 417.28125,
+              "y": 87,
+              "width": 320,
+              "height": 132
+            },
+            "documentOverflow": false
+          }
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-home-top.jpg",
+        "tablet-home-settings-open.jpg",
+        "tablet-home-quality-poster.jpg",
+        "tablet-home-mid.jpg"
+      ],
+      "errors": [],
+      "header": {
+        "quality": {
+          "x": 434.28125,
+          "y": 158,
+          "width": 286,
+          "height": 44
+        },
+        "centers": [
+          22,
+          22
+        ],
+        "motionLabel": {
+          "width": 54.109375,
+          "display": "block"
+        },
+        "contrast": {
+          "motion": 13.003290294800355,
+          "quality": 13.003290294800355,
+          "trigger": 9.415900295200636
+        },
+        "popover": {
+          "x": 417.28125,
+          "y": 87,
+          "width": 320,
+          "height": 132
+        },
+        "documentOverflow": false
+      }
+    },
+    {
+      "viewport": "tablet",
+      "id": "atlas",
+      "route": "/atlas",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "Map zoom and context targets are at least 44px",
+          "passed": true,
+          "detail": [
+            {
+              "width": 44,
+              "height": 44
+            },
+            {
+              "width": 44,
+              "height": 44
+            },
+            {
+              "width": 72.984375,
+              "height": 44
+            },
+            {
+              "width": 84.171875,
+              "height": 44
+            },
+            {
+              "width": 96.796875,
+              "height": 44
+            },
+            {
+              "width": 76.0625,
+              "height": 44
+            },
+            {
+              "width": 83.546875,
+              "height": 44
+            },
+            {
+              "width": 84.75,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-atlas-top.jpg",
+        "tablet-atlas-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "tablet",
+      "id": "soil",
+      "route": "/soil",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-soil-top.jpg",
+        "tablet-soil-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "tablet",
+      "id": "crops",
+      "route": "/crops?crop=maize",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-crops-top.jpg",
+        "tablet-crops-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "tablet",
+      "id": "setup",
+      "route": "/studio/setup",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "Quality pill is 44px and icon/caret are vertically centered",
+          "passed": true,
+          "detail": {
+            "quality": {
+              "x": 434.28125,
+              "y": 158,
+              "width": 286,
+              "height": 44
+            },
+            "centers": [
+              22,
+              22
+            ],
+            "motionLabel": {
+              "width": 54.109375,
+              "display": "block"
+            },
+            "contrast": {
+              "motion": 10.857647752308157,
+              "quality": 10.857647752308157,
+              "trigger": 9.591840501335481
+            },
+            "popover": {
+              "x": 417.28125,
+              "y": 87,
+              "width": 320,
+              "height": 132
+            },
+            "documentOverflow": false
+          }
+        },
+        {
+          "name": "Quality pill stays in the viewport",
+          "passed": true,
+          "detail": {
+            "x": 434.28125,
+            "y": 158,
+            "width": 286,
+            "height": 44
+          }
+        },
+        {
+          "name": "Display control labels have 4.5:1 text contrast",
+          "passed": true,
+          "detail": {
+            "motion": 10.857647752308157,
+            "quality": 10.857647752308157,
+            "trigger": 9.591840501335481
+          }
+        },
+        {
+          "name": "Popover shows its motion label",
+          "passed": true,
+          "detail": {
+            "width": 54.109375,
+            "display": "block"
+          }
+        },
+        {
+          "name": "Settings trigger is visible and popover fits the viewport",
+          "passed": true,
+          "detail": {
+            "quality": {
+              "x": 434.28125,
+              "y": 158,
+              "width": 286,
+              "height": 44
+            },
+            "centers": [
+              22,
+              22
+            ],
+            "motionLabel": {
+              "width": 54.109375,
+              "display": "block"
+            },
+            "contrast": {
+              "motion": 10.857647752308157,
+              "quality": 10.857647752308157,
+              "trigger": 9.591840501335481
+            },
+            "popover": {
+              "x": 417.28125,
+              "y": 87,
+              "width": 320,
+              "height": 132
+            },
+            "documentOverflow": false
+          }
+        },
+        {
+          "name": "Every sequence date has at least 140px of readable width",
+          "passed": true,
+          "detail": [
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": -141.53125,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": -95.53125
+                },
+                {
+                  "x": 482,
+                  "y": -141.53125,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": -95.53125
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": -68.53125,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": -50.53125
+              },
+              "label": {
+                "x": 220.625,
+                "y": -81.53125,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": -37.53125
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": -67.9375,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": -52.9375
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": -81.53125,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": -37.53125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": 122.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": 168.96875
+                },
+                {
+                  "x": 482,
+                  "y": 122.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": 168.96875
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": 195.96875,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": 213.96875
+              },
+              "label": {
+                "x": 220.625,
+                "y": 182.96875,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": 226.96875
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": 196.5625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": 211.5625
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": 182.96875,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": 226.96875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": 387.46875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": 433.46875
+                },
+                {
+                  "x": 482,
+                  "y": 387.46875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": 433.46875
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": 460.46875,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": 478.46875
+              },
+              "label": {
+                "x": 220.625,
+                "y": 447.46875,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": 491.46875
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": 461.0625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": 476.0625
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": 447.46875,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": 491.46875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": 651.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": 697.96875
+                },
+                {
+                  "x": 482,
+                  "y": 651.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": 697.96875
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": 724.96875,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": 742.96875
+              },
+              "label": {
+                "x": 220.625,
+                "y": 711.96875,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": 755.96875
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": 725.5625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": 740.5625
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": 711.96875,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": 755.96875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": 916.46875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": 962.46875
+                },
+                {
+                  "x": 482,
+                  "y": 916.46875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": 962.46875
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": 989.46875,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": 1007.46875
+              },
+              "label": {
+                "x": 220.625,
+                "y": 976.46875,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": 1020.46875
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": 990.0625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": 1005.0625
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": 976.46875,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": 1020.46875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": 1180.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": 1226.96875
+                },
+                {
+                  "x": 482,
+                  "y": 1180.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": 1226.96875
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": 1253.96875,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": 1271.96875
+              },
+              "label": {
+                "x": 220.625,
+                "y": 1240.96875,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": 1284.96875
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": 1254.5625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": 1269.5625
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": 1240.96875,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": 1284.96875
+              },
+              "overlap": 0
+            }
+          ]
+        },
+        {
+          "name": "Residue label and separate delete target fit their cells",
+          "passed": true,
+          "detail": [
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": -141.53125,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": -95.53125
+                },
+                {
+                  "x": 482,
+                  "y": -141.53125,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": -95.53125
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": -68.53125,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": -50.53125
+              },
+              "label": {
+                "x": 220.625,
+                "y": -81.53125,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": -37.53125
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": -67.9375,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": -52.9375
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": -81.53125,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": -37.53125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": 122.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": 168.96875
+                },
+                {
+                  "x": 482,
+                  "y": 122.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": 168.96875
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": 195.96875,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": 213.96875
+              },
+              "label": {
+                "x": 220.625,
+                "y": 182.96875,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": 226.96875
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": 196.5625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": 211.5625
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": 182.96875,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": 226.96875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": 387.46875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": 433.46875
+                },
+                {
+                  "x": 482,
+                  "y": 387.46875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": 433.46875
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": 460.46875,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": 478.46875
+              },
+              "label": {
+                "x": 220.625,
+                "y": 447.46875,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": 491.46875
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": 461.0625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": 476.0625
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": 447.46875,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": 491.46875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": 651.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": 697.96875
+                },
+                {
+                  "x": 482,
+                  "y": 651.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": 697.96875
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": 724.96875,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": 742.96875
+              },
+              "label": {
+                "x": 220.625,
+                "y": 711.96875,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": 755.96875
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": 725.5625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": 740.5625
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": 711.96875,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": 755.96875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": 916.46875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": 962.46875
+                },
+                {
+                  "x": 482,
+                  "y": 916.46875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": 962.46875
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": 989.46875,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": 1007.46875
+              },
+              "label": {
+                "x": 220.625,
+                "y": 976.46875,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": 1020.46875
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": 990.0625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": 1005.0625
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": 976.46875,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": 1020.46875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 220.625,
+                  "y": 1180.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 466,
+                  "bottom": 1226.96875
+                },
+                {
+                  "x": 482,
+                  "y": 1180.96875,
+                  "width": 245.375,
+                  "height": 46,
+                  "right": 727.375,
+                  "bottom": 1226.96875
+                }
+              ],
+              "checkbox": {
+                "x": 220.625,
+                "y": 1253.96875,
+                "width": 18,
+                "height": 18,
+                "right": 238.625,
+                "bottom": 1271.96875
+              },
+              "label": {
+                "x": 220.625,
+                "y": 1240.96875,
+                "width": 245.375,
+                "height": 44,
+                "right": 466,
+                "bottom": 1284.96875
+              },
+              "text": [
+                {
+                  "x": 248.625,
+                  "y": 1254.5625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 330.796875,
+                  "bottom": 1269.5625
+                }
+              ],
+              "remove": {
+                "x": 683.375,
+                "y": 1240.96875,
+                "width": 44,
+                "height": 44,
+                "right": 727.375,
+                "bottom": 1284.96875
+              },
+              "overlap": 0
+            }
+          ]
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-setup-top.jpg",
+        "tablet-setup-settings-open.jpg",
+        "tablet-setup-quality-poster.jpg",
+        "tablet-setup-mid.jpg"
+      ],
+      "errors": [],
+      "header": {
+        "quality": {
+          "x": 434.28125,
+          "y": 158,
+          "width": 286,
+          "height": 44
+        },
+        "centers": [
+          22,
+          22
+        ],
+        "motionLabel": {
+          "width": 54.109375,
+          "display": "block"
+        },
+        "contrast": {
+          "motion": 10.857647752308157,
+          "quality": 10.857647752308157,
+          "trigger": 9.591840501335481
+        },
+        "popover": {
+          "x": 417.28125,
+          "y": 87,
+          "width": 320,
+          "height": 132
+        },
+        "documentOverflow": false
+      },
+      "rows": [
+        {
+          "dates": [
+            {
+              "x": 220.625,
+              "y": -141.53125,
+              "width": 245.375,
+              "height": 46,
+              "right": 466,
+              "bottom": -95.53125
+            },
+            {
+              "x": 482,
+              "y": -141.53125,
+              "width": 245.375,
+              "height": 46,
+              "right": 727.375,
+              "bottom": -95.53125
+            }
+          ],
+          "checkbox": {
+            "x": 220.625,
+            "y": -68.53125,
+            "width": 18,
+            "height": 18,
+            "right": 238.625,
+            "bottom": -50.53125
+          },
+          "label": {
+            "x": 220.625,
+            "y": -81.53125,
+            "width": 245.375,
+            "height": 44,
+            "right": 466,
+            "bottom": -37.53125
+          },
+          "text": [
+            {
+              "x": 248.625,
+              "y": -67.9375,
+              "width": 82.171875,
+              "height": 15,
+              "right": 330.796875,
+              "bottom": -52.9375
+            }
+          ],
+          "remove": {
+            "x": 683.375,
+            "y": -81.53125,
+            "width": 44,
+            "height": 44,
+            "right": 727.375,
+            "bottom": -37.53125
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 220.625,
+              "y": 122.96875,
+              "width": 245.375,
+              "height": 46,
+              "right": 466,
+              "bottom": 168.96875
+            },
+            {
+              "x": 482,
+              "y": 122.96875,
+              "width": 245.375,
+              "height": 46,
+              "right": 727.375,
+              "bottom": 168.96875
+            }
+          ],
+          "checkbox": {
+            "x": 220.625,
+            "y": 195.96875,
+            "width": 18,
+            "height": 18,
+            "right": 238.625,
+            "bottom": 213.96875
+          },
+          "label": {
+            "x": 220.625,
+            "y": 182.96875,
+            "width": 245.375,
+            "height": 44,
+            "right": 466,
+            "bottom": 226.96875
+          },
+          "text": [
+            {
+              "x": 248.625,
+              "y": 196.5625,
+              "width": 82.171875,
+              "height": 15,
+              "right": 330.796875,
+              "bottom": 211.5625
+            }
+          ],
+          "remove": {
+            "x": 683.375,
+            "y": 182.96875,
+            "width": 44,
+            "height": 44,
+            "right": 727.375,
+            "bottom": 226.96875
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 220.625,
+              "y": 387.46875,
+              "width": 245.375,
+              "height": 46,
+              "right": 466,
+              "bottom": 433.46875
+            },
+            {
+              "x": 482,
+              "y": 387.46875,
+              "width": 245.375,
+              "height": 46,
+              "right": 727.375,
+              "bottom": 433.46875
+            }
+          ],
+          "checkbox": {
+            "x": 220.625,
+            "y": 460.46875,
+            "width": 18,
+            "height": 18,
+            "right": 238.625,
+            "bottom": 478.46875
+          },
+          "label": {
+            "x": 220.625,
+            "y": 447.46875,
+            "width": 245.375,
+            "height": 44,
+            "right": 466,
+            "bottom": 491.46875
+          },
+          "text": [
+            {
+              "x": 248.625,
+              "y": 461.0625,
+              "width": 82.171875,
+              "height": 15,
+              "right": 330.796875,
+              "bottom": 476.0625
+            }
+          ],
+          "remove": {
+            "x": 683.375,
+            "y": 447.46875,
+            "width": 44,
+            "height": 44,
+            "right": 727.375,
+            "bottom": 491.46875
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 220.625,
+              "y": 651.96875,
+              "width": 245.375,
+              "height": 46,
+              "right": 466,
+              "bottom": 697.96875
+            },
+            {
+              "x": 482,
+              "y": 651.96875,
+              "width": 245.375,
+              "height": 46,
+              "right": 727.375,
+              "bottom": 697.96875
+            }
+          ],
+          "checkbox": {
+            "x": 220.625,
+            "y": 724.96875,
+            "width": 18,
+            "height": 18,
+            "right": 238.625,
+            "bottom": 742.96875
+          },
+          "label": {
+            "x": 220.625,
+            "y": 711.96875,
+            "width": 245.375,
+            "height": 44,
+            "right": 466,
+            "bottom": 755.96875
+          },
+          "text": [
+            {
+              "x": 248.625,
+              "y": 725.5625,
+              "width": 82.171875,
+              "height": 15,
+              "right": 330.796875,
+              "bottom": 740.5625
+            }
+          ],
+          "remove": {
+            "x": 683.375,
+            "y": 711.96875,
+            "width": 44,
+            "height": 44,
+            "right": 727.375,
+            "bottom": 755.96875
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 220.625,
+              "y": 916.46875,
+              "width": 245.375,
+              "height": 46,
+              "right": 466,
+              "bottom": 962.46875
+            },
+            {
+              "x": 482,
+              "y": 916.46875,
+              "width": 245.375,
+              "height": 46,
+              "right": 727.375,
+              "bottom": 962.46875
+            }
+          ],
+          "checkbox": {
+            "x": 220.625,
+            "y": 989.46875,
+            "width": 18,
+            "height": 18,
+            "right": 238.625,
+            "bottom": 1007.46875
+          },
+          "label": {
+            "x": 220.625,
+            "y": 976.46875,
+            "width": 245.375,
+            "height": 44,
+            "right": 466,
+            "bottom": 1020.46875
+          },
+          "text": [
+            {
+              "x": 248.625,
+              "y": 990.0625,
+              "width": 82.171875,
+              "height": 15,
+              "right": 330.796875,
+              "bottom": 1005.0625
+            }
+          ],
+          "remove": {
+            "x": 683.375,
+            "y": 976.46875,
+            "width": 44,
+            "height": 44,
+            "right": 727.375,
+            "bottom": 1020.46875
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 220.625,
+              "y": 1180.96875,
+              "width": 245.375,
+              "height": 46,
+              "right": 466,
+              "bottom": 1226.96875
+            },
+            {
+              "x": 482,
+              "y": 1180.96875,
+              "width": 245.375,
+              "height": 46,
+              "right": 727.375,
+              "bottom": 1226.96875
+            }
+          ],
+          "checkbox": {
+            "x": 220.625,
+            "y": 1253.96875,
+            "width": 18,
+            "height": 18,
+            "right": 238.625,
+            "bottom": 1271.96875
+          },
+          "label": {
+            "x": 220.625,
+            "y": 1240.96875,
+            "width": 245.375,
+            "height": 44,
+            "right": 466,
+            "bottom": 1284.96875
+          },
+          "text": [
+            {
+              "x": 248.625,
+              "y": 1254.5625,
+              "width": 82.171875,
+              "height": 15,
+              "right": 330.796875,
+              "bottom": 1269.5625
+            }
+          ],
+          "remove": {
+            "x": 683.375,
+            "y": 1240.96875,
+            "width": 44,
+            "height": 44,
+            "right": 727.375,
+            "bottom": 1284.96875
+          },
+          "overlap": 0
+        }
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "id": "scenarios",
+      "route": "/studio/scenarios",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-scenarios-top.jpg",
+        "tablet-scenarios-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "tablet",
+      "id": "export",
+      "route": "/studio/export",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 768
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "tablet-export-top.jpg",
+        "tablet-export-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "phone",
+      "id": "home",
+      "route": "/",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "Quality pill is 44px and icon/caret are vertically centered",
+          "passed": true,
+          "detail": {
+            "quality": {
+              "x": 71.40625,
+              "y": 181,
+              "width": 286,
+              "height": 44
+            },
+            "centers": [
+              22,
+              22
+            ],
+            "motionLabel": {
+              "width": 59.03125,
+              "display": "block"
+            },
+            "contrast": {
+              "motion": 13.003290294800355,
+              "quality": 13.003290294800355,
+              "trigger": 9.415900295200636
+            },
+            "popover": {
+              "x": 54.40625,
+              "y": 110,
+              "width": 320,
+              "height": 132
+            },
+            "documentOverflow": false
+          }
+        },
+        {
+          "name": "Quality pill stays in the viewport",
+          "passed": true,
+          "detail": {
+            "x": 71.40625,
+            "y": 181,
+            "width": 286,
+            "height": 44
+          }
+        },
+        {
+          "name": "Display control labels have 4.5:1 text contrast",
+          "passed": true,
+          "detail": {
+            "motion": 13.003290294800355,
+            "quality": 13.003290294800355,
+            "trigger": 9.415900295200636
+          }
+        },
+        {
+          "name": "Popover shows its motion label",
+          "passed": true,
+          "detail": {
+            "width": 59.03125,
+            "display": "block"
+          }
+        },
+        {
+          "name": "Settings trigger is visible and popover fits the viewport",
+          "passed": true,
+          "detail": {
+            "quality": {
+              "x": 71.40625,
+              "y": 181,
+              "width": 286,
+              "height": 44
+            },
+            "centers": [
+              22,
+              22
+            ],
+            "motionLabel": {
+              "width": 59.03125,
+              "display": "block"
+            },
+            "contrast": {
+              "motion": 13.003290294800355,
+              "quality": 13.003290294800355,
+              "trigger": 9.415900295200636
+            },
+            "popover": {
+              "x": 54.40625,
+              "y": 110,
+              "width": 320,
+              "height": 132
+            },
+            "documentOverflow": false
+          }
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-home-top.jpg",
+        "phone-home-settings-open.jpg",
+        "phone-home-quality-poster.jpg",
+        "phone-home-mid.jpg"
+      ],
+      "errors": [],
+      "header": {
+        "quality": {
+          "x": 71.40625,
+          "y": 181,
+          "width": 286,
+          "height": 44
+        },
+        "centers": [
+          22,
+          22
+        ],
+        "motionLabel": {
+          "width": 59.03125,
+          "display": "block"
+        },
+        "contrast": {
+          "motion": 13.003290294800355,
+          "quality": 13.003290294800355,
+          "trigger": 9.415900295200636
+        },
+        "popover": {
+          "x": 54.40625,
+          "y": 110,
+          "width": 320,
+          "height": 132
+        },
+        "documentOverflow": false
+      }
+    },
+    {
+      "viewport": "phone",
+      "id": "atlas",
+      "route": "/atlas",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "Map zoom and context targets are at least 44px",
+          "passed": true,
+          "detail": [
+            {
+              "width": 44,
+              "height": 44
+            },
+            {
+              "width": 44,
+              "height": 44
+            },
+            {
+              "width": 72.984375,
+              "height": 44
+            },
+            {
+              "width": 84.171875,
+              "height": 44
+            },
+            {
+              "width": 96.796875,
+              "height": 44
+            },
+            {
+              "width": 76.0625,
+              "height": 44
+            },
+            {
+              "width": 83.546875,
+              "height": 44
+            },
+            {
+              "width": 84.75,
+              "height": 44
+            }
+          ]
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-atlas-top.jpg",
+        "phone-atlas-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "phone",
+      "id": "soil",
+      "route": "/soil",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-soil-top.jpg",
+        "phone-soil-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "phone",
+      "id": "crops",
+      "route": "/crops?crop=maize",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-crops-top.jpg",
+        "phone-crops-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "phone",
+      "id": "setup",
+      "route": "/studio/setup",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "Quality pill is 44px and icon/caret are vertically centered",
+          "passed": true,
+          "detail": {
+            "quality": {
+              "x": 71.40625,
+              "y": 181,
+              "width": 286,
+              "height": 44
+            },
+            "centers": [
+              22,
+              22
+            ],
+            "motionLabel": {
+              "width": 59.03125,
+              "display": "block"
+            },
+            "contrast": {
+              "motion": 10.857647752308157,
+              "quality": 10.857647752308157,
+              "trigger": 9.591840501335481
+            },
+            "popover": {
+              "x": 54.40625,
+              "y": 110,
+              "width": 320,
+              "height": 132
+            },
+            "documentOverflow": false
+          }
+        },
+        {
+          "name": "Quality pill stays in the viewport",
+          "passed": true,
+          "detail": {
+            "x": 71.40625,
+            "y": 181,
+            "width": 286,
+            "height": 44
+          }
+        },
+        {
+          "name": "Display control labels have 4.5:1 text contrast",
+          "passed": true,
+          "detail": {
+            "motion": 10.857647752308157,
+            "quality": 10.857647752308157,
+            "trigger": 9.591840501335481
+          }
+        },
+        {
+          "name": "Popover shows its motion label",
+          "passed": true,
+          "detail": {
+            "width": 59.03125,
+            "display": "block"
+          }
+        },
+        {
+          "name": "Settings trigger is visible and popover fits the viewport",
+          "passed": true,
+          "detail": {
+            "quality": {
+              "x": 71.40625,
+              "y": 181,
+              "width": 286,
+              "height": 44
+            },
+            "centers": [
+              22,
+              22
+            ],
+            "motionLabel": {
+              "width": 59.03125,
+              "display": "block"
+            },
+            "contrast": {
+              "motion": 10.857647752308157,
+              "quality": 10.857647752308157,
+              "trigger": 9.591840501335481
+            },
+            "popover": {
+              "x": 54.40625,
+              "y": 110,
+              "width": 320,
+              "height": 132
+            },
+            "documentOverflow": false
+          }
+        },
+        {
+          "name": "Every sequence date has at least 140px of readable width",
+          "passed": true,
+          "detail": [
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": -231.953125,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": -185.953125
+                },
+                {
+                  "x": 203,
+                  "y": -231.953125,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": -185.953125
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": -158.953125,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": -140.953125
+              },
+              "label": {
+                "x": 40.5,
+                "y": -171.953125,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": -127.953125
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": -158.359375,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": -143.359375
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": -171.953125,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": -127.953125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": 32.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": 78.546875
+                },
+                {
+                  "x": 203,
+                  "y": 32.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": 78.546875
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": 105.546875,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": 123.546875
+              },
+              "label": {
+                "x": 40.5,
+                "y": 92.546875,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": 136.546875
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": 106.140625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": 121.140625
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": 92.546875,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": 136.546875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": 297.046875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": 343.046875
+                },
+                {
+                  "x": 203,
+                  "y": 297.046875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": 343.046875
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": 370.046875,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": 388.046875
+              },
+              "label": {
+                "x": 40.5,
+                "y": 357.046875,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": 401.046875
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": 370.640625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": 385.640625
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": 357.046875,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": 401.046875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": 561.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": 607.546875
+                },
+                {
+                  "x": 203,
+                  "y": 561.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": 607.546875
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": 634.546875,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": 652.546875
+              },
+              "label": {
+                "x": 40.5,
+                "y": 621.546875,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": 665.546875
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": 635.140625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": 650.140625
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": 621.546875,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": 665.546875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": 826.046875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": 872.046875
+                },
+                {
+                  "x": 203,
+                  "y": 826.046875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": 872.046875
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": 899.046875,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": 917.046875
+              },
+              "label": {
+                "x": 40.5,
+                "y": 886.046875,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": 930.046875
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": 899.640625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": 914.640625
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": 886.046875,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": 930.046875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": 1090.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": 1136.546875
+                },
+                {
+                  "x": 203,
+                  "y": 1090.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": 1136.546875
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": 1163.546875,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": 1181.546875
+              },
+              "label": {
+                "x": 40.5,
+                "y": 1150.546875,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": 1194.546875
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": 1164.140625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": 1179.140625
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": 1150.546875,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": 1194.546875
+              },
+              "overlap": 0
+            }
+          ]
+        },
+        {
+          "name": "Residue label and separate delete target fit their cells",
+          "passed": true,
+          "detail": [
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": -231.953125,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": -185.953125
+                },
+                {
+                  "x": 203,
+                  "y": -231.953125,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": -185.953125
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": -158.953125,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": -140.953125
+              },
+              "label": {
+                "x": 40.5,
+                "y": -171.953125,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": -127.953125
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": -158.359375,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": -143.359375
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": -171.953125,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": -127.953125
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": 32.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": 78.546875
+                },
+                {
+                  "x": 203,
+                  "y": 32.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": 78.546875
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": 105.546875,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": 123.546875
+              },
+              "label": {
+                "x": 40.5,
+                "y": 92.546875,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": 136.546875
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": 106.140625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": 121.140625
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": 92.546875,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": 136.546875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": 297.046875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": 343.046875
+                },
+                {
+                  "x": 203,
+                  "y": 297.046875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": 343.046875
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": 370.046875,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": 388.046875
+              },
+              "label": {
+                "x": 40.5,
+                "y": 357.046875,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": 401.046875
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": 370.640625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": 385.640625
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": 357.046875,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": 401.046875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": 561.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": 607.546875
+                },
+                {
+                  "x": 203,
+                  "y": 561.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": 607.546875
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": 634.546875,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": 652.546875
+              },
+              "label": {
+                "x": 40.5,
+                "y": 621.546875,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": 665.546875
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": 635.140625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": 650.140625
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": 621.546875,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": 665.546875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": 826.046875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": 872.046875
+                },
+                {
+                  "x": 203,
+                  "y": 826.046875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": 872.046875
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": 899.046875,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": 917.046875
+              },
+              "label": {
+                "x": 40.5,
+                "y": 886.046875,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": 930.046875
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": 899.640625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": 914.640625
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": 886.046875,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": 930.046875
+              },
+              "overlap": 0
+            },
+            {
+              "dates": [
+                {
+                  "x": 40.5,
+                  "y": 1090.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 187,
+                  "bottom": 1136.546875
+                },
+                {
+                  "x": 203,
+                  "y": 1090.546875,
+                  "width": 146.5,
+                  "height": 46,
+                  "right": 349.5,
+                  "bottom": 1136.546875
+                }
+              ],
+              "checkbox": {
+                "x": 40.5,
+                "y": 1163.546875,
+                "width": 18,
+                "height": 18,
+                "right": 58.5,
+                "bottom": 1181.546875
+              },
+              "label": {
+                "x": 40.5,
+                "y": 1150.546875,
+                "width": 146.5,
+                "height": 44,
+                "right": 187,
+                "bottom": 1194.546875
+              },
+              "text": [
+                {
+                  "x": 68.5,
+                  "y": 1164.140625,
+                  "width": 82.171875,
+                  "height": 15,
+                  "right": 150.671875,
+                  "bottom": 1179.140625
+                }
+              ],
+              "remove": {
+                "x": 305.5,
+                "y": 1150.546875,
+                "width": 44,
+                "height": 44,
+                "right": 349.5,
+                "bottom": 1194.546875
+              },
+              "overlap": 0
+            }
+          ]
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-setup-top.jpg",
+        "phone-setup-settings-open.jpg",
+        "phone-setup-quality-poster.jpg",
+        "phone-setup-mid.jpg"
+      ],
+      "errors": [],
+      "header": {
+        "quality": {
+          "x": 71.40625,
+          "y": 181,
+          "width": 286,
+          "height": 44
+        },
+        "centers": [
+          22,
+          22
+        ],
+        "motionLabel": {
+          "width": 59.03125,
+          "display": "block"
+        },
+        "contrast": {
+          "motion": 10.857647752308157,
+          "quality": 10.857647752308157,
+          "trigger": 9.591840501335481
+        },
+        "popover": {
+          "x": 54.40625,
+          "y": 110,
+          "width": 320,
+          "height": 132
+        },
+        "documentOverflow": false
+      },
+      "rows": [
+        {
+          "dates": [
+            {
+              "x": 40.5,
+              "y": -231.953125,
+              "width": 146.5,
+              "height": 46,
+              "right": 187,
+              "bottom": -185.953125
+            },
+            {
+              "x": 203,
+              "y": -231.953125,
+              "width": 146.5,
+              "height": 46,
+              "right": 349.5,
+              "bottom": -185.953125
+            }
+          ],
+          "checkbox": {
+            "x": 40.5,
+            "y": -158.953125,
+            "width": 18,
+            "height": 18,
+            "right": 58.5,
+            "bottom": -140.953125
+          },
+          "label": {
+            "x": 40.5,
+            "y": -171.953125,
+            "width": 146.5,
+            "height": 44,
+            "right": 187,
+            "bottom": -127.953125
+          },
+          "text": [
+            {
+              "x": 68.5,
+              "y": -158.359375,
+              "width": 82.171875,
+              "height": 15,
+              "right": 150.671875,
+              "bottom": -143.359375
+            }
+          ],
+          "remove": {
+            "x": 305.5,
+            "y": -171.953125,
+            "width": 44,
+            "height": 44,
+            "right": 349.5,
+            "bottom": -127.953125
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 40.5,
+              "y": 32.546875,
+              "width": 146.5,
+              "height": 46,
+              "right": 187,
+              "bottom": 78.546875
+            },
+            {
+              "x": 203,
+              "y": 32.546875,
+              "width": 146.5,
+              "height": 46,
+              "right": 349.5,
+              "bottom": 78.546875
+            }
+          ],
+          "checkbox": {
+            "x": 40.5,
+            "y": 105.546875,
+            "width": 18,
+            "height": 18,
+            "right": 58.5,
+            "bottom": 123.546875
+          },
+          "label": {
+            "x": 40.5,
+            "y": 92.546875,
+            "width": 146.5,
+            "height": 44,
+            "right": 187,
+            "bottom": 136.546875
+          },
+          "text": [
+            {
+              "x": 68.5,
+              "y": 106.140625,
+              "width": 82.171875,
+              "height": 15,
+              "right": 150.671875,
+              "bottom": 121.140625
+            }
+          ],
+          "remove": {
+            "x": 305.5,
+            "y": 92.546875,
+            "width": 44,
+            "height": 44,
+            "right": 349.5,
+            "bottom": 136.546875
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 40.5,
+              "y": 297.046875,
+              "width": 146.5,
+              "height": 46,
+              "right": 187,
+              "bottom": 343.046875
+            },
+            {
+              "x": 203,
+              "y": 297.046875,
+              "width": 146.5,
+              "height": 46,
+              "right": 349.5,
+              "bottom": 343.046875
+            }
+          ],
+          "checkbox": {
+            "x": 40.5,
+            "y": 370.046875,
+            "width": 18,
+            "height": 18,
+            "right": 58.5,
+            "bottom": 388.046875
+          },
+          "label": {
+            "x": 40.5,
+            "y": 357.046875,
+            "width": 146.5,
+            "height": 44,
+            "right": 187,
+            "bottom": 401.046875
+          },
+          "text": [
+            {
+              "x": 68.5,
+              "y": 370.640625,
+              "width": 82.171875,
+              "height": 15,
+              "right": 150.671875,
+              "bottom": 385.640625
+            }
+          ],
+          "remove": {
+            "x": 305.5,
+            "y": 357.046875,
+            "width": 44,
+            "height": 44,
+            "right": 349.5,
+            "bottom": 401.046875
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 40.5,
+              "y": 561.546875,
+              "width": 146.5,
+              "height": 46,
+              "right": 187,
+              "bottom": 607.546875
+            },
+            {
+              "x": 203,
+              "y": 561.546875,
+              "width": 146.5,
+              "height": 46,
+              "right": 349.5,
+              "bottom": 607.546875
+            }
+          ],
+          "checkbox": {
+            "x": 40.5,
+            "y": 634.546875,
+            "width": 18,
+            "height": 18,
+            "right": 58.5,
+            "bottom": 652.546875
+          },
+          "label": {
+            "x": 40.5,
+            "y": 621.546875,
+            "width": 146.5,
+            "height": 44,
+            "right": 187,
+            "bottom": 665.546875
+          },
+          "text": [
+            {
+              "x": 68.5,
+              "y": 635.140625,
+              "width": 82.171875,
+              "height": 15,
+              "right": 150.671875,
+              "bottom": 650.140625
+            }
+          ],
+          "remove": {
+            "x": 305.5,
+            "y": 621.546875,
+            "width": 44,
+            "height": 44,
+            "right": 349.5,
+            "bottom": 665.546875
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 40.5,
+              "y": 826.046875,
+              "width": 146.5,
+              "height": 46,
+              "right": 187,
+              "bottom": 872.046875
+            },
+            {
+              "x": 203,
+              "y": 826.046875,
+              "width": 146.5,
+              "height": 46,
+              "right": 349.5,
+              "bottom": 872.046875
+            }
+          ],
+          "checkbox": {
+            "x": 40.5,
+            "y": 899.046875,
+            "width": 18,
+            "height": 18,
+            "right": 58.5,
+            "bottom": 917.046875
+          },
+          "label": {
+            "x": 40.5,
+            "y": 886.046875,
+            "width": 146.5,
+            "height": 44,
+            "right": 187,
+            "bottom": 930.046875
+          },
+          "text": [
+            {
+              "x": 68.5,
+              "y": 899.640625,
+              "width": 82.171875,
+              "height": 15,
+              "right": 150.671875,
+              "bottom": 914.640625
+            }
+          ],
+          "remove": {
+            "x": 305.5,
+            "y": 886.046875,
+            "width": 44,
+            "height": 44,
+            "right": 349.5,
+            "bottom": 930.046875
+          },
+          "overlap": 0
+        },
+        {
+          "dates": [
+            {
+              "x": 40.5,
+              "y": 1090.546875,
+              "width": 146.5,
+              "height": 46,
+              "right": 187,
+              "bottom": 1136.546875
+            },
+            {
+              "x": 203,
+              "y": 1090.546875,
+              "width": 146.5,
+              "height": 46,
+              "right": 349.5,
+              "bottom": 1136.546875
+            }
+          ],
+          "checkbox": {
+            "x": 40.5,
+            "y": 1163.546875,
+            "width": 18,
+            "height": 18,
+            "right": 58.5,
+            "bottom": 1181.546875
+          },
+          "label": {
+            "x": 40.5,
+            "y": 1150.546875,
+            "width": 146.5,
+            "height": 44,
+            "right": 187,
+            "bottom": 1194.546875
+          },
+          "text": [
+            {
+              "x": 68.5,
+              "y": 1164.140625,
+              "width": 82.171875,
+              "height": 15,
+              "right": 150.671875,
+              "bottom": 1179.140625
+            }
+          ],
+          "remove": {
+            "x": 305.5,
+            "y": 1150.546875,
+            "width": 44,
+            "height": 44,
+            "right": 349.5,
+            "bottom": 1194.546875
+          },
+          "overlap": 0
+        }
+      ]
+    },
+    {
+      "viewport": "phone",
+      "id": "scenarios",
+      "route": "/studio/scenarios",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-scenarios-top.jpg",
+        "phone-scenarios-mid.jpg"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "phone",
+      "id": "export",
+      "route": "/studio/export",
+      "checks": [
+        {
+          "name": "No horizontal document overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "Mid-page layout has no horizontal overflow",
+          "passed": true,
+          "detail": 390
+        },
+        {
+          "name": "No unhandled page errors",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "screenshots": [
+        "phone-export-top.jpg",
+        "phone-export-mid.jpg"
+      ],
+      "errors": []
+    }
+  ],
+  "failures": []
+}

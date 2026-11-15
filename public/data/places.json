@@ -1,0 +1,72 @@
+{
+  "publisher": "Open-Meteo / GeoNames",
+  "source": "https://open-meteo.com/en/docs/geocoding-api",
+  "retrieved": "2026-11-14",
+  "status": "genuine cached geocoding response",
+  "places": [
+    {
+      "name": "Lahore",
+      "latitude": 31.558,
+      "longitude": 74.35071,
+      "country": "Pakistan",
+      "admin1": "Punjab",
+      "id": 1172451
+    },
+    {
+      "name": "Faisalabad",
+      "latitude": 31.41554,
+      "longitude": 73.08969,
+      "country": "Pakistan",
+      "admin1": "Punjab",
+      "id": 1179400
+    },
+    {
+      "name": "Multan",
+      "latitude": 30.19679,
+      "longitude": 71.47824,
+      "country": "Pakistan",
+      "admin1": "Punjab",
+      "id": 1169825
+    },
+    {
+      "name": "Islamabad",
+      "latitude": 33.72148,
+      "longitude": 73.04329,
+      "country": "Pakistan",
+      "admin1": "Islamabad",
+      "id": 1176615
+    },
+    {
+      "name": "Delhi",
+      "latitude": 28.65195,
+      "longitude": 77.23149,
+      "country": "India",
+      "admin1": "National Capital Territory of Delhi",
+      "id": 1273294
+    },
+    {
+      "name": "Cairo",
+      "latitude": 30.06263,
+      "longitude": 31.24967,
+      "country": "Egypt",
+      "admin1": "Cairo Governorate",
+      "id": 360630
+    },
+    {
+      "name": "London",
+      "latitude": 51.50853,
+      "longitude": -0.12574,
+      "country": "United Kingdom",
+      "admin1": "England",
+      "id": 2643743
+    },
+    {
+      "name": "Nairobi",
+      "latitude": -1.28333,
+      "longitude": 36.81667,
+      "country": "Kenya",
+      "admin1": "Nairobi County",
+      "id": 184745
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "at": "2026-11-15T18:22:55.994Z",
+  "errors": [],
+  "result": {
+    "loaded": {
+      "id": 1,
+      "type": "ready",
+      "loadMs": 5592.5,
+      "model": "agrorithm-flan-t5-small-lora-2"
+    },
+    "rows": [
+      {
+        "question": "What was the minimum in January 2023?",
+        "evidence": {
+          "mode": "weather",
+          "label": "NASA POWER mean daily minimum reading",
+          "question": "Read this historical card and tell me the minimum value for 2023-01.",
+          "passage": "Source: NASA POWER historical daily point record. Point 32.1 N, 73 E. Month 2023-01. Complete days 31. Mean daily minimum 4.44 C. Mean daily maximum 19.57 C. Total precipitation 19.46 mm. Days below 1 mm rain 83.87%. Regional grid, not a field sensor. Not a forecast.",
+          "expected": [
+            "In 2023-01, NASA POWER recorded minimum 4.44 C. This is regional historical data, not a forecast.",
+            "For 2023-01, NASA POWER recorded minimum 4.44 C. This is regional historical data, not a forecast."
+          ]
+        },
+        "output": {
+          "id": 2,
+          "type": "complete",
+          "text": "For 2023-01, NASA POWER recorded minimum 4.44 C. This is regional historical data, not a forecast.",
+          "tokens": 26,
+          "elapsedMs": 1048.800000011921
+        },
+        "validation": {
+          "accepted": true,
+          "text": "For 2023-01, NASA POWER recorded mean daily minimum 4.44 C. This is regional historical data, not a forecast."
+        }
+      },
+      {
+        "question": "What was July 2023 precipitation?",
+        "evidence": {
+          "mode": "weather",
+          "label": "NASA POWER monthly precipitation reading",
+          "question": "Read this historical card and tell me the precipitation value for 2023-07.",
+          "passage": "Source: NASA POWER historical daily point record. Point 32.1 N, 73 E. Month 2023-07. Complete days 31. Mean daily minimum 27.01 C. Mean daily maximum 35.59 C. Total precipitation 259.09 mm. Days below 1 mm rain 19.35%. Regional grid, not a field sensor. Not a forecast.",
+          "expected": [
+            "In 2023-07, NASA POWER recorded precipitation 259.09 mm. This is regional historical data, not a forecast.",
+            "For 2023-07, NASA POWER recorded precipitation 259.09 mm. This is regional historical data, not a forecast."
+          ]
+        },
+        "output": {
+          "id": 3,
+          "type": "complete",
+          "text": "For 2023-07, NASA POWER recorded precipitation 259.09 mm. This is regional historical data, not a forecast.",
+          "tokens": 30,
+          "elapsedMs": 782.6999999880791
+        },
+        "validation": {
+          "accepted": true,
+          "text": "For 2023-07, NASA POWER recorded precipitation 259.09 mm. This is regional historical data, not a forecast."
+        }
+      },
+      {
+        "question": "Explain irrigation water accounting",
+        "evidence": {
+          "mode": "guide",
+          "label": "What do the water numbers mean?",
+          "question": "Please explain: What do the water numbers mean?",
+          "passage": "Source: src/data/guide.ts, topic water. Crop ET describes estimated evapotranspiration. Effective rainfall is the part of rain used by the screening model. Net irrigation also accounts for the stated root-zone storage assumptions. Delivered irrigation divides net irrigation by application efficiency. One millimetre over one hectare is 10 cubic metres. These are screening estimates, not metered water use.",
+          "expected": [
+            "Crop ET describes estimated evapotranspiration. Effective rainfall is the part of rain used by the screening model. Net irrigation also accounts for the stated root-zone storage assumptions. Delivered irrigation divides net irrigation by application efficiency. One millimetre over one hectare is 10 cubic metres. These are screening estimates, not metered water use."
+          ]
+        },
+        "output": {
+          "id": 4,
+          "type": "complete",
+          "text": "The src/data/guide.ts is water based. This is screening estimates, not metered water use.",
+          "tokens": 29,
+          "elapsedMs": 1034.300000011921
+        },
+        "validation": {
+          "accepted": false,
+          "reason": "The draft changed a source statement or its units. The verified explanation is retained."
+        }
+      },
+      {
+        "question": "Explain NDVI and groundwater",
+        "evidence": {
+          "mode": "guide",
+          "label": "Does low NDVI mean bare or unhealthy soil?",
+          "question": "Please explain: Does low NDVI mean bare or unhealthy soil?",
+          "passage": "Source: src/data/guide.ts, topic ndvi. Low NDVI may indicate little live vegetation. It cannot establish bare soil, residue absence, crop identity, nutrient levels or soil carbon by itself. Cloud screening and valid-pixel coverage matter. Confirm surface cover and residue with the farmer before interpreting the signal.",
+          "expected": [
+            "Low NDVI may indicate little live vegetation. It cannot establish bare soil, residue absence, crop identity, nutrient levels or soil carbon by itself. Cloud screening and valid-pixel coverage matter. Confirm surface cover and residue with the farmer before interpreting the signal."
+          ]
+        },
+        "output": {
+          "id": 5,
+          "type": "complete",
+          "text": "Low NDVI may indicate little live vegetation. It cannot establish bare soil, residue absence, crop identity, nutrient levels or soil carbon by itself. Cloud screening and valid-pixel coverage matter. Confirm surface cover and residue with the farmer before interpreting the signal.",
+          "tokens": 58,
+          "elapsedMs": 1159.300000011921
+        },
+        "validation": {
+          "accepted": true,
+          "text": "Low NDVI may indicate little live vegetation. It cannot establish bare soil, residue absence, crop identity, nutrient levels or soil carbon by itself. Cloud screening and valid-pixel coverage matter. Confirm surface cover and residue with the farmer before interpreting the signal."
+        }
+      }
+    ]
+  }
+}

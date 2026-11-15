@@ -1,0 +1,29 @@
+{
+  "schema": 2,
+  "seed": 2833,
+  "createdAt": "2026-11-15T18:10:16.868Z",
+  "counts": {
+    "train": 657,
+    "template_holdout": 39,
+    "task_holdout": 22,
+    "fresh_template_holdout": 14
+  },
+  "sources": {
+    "public/data/weather.json": "3570df074baf6ffe40802445972f37c2f689c83ebb92e136888ca9bbddd1d057",
+    "public/data/vegetation.json": "7b01dd1d191c2fc301b77d3434207d2dbae7ba799d9af3a45687421ae5288c39",
+    "public/data/provenance.json": "b3007c2bf35e48ef1e6f7b723a93204c42fac242a85a7a7db5dbd3e99533cf11",
+    "src/data/guide.ts": "de68bd9a0a92aa59658bf56387eb54c25758522c6f960eca99cff78d645d256c",
+    "src/data/cropProfiles.ts": "b87841ba12b007d14869037ba1c3b37ff3a02fa4c5edd3d9ddda43fdcee6bf03",
+    "src/data/crops.ts": "b7c7491876fdd72f508f8c5862ab194082160f11e0dbb801c5098d0b957d7022",
+    "src/engine/engine.ts": "5cf2898c539f6fd4405040c47e409fa0ca54eb41cb8ea7273ff38df6f78f60d1",
+    "src/engine/agrorithmHelper.ts": "c031592fdd99a0c4b8b173c921bc48a4448e18f8d8f60160094c81a707c3573d"
+  },
+  "originalTaskEvaluation": "Original task holdout rows remain byte-for-byte unchanged and are never gradient inputs. Their task families are now represented in augmentation, so this is an unseen-example regression/generalization audit, not a fresh unseen-task-family test.",
+  "freshHoldout": "New question templates over source cards; no gradient inputs. Weather source months are 2023-2024; all training weather remains 2018-2022. HLS training excludes original HLS evaluation dates. Safety examples are constructed source-limitation question variants, not new scientific observations.",
+  "hashes": {
+    "train": "66372f03f7feec8a4df2962f64f3e85638bd029ee9bed6c8ef8d1661117191d6",
+    "template_holdout": "807c7afdb964e34266ccfe1631b91b59ca89e2559efdc84962cd7e5d877a9353",
+    "task_holdout": "e0aad488c17def5cf0ec47cd8645d99d5704f041d14c0966b95f44e294ffd750",
+    "fresh_template_holdout": "fdf388db95d01811e1466e7cddd6268b296bb0cab6c161246ddd91d3d39aeecb"
+  }
+}

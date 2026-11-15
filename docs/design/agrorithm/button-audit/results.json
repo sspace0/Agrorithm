@@ -1,0 +1,283 @@
+{
+  "generated": "2026-11-15T14:12:55.135Z",
+  "base": "https://sspace0.github.io/Agrorithm/?revision=6",
+  "checks": [
+    {
+      "name": "Plan with wheat",
+      "pass": true,
+      "detail": "https://sspace0.github.io/Agrorithm/?revision=6#/studio/setup"
+    },
+    {
+      "name": "Plan with maize",
+      "pass": true,
+      "detail": "https://sspace0.github.io/Agrorithm/?revision=6#/studio/setup"
+    },
+    {
+      "name": "Plan with mung",
+      "pass": true,
+      "detail": "https://sspace0.github.io/Agrorithm/?revision=6#/studio/setup"
+    },
+    {
+      "name": "Plan with chickpea",
+      "pass": true,
+      "detail": "https://sspace0.github.io/Agrorithm/?revision=6#/studio/setup"
+    },
+    {
+      "name": "Plan with tomato",
+      "pass": true,
+      "detail": "https://sspace0.github.io/Agrorithm/?revision=6#/studio/setup"
+    },
+    {
+      "name": "Plan with potato",
+      "pass": true,
+      "detail": "https://sspace0.github.io/Agrorithm/?revision=6#/studio/setup"
+    },
+    {
+      "name": "Plan with citrus",
+      "pass": true,
+      "detail": "https://sspace0.github.io/Agrorithm/?revision=6#/studio/setup"
+    },
+    {
+      "name": "Plan with mango",
+      "pass": true,
+      "detail": "https://sspace0.github.io/Agrorithm/?revision=6#/studio/setup"
+    },
+    {
+      "name": "studio six navigation steps and sensitivity worker",
+      "pass": true,
+      "detail": [
+        "setup",
+        "lab",
+        "evidence",
+        "scenarios",
+        "tradeoffs",
+        "export"
+      ]
+    },
+    {
+      "name": "console six navigation steps and sensitivity worker",
+      "pass": true,
+      "detail": [
+        "setup",
+        "lab",
+        "evidence",
+        "scenarios",
+        "tradeoffs",
+        "export"
+      ]
+    },
+    {
+      "name": "companion six navigation steps and sensitivity worker",
+      "pass": true,
+      "detail": [
+        "setup",
+        "lab",
+        "evidence",
+        "scenarios",
+        "tradeoffs",
+        "export"
+      ]
+    },
+    {
+      "name": "Help suggestion, clear search, no-result recovery",
+      "pass": true,
+      "detail": {
+        "cleared": true,
+        "questions": 11
+      }
+    },
+    {
+      "name": "Weather: four patterns, all 84 monthly buttons, custom valid/invalid/close",
+      "pass": true,
+      "detail": {
+        "patterns": 4,
+        "months": 84,
+        "download": {
+          "name": "weather-patterns.json",
+          "bytes": 54026
+        }
+      }
+    },
+    {
+      "name": "Weather unavailable state and retry",
+      "pass": true,
+      "detail": "503 recovered through retry"
+    },
+    {
+      "name": "JSON, CSV, feedback template downloads and print button",
+      "pass": true,
+      "detail": {
+        "json": 43001,
+        "csv": 32845,
+        "template": 861,
+        "printCalls": 1
+      }
+    },
+    {
+      "name": "Inventory home",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory help",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory weather-patterns",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory crops",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory atlas",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory soil",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory sources",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory about",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory design",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory studio/setup",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory studio/lab",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory studio/evidence",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory studio/scenarios",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory studio/tradeoffs",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "Inventory studio/export",
+      "pass": true,
+      "detail": 0
+    }
+  ],
+  "failures": [
+    {
+      "name": "Save/delete/reset and exported-plan restore; malformed import error",
+      "error": "TimeoutError: locator.setInputFiles: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Restore exported plan JSON')\u001b[22m\n"
+    },
+    {
+      "name": "Editable crop registry download/import/restore and malformed weather",
+      "error": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================"
+    }
+  ],
+  "inventory": [
+    {
+      "route": "home",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "help",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "weather-patterns",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "crops",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "atlas",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "soil",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "sources",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "about",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "design",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "studio/setup",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "studio/lab",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "studio/evidence",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "studio/scenarios",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "studio/tradeoffs",
+      "controls": [],
+      "overflow": false
+    },
+    {
+      "route": "studio/export",
+      "controls": [],
+      "overflow": false
+    }
+  ],
+  "assets": [],
+  "errors": [
+    "Cannot read properties of undefined (reading 'kind')"
+  ]
+}
